@@ -1,6 +1,6 @@
 {
   "Name": "Interstellar_b10",
-  "Description": "REQUIRES CD2_beta_12b, MEVv5_4 AND DEA_a05t2. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies. b10 Changelogs: Added NoSpawnWithin in short range for all Bulk Detonator type except minibulks, All mactera types and Solaris to prevent them from spawning up extremely up close to player to cause instant disadvantage. Renamed some of the descriptors in this difficulty file not to conflict with some of the descriptors on the newly released EEE enemy dependency mod. Caretakerhelpers interval 10 -> 25 to give the team some of the downtime.",
+  "Description": "REQUIRES CD2_beta_12b, MEVv5_4 AND DEA_a05t2. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies. b10 Changelogs: Added NoSpawnWithin in short range for all Bulk Detonator type except minibulks, All grabber types and Solaris to prevent them from spawning up extremely up close to player to cause instant disadvantage. Renamed some of the descriptors in this difficulty file not to conflict with some of the descriptors on the newly released EEE enemy dependency mod. Caretakerhelpers interval 10 -> 25 to give the team some of the downtime.",
   "Dwarves": {
     "Test": true,
     "RegenHealthPerSecond": {
