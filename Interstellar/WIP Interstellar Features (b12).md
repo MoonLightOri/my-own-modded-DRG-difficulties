@@ -1,0 +1,179 @@
+As Interstellar is still a WIP difficulty, this feature list may be subject to change. This list is updated to b11 version.
+This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but with adjustments. As a result, this feature list might repeat some lines with same description as FC_b23.
+
+# General (Mostly the same as FC)
+- Enemy HP scaling follows Hazard 6.
+- Enemy movement speed follows Hazard 7.
+- Enemy damage scaling follows Hazard 7.
+- Initial resupply cost is 40 nitra, afterwards it raises to 60 nitra.
+- Enemy projectile speed follows Hazard 6 and Hazard 7.
+- Friendly fire is set to 110%.
+- You revive with 40% HP and regen up to 40% of your HP compared to the typical 10% seen in Hazard 5 and other modded Hazards. You begin to regenerate your HP after 6 seconds if you don't take any damage. It takes 10 seconds to regenerate from 1 HP to 40% HP once the regeneration begins.
+- Dorretta resists 75% of damage; it is the same as the value used in 6x2.
+- During the Extraction phase of a mission or the PE countdown until the Drop Pod lands, x1.66 or x2 more bugs spawn respectively.
+- During the time in-between the Fuel Cells and the Drop Pod opening on a Salvage mission, there will initially be a pause in bug spawns with the amount of bugs spawning greatly increasing as the Drop Pod gets closer to opening.
+- Whenever an Egg is pulled, if it does not trigger a swarm, the wave it summons spawns x4 the bugs.
+- Wave timers are loosely based off of Hazard 7 with low chances for a swarm to spawn instantly, only in Refinery mission type. This wave timer distribution is a slightly on easier side compare to FC.
+- A "fat" wave of bugs can occasionally spawn. This is a wave that is twice the size of a typical wave. The chance for "fat" wave was nerfed compare to FC
+- Enemy diversity is higher and more variable; this means you can get multiple types of enemies all spawning at once with the amount being variable. You could get a superdiverse wave or a wave of only one or two enemy types.
+- Most caves will have at least one of every Stationary type if possible.
+- Veteran chance has been significantly increased; this means more Guards, Slashers, Brundles, Trijaws, and Oppressors. Some of the enemies can also be promoted into new type of enemies, with own's custom veterans chance.
+- Many new enemies have been added in the form of enemies that normally don't spawn in waves and entirely new enemies from CD2, MEV and DEA.
+- Some existing enemies have been modified.
+- Custom waves of certain enemies spawn at set intervals or conditions.
+- (new) Adjusted mission types enemycount mostly to be more balanced, harder in Refinery refining phase, Hacking phase in Sabotage, Escort Final phase 3 and 4, Drillevator and Uplink/Refuel/Blackbox. Slightly easier on Escort Final phase 1 and 2, any phase before Hacking and Caretaker phase in Sabotage, and normal and pressure wave of Deep Scan.
+- (new) During the time of Uplink/Refuel/Blackbox objectives, penalty of draining the progress bar is reduced by 30%, and Mission Control will no longer shout at you with "Get back to the triangulation zone! We're losing you" type of quotes if you no one is at triangulation zone.
+- (new) Disabled player headbounces.
+- (new) Breeder type enemies (except for Battle Blimp which has opposite effect) have lowered Freeze temp.
+- (new) Rival turrets and Patrol Bot enemies have lower freeze temp.
+
+# Enemies
+- Canary
+  - This is a giant Swarmer that spawns at the start of every mission. Its sole purpose is to test client desync. If clients cannot see a giant Swarmer or the boss health bar it creates, they are desynced and should try rejoining.
+- Sentinel
+  - These are the bugs the Dreadnought Hiveguard summon. These also move 35% faster.
+- Leech
+  - These move x2 faster. However, if a Leech from high up grabs you and it's killed, you will not die of fall damage.
+- Fire Bomber
+  - This is an unused enemy in the game files. It behaves like a normal Goo Bomber, except it drops bomblets that deal extreme damage to players.
+- Breeder
+  - These take x2 damage. A Breeder can sometimes respawn in a wave. Both natural and respawning Breeders also spawn white Exploders from MEV that move at x0.75 speed. White Exploders spawned from Breeders have a 35% chance to promote into Ice Exploder.
+- Patrol Bot
+  - These spawn globally independent of Rival Presence or Industrial Sabotage. Damage taken is increased to x3 when being Frozen.
+- Nexus
+  - These take x3.95 fire damage. They also spawn white Slashers from MEV that only have 66 HP.
+- Sentinel Swarmer (MEV)
+  - These are small, blue Sentinels from MEV with little HP. They still leave goo upon death. They can only spawn from Swarmer Tunnels.
+- White Exploder (MEV)
+  - Apart from spawning from Breeders, these also spawn from Swarmer Eggs. These also move at x0.75 speed.
+- *new* Ice Exploder (MEV)
+  - These are the MEV Exploder, come from the promotion of Breeder White Exploder that will leave behind Ice Bomber's bombing snow after it explodes. 
+- Exploder
+  - These move x1.5 faster.
+- Septic Spreader
+  - They have 15% chance to promote into Ice Spreader.
+- *new** Ice Spreader (CD2)
+  - They are the promoted variant of Septic Spreader which lobs Snowball projectile at your team. Its look is modified via CD2.
+- Grabber
+  - These move x1.5 faster. They have 35% chance to promote into Deliverer, and 30% chance to promote into Carrier. If Carrier is banned in certain scenario, the chance to promote into Deliverer is now 50% instead.
+- *new* Deliverer (CD2)
+  - This is a promoted type of grabber that has 20% more HP than normal Grabber and 30% slower time dilated. Instead they have fear immunity, and won't flee away or drop you down once you're grabbed. Its look is the same as normal grabber, only name change.
+- *new* Carrier (CD2 - inspiration from DH difficulty)
+  - This is an elite version of promoted type of grabber that has x2 damage taken and has s5 stalker's cloak material. Instead they move extremely fast. It's banned in Defensive objective, Drillevator, additionally in Encounter and as well as in 1 player count lobby.
+- Bulk Detonator
+  - These move x1.5 faster. They also tend to spawn far from the team. On an Escort, they spawn at a normal distance from the team.
+- *new* Ice Detonator (MEV)
+  - These are the MEV Bulk type that has 75% of original bulk HP, move x1.5 faster, spawn far from the team and its attack and explosion will cause freeze damage instead. Explosion leaves no meatball but it will blast players away if they are caught within the explosion zone. Explosion size is reduced by 33.33%. It's weakpoint is changed and now glow in the dark via CD2.
+- *new* Sonic Detonator (CD2)
+  - These are another type of Bulk which have oppressor's base HP (900HP), move at more than x2 movement speed, 180 degrees turning speed and its explosion will spawn 16 meatballs instead of 8.
+  It's explosion damage radius and max damage radius is reduced by 20%. It's banned in Defensive Objective and in Drillevator. 
+- Trawler, *new* Glacial Praetorian, Glacial Bomber
+  - These spawn globally in all biomes.
+- Oppressor
+  - These move at x2 speed. If 2 or more Oppressors are present on the map, no more Oppressors will spawn in. During the Uplink/Fuel Cells/Black Box, if 1 or more Oppressors are present on the map, no more Oppressors will spawn in.
+- Stalker (Beta Stalkers)
+  - These are replaced with their Beta version. Set your Effects in the in-game options to High to see them while they are cloaked.
+- *new* Naedocyte Seeder (CD2)
+  - These have a rare chance of spawning in a wave that has x2 damage taken (similar to normal breeder). These spawn yellow color with slightly-smaller sized Sentinel with 60% of original HP. These sentinel are based off NDS difficulty descriptor. Its looks is modified by CD2.
+- new* Naedocyte Thugger (CD2)
+  - These have a rare chance of spawning in a wave that has x2 damage taken (similar to normal breeder). These spawn swarmer sized Oppressor with ~5% of original HP and leave behind Glacial Praetorian's gas once died. Thugger and Thug's look is modified by CD2.
+- *new* Battle Blimp (CD2 - from Nightmares difficulty)
+  - This is a very rare bigger sized Breeder that will rapidly shoot Patrol Bot's slow missile. It has x0.5 damage taken and upon its death, will spawn 14 cralwers named "Airship Crewmate" to attack your team. Blimp and Crawlers' look are modified by CD2.
+- Elite Guard, Elite Grunt Slasher, Elite Mactera Spawn, *new* Elite Septic Spreader, Elite Stingtail and Elite Ratter (CD2 - DEA)
+  - These spawn globally independent of Elite Threat. Mostly spawn from wave spawner, with its look modified and are slightly bigger sized. Further changes are as below:
+  - All have lower burning and freezing temperature compare to vanilla elite enemies, but the number is still higher or equal to normal enemy type.
+  - Elite Guard gains x1.396 damage taken increase. They ONLY spawn in normal waves. Its look is default.
+  - Elite Slasher takes x3.2 more damage than usual.
+  - Elite Septic Spreaders have the HP of a normal slasher, and are 40% faster time dilated.
+  - Elite Stingtails have the HP of a normal grunt, and move x1.4 faster.
+  - Elite Ratter (DEA) is a ground acid spitter that have the HP of a normal grunt, and will lob a spawner projectile that spawn 1 Glyphid Rat, which is a modified bigger look swarmer that move x1.2 faster and has a HP of an exploder, also doesn't die from being on fire and frozen.
+- *new* Mactera Plague Bomber (DEA)
+  - These are the Bomber type that shoot out pheromone STE on single target attack, and its bombing will spawn Glyphid Rat. On its presence, every Glyphid Rat in the map will gain 71.5% damage receive down, reflected via a different Glyphid Rat's material look. This buff and material look will be reverted back once no more Plague Bomber is presenting in the map.
+- *new* Acid Bomber (DEA - from NDS difficulty)
+  - This is another DEA Bomber variant which drops goo with properties of both sentinel goo and septic spreader goo. Its projectile attack will also leave goo behind when dodged, does a 50/50 split of poison/explosive damage rather than explosive, and applies the acid spitter STE if it hits you (mostly copied from von's website).
+- Turbo Menace (MEV)
+  - This is a flashy Menace from MEV. It shoots a laserbeam of projectiles, but it only has 100 HP, giving it slightly less than a Grunt.
+- *new* Glyphid Architect (CD2)
+  - This is a yellow aura colored menace that has the base HP of a vanilla Korlok Sprout and shoots Engineer's platform rapidly with 25% slower time dilation. Its look is heavily modified by CD2.
+- *new* Lacerator + Arbalest (DEA)
+  - These can spawn in waves. Both have Brundle HP. They will not try to heal with each other. Both have a 20% promote chance to become Wallhacker and Banshee respectively.
+- *new* Wallhacker + Banshee (DEA)
+  - These are the promoted version of twins. Both have Brundle HP. Wallhacker is a type of Lacerator that have different (intentionally bugged) AI behavior that prefers spamming stomp attack at your team in a far distance, even without line of sight. Banshee is a type of Arbalest that only uses Grieves attack.
+- *new* Youngnaught and Ice Youngnaught (DEA - from NDS and LX Revamp difficulties)
+  - Youngnaught can spawn in waves, but can be promoted into Ice Youngnaught with 25% chance. Both are the weak OG Dreadnaught variants which have significantly less HP than the original variant. Youngnaught has the OG Fireball, Slam and Spawnball (spawn Glyphid Rat) attacks. Ice Youngnaught has the Tri-Snowball, Burrow and Oppressor Slam attacks instead. Ice Youngnaught has modified looks from CD2.
+- Mini Bulk Detonator (MEV)
+  - A small Bulk Detonator from MEV. Its stomp radius and explosion radius is significantly smaller than a normal Bulk's. It also shoots out less meatballs upon death. It leaves behind dirt when it dies. This also has less HP than a normal Bulk.
+- *new* Line-Cutting Turret (CD2)
+  - These are the modified bigger-sized Repulsion turret via CD2, made into every mission type and spawn as Stationary unit. It has the same HP as repulsion turret (600 HP) which is 50% faster time dilated and shoots Line-Cutting projectiles from OMEN Tower in many direction upon alerted. It's also immune to dying after being on fire, has freezing temperature of -200 celcius and take x3 more damage once frozen.
+- *new* Rocket Turret (CD2, MEV)
+  - These are the bigger sized Sniper Turret from Sabotage mission made into every mission type and spawn as Stationary unit. They are 50% faster time dilated, and shoot a fast moving Patrol Bot's missile projectile that deal moderate damage to the player. They can also be frozen at -100 celcius and take x3 more damage once frozen. Their looks is changed via CD2 and glow in the dark.
+- Korlok Sprouts (MEV)
+  - Added from MEV, Sprouts spawn as Stationaries similar to Nexuses, Leeches, Breeders, and Spitballers. These can spawn only on the ground and start off sleeping until they take damage. These take x1.2 damage.
+- Nukeballer (MEV)
+  - Added from MEV, this is a Spitballer that shoots a slow-moving nuke that instakills anyone in the blast radius and leaves behind a cloud of radiation. It does not carve terrain. The projectile can be shot down.
+- *new* Spitscreener (CD2)
+  - These are the modified look of normal Spitballer, spawn as Stationary unit which shoot three Nemesis's barrier in each shot toward your team. Made to be rarer than normal Spitballer and possibly Nukeballer.
+- Big Bulk Detonator (MEV)
+  - Added from MEV, this is a big Bulk Detonator that has its looks modified by CD2. It has more HP and has a significantly larger death explosion and carve radius. It leaves behind hot rock upon death. It also moves x1.35 faster. It is banned on Escort and during Uplink/Fuel Cells/Black Box events.
+- Brundle
+  - They have 30% chance to promote into Brendle.
+- *new* Brendle
+  - They are the Brundle modified from DEA, which shoots fast Line Cutting projectile from OMEN Turret.
+- Bundle (CD2)
+  - This is a big, white Brundle possible with CD2. It deals normal damage but it has the HP of a Goo Bomber.
+- Big Shredder (CD2)
+  - Possible with CD2, this is just a big Shredder that spawns alone or in a pair. It deals normal Shredder damage, but it has about x13 the HP of a normal Shredder.
+- Shredders
+  - Can now spawn in every mission types. They have higher rarity now since Big Shredder can also spawn along side Shredders.
+- *new* Vomit Spitter (CD2)
+  - These are another type of ground acid spitter which shoot Barrage Infector's vomit projectile. Its look is changed via CD2. 
+- *new* Barrier Spitter (CD2)
+  - These are another type of acid spitter which has slightly bigger look, and spit at x0.75 speed. The projectile they spit is Nemesis's Barrier. Its look is changed via CD2.
+- *new* Barrinator (CD2, MEV)
+  - This is a CD2-modified Plantonator from MEV. It is as rare as the Battle Blimp. It behaves like a normal Bulk but it has only around 1000 HP. Upon death, it leaves a normal Bulk crater, but it shoots out 15 meatballs that all turn into Barrier spitter. It is banned on Escort.
+- Fat Leech (CD2)
+  - This is a CD2-modified Cave Leech. It's larger and it has more HP. It also moves slower than normal Cave Leeches, but it has extreme horizontal range; it can grab you at a near 90-degree angle.
+- Kamikaze Goo Bomber (CD2, DEA)
+  - This is a CD2-modified Goo Bomber. It's very small, glows, and it has about the health of a Swarmer. Its main objective is to die on top of the team and leave behind goo everywhere. It does not have the normal shot attack of a goo bomber.
+- Crawler
+  - These can spawn in waves globally independent of the Core Stone event.
+- Barrage Infector
+  - These are rarer than usual and are even rarer on Escort.
+- *new* Demolition Infector (CD2)
+  - These are the modified look of normal Barrager, spawn as Stationary unit, which shoot Arbalest's mine on each projectile which cannot be shot down, have more explosion range and deal more damage on explosion. They are more rare than normal Barrage Infector, even more so in Escort.
+- *new* Nuke Barrager (CD2, DEA - from Nightmare difficulty-ish)
+  - This is a rare type of Barrager that spawns as stationary unit. TIt has 75% slower time dilated in the first 90s of the mission, and 66.66% slower time dilated for the rest of the time. Every projectile it shoots is the fatboy nuke with low projectile velocity. Its look is changed via CD2.
+- Scalebramble (CD2)
+  - These are rarer than usual. Only one can spawn on Escort. They are time dilated to half speed. 
+- Warden Bomber (MEV)
+  - These are pink Goo Bombers added from MEV. These spawn 8 Mactera Spawn upon aggro and they heal them and all other types of Mactera similar to a Warden. It does not attack, it only heals.
+- Fanatic (DEA)
+  - This is a Menace from DEA that fires the Arbalest Fireball Fan. It has equivalent HP to a Turbo Menace (100 HP).
+- Pentajaw (DEA)
+  - This is a Trijaw from DEA that shoots two additional projectiles. It is a veteran of a Trijaw and follows VeteranLarge.
+- *new* Mactera Solaris (DEA, CD2)
+  - Mactera Solaris is a fairly rare Mactera Radial Jaw enemy (a trijaw that shoots in a circular pattern), except it shoots Bet-C bomb that deals dread fireball tier damage, move very fast. It has 200% more HP than normal trijaw and it's stun time is reduced to 25% compare to vanilla trijaw and they have x1 stun immunity window. Freeze temp is -220 celcius. There can only be 1 in the map. It's look is changed via CD2 (only the weakpoint is changed to red color).
+- *new* The Sun (CD2)
+  - Renamed from "Ommoran Rock Buffer". This is a type of ommoran flying rock. It has base HP of a Sentinel, tends to spawn away or near from the team depend on mission type. On its presence, every enemy that SPAWNED AFTER Rock buffer will gain a permanent Movement Speed, Projectile Speed and Attack Speed (only grunt type enemies) buff. Killing the rock won't revert the buff on already buffed enemies. It's banned on Defensive objective, Drillevator and Escort. Its look is modified by CD2.
+- *new* The Moon (CD2)
+  - This is a type of ommoran flying rock. It has base HP of a Sentinel, tends to spawn away or near from the team depend on mission type. On its presence, reduce all lighting strength by 65%, players' maximum health regen to 10%, revive health to 10% and regen rate to 1.45 HP/s. It's banned in Escort, Drillevator and Defensive objective. Its look changed via CD2.
+- *new* Big Youngling (CD2 - from NDS difficulty)
+  - This is a bigger sized Youngling that has x4.5 more HP than original version.
+- *new* Glyphid Tarantula and Glyphid Juvenile (CD2)
+  - These are the changed look of Glyphid Warden, they move at x1.5 speed and won't buff to any of Glyphid enemies. Instead, they will instantly and periodically spawn Glyphid Juveniles upon Alerted and staying in the map. Glyphid Juvenile is a type of web spitter that moves at x1.5 speed and spit Electric STE Turbo Menace projectile. Tarantula still spawns Grunt upon alerted. Tarantula and Juvenile's look are changed in CD2, they have blue ice-y color scheme.
+- *new* Glyphid Spy (CD2)
+  - This is a swarmer sized Web spitter that has 70 Base HP, S5 Stalker's Cloak material changed from CD2, moves extremely fast and will randomly shoot either slow or fast Line Cutting projectiles from OMEN Tower at your team. It also has very high resistence to fire, cold, corrosive and explosive damage and cannot be stunned.
+ 
+
+# Custom Waves
+- During a Dreadnought fight (OG Dreadnought, Hiveguard, normal Twins), a Bulk Detonator known as a "DreadHelper" will spawn in to allow the team to kill the Dreadnought faster. Only one DreadHelper can exist at a given time. The DreadHelper moves x1.5 faster.
+- Also, during a Caretaker fight, 3 mini-bulks known as "CaretakerHelpers" will spawn in to allow the team to speed up killing caretaker faster. Only three CaretakerHelpers can exist at a given time, once no more CaretakerHelpers is in the map but Caretaker fight is still going, they will instantly respawn. CaretakerHelper has normal attribute of a normal mini-bulk.
+- At the start of a mission, a Canary or two spawns in. It is a big, slow swarmer with a boss HP bar. It is meant to detect desync between clients on CD2.
+- Every 5 minutes, ~6 Magma Maggots spawn spread out throughout the cave.
+- Every 60 seconds, either 20 Grunts with 3-4 White Spitters, a Bundle or/with 2-3 Mactera Spawns, or 2-3 Mini-Bulks spawn. Mini-Bulks from this WaveController are not allowed to spawn on Escort, and disabled while in caretaker fight. Minibulk wave has a slightly higher chance to spawn compare to FC
+- Every 90 seconds, a Trawler spawns. Up to 4 trawlers can be available in the map. This wave controller is disabled in 1 player count lobby.
+- Every 45 seconds, a mix of 2-4 weak Elite enemies will appear. The pool are: "0-2 Mactera Spawns, 0-3 Slashers, 0-2 Septic Spreaders, 0-1 Stingtail and 0-2 Ratters". Stingtail once spawned will have a cooldown timer of 140s before being able to spawn again in this wavespawner.
+- Every 120 seconds, a Penta-jaw will appear (only appear in 4p setting or during EnemyCountMultiplier waves from what I've read from the file since this feature was brought back from FC).
+
+# Miscellaneous:
+- Bandaid bug fix: Darkness module somehow caused scout's flare gun to have significantly less duration time so i added FlareGunDuration field value in Darkness module file, so it matches 90s of duration (1 duration upgrade) most scout upgrade path will take.
