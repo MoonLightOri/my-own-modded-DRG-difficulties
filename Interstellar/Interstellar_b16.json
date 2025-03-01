@@ -3911,7 +3911,7 @@
           "ED": "ED_Grabber_Carrier"
         },
         "<": 1,
-        "Then": true,
+        "Then": false,
         "Else": false
       },
       "SpawnOnEnable": true,
