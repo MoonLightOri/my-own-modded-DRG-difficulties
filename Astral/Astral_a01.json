@@ -10,13 +10,6 @@
         ]
       }
     },
-    "NitraMultiplier": {
-      "Mutate": "ByDNA",
-      "Default": 1,
-      "Mining,2,1": 1.2,
-      "DeepScan,1,2": 1.2,
-      "Sabotage,2,1": 1.2
-    },
     "Dwarves": {
       "Test": true,
       "RegenHealthPerSecond": 5.8,
@@ -225,8 +218,8 @@
       "StationaryEnemyDiversity": [
         {
           "weight": 1,
-          "min": 12,
-          "max": 12
+          "min": 9,
+          "max": 9
         }
       ],
       "VeteranNormal": [
@@ -255,7 +248,6 @@
               "Else": {
                 "Mutate": "ByPlayerCount",
                 "Values": [
-                  0,
                   0,
                   0.2
                 ]
@@ -295,7 +287,6 @@
               "Else": {
                 "Mutate": "ByPlayerCount",
                 "Values": [
-                  0,
                   0,
                   0.2
                 ]
@@ -433,7 +424,7 @@
       "ED_BarrageInfector": {
         "DifficultyRating": {
           "Default": 200,
-          "Escort": 450,
+          "Escort": 400,
           "Mutate": "ByMissionType"
         },
         "MaxSpawnCount": {
@@ -1133,30 +1124,6 @@
         "SpawnAmountModifier": 0.01,
         "WeakpointHP": 300
       },
-      "XED_CaretakerHelper": {
-        "Base": "ED_Spider_ExploderTank",
-        "DifficultyRating": 250,
-        "HealthRaw": 1400,
-        "MaxSpawnCount": 0,
-        "Movement": {
-          "AlignDirectionSpeed": 1.2,
-          "AlignToTargetMinRequiredAngle": 1.1,
-          "MaxAcceleration": 1.2,
-          "MaxBrakingDeceleration": 1.2,
-          "MaxPawnSpeed": 1.2,
-          "MaxStrafeDistance": 1.2,
-          "StrafeSpeed": 1.2
-        },
-        "SpawnAmountModifier": 0.01,
-        "WeakpointHP": 300,
-        "Materials": [
-          "M_DropPod_Metal01",
-          "M_Canteen_Metal_3"
-        ],
-        "Direct": {
-          "Float:CarveDiameter": 800
-        }
-      },
       "XED_Spider_Grunt": {
         "Base": "ED_Spider_Grunt",
         "CanBeUsedForConstantPressure": true,
@@ -1228,34 +1195,6 @@
         "Interval": 10,
         "Enemies": [
           "XED_DreadHelper"
-        ],
-        "Difficulty": 250,
-        "Distance": 1750,
-        "Locations": 1
-      },
-      {
-        "Enabled": {
-          "Mutate": "IfFloat",
-          "Value": {
-            "Mutate": "EnemyCount",
-            "ED": "XED_CaretakerHelper"
-          },
-          "<": 1,
-          "Then": {
-            "Mutate": "BySaboPhase",
-            "Default": false,
-            "Phase1Vent": true,
-            "Phase1Eye": true,
-            "Phase2Vent": true,
-            "Phase2Eye": true,
-            "Phase3Vent": true,
-            "Phase3Eye": true
-          },
-          "Else": false
-        },
-        "Interval": 5,
-        "Enemies": [
-          "XED_CaretakerHelper"
         ],
         "Difficulty": 250,
         "Distance": 1750,

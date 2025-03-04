@@ -217,7 +217,7 @@
             "Condition": {
               "Mutate": "DuringDefend"
             },
-            "Then": 1.1,
+            "Then": 1.15,
             "Else": {
               "Mutate": "If",
               "Condition": {
