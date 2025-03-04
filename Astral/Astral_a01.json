@@ -1,6 +1,6 @@
 {
     "Name": "Astral_a01",
-    "Description": "REQUIRES CD2_beta_12b, MEVv5_4 AND DEA_a05t2. Astral, shortened as AS, is a spin off of 6x2EX and the dial-down version of Celestial with some interesting twists on modded enemies. a01: Initial release. Read on Feature list in PDRG Discord channel for more details.",
+    "Description": "REQUIRES CD2_beta_12b, MEVv5_4. Astral, shortened as AS, is a spin off of 6x2EX and the dial-down version of Celestial with some interesting twists on modded enemies. a01: Initial release. Read on Feature list in PDRG Discord channel for more details.",
     "Resupply": {
       "Cost": {
         "Mutate": "ByResuppliesCalled",
