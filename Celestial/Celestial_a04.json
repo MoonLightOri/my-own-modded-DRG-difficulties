@@ -1535,16 +1535,7 @@
         "Resistances": {
           "DamageMultiplier": 1.823
         },
-        "SpawnAmountModifier": {
-          "Mutate": "EnemyCooldown",
-          "EDs": [
-            "ED_Spider_Boss_TwinA_Weak",
-            "ED_Spider_Boss_TwinB_Weak"
-          ],
-          "CooldownTime": 40,
-          "ValueDuringCooldown": 0.0001,
-          "DefaultValue": 2
-        }
+        "SpawnAmountModifier": 2
       },
       "ED_Spider_Boss_TwinB_Weak": {
         "Base": "ED_Lassie_Zen",
@@ -1569,16 +1560,7 @@
         "Resistances": {
           "DamageMultiplier": 1.823
         },
-        "SpawnAmountModifier": {
-          "Mutate": "EnemyCooldown",
-          "EDs": [
-            "ED_Spider_Boss_TwinA_Weak",
-            "ED_Spider_Boss_TwinB_Weak"
-          ],
-          "CooldownTime": 40,
-          "ValueDuringCooldown": 0.0001,
-          "DefaultValue": 2
-        }
+        "SpawnAmountModifier": 2
       },
       "ED_Spider_Buffer": {
         "CanBeUsedForConstantPressure": true,
@@ -1772,16 +1754,7 @@
           "M_TetherPole_CenterGlow",
           "M_TetherPole_CenterGlow"
         ],
-        "SpawnAmountModifier": {
-          "Mutate": "IfFloat",
-          "Value": {
-            "Mutate": "EnemyCount",
-            "ED": "ED_Spider_RapidShooter_Platform"
-          },
-          ">=": 1,
-          "Then": 0.000001,
-          "Else": 1
-        }
+        "SpawnAmountModifier": 1
       },
       "ED_Spider_ShieldTank": {
         "Movement": {
