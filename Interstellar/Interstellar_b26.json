@@ -1,22 +1,33 @@
 {
-  "Name": "Interstellar_b25",
-  "Description": "REQUIRES CD2_beta_12b, MEVv5_4 AND DEA_a05t2. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies. 
-  b25: 
-- Glyphid Thug (spawn from Naedocyte Thugger): Increase PhysicalDamageMultiplier to where it can die with 1 normal pickaxe hit, FireDamageMultiplier increased 0.34 -> 0.45, FreezeTemperature lowered to -150, unfreeze temp is 0, warming rate is 75. 
-- Weak Twins and OG Dread variants: now have slightly lowered freeze temp of -400, except Ice Youngnought keeping OG freeze temperature. 
-- OG Dread variants: are now unfreeze 1s after being frozen. 
-- Solaris: Freeze temp is now also heightened up to -400. 
-- Mini-Bulk and Sonic Bulk: Freeze temp is now lowered to -240. 
-- Patrol Bot: MaxSpawnCount is now scaled with playercount, 0 at 1p, 2 at 3p+. 
-- Barragers type enemies: In 1p setting have further reduced SpawnAmountModifier to 0.2, if on 1p setting and the player is not using Gunner class, reduce their HP x1 -> 0.666 (1200 -> 800 Base HP, same as Spitballer) and add FireDamageMultiplier by x2 (Same weakness as Spitballer).
-- Fix an issue where Ice Praetorian doesn't appear in REZ biome.
-",
+  "Name": "Interstellar_b26",
+  "Description": "REQUIRES CD2_beta_12b, MEVv5_4 AND DEA_a05t2. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies.
+    b26: 
+  - Resupply Cost adjusted for 1/2p setting: 2nd resupply and onward will cost 50 nitra instead of 60. No change at 3/4p setting.
+  - Removed Magma Maggot wavespawner. I feel like the RNG damage that can lead to death is unhealthy for the sake of this difficulty.
+  - Solaris: Adding a cooldown of 40s respectively to try to limit the amount of frequency they spawn on you.
+  - Solaris, Architect, Battle Blimp: Attempt to fix an issue where two (three if Architect) of them can exist in the map. 
+  - Fat Leech: now added PhysicalDamageMultiplier equal to an amount that you can kill with one damage upgrade Power Attack.
+  - Barrager type enemies: 1p setting for SpawnAmountModifier and MaxSpawnCount now also applies to 2p setting.
+  - Spitscreener: MaxSpawnCount 1p setting reduced to 1, and 2p setting now is reduced to 1, only at 3+ setting it will be at original value.
+  - Shellbacks, Big Youngling: MaxSpawnCount at 1/2p setting reduced to 0.
+  - Youngling (spawn in Salt Pits): MaxSpawnCount at 1/2p setting reduced to 3/6.
+  - The Sun: Acknowledged DifficultyRating 175 instead (forgot to fix issue became a feature).
+  - Sniper Turret removed DifficultyRating nerf (it doesn't do anything), instead replaced their base with DEA version that has 66.6% of original HP, and the projectile speed is slower by a half.
+  - Moving structure of Cooldown on EDs into EnemyPool.
+  ",  
   "Resupply": {
     "Cost": {
       "Mutate": "ByResuppliesCalled",
       "Values": [
         40,
-        60
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            50,
+            50,
+            60
+          ]
+        }
       ]
     }
   },
@@ -597,8 +608,21 @@
             },
             "Then": [],
             "Else": [
-              "ED_Spider_Boss_TwinA_Weak",
-              "ED_Spider_Boss_TwinB_Weak",
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_Spider_Boss_TwinA_Weak",
+                  "ED_Spider_Boss_TwinB_Weak",
+                  "ED_Banshee",
+                  "ED_Wallhacker"
+                ],
+                "CooldownTime": 20,
+                "ValueDuringCooldown": [],
+                "DefaultValue": [
+                  "ED_Spider_Boss_TwinA_Weak",
+                  "ED_Spider_Boss_TwinB_Weak"
+                ]
+              },
               {
                 "Mutate": "If",
                 "Condition": {
@@ -606,7 +630,33 @@
                 },
                 "Then": [],
                 "Else": [
-                  "ED_Fauxnought"
+                  {
+                    "Mutate": "EnemyCooldown",
+                    "EDs": [
+                      "ED_Fauxnought",
+                      "ED_Altnought_Ice"
+                    ],
+                    "CooldownTime": {
+                      "Mutate": "If",
+                      "Condition": {
+                        "Mutate": "DuringDefend"
+                      },
+                      "Then": {
+                        "Mutate": "ByPlayerCount",
+                        "Values": [
+                          95,
+                          95,
+                          75,
+                          60
+                        ]
+                      },
+                      "Else": 30
+                    },
+                    "ValueDuringCooldown": [],
+                    "DefaultValue": [
+                      "ED_Fauxnought"
+                    ]
+                  }
                 ]
               }
             ]
@@ -625,7 +675,18 @@
         },
         "ED_Shredder_Big",
         "ED_Parabomber_Rat",
-        "ED_Spider_RapidShooter_Platform",
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Spider_RapidShooter_Platform"
+          },
+          ">=": 1,
+          "Then": [],
+          "Else": [
+            "ED_Spider_RapidShooter_Platform"
+          ]
+        },
         {
           "Mutate": "If",
           "Condition": {
@@ -721,13 +782,35 @@
           "Else": {
             "Mutate": "ByMissionType",
             "Default": [
-              "ED_FlyingSmartRock_buffer",
-              "ED_FlyingSmartRock_debuffer"
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_FlyingSmartRock_buffer",
+                  "ED_FlyingSmartRock_debuffer"
+                ],
+                "CooldownTime": 60,
+                "ValueDuringCooldown": [],
+                "DefaultValue": [
+                  "ED_FlyingSmartRock_buffer",
+                  "ED_FlyingSmartRock_debuffer"
+                ]
+              }
             ],
             "Escort": []
           }
         },
-        "ED_JellyBreeder_Blimp",
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_JellyBreeder_Blimp"
+          },
+          ">=": 1,
+          "Then": [],
+          "Else": [
+            "ED_JellyBreeder_Blimp"
+          ]
+        },
         "ED_JellyBreeder_Sentinel",
         "ED_Spider_Buffer_elecspawner",
         "ED_Spider_Tank_Ice_global",
@@ -747,9 +830,26 @@
             }
           },
           "Then": [],
-          "Else": [
-            "ED_Solaris"
-          ]
+          "Else": {
+            "Mutate": "EnemyCooldown",
+            "EDs": [
+              "ED_Solaris"
+            ],
+            "CooldownTime": 40,
+            "ValueDuringCooldown": [],
+            "DefaultValue": {
+              "Mutate": "IfFloat",
+              "Value": {
+                "Mutate": "EnemyCount",
+                "ED": "ED_Solaris"
+              },
+              ">=": 1,
+              "Then": [],
+              "Else": [
+                "ED_Solaris"
+              ]
+            }
+          }
         },
         "ED_Acid_Bomber",
         "ED_Ninja",
@@ -922,12 +1022,14 @@
         "Mutate": "ByPlayerCount",
         "Values": [
           0,
+          0,
           9999
         ]
       },
       "SpawnAmountModifier": {
         "Mutate": "ByPlayerCount",
         "Values": [
+          0.2,
           0.2,
           1
         ]
@@ -974,6 +1076,7 @@
         "Mutate": "ByPlayerCount",
         "Values": [
           0,
+          0,
           9999
         ]
       },
@@ -994,6 +1097,7 @@
       "SpawnAmountModifier": {
         "Mutate": "ByPlayerCount",
         "Values": [
+          0.2,
           0.2,
           0.5
         ]
@@ -1023,6 +1127,7 @@
       "MaxSpawnCount": {
         "Mutate": "ByPlayerCount",
         "Values": [
+          0,
           0,
           1
         ]
@@ -1069,6 +1174,7 @@
       "SpawnAmountModifier": {
         "Mutate": "ByPlayerCount",
         "Values": [
+          0.2,
           0.2,
           0.35
         ]
@@ -1189,7 +1295,8 @@
       "MinSpawnCount": 1,
       "Rarity": 3,
       "Resistances": {
-        "DamageMultiplier": 0.167
+        "DamageMultiplier": 0.167,
+        "PhysicalDamageMultiplier": 3
       },
       "Scale": 2,
       "SpawnAmountModifier": 1,
@@ -1293,7 +1400,7 @@
       }
     },
     "ED_FacilityTurret_Sniper": {
-      "TimeDilation": 0.666,
+      "Base": "ED_Sniper_Turret_Slow",
       "Temperature": {
         "FreezeTemperature": -75,
         "UnfreezeTemperature": -10,
@@ -1311,31 +1418,7 @@
       "MinSpawnCount": 1,
       "HealthMultiplier": 1.8,
       "UsesSpawnRarityModifiers": false,
-      "Rarity": {
-        "Mutate": "EnemyCooldown",
-        "EDs": [
-          "ED_Fauxnought",
-          "ED_Altnought_Ice"
-        ],
-        "CooldownTime": {
-          "Mutate": "If",
-          "Condition": {
-            "Mutate": "DuringDefend"
-          },
-          "Then": {
-            "Mutate": "ByPlayerCount",
-            "Values": [
-              95,
-              95,
-              75,
-              60
-            ]
-          },
-          "Else": 30
-        },
-        "ValueDuringCooldown": 1000,
-        "DefaultValue": 6.25
-      },
+      "Rarity": 6.25,
       "StaggerDurationMultiplier": 0,
       "Significance": "Critical",
       "Temperature": {
@@ -1720,16 +1803,7 @@
       "Projectile": "PRJ_PatrolBotRocket_slow",
       "Significance": "Critical",
       "DifficultyRating": 250,
-      "Rarity": {
-        "Mutate": "IfFloat",
-        "Value": {
-          "Mutate": "EnemyCount",
-          "ED": "ED_JellyBreeder_Blimp"
-        },
-        ">=": 1,
-        "Then": 1000000,
-        "Else": 9
-      },
+      "Rarity": 9,
       "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "SpawnAmountModifier": 1,
@@ -1877,16 +1951,7 @@
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 175,
       "UsesSpawnRarityModifiers": false,
-      "Rarity": {
-        "Mutate": "EnemyCooldown",
-        "EDs": [
-          "ED_FlyingSmartRock_buffer",
-          "ED_FlyingSmartRock_debuffer"
-        ],
-        "CooldownTime": 60,
-        "ValueDuringCooldown": 100000,
-        "DefaultValue": 7.25
-      },
+      "Rarity": 7.25,
       "Scale": 1,
       "Materials": [
         "M_NeonSign_Blinking_Red_01",
@@ -1965,16 +2030,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": false,
       "UsesSpawnRarityModifiers": false,
-      "Rarity": {
-        "Mutate": "EnemyCooldown",
-        "EDs": [
-          "ED_FlyingSmartRock_buffer",
-          "ED_FlyingSmartRock_debuffer"
-        ],
-        "CooldownTime": 60,
-        "ValueDuringCooldown": 100000,
-        "DefaultValue": 7.25
-      },
+      "Rarity": 7.25,
       "DifficultyRating": 150,
       "Scale": 1,
       "Materials": [
@@ -2284,7 +2340,9 @@
       "MaxSpawnCount": {
         "Mutate": "ByPlayerCount",
         "Values": [
-          2,
+          1,
+          1,
+          3,
           4
         ]
       },
@@ -2377,16 +2435,7 @@
       "Projectile": "PRJ_InfectedMuleGrenade_C",
       "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
-      "Rarity": {
-        "Mutate": "IfFloat",
-        "Value": {
-          "Mutate": "EnemyCount",
-          "ED": "ED_Solaris"
-        },
-        ">=": 1,
-        "Then": 100000,
-        "Else": 7
-      },
+      "Rarity": 7,
       "DifficultyRating": 150,
       "Materials": [
         "M_Flier_Triple_Shooter_01",
@@ -2441,18 +2490,7 @@
       "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "UsesSpawnRarityModifiers": false,
-      "Rarity": {
-        "Mutate": "EnemyCooldown",
-        "EDs": [
-          "ED_Spider_Boss_TwinA_Weak",
-          "ED_Spider_Boss_TwinB_Weak",
-          "ED_Banshee",
-          "ED_Wallhacker"
-        ],
-        "CooldownTime": 20,
-        "ValueDuringCooldown": 100000,
-        "DefaultValue": 5.5
-      },
+      "Rarity": 5.5,
       "Resistances": {
         "DamageMultiplier": 1.823
       },
@@ -2480,18 +2518,7 @@
       "MaxSpawnCount": 0,
       "UsesSpawnRarityModifiers": false,
       "MinSpawnCount": 1,
-      "Rarity": {
-        "Mutate": "EnemyCooldown",
-        "EDs": [
-          "ED_Spider_Boss_TwinA_Weak",
-          "ED_Spider_Boss_TwinB_Weak",
-          "ED_Banshee",
-          "ED_Wallhacker"
-        ],
-        "CooldownTime": 20,
-        "ValueDuringCooldown": 100000,
-        "DefaultValue": 5.5
-      },
+      "Rarity": 5.5,
       "Resistances": {
         "DamageMultiplier": 1.823
       },
@@ -2916,16 +2943,7 @@
       "DisplayName": "Glyphid Architect",
       "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
-      "Rarity": {
-        "Mutate": "IfFloat",
-        "Value": {
-          "Mutate": "EnemyCount",
-          "ED": "ED_Spider_RapidShooter_Platform"
-        },
-        ">=": 1,
-        "Then": 100000,
-        "Else": 5.5
-      },
+      "Rarity": 5.5,
       "DifficultyRating": 130,
       "Projectile": "PRJ_PlatformMaker_C",
       "TimeDilation": 0.75,
@@ -3298,7 +3316,14 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 70,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          0,
+          0,
+          1
+        ]
+      },
       "Rarity": 5.25,
       "SpawnAmountModifier": 1
     },
@@ -3307,7 +3332,14 @@
       "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 60,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          0,
+          0,
+          1
+        ]
+      },
       "MinSpawnCount": 1,
       "Rarity": 5.35,
       "SpawnAmountModifier": 1,
@@ -3322,7 +3354,14 @@
       "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 30,
-      "MaxSpawnCount": 10,
+      "MaxSpawnCount": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          3,
+          6,
+          10
+        ]
+      },
       "MinSpawnCount": 1,
       "Rarity": 5.125
     },
@@ -3455,13 +3494,6 @@
         "FreezeTemperature": -100
       },
       "TimeDilation": 0.85
-    },
-    "XED_MagmaMaggot": {
-      "Base": "ED_Maggot_Fire",
-      "DifficultyRating": 30,
-      "MaxSpawnCount": 5,
-      "MinSpawnCount": 1,
-      "SpawnSpread": 10000
     },
     "XED_Spider_Shooter_Spawner_Elite": {
       "Base": "ED_Spider_Shooter_Spawner",
@@ -3716,16 +3748,6 @@
       "Difficulty": 10,
       "Distance": 0,
       "Locations": 1
-    },
-    {
-      "Enabled": true,
-      "Enemies": [
-        "XED_MagmaMaggot"
-      ],
-      "Interval": 100,
-      "Distance": 0,
-      "Difficulty": 300,
-      "Locations": 3
     },
     {
       "Enabled": {
