@@ -5,7 +5,7 @@ This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but 
 - Enemy HP scaling follows Hazard 6.
 - Enemy movement speed follows Hazard 7.
 - Enemy damage scaling follows Hazard 7.
-- Initial resupply cost is 40 nitra, afterwards it raises to 60 nitra (50 nitra instead of 1/2p setting).
+- Initial resupply cost is 40 nitra, afterwards it raises to 60 nitra (50 nitra instead for 1/2p setting).
 - Enemy projectile speed follows Hazard 6 and Hazard 7.
 - Friendly fire is set to 110%.
 - You revive with 40% HP and regen up to 40% of your HP compared to the typical 10% seen in Hazard 5 and other modded Hazards. You begin to regenerate your HP after 6 seconds if you don't take any damage. It takes 10 seconds to regenerate from 1 HP to 40% HP once the regeneration begins.
