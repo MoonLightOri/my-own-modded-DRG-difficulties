@@ -8,6 +8,7 @@
   - Added wave spawner during Dread and Caretaker that spawns a normal sized wave every 210s. This is to mimic the functionality of Elim & Sabo with wave mods (with different tweaks), so now you can uninstall these mods since we have the supported wave spawners without much balancing problem.
   - Swarmer: now they are stunnable, and base HP reduced to 12 -> 5.
   - Elimination mission: During Dreadnought and Sabotage fight, weak Elite Slasher & Grunt wave spawner will have +50/35s of increased interval. -25% Difficulty on StationaryDifficulty on certain big room biomes.
+  - Sabotage: Reworked difficulty on phases, so now it's in-line with Celestial and Interstellar.
     ",
   "Resupply": {
     "Cost": {
@@ -134,17 +135,17 @@
               "Mutate": "DuringEncounters"
             },
             "Then": 0.65,
-            "Else": 0.9
+            "Else": 0.8
           },
-          "Hacking": 1.1,
-          "BetweenHacks": 1,
-          "HackingFinished": 1,
-          "Phase1Vent": 0.95,
-          "Phase1Eye": 0.95,
-          "Phase2Vent": 0.95,
-          "Phase2Eye": 0.95,
-          "Phase3Vent": 0.95,
-          "Phase3Eye": 0.95,
+          "Hacking": 1,
+          "BetweenHacks": 0.9,
+          "HackingFinished": 0.9,
+          "Phase1Vent": 0.85,
+          "Phase1Eye": 0.85,
+          "Phase2Vent": 0.85,
+          "Phase2Eye": 0.85,
+          "Phase3Vent": 0.85,
+          "Phase3Eye": 0.85,
           "Finished": 1
         },
         "DeepScan": {

@@ -17,7 +17,7 @@ This difficulty used 6x2EX - a difficulty made by pH-JPEG, as a framework, but w
 - Many new enemies have been added in the form of enemies that normally don't spawn in waves and entirely new enemies from CD2, MEV and DEA.
 - Some existing enemies have been modified.
 - Custom waves of certain enemies spawn at set intervals or conditions.
-- Adjusted mission types enemycount mostly to be more balanced, harder in Refinery refining phase, Hacking phase in Sabotage and Drillevator. Slightly easier on Escort Final phase 1 and 2, before Hacking 1 and Caretaker phase in Sabotage, and normal and pressure wave of Deep Scan.
+- Adjusted mission types enemycount mostly to be more balanced, harder in Refinery refining phase, and Drillevator. Slightly easier on Escort Final phase 1 and 2, any phase before Hacking and Caretaker phase in Sabotage, and normal and pressure wave of Deep Scan.
 - During the time of Uplink/Refuel/Blackbox objectives, Mission Control will no longer shout at you with "Get back to the triangulation zone! We're losing you" type of quotes if you no one is at triangulation zone.
 - Disabled player headbounces.
 - Breeder type enemies have lowered Freeze temp.
