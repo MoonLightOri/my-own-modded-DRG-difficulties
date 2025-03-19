@@ -196,9 +196,16 @@
           "Mutate": "Multiply",
           "A": {
             "Mutate": "ByBiome",
-            "Default": 500,
+            "Default": 375,
+            "CrystalCaves": 500,
+            "MagmaCore": 500,
+            "SaltPits": 500,
             "AzureWeald": 375,
-            "Sandblasted": 375
+            "Sandblasted": 375,
+            "GlacialStrata": 500,
+            "FungusBogs": 500,
+            "REZ": 500,
+            "HollowBough": 500
           },
           "B": {
             "Mutate": "ByMissionType",
@@ -210,9 +217,16 @@
           "Mutate": "Multiply",
           "A": {
             "Mutate": "ByBiome",
-            "Default": 650,
+            "Default": 487.5,
+            "CrystalCaves": 650,
+            "MagmaCore": 650,
+            "SaltPits": 650,
             "AzureWeald": 487.5,
-            "Sandblasted": 487.5
+            "Sandblasted": 487.5,
+            "GlacialStrata": 650,
+            "FungusBogs": 650,
+            "REZ": 650,
+            "HollowBough": 650
           },
           "B": {
             "Mutate": "ByMissionType",
@@ -1490,7 +1504,7 @@
         "FinalEventA": 0.8125,
         "FinalEventB": 0.8125,
         "FinalEventC": 0.8125,
-        "FinalEventD": 0.8125,
+        "FinalEventD": 0.8125
         },
         0.75
       ]
