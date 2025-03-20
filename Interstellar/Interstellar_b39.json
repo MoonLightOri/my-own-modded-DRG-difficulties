@@ -2478,7 +2478,7 @@
       "MaxSpawnCount": [
         0,
         0,
-        2,
+        2
       ],
       "MinSpawnCount": 1,
       "Base": "ED_ShootingPlant_Nuke",
@@ -4015,7 +4015,7 @@
           "Escort": {
             "Mutate": "ByEscortPhase",
             "Default": 60,
-            "WaitingForFuel": 80,
+            "WaitingForFuel": 80
           },
           "Sabotage": {
             "Mutate": "BySaboPhase",
@@ -4153,7 +4153,7 @@
             "Escort": {
               "Mutate": "ByEscortPhase",
               "Default": 45,
-              "WaitingForFuel": 60,
+              "WaitingForFuel": 60
             },
             "Sabotage": {
               "Mutate": "BySaboPhase",
