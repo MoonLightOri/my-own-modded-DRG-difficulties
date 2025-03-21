@@ -1,6 +1,6 @@
 My list of modded difficulties i made
 Currently made:
-- Interstellar <Require CD2 beta 13, MEV v5_4 and DEA b00.2>
+- Interstellar <Require CD2 beta 14, MEV v5_4 and DEA b00.3>
 - Celestial <Require at least CD2 beta 13, MEV v5_4 and DEA a05t2 or DEA b00.2> (Toned-down of Interstellar, ND level) 
 - Astral <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
 
