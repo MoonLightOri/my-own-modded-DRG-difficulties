@@ -1,7 +1,7 @@
 {
-  "Name": "Celestial_a16",
+  "Name": "Celestial_a17",
   "Description": "REQUIRES CD2 beta 13, MEV v5.4 AND DEA a05t2. Recommended VEA. Celestial, shortened as CS, is a spin off of ND and the dial-down version of Interstellar with some interesting twists on modded enemies. 
-    a16:
+    a17:
   - Stationary Difficulty: Removed the biome adjustments. Now it uses the value from the patch before now.
   - Escort Duty: Slightly reduce difficulty on 2nd/3rd phase of heartstone.
   - Trawler: AttackDamageMultiplier reduced from 0.9 -> 0.75. Banned in 1p setting and there can only be at most 2/4/5 sharks in the map. No longer spawns during Encounters.
