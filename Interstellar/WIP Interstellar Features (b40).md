@@ -27,7 +27,7 @@ This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but 
 - (new) Breeder type enemies (except for Battle Blimp) have lowered Freeze temp.
 - (new) Patrol Bot enemies have lower freeze temp. Rival Turrets spawn count in Encounters sabotage mission type is reduced by 50%.
 - (new) Added x1.2 NitraMultiplier on specific mission type (Length:Complexity) Mining 2:1, DeepScan 1:2, and Sabotage 2:2. Sabotage 2:1, Elimination 2:2, Elimination 3:3 gains x1.55/x1.35/x1.1 instead. The reason behind this is these specific mission type has significantly way lower Nitra generation than the only slightly longer or bigger missions, which can cause Attrition issue very fast (especially in sabotage with stationary and swarm).
-- (new) Lower player scaling will have some change to the existing enemies to make playing easier, especially in 1-2p setting. Such as: Increase Player Light Intensity by 50% (25% if 3-4p setting) if Scout doesn't present. Spitscreen Infector has -33.3% Time Dilation. Barrager type enemies MaxSpawnCount reduced to 0, and they gain signficantly less SpawnAmountModifier than before, (1p setting only) their HP stats is reduced to be the same as Spitballer's and gain 100% weakness to fire like Spitballer. Bulk type enemies are banned during 1p defensive objective. Shockers have added NoSpawnWithin in 1/2p setting, and have spawncount significantly reduced in 1p setting. Escort during Heartstone phase on 1p setting, Doretta gains +40% resistance. 
+- (new) Lower player scaling will have some change to the existing enemies to make playing easier, especially in 1-2p setting. Such as: Increase Player Light Intensity by 50% (25% if 3-4p setting) if Scout doesn't present. Barrager type enemies MaxSpawnCount reduced to 0, and they gain signficantly less SpawnAmountModifier than before, (1p setting only) their HP stats is reduced to be the same as Spitballer's and gain 100% weakness to fire like Spitballer. Bulk type enemies are banned during 1p defensive objective. Shockers have added NoSpawnWithin in 1/2p setting, and have spawncount significantly reduced in 1p setting. Escort during Heartstone phase on 1p setting, Doretta gains +40% resistance. 
 - (new) Added NitraMultiplier for Deep Dive Secondary with values: +25% on Eggs, +20% on Black Box and Dread Cocoon, +10% on Deep Scan and Morkite Well, unchanged in Mini-Mules and Morkite. This value is also compatible with current Main objective if they have nitra multiplier support, calculated multiplicatively.
 - (new) Added Elimination and Caretaker with wave functionality (via Wave Spawner), so now you can uninstall Elim and Caretaker with waves mod since we have them in my difficulty with better balance.
  
@@ -75,7 +75,7 @@ This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but 
 - *new* Sonic Detonator (CD2)
   - These are another type of Bulk which have oppressor's base HP (900HP). Freeze and Unfreeze temp is now only -240 & -100, and they warm slower than normal bulk. They move at more than x2 movement speed, 180 degrees turning speed and its explosion will spawn 16 meatballs instead of 8.
   It's explosion damage radius and max damage radius is reduced by 20%. It's banned in Defensive Objective, in Drillevator and Escort. 
-- Flying Rock from Heartstone phase: 
+- Flying Rock from Heartstone phase
   - Reduced Base HP from 250 to 90/120/148 (same Base HP as Grunt/Acid Spitter/Slasher) in 1/2/3p+ setting.
 - Trawler, *new* Glacial Praetorian, Glacial Bomber
   - These spawn globally in all biomes. Trawler won't spawn normally in the pool anymore but via wavespawner instead. Trawler deals 25% less damage than normally.
@@ -122,7 +122,7 @@ This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but 
   - Added from MEV, Sprouts spawn as Stationaries similar to Nexuses, Leeches, Breeders, and Spitballers. These can spawn only on the ground and start off sleeping until they take damage. These take x1.2 damage.
 - Nukeballer (MEV)
   - Added from MEV, this is a Spitballer that shoots a slow-moving nuke that instakills anyone in the blast radius and leaves behind a cloud of radiation. It does not carve terrain. The projectile can be shot down.
-- *new* Spitscreener (CD2)
+- *new* Spitscreener (CD2, MEV)
   - These are the modified look of normal Spitballer, have slower time dilated by -33.3% (50% if on 1p setting). They spawn as Stationary unit which shoot three Nemesis's barrier in each shot toward your team. Made to be rarer than normal Spitballer and possibly Nukeballer. They spawn even less in pack in 1p setting.
 - Big Bulk Detonator (MEV)
   - Added from MEV, this is a super rare big Bulk Detonator that has its looks modified by CD2. It has more HP and has a significantly larger death explosion and carve radius. It leaves behind hot rock upon death. It also moves x1.35 faster. It is banned on Escort, during Uplink/Fuel Cells/Black Box events. In 1p lobby it's totally banned. It has massive Electric damage weakness, normal corrosive damage weakness and Piercing damage resistance. They have massive cooldown when spawned, and can only spawn once in small 1-room mission type.
