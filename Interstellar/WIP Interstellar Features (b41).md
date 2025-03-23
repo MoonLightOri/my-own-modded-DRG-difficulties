@@ -183,7 +183,7 @@ This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but 
       + Summons clones of itself on the map with no HP bar and a very slight different on it's appearance, they inherit the Time-Dilation trait from the real Joker, but have lower HP and no resistance. The clones can instantly respawn upon being defeated and only deals 1/4 of real damage and without Poison DoT.
       + Upon killing the real Joker, all clones will instantly die.
       + Both real and clone Jokers have very low Stun Duration, high Stun Immunity and very high Freezing temperature (-400), because the clone won't be able to respawn back when they are frozen and die. 
-    * They are banned during Uplink/Refill and Drillevator.
+  - They are banned during Uplink/Refill and Drillevator.
  
 
 # Custom Waves
