@@ -1,0 +1,8 @@
+- Dreadnought Cocoon Secondary: Nitra Multiplier x1.2 -> x1.25.
+- Mactera Joker: 
+  + The real Joker has wings material apperance changed to be more visible.
+  + Stagger Duration and Cooldown of real and clone Joker increased and decreased: x0.25 -> x0.5, x3 -> x2.
+  + Clones HP decreased: x1 -> x0.5.
+- Solaris: Physical Damage Multiplier x1.5 -> 2.
+- Normal, Ice, Barrinator, Sonic and Mini Bulk enemies: Added cooldown for when they spawn by 45s. During Defensive Objective and Drillevator, cooldown is increased to 90s instead (except Sonic Bulk since it's banned). Mini-bulks spawn from Grunt Wavespawner is unaffected by the Cooldown.
+- Grunt Wavespawner: During Defensive Objective and Drillevator, chance to spawn 2-3 mini-bulks is now 0%.
