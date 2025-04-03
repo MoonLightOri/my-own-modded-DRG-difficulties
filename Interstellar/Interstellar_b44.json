@@ -22,6 +22,7 @@
   - Weak Dreadnought variants: Increasing Cooldown 30s -> 60s in normal circumstances. During Uplink/Refill, the Cooldown is increased to 120/120/105/90 in 1/2/3/4p setting instead.
   - Solaris and Joker: Increasing Cooldown 40s -> 60s.
   - Big Bulk: Removed SpawnSpread. NoSpawnWithin 15m -> 7.5m.
+  - CaretakerHelper: Now named as Glyphid Weak Bulk Detonator.
   ",
   "Resupply": {
     "Cost": {
@@ -4330,6 +4331,7 @@
     },
     "XED_CaretakerHelper": {
       "Base": "ED_Spider_ExploderTank",
+      "DisplayName": "Glyphid Weak Bulk Detonator",
       "DifficultyRating": 250,
       "HealthRaw": 1000,
       "MaxSpawnCount": 0,

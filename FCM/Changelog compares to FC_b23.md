@@ -39,4 +39,4 @@ FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce
 - Added DreadNWave and CaretakerNWave with 240s/180s interval (the beginning of dread fight will have a normal wave immediately), this is to simulate Dread and Caretaker with wave mod.
 - Grunt WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 60s. No longer spawns minibulks during Uplink/Refill/Blackbox and Drillevator.
 - Trawler WaveSpawner: Limit the amount of XED_Shark on the map to 5. ED_Shark from pool spawn doesn't count toward this. This WS is disabled in 1p setting to avoid frustration.
-- Grunt WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 100s.
+- Weak Elite WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 100s.
