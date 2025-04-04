@@ -18,3 +18,5 @@ Installation order in mint/mintcat:
 - DEA (above MEV)
 - MEV (above CD2)
 - CD2 (bottom)
+
+[Mint repository (3rd party mod integration)](https://github.com/trumank/mint)
