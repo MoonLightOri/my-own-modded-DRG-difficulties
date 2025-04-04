@@ -6,22 +6,27 @@
   - Added Tower of Babel into Stationary Pool, it's a giant Burst Turret that has longer lock on time, but shoot a very low burst of Scorching Tide projectiles on you. It has the base HP of 1500 - Vanilla Breeder (in 1p setting its HP is reduced down to 900 instead for non-Gunner class) with halved attributes of normal Burst Turret weaknesses, in 1p setting without Gunner they gain 50% weakness to fire as well. It will not die to being on fire, and is freezeable at -150 temp and take x3 damage but won't stop any action once frozen. Tower of Babel is banned on Escort.
   * General:
   - Grunt and Weak Elite WaveSpawner: When a player is downed, pause the wavespawner timer (This allow for some recovery).
-  - Escort: At 1p Setting, Dotty resistance during Refill is increased by 40% (Similar to Heartstone phase)
+  - Escort: At 1p Setting, Dotty resistance during Refill and Heartstone stop but button not pressed are increased by 40% (Similar to Heartstone phase)
   - Salvage: At 1p Setting, Bubble Size is increased by 50%, Leave Penalty is decreased from 0.5 -> 0.4 for other classes than Scout. For Scout, Leave Penalty is now completely halted (No more progress draining when leaving the bubble).
+  - Banned Blood Sugar, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak warnings.
   * Enemy Adjustments:
   - Readjust SpawnAmountModifier on Barrager and Septic Barrager to spawn less since we have new stationary, Septic Barrager now has reduced MaxSpawnCount as well.
-  - All barrager type enemies in 1p setting has SpawnAmountModifier reduced to 0.001 (Minimum spawn)
-  - Septic Barrager: AttackDamageMultiplier 0.25 -> 0.6. (Impact damage significantly increased)
-  - Wrathbane: AttackDamageMultiplier 0.25 -> 0.4.
+  - All barrager type enemies in 1-2p setting has SpawnAmountModifier reduced to 0.001 (Minimum spawn)
+  - Septic Barrager: AttackDamageMultiplier 0.25 -> 0.5. (Impact damage significantly increased).
+  - Wrathbane: AttackDamageMultiplier 0.25 -> 0.35.
   - Barrinator: Unbanned in Escort. Will apply cooldown when spawning like other bulk type enemies.
-  - Escort: Bulk type enemies increased cooldown from 45 to 60, and 90 to 120 during Escort Heartstone event and newly added Escort refill phase. Bulk type enemies also have reduced MaxSpawnCount to 0 on Escort refill phase. This excludes Sonic and Big bulk since they are banned in Escort.
+  - Escort: 
+    + Bulk type enemies increased cooldown from 45 to 60, and 90 to 120 during Escort Heartstone event and newly added Escort refill phase. Bulk type enemies also have reduced MaxSpawnCount to 0 on Escort refill phase. This excludes Sonic and Big bulk since they are banned in Escort. At 1p setting all other bulks (except for Minibulks) are banned.
+    + Bomber type enemies: At 1p setting, no longer spawns during Encounter.
+  - Grabber type enemies: At 1p setting, apply 120s Cooldown after they spawn. No longer spawns during Encounter.
+  - Architect: During Drillevator and Escort on vulnerable Dotty phases, they are banned from spawning (mostly they will shoot platform but unable to spawn, waste of Difficulty Point)
   - Youngnought (DEA update): Eggshot attack now spawns a few Streakers, they are pink Grunt which have the base HP of a Slasher, no armor and Swarmer moveset (They can jump and move very fast). They also have normal attribute of weaknesses and temperature of a Slasher.
   - Plague Bomber and Glyphid Dreadnought: Eggshot attack now spawns a bunch of Glyphid Rat. Plague Bomber DifficultyRating 110 -> 125 due to the buff.
   - Septic: Promotion chance into Ice Spreader is now 17.5% -> 20%.
   - Weak Twin variants: Increasing Cooldown 20s -> 45s.
   - Weak Dreadnought variants: Increasing Cooldown 30s -> 60s in normal circumstances. During Uplink/Refill, the Cooldown is increased to 120/120/105/90 in 1/2/3/4p setting instead.
   - Solaris and Joker: Increasing Cooldown 40s -> 60s.
-  - Big Bulk: Removed SpawnSpread. NoSpawnWithin 15m -> 7.5m.
+  - Big Bulk: Removed SpawnSpread. NoSpawnWithin 15m -> 7.5m. DifficultyRating 400 -> 450 to match back FC's difficulty point.
   - CaretakerHelper: Now named as Glyphid Weak Bulk Detonator.
   ",
   "Resupply": {
@@ -61,6 +66,14 @@
       "OBJ_DD_DeepScan": 1.1,
       "OBJ_DD_MorkiteWell": 1.1
     }
+  },
+  "Warnings": {
+    "Banned": [
+      "MMUT_BloodSugar",
+      "WRN_BulletHell",
+      "WRN_Plague",
+      "WRN_RockInfestation"
+    ]
   },
   "Dwarves": {
     "Test": true,
@@ -969,9 +982,29 @@
           },
           ">=": 1,
           "Then": [],
-          "Else": [
-            "ED_Spider_RapidShooter_Platform"
-          ]
+          "Else": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringDrillevator"
+            },
+            "Then": [],
+            "Else": {
+              "Mutate": "ByMissionType",
+              "Default": [
+                "ED_Spider_RapidShooter_Platform"
+              ],
+              "Escort": {
+                "Mutate": "ByEscortPhase",
+                "Default": [],
+                "InGarage": [
+                  "ED_Spider_RapidShooter_Platform"
+                ],
+                "Finished": [
+                  "ED_Spider_RapidShooter_Platform"
+                ]
+              }
+            }
+          }
         },
         {
           "Mutate": "If",
@@ -1066,9 +1099,21 @@
               "FinalEventD": 120
             },
             "ValueDuringCooldown": [],
-            "DefaultValue": [
-              "ED_Spider_ExploderTank_frozen"
-            ]
+            "DefaultValue": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                {
+                  "Mutate": "ByMissionType",
+                  "Default": [
+                    "ED_Spider_ExploderTank_frozen"
+                  ],
+                  "Escort": []
+                },
+                [
+                  "ED_Spider_ExploderTank_frozen"
+                ]
+              ]
+            }
           }
         },
         {
@@ -1255,12 +1300,31 @@
           "Condition": {
             "Mutate": "DuringEncounters"
           },
-          "Then": [
-            "ED_Grabber_Enc"
-          ],
-          "Else": [
-            "ED_Grabber_Wave"
-          ]
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [],
+              [
+                "ED_Grabber_Enc"
+              ]
+            ]
+          },
+          "Else":         {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_Grabber",
+                  "ED_Grabber_Deliverer"
+                ],
+                "CooldownTime": 120,
+                "ValueDuringCooldown": [],
+                "DefaultValue": ["ED_Grabber_Wave"]
+              },
+              []
+            ]
+          }
         },
         {
           "Mutate": "EnemyCooldown",
@@ -1325,9 +1389,21 @@
                 "FinalEventD": 120
               },
               "ValueDuringCooldown": [],
-              "DefaultValue": [
-                "ED_Plantonator_Barrinator"
-              ]
+              "DefaultValue": {
+                "Mutate": "ByPlayerCount",
+                "Values": [
+                  {
+                    "Mutate": "ByMissionType",
+                    "Default": [
+                      "ED_Plantonator_Barrinator"
+                    ],
+                    "Escort": []
+                  },
+                  [
+                    "ED_Plantonator_Barrinator"
+                  ]
+                ]
+              }
           }
         }
       ],
@@ -1435,7 +1511,19 @@
             "ValueDuringCooldown": [
               "ED_Spider_ExploderTank"
             ],
-            "DefaultValue": []
+            "DefaultValue": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                {
+                  "Mutate": "ByMissionType",
+                  "Default": [],
+                  "Escort": [
+                    "ED_Spider_ExploderTank"
+                  ]
+                },
+                []
+              ]
+            }
           }
         }
       ]
@@ -1593,7 +1681,7 @@
         "Mutate": "ByMissionType"
       },
       "Projectile": "PRJ_Spider_Lobber_Projectile",
-      "AttackDamageMultiplier": 0.6,
+      "AttackDamageMultiplier": 0.5,
       "SpawnAmountModifier": [
         0.001,
         0.001,
@@ -1766,6 +1854,7 @@
             "Default": true,
             "Egg,x,2": false,
             "PE": false,
+            "Escort": false,
             "Refinery": false,
             "DeepScan": false
           },
@@ -1795,6 +1884,7 @@
             "Default": true,
             "Egg,x,2": false,
             "PE": false,
+            "Escort": false,
             "Refinery": false,
             "DeepScan": false
           },
@@ -1824,6 +1914,7 @@
             "Default": true,
             "Egg,x,2": false,
             "PE": false,
+            "Escort": false,
             "Refinery": false,
             "DeepScan": false
           },
@@ -3515,7 +3606,7 @@
       "Base": "ED_Spider_ExploderTank_big",
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": false,
-      "DifficultyRating": 400,
+      "DifficultyRating": 450,
       "NoSpawnWithin": 750,
       "DisplayName": "Glyphid Big Bulk Detonator",
       "IsBossFight": true,
@@ -4947,6 +5038,7 @@
         {
           "Mutate": "ByEscortPhase",
           "Default": 0.75,
+          "Stationary": 0.85,
           "WaitingForFuel": 0.85,
           "FinalEventA": 0.85,
           "FinalEventB": 0.85,
