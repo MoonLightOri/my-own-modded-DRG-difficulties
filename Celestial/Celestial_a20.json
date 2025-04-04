@@ -16,6 +16,8 @@
   - Plague Bomber and Glyphid Dreadnought: Eggshot attack now spawns a bunch of Glyphid Rat. Plague Bomber DifficultyRating 110 -> 125 due to the buff.
   - Weak Twin variants: Increasing Cooldown 40s -> 45s.
   - CaretakerHelper: Now named as Glyphid Weak Bulk Detonator.
+  * Misc change:
+  - Praetorian won't promote into Oppressor in Encounters anymore.
   ",
   "Resupply": {
     "Cost": {
@@ -606,6 +608,18 @@
     },
     "EnemyPool": {
       "Add": [
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringEncounters"
+          },
+          "Then": [
+            "ED_Spider_Tank_Enc"
+          ],
+          "Else": [
+            "ED_Spider_Tank_Wave"
+          ]
+        },
         "ED_Sentinel",
         {
           "Mutate": "ByPlayerCount",
@@ -920,6 +934,7 @@
         "ED_Ninja"
       ],
       "Remove": [
+        "ED_Spider_Tank",
         "ED_Bomber_Ice",
         "ED_Spider_Tank_Ice",
         {
@@ -2608,9 +2623,23 @@
       "Rarity": 3.5,
       "SpawnAmountModifier": 0.85
     },
-    "ED_Spider_Tank": {
-      "CanBeUsedForConstantPressure": true,
+    "ED_Spider_Tank_Enc": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": true,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 4,
+      "SpawnAmountModifier": 1,
+      "VeteranClasses": [
+        "ED_Spider_Tank_Enc"
+      ]
+    },
+    "ED_Spider_Tank_Wave": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
       "DifficultyRating": 10,
       "MaxSpawnCount": 2,
       "MinSpawnCount": 1,

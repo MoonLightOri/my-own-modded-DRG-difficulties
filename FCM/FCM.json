@@ -1,6 +1,6 @@
 {
     "Name": "FCM",
-    "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. Changelog in PDRG thread.",
+    "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. Changelogs in PDRG thread. v1.01: Emergency fix an issue where Praetorians can promote into Oppressors during Encounters.",
     "Dwarves": {
       "RegenHealthPerSecond": 5.8,
       "RegenDelayAfterDamage": 6,
@@ -379,6 +379,18 @@
       },
       "EnemyPool": {
         "Add": [
+          {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringEncounters"
+            },
+            "Then": [
+              "ED_Spider_Tank_Enc"
+            ],
+            "Else": [
+              "ED_Spider_Tank_Wave"
+            ]
+          },
           "ED_Sentinel",
           "ED_Bomber_Explosive",
           "ED_JellyBreeder_Swarm",
@@ -532,6 +544,7 @@
           "ED_Spider_Shooter_Bouncer"
         ],
         "Remove": [
+          "ED_Spider_Tank",
           "ED_Shark",
           {
             "Mutate": "EnemyCooldown",
@@ -1362,9 +1375,23 @@
         "Rarity": 3.5,
         "SpawnAmountModifier": 1
       },
-      "ED_Spider_Tank": {
-        "CanBeUsedForConstantPressure": true,
+      "ED_Spider_Tank_Enc": {
+        "Base": "ED_Spider_Tank",
+        "CanBeUsedForConstantPressure": false,
         "CanBeUsedInEncounters": true,
+        "DifficultyRating": 10,
+        "MaxSpawnCount": 2,
+        "MinSpawnCount": 1,
+        "Rarity": 4,
+        "SpawnAmountModifier": 1,
+        "VeteranClasses": [
+          "ED_Spider_Tank_Enc"
+        ]
+      },
+      "ED_Spider_Tank_Wave": {
+        "Base": "ED_Spider_Tank",
+        "CanBeUsedForConstantPressure": true,
+        "CanBeUsedInEncounters": false,
         "DifficultyRating": 10,
         "MaxSpawnCount": 2,
         "MinSpawnCount": 1,

@@ -28,6 +28,8 @@
   - Solaris and Joker: Increasing Cooldown 40s -> 60s.
   - Big Bulk: Removed SpawnSpread. NoSpawnWithin 15m -> 7.5m. DifficultyRating 400 -> 450 to match back FC's difficulty point.
   - CaretakerHelper: Now named as Glyphid Weak Bulk Detonator.
+  * Misc change:
+  - Praetorian won't promote into Oppressor in Encounters anymore.
   ",
   "Resupply": {
     "Cost": {
@@ -667,6 +669,18 @@
     },
     "EnemyPool": {
       "Add": [
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringEncounters"
+          },
+          "Then": [
+            "ED_Spider_Tank_Enc"
+          ],
+          "Else": [
+            "ED_Spider_Tank_Wave"
+          ]
+        },
         "ED_Sentinel",
         {
           "Mutate": "ByPlayerCount",
@@ -1408,6 +1422,7 @@
         }
       ],
       "Remove": [
+        "ED_Spider_Tank",
         "ED_Grabber",
         "ED_Shark",
         "ED_Bomber_Ice",
@@ -4141,9 +4156,23 @@
       "Rarity": 3.5,
       "SpawnAmountModifier": 1
     },
-    "ED_Spider_Tank": {
-      "CanBeUsedForConstantPressure": true,
+    "ED_Spider_Tank_Enc": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": true,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 4,
+      "SpawnAmountModifier": 1,
+      "VeteranClasses": [
+        "ED_Spider_Tank_Enc"
+      ]
+    },
+    "ED_Spider_Tank_Wave": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
       "DifficultyRating": 10,
       "MaxSpawnCount": 2,
       "MinSpawnCount": 1,

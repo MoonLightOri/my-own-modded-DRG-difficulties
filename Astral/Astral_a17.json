@@ -7,6 +7,8 @@
   - Escort: 
     + At 1p setting all bulks are banned, Dotty resistance increase on Refill and Heartstone now includes when Dotty stops at Heartstone but not pressed the button, resistance value increase 25% -> 30%.
     + Bomber type enemies: At 1p setting, no longer spawns during Encounter.
+  * Misc change:
+  - Praetorian won't promote into Oppressor in Encounters anymore.
   ",
   "Resupply": {
     "Cost": {
@@ -309,6 +311,18 @@
     },
     "EnemyPool": {
       "Add": [
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringEncounters"
+          },
+          "Then": [
+            "ED_Spider_Tank_Enc"
+          ],
+          "Else": [
+            "ED_Spider_Tank_Wave"
+          ]
+        },
         "ED_Sentinel",
         {
           "Mutate": "ByPlayerCount",
@@ -458,6 +472,7 @@
         }
       ],
       "Remove": [
+        "ED_Spider_Tank",
         "ED_Bomber_Ice",
         "ED_Spider_Tank_Ice",
         {
@@ -1317,9 +1332,23 @@
       "Rarity": 5,
       "SpawnAmountModifier": 1
     },
-    "ED_Spider_Tank": {
-      "CanBeUsedForConstantPressure": true,
+    "ED_Spider_Tank_Enc": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": true,
+      "DifficultyRating": 12,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 5,
+      "SpawnAmountModifier": 1,
+      "VeteranClasses": [
+        "ED_Spider_Tank_Enc"
+      ]
+    },
+    "ED_Spider_Tank_Wave": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
       "DifficultyRating": 12,
       "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
