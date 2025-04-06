@@ -2,6 +2,7 @@
   "Name": "Interstellar_b45",
   "Description": "REQUIRES CD2 beta update 14, MEV v5.4 AND DEA b00.3.3 (updated). Recommended VEA. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies.
     Beta 45:
+  - Removed Septic Barrager out of the game, revert normal barrager SpawnAmountModifier 0.65 -> 1. Do not ask why this thing is removed, ask seu for info.
   - Grunt: SpawnAmountModifier 0.65 -> 0.7.
   - Grunt WaveSpawner: 
     + Grunt & Spitter weight chance: 57% -> 67%.
@@ -9,7 +10,7 @@
     + Minibulk weight chance: 17% -> 12%.
   - Grabber: Fixed an issue where Grabber in wave not spawning at 2p+. At 1p, MaxSpawnCount 1 -> 0.
   - Ice Detonator: Revert the nerf about Explosion range (It was -33.33% explosion range back then).
-  - Septic Barrager: AttackDamageMultiplier 0.5 -> 0.8.
+  - Ice Septic: 20% -> 25% chance to promote to this time.
   ",
   "Resupply": {
     "Cost": {
@@ -559,8 +560,8 @@
     "StationaryEnemyDiversity": [
       {
         "weight": 1,
-        "min": 16,
-        "max": 16
+        "min": 15,
+        "max": 15
       }
     ],
     "VeteranNormal": [
@@ -1536,7 +1537,6 @@
           ],
           "Escort": []
         },
-        "ED_BarrageInfector_Septic",
         "ED_ShootingPlant_Shield",
         "ED_Sniper_Turret_Slow_Rocket",
         "ED_BarrageInfector_Nuker",
@@ -1623,64 +1623,7 @@
       "SpawnAmountModifier": [
         0.001,
         0.001,
-        0.65
-      ]
-    },
-    "ED_BarrageInfector_Septic": {
-      "Base": "ED_BarrageInfector",
-      "DisplayName": "Septic Infector",
-      "CanBeUsedForConstantPressure": false,
-      "CanBeUsedInEncounters": true,
-      "HealthMultiplier": [
-        {
-          "Mutate": "IfFloat",
-          "Value": {
-            "Mutate": "GunnerCount"
-          },
-          ">=": 1,
-          "Then": 1,
-          "Else": 0.666
-        },
         1
-      ],
-      "Resistances": {
-        "FireDamageMultiplier": [
-          {
-            "Mutate": "IfFloat",
-            "Value": {
-              "Mutate": "GunnerCount"
-            },
-            ">=": 1,
-            "Then": 1,
-            "Else": 2
-          },
-          1
-        ]
-      },
-      "MaxSpawnCount": [
-        0,
-        0,
-        2
-      ],
-      "MinSpawnCount": 1,
-      "Materials": [
-        "M_Engineer_PJ_ScaleBrigade",
-        "",
-        "",
-        "M_Spider_Lobber_GlowBubbles"
-      ],
-      "Rarity": 5,
-      "DifficultyRating": {
-        "Default": 250,
-        "Escort": 500,
-        "Mutate": "ByMissionType"
-      },
-      "Projectile": "PRJ_Spider_Lobber_Projectile",
-      "AttackDamageMultiplier": 0.8,
-      "SpawnAmountModifier": [
-        0.001,
-        0.001,
-        0.35
       ]
     },
     "ED_BarrageInfector_Nuker": {
@@ -3740,7 +3683,7 @@
       "Rarity": 5.25,
       "SpawnAmountModifier": 1,
       "CustomVeterans": {
-        "ED_Spider_Lobber": 0.825,
+        "ED_Spider_Lobber": 0.75,
         "ED_Spider_Lobber_frozen": {
           "Mutate": "IfFloat",
           "Value": {
@@ -3757,7 +3700,7 @@
             ]
           },
           "Then": 0,
-          "Else": 0.2
+          "Else": 0.25
         }
       }
     },
