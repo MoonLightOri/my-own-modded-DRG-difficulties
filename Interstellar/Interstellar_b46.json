@@ -14,7 +14,7 @@
   - Barrinator: added Spawnspread of 7.5m.
   - Jelly Swarmer: added Spawnspread of 10/5/0m in 1/2/3p+ setting.
   - Normal & Ice Bulk: NoSpawnWithin in Escort is reduced to 3m.
-  - Ice Bulk: AttackDamageMultiplier x1 -> x0.65. Still enough damage to fully freeze you. Spawnspread is reduced 16000 -> 1200 (12m).
+  - Ice Bulk: Spawnspread is reduced 16000 -> 1200 (12m).
   - Sonic & Big Bulk: Spawnspread 0 -> 500 (5m).
   - Carrier: HealthMultiplier x0.35 -> x0.5.
   ",
@@ -3477,7 +3477,6 @@
     },
     "ED_Spider_ExploderTank_frozen": {
       "DifficultyRating": 100,
-      "AttackDamageMultiplier": 0.65,
       "IsBossFight": false,
       "DisplayName": "Glyphid Ice Detonator",
       "Rarity": 6.5,
