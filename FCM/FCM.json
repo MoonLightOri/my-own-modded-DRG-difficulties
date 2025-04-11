@@ -1,6 +1,6 @@
 {
     "Name": "FCM",
-    "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. Changelogs in PDRG thread. v1.01: Emergency fix an issue where Praetorians can promote into Oppressors during Encounters.",
+    "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. Changelogs in PDRG thread. v1.02: During Caretaker Normal Wave: Interval 180 -> 140. During Dreadnought Normal Wave: Interval 240 -> 180. Normal Bulk: NoSpawnWithin in Escort is reduced to 3m. Turbonator: added Spawnread of 7.5m. Big Bulk: added Spawnspread of 5m.",
     "Dwarves": {
       "RegenHealthPerSecond": 5.8,
       "RegenDelayAfterDamage": 6,
@@ -960,6 +960,7 @@
         "CanBeUsedForConstantPressure": true,
         "CanBeUsedInEncounters": false,
         "DifficultyRating": 200,
+        "SpawnSpread": 750,
         "NoSpawnWithin": 750,
         "DisplayName": "Glyphid Turbonator",
         "IsBossFight": true,
@@ -1142,19 +1143,24 @@
         },
         "Rarity": 6,
         "SpawnAmountModifier": 1,
+        "NoSpawnWithin": {
+          "Default": 750,
+          "Escort": 300,
+          "Mutate": "ByMissionType"
+        },
         "SpawnSpread": {
           "Default": 16000,
           "Escort": 0,
           "Mutate": "ByMissionType"
         },
-        "TimeDilation": 1,
-        "NoSpawnWithin": 750
+        "TimeDilation": 1
       },
       "ED_Spider_ExploderTank_kiwami": {
         "Base": "ED_Spider_ExploderTank_big",
         "CanBeUsedForConstantPressure": true,
         "CanBeUsedInEncounters": false,
         "DifficultyRating": 450,
+        "SpawnSpread": 500,
         "NoSpawnWithin": 750,
         "DisplayName": "Glyphid Big Bulk Detonator",
         "IsBossFight": true,
@@ -1710,7 +1716,7 @@
         "Enabled": {
           "Mutate": "DuringDread"
         },
-        "Interval": 240,
+        "Interval": 180,
         "SpawnOnEnable": true,
         "Difficulty": 800,
         "Distance": 2000,
@@ -1728,7 +1734,7 @@
           "Phase3Vent": true,
           "Phase3Eye": true
         },
-        "Interval": 180,
+        "Interval": 140,
         "Difficulty": 800,
         "Distance": 2000,
         "Locations": 1
