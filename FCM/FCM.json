@@ -1,6 +1,6 @@
 {
     "Name": "FCM",
-    "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. Changelogs in PDRG thread. v1.02: During Caretaker Normal Wave: Interval 180 -> 140. During Dreadnought Normal Wave: Interval 240 -> 180. Normal Bulk: NoSpawnWithin in Escort is reduced to 3m. Turbonator: added Spawnread of 7.5m. Big Bulk: added Spawnspread of 5m.",
+    "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. Changelogs in PDRG thread. v1.03: Banned Low Gravity. Fixed issue where ECM isn't applied correctly in Salvage. Elite Slasher used HealthMultiplier from Interstellar now, so they are weaker. Stationary Pool Count is now 12, correctly counted.",
     "Dwarves": {
       "RegenHealthPerSecond": 5.8,
       "RegenDelayAfterDamage": 6,
@@ -58,6 +58,7 @@
     "Warnings": {
       "Banned": [
         "MMUT_BloodSugar",
+        "MMUT_LowGravity",
         "WRN_BulletHell",
         "WRN_Plague",
         "WRN_RockInfestation"
@@ -174,6 +175,11 @@
             },
             "Then": 1,
             "Else": {
+              "Mutate": "If",
+              "Condition": {
+                "Mutate": "DuringExtraction"
+              },
+              "Then": {
                 "Mutate": "Add",
                 "A": {
                   "Mutate": "Multiply",
@@ -183,7 +189,9 @@
                   "B": 0.02
                 },
                 "B": 0.2
-              }
+              },
+              "Else": 1
+            }
           },
           "Escort": {
             "Mutate": "If",
@@ -334,8 +342,8 @@
       "StationaryEnemyDiversity": [
         {
           "weight": 1,
-          "min": 11,
-          "max": 11
+          "min": 12,
+          "max": 12
         }
       ],
       "VeteranNormal": [
@@ -374,8 +382,8 @@
         "Max": 7
       },
       "StationaryEnemyCount": {
-        "Min": 11,
-        "Max": 11
+        "Min": 12,
+        "Max": 12
       },
       "EnemyPool": {
         "Add": [
@@ -1245,7 +1253,7 @@
         "MaxSpawnCount": 1,
         "MinSpawnCount": 1,
         "Rarity": 5.125,
-        "HealthMultiplier": 0.768,
+        "HealthMultiplier": 0.3125,
         "Scale": 1.1,
         "Temperature": {
           "BurnTemperature": 12,
@@ -1666,7 +1674,7 @@
         "MaxSpawnCount": 1,
         "MinSpawnCount": 1,
         "Rarity": 5.125,
-        "HealthMultiplier": 0.768,
+        "HealthMultiplier": 0.3125,
         "Temperature": {
           "BurnTemperature": 12,
           "DouseFireTemperature": 2,
