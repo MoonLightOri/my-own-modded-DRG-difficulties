@@ -1,6 +1,6 @@
 {
     "Name": "FCM",
-    "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. Changelogs in PDRG thread. v1.03: Banned Low Gravity. Fixed issue where ECM isn't applied correctly in Salvage. Elite Slasher used HealthMultiplier from Interstellar now, so they are weaker. Stationary Pool Count is now 12, correctly counted.",
+    "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. Changelogs in PDRG thread. v1.04: Added nitra multiplier support for Sabotage 2 Complexity (x1.2), Elimination 3 Dreads (x1.1). Increase nitra multiplier support for Sabotage 1 Complexity to x1.55 and Elimination 2 Dreads to x1.35.",
     "Dwarves": {
       "RegenHealthPerSecond": 5.8,
       "RegenDelayAfterDamage": 6,
@@ -42,8 +42,10 @@
         "Default": 1,
         "Mining,2,1": 1.2,
         "DeepScan,1,2": 1.2,
-        "Sabotage,2,1": 1.35,
-        "Elimination,2,2": 1.2
+        "Sabotage,2,1": 1.55,
+        "Sabotage,2,2": 1.2,
+        "Elimination,2,2": 1.35,
+        "Elimination,3,3": 1.1
       },
       "B": {
         "Mutate": "BySecondary",
