@@ -1,7 +1,7 @@
 {
   "Name": "Penumbra",
   "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. Penumbra (Previously named FCM), is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. WARNING: THIS IS A SLIGHTLY TONED DOWN VERSION OF FC_B23, IT DOES NOT OFFER SIMILAR EXTREME HIGH PACING EXPERIENCE AS FC_B23.
-    v1.05
+    v1.05b (fix out typos on nitra number part)
   - Renamed FCM into Penumbra due to confusion of similar difficulty name.
   
   - Reworked NitraMultiplier for Mission types with values:
@@ -74,12 +74,11 @@
     "A": {
       "Mutate": "ByDNA",
       "Default": 1,
-      "Mining,2,1": 1.2,
+      "Mining,2,1": 1.15,
       "DeepScan,1,2": 1.2,
-      "Sabotage,2,1": 1.55,
-      "Sabotage,2,2": 1.2,
-      "Elimination,2,2": 1.35,
-      "Elimination,3,3": 1.1
+      "Sabotage,2,1": 1.35,
+      "Sabotage,2,2": 1.1,
+      "Elimination,2,2": 1.2
     },
     "B": {
       "Mutate": "BySecondary",
@@ -89,6 +88,7 @@
         "Default": 0,
         "Mining,1,1": 0.3,
         "Mining,2,1": 0.25,
+        "Mining,2,2": 0.25,
         "Egg,1,1": 0.3,
         "Egg,2,2": 0.18,
         "PE,2,3": 0.166,
@@ -107,6 +107,7 @@
         "Default": 0,
         "Mining,1,1": 0.3,
         "Mining,2,1": 0.25,
+        "Mining,2,2": 0.25,
         "Egg,1,1": 0.3,
         "Egg,2,2": 0.18,
         "PE,2,3": 0.166,
@@ -125,6 +126,7 @@
         "Default": 0,
         "Mining,1,1": 0.3,
         "Mining,2,1": 0.25,
+        "Mining,2,2": 0.25,
         "Egg,1,1": 0.3,
         "Egg,2,2": 0.18,
         "PE,2,3": 0.166,
@@ -143,6 +145,7 @@
         "Default": 0,
         "Mining,1,1": 0.12,
         "Mining,2,1": 0.1,
+        "Mining,2,2": 0.1,
         "Egg,1,1": 0.12,
         "Egg,2,2": 0.1075,
         "PE,2,3": 0.107,
@@ -161,6 +164,7 @@
         "Default": 0,
         "Mining,1,1": 0.12,
         "Mining,2,1": 0.1,
+        "Mining,2,2": 0.1,
         "Egg,1,1": 0.12,
         "Egg,2,2": 0.1075,
         "PE,2,3": 0.107,
