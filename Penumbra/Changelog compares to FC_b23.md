@@ -1,10 +1,20 @@
-FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.04. Changelog compares to FC is below:
+Penumbra, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.05. Changelog compares to FC is below:
 
 # General
 - Banned Blood Sugar, Low Gravity, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak.
 - During the time of Uplink/Refuel/Blackbox objectives, penalty of draining the progress bar is reduced by 30%, and Mission Control will no longer shout when no player is at the bubble zone.
-- Added NitraMultiplier for Mission types with values: +55% on Sabotage 1 Complexity, +35% on Elimination 2 Dreads, +20% on Mining 225 Morkite, Deep Scan 3 Crystals, Sabotage 2 Complexity and +10% on Elimination 3 Dreads.
-- Added NitraMultiplier for Deep Dive Secondaries with values: +25% on Eggs and Dreadnought Cocoon, +20% on Black Box, +10% on Deep Scan and Morkite Well, unchanged in Mini-Mules and Morkite. This value is also compatible with current Main objective if they have nitra multiplier support, calculated multiplicatively.
+- Added NitraMultiplier for Mission types with values:
+  > Mission type (Complexity:Length): Value
+    + Mining    (1:2): x1.15 (~2/3 a resupply, ~40N)
+    + Elim      (2:2): x1.2 (enough for 1 more resup, ~60N)
+    + Deep Scan (2:1): x1.2 (enough for 1 more resup, ~60N)
+    + Sabotage  (1:2): x1.35 (slightly over 2 resups, > 120N)
+    + Sabotage  (2:2): x1.1 (just enough for 1 more resup, ~60N)
+- Added NitraMultiplier for Deep Dive Secondaries with approximate values: 
+    + 1 Extra resupply (~60N) on Eggs, Dreadnought Cocoon and Black Box.
+    + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well
+    + Unchanged in Mini-Mules and Morkite.
+This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
 - Sabotage mission type: -50% Rival Turret spawn amount.
 - EnemyWaveInterval: 1% chance to instantly spawn an announced wave is now restricted to during hotdrop of Refinery mission type, and it will delay 7s to spawn an announced wave instead.
 - EnemyNormalWaveInterval: Removed 10% chance to instantly spawn a normal wave.
@@ -36,7 +46,8 @@ FCM, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce
 
 # Custom Waves
 - Removed Canary WaveSpawner.
-- Added DreadNWave and CaretakerNWave with 180s/140s interval (the beginning of dread fight will have a normal wave immediately), this is to simulate Dread and Caretaker with wave mod.
+- Added DreadNWave and CaretakerNWave with normal wave interval and difficulty point (the beginning of dread fight will have a normal wave immediately, but they will have 50s more interval), this is to simulate Dread and Caretaker with wave mod.
+- During a Caretaker fight, a weaker Bulk known as "CaretakerHelper" will spawn in to allow the team to speed up killing caretaker faster. Only 1 CaretakerHelper can exist at a given time, once no more CaretakerHelper is in the map but Caretaker fight is still going, they will respawn after 5s. CaretakerHelper has only 1000 Base HP (4000 HP normal bulk), with only x1.2 movement speed instead (normal bulk x1.5), and the carve radius is the same as minibulk. Its look is changed via CD2.
 - Grunt WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 60s. No longer spawns minibulks during Uplink/Refill/Blackbox and Drillevator.
 - Trawler WaveSpawner: Limit the amount of XED_Shark on the map to 5. ED_Shark from pool spawn doesn't count toward this. This WS is disabled in 1p setting to avoid frustration.
 - Weak Elite WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 100s.
