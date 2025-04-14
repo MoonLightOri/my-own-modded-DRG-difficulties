@@ -41,14 +41,11 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
 - Most caves will have at least one of every Stationary type if possible.
 - Veteran chance has been significantly increased; this means more Guards, Slashers, Brundles, Trijaws, and Oppressors. Some of the enemies can also be promoted into new type of enemies, with own's custom veterans chance.
 - Many new enemies have been added in the form of enemies that normally don't spawn in waves and entirely new enemies from CD2, MEV and DEA.
-- Some existing enemies have been modified (E.G: Some enemies having lower freezing temperatures like Breeders, Bombers and Patrol Bot... - Having some favor for Cryo comp. Elite enemies have lower burn and freeze temperature,...).
+- Some existing enemies have been modified (E.G: Some enemies having lower freezing temperatures like Breeders, Bombers and Patrol Bot. Elite enemies have lower burn and freeze temperature,... - Having some favor for Cryo comp.).
 - Custom waves of certain enemies spawn at set intervals or conditions.
 - Difficulty adjusted across mission types (E.G: PE gets harder, Escort heartstone phase gets easier).
 - During Defense, reduce Progress Bar Penalty by 30%. At 1p, further reduce Progress Bar Penalty to 60%, and 100% if the player is Scout (No more draining). Also increase Bubble radius by 50% at 1p.
 - Rival Turrets spawn count in Encounters sabotage mission type is reduced by 50%.
-- Disabled player headbounces.
-- Breeder type enemies have lowered Freeze temp.
-- Patrol Bot enemies have lower freeze temp. Rival Turrets spawn count in Encounters sabotage mission type is reduced by 50%.
 - Lower player scaling will have some change (both Enemies and Objectives) to make playing easier. (E.G: Doretta during Refill and Heartstone phase gains slight increased resistance. No Bulk spawns during Defense. Dangerous run ending at 1p also gets reduced specific values,...)
 - Added NitraMultiplier for Deep Dive Secondaries with approximate values: 
   + 1 Extra resupply (~50N) on Eggs, Dreadnought Cocoon and Black Box.
@@ -56,6 +53,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + Unchanged in Mini-Mules and Morkite.
 - Disabled player headbounces.
 - Banned Blood Sugar, Low Gravity, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak warnings.
+
 # Enemies
 - Swarmer
   + They are now stunnable.
@@ -66,7 +64,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + They have Time Dilation +100%.
   + However, if a Leech from high up grabs you and it's killed, you will not die of fall damage.
 - Fire Bomber
-  + This is an unused enemy in the game files. It behaves like a normal Goo Bomber, except it drops bomblets that deal extreme damage to players.
+  + They are an unused enemy in the game files. They behave like a normal Goo Bomber, except they drop bomblets that deal extreme damage to players.
 - Acid Spitter
   + Their Direct hit damage -20%, and have slight material change.
 - Breeder
@@ -84,7 +82,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
 - Exploder
   + They move +50% faster.
 - Grabber
-  + They spawn spread out from waves. There is 30% chance to promote into Deliverer instead.
+  + They spawn spread out from waves. There is 50% chance to promote into Deliverer instead.
   + They move +50% faster.
 - Deliverer (CD2)
   + They have Base HP +20%, Time Dilation -30% and Fear immunity.
@@ -113,10 +111,10 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + They are replaced with their Beta version. 
   + Set your Effects in the in-game options to High to see them while they are cloaked. If you have Low Graphic Stalker Fix mod then you can ignore this line.
 - Naedocyte Seeder (CD2)
-  + It's a rarer Breeder that only spawns in a wave.
+  + It's a rarer Breeder that only spawns in a wave. Their materials are changed also.
   + Base HP -50%, move -66.66% slower.
-  + They now instead spawn smaller and different look Sentinels that inherit every trait of normal Sentinel, with some extra stats: Fire damage resistance +25%, Base HP -40%.
-  + In 1p or Deep Scan mission type, they bleed out (lose HP) after 1 minute of being in the map.
+  + They now instead spawn smaller and different look Sentinels that inherit every trait of normal Sentinel, with some extra stats: Fire damage resistance +25%, Base HP -40%, and Damage Dealt -25%.
+  + In 1p or Deep Scan mission type, Seeder bleed out (lose HP) after 1 minute of being in the map.
 - Elite Guard, Elite Grunt Slasher, Elite Septic Spreader and Elite Ratter (CD2 - DEA)
   They spawn globally independent of Elite Threat, and mostly spawn via custom Wave Spawner. Individual changes are below: 
   - All Elite enemies except Guard have material change (to tell them if they are weak).
@@ -127,14 +125,16 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   - Elite Septic: Base HP x0.1244, Time Dilation +30% and Damage Dealt -20%.
   - Elite Guard: Base HP x0.7163, ONLY SPAWN IN WAVES.
 - Glyphid Rat: 
-  + They are bigger sized Swarmer that won't die when ignited/frozen. Their material is changed also.
+  + They are bigger sized Swarmer that won't die when ignited/frozen. Their materials are changed also.
   + Base HP 12 -> 20, move +20% faster and Damage Dealt +10% than normal Swarmer.
   + There is a variant that spawn only on swarmer tunnel, they are named as Glyphid Sewer Rat, have Base HP 12 -> 70 instead and blacker material.
 - Mactera Plague Bomber (DEA)
-  + These are Goo Bomber variant that have Base HP -25%. Their material is changed also.
-  + Normal attack projectile is now replaced with Glyphid Dreadnought's Egg spawn projectile that spawns a bunch of Glyphid Rats and apply Pheromone STE.
+  + These are Goo Bomber variant that have Base HP -25%. Their materials are changed also.
+  + Normal attack projectile is now replaced with Glyphid Dreadnought's Eggshot projectile that spawns a bunch of Glyphid Rats and apply Pheromone STE.
   + Bombing attack now spawns individual Glyphid Rats instead.
   + On its presence, all Glyphid Rats on-field gain +60% Damage Resistance. This buff is removed when all on-field Plague Bombers are dead.
+- Glyphid Dreadnought (BOSS)
+  + Glyphid Dreadnought's Eggshot projectile spawns a bunch of Glyphid Rats instead with Pheromone STE.
 - Turbo Menace (MEV)
   + They are flashy Menaces from MEV that have Base HP 800 -> 100.
   + Instead, they shoot a laserbeam of projectiles.
@@ -149,11 +149,12 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + None of normal Bulk SFX will be played until they die, so they are more stealthy than Normal Bulk.
   + Their stomp radius and explosion radius are significantly smaller than normal Bulk's. Meatball count upon death is reduced as well.
 - Line-Cutting Turret (CD2)
-  + They are Repulsion Turrets that have their material changed and now shoot slow Breach Cutter projectile.
+  + They are Repulsion Turrets that have their materials changed and now shoot slow Breach Cutter projectile.
   + Stationary unit.
   + Burning won't self-destruct them. Burning and Freezing temperature is now lower than normal.
+  + It cannot be spawned on Escort mission type.
 - Rocket Turret (CD2, MEV)
-  + They are Sniper Turrets that have their material changed and now shoot Patrol Bot's missile projectiles that deal +50% more damage.
+  + They are Sniper Turrets that have their materials changed and now shoot Patrol Bot's homing missile projectiles that deal +50% more damage.
   + Stationary unit.
 - Korlok Sprouts (MEV)
   + Stationary unit.
@@ -165,18 +166,18 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + Projectile they shoot is a slow-moving nuke that instakills anyone in the blast radius and leaves behind a cloud of radiation.
   + The projectile does not carve terrain and can be shot down.
 - Spitscreener (CD2, MEV)
-  + They are more expensive Spitballers that have Time Dilation -33.33%. Their material is changed also.
+  + They are more expensive Spitballers that have Time Dilation -33.33%. Their materials is changed also.
   + Stationary unit.
   + Projectile they shoot is triple Nemesis's barriers.
 - Big Shredder (CD2)
   + They spawn in a pair. Base HP x12.82, Damage Dealt +100% and is immune to Fear.
   + They don't have any weaknesses of small shredders.
 - Vomit Spitter (CD2, DEA)
-  + They are ground Web Spitter that spit Barrager's vomit projectile in an arc. Their material is changed also.
+  + They are ground Web Spitter that spit Barrager's vomit projectile in an arc. Their materials is changed also.
   + Use Acid Spitter's AI, mean that they will aggressively shoot at you once they stop moving.
   + They have improved accuracy compare to Astral difficulty's version.
 - Barrier Spitter (CD2)
-  + They are Acid Spitter that spit Nemesis's barrier. Their material is changed also.
+  + They are Acid Spitter that spit Nemesis's barrier. Their materials is changed also.
   + Use Web Spitter's AI, mean that they will reposition after shootting once.
   + They move +50% faster.
 - Crawler
@@ -184,7 +185,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
 - Barrage Infector
   + They are rarer than usual and are even rarer on Escort.
 - Nuke Barrager (CD2, DEA)
-  + They are more expensive Barragers that have Time Dilation -66.66% (Even slower Time Dilation when spawned in the first 90s into the Mission). Their material is changed also.
+  + They are more expensive Barragers that have Time Dilation -66.66% (Even slower Time Dilation when spawned in the first 90s into the Mission). Their materials is changed also.
   + Stationary unit.
   + Projectiles they shoot are low velocity Fat Boy nukes that instakill anyone in the blast radius and leave behind a cloud of radiation.
   + The projectiles WILL carve terrain and CANNOT be shot down.
@@ -195,14 +196,14 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + On its presence, it increases Movement Speed, Projectile Speed and decreases Attack Cooldown (apply mostly for Melee attack enemies like Grunt) values by a considerable amount.
   + It cannot buff already on-field enemies before The Sun spawns. The buff cannot wear off on already buffed enemies.
   + The Sun will bleed out (lose HP) after 30s of being in the map. 
-  + It cannot be spawned on During Defense, Drillevator and Escort mission type.
+  + It cannot be spawned During Defense, Drillevator and Escort mission type.
 - The Moon (CD2)
   + This is a static Ommoran Flying Rock that has Base HP 250 -> 600 (Brundle's). Its material is changed also.
   + On its presence, it prevents regen your HP naturally, reduces revive HP to 10% and reduces all lighting values to low amount (This will make surrounding much darker).
   + The Moon will bleed out (lose HP) after 30s of being in the map. 
-  + It cannot be spawned on During Defense, Drillevator and Escort mission type.
+  + It cannot be spawned During Defense, Drillevator and Escort mission type.
 - Ninja (CD2, MEV)
-  + They are Shellback variant that are smaller scaled and spawn far away from the team. Their material are changed also.
+  + They are Shellback variant that are smaller scaled and spawn far away from the team. Their materials are changed also.
   + Base HP is lowered than normal Shellback (Slightly higher HP than Mactera Spawn).  
   + Damage taken stats: Electricity x1.2, Physical x2 (Weak) and Fire x1.
   + Their AI have been tweaked to have instant walking speed (Teleport) and rarely roll around. Which mean they will do more spit attack than Shellback normally.

@@ -33,7 +33,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
 - High enemy diversity in waves.
 - Most caves will have at least one of every Stationary type if possible.
 - Many new enemies have been added in the form of enemies that normally don't spawn in waves and entirely new enemies from CD2, MEV and DEA.
-- Some existing enemies have been modified (E.G: Some enemies having lower freezing temperatures like Breeders, Bombers and Patrol Bot... - Having some favor for Cryo comp. Elite enemies have lower burn and freeze temperature,...).
+- Some existing enemies have been modified (E.G: Some enemies having lower freezing temperatures like Breeders, Bombers and Patrol Bot. Elite enemies have lower burn and freeze temperature,... - Having some favor for Cryo comp.).
 - Custom waves of certain enemies spawn at set intervals or conditions.
 - Difficulty adjusted across mission types (E.G: PE gets harder, Escort heartstone phase gets easier).
 - During Defense at 1p, reduce Progress Bar Penalty by 30%, the value is doubled to 60% if the player is Scout. Also increase Bubble radius by 35%.
@@ -41,6 +41,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
 - Lower player scaling will have some change (both Enemies and Objectives) to make playing easier. (E.G: Doretta during Refill and Heartstone phase gains slight increased resistance. No Bulk spawns during Defense. Dangerous run ending at 1p also gets reduced specific values,...)
 - Disabled player headbounces.
 - Banned Blood Sugar, Low Gravity, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak warnings.
+
 # Enemies
 - Swarmer
   + They are now stunnable.
@@ -51,7 +52,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + They have Time Dilation +25%.
   + However, if a Leech from high up grabs you and it's killed, you will not die of fall damage.
 - Fire Bomber
-  + This is an unused enemy in the game files. It behaves like a normal Goo Bomber, except it drops bomblets that deal extreme damage to players.
+  + They are an unused enemy in the game files. They behave like a normal Goo Bomber, except they drop bomblets that deal extreme damage to players.
 - Acid Spitter
   + Their Direct hit damage -15%, and have slight material change.
 - Breeder
@@ -100,6 +101,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + They are Repulsion Turrets that have their material changed and now shoot slow Breach Cutter projectile.
   + Stationary unit.
   + Burning won't self-destruct them. Burning and Freezing temperature is now lower than normal.
+  + It cannot be spawned on Escort mission type.
 - Korlok Sprouts (MEV)
   + Stationary unit.
   + They can spawn only on the ground and start off sleeping until they take damage.
