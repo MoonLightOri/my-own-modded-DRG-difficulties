@@ -172,12 +172,12 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
 - Glyphid Rat: 
   + They are bigger sized Swarmer that won't die when ignited/frozen. Their materials are changed also.
   + Base HP 12 -> 20, move +20% faster and Damage Dealt +10% than normal Swarmer.
-  + There is a variant that spawn only on swarmer tunnel, they are named as Glyphid Sewer Rat, have Base HP 12 -> 70 instead and blacker material.
+  + There is a variant that spawn only on swarmer tunnel, they are named as Glyphid Sewer Rat, have Base HP 12 -> 70 instead and Blacker material.
 - Mactera Plague Bomber (DEA)
   + These are Goo Bomber variant that have Base HP -25%. Their materials are changed also.
   + Normal attack projectile is now replaced with Glyphid Dreadnought's Eggshot projectile that spawns a bunch of Glyphid Rats and apply Pheromone STE.
   + Bombing attack now spawns individual Glyphid Rats instead.
-  + On its presence, all Glyphid Rats on-field gain +60% Damage Resistance. This buff is removed when all on-field Plague Bombers are dead.
+  + On its presence, all Glyphid Rats on-field gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Bombers are dead.
 - Glyphid Dreadnought (BOSS)
   + Glyphid Dreadnought's Eggshot projectile spawns a bunch of Glyphid Rats instead with Pheromone STE.
 - Turbo Menace (MEV)
