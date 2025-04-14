@@ -253,7 +253,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + They are Acid Spitter that spit Nemesis's barrier. Their materials is changed also.
   + Use Web Spitter's AI, mean that they will reposition after shootting once.
   + They move +50% faster.
-- *new* Barrinator (CD2, MEV)
+- Barrinator (CD2, MEV)
   + This is a rare Bulk Detonator from MEV that have its material changed.
   + It has Base HP x0.175 (Around 1000 HP). 
   + On death, it leaves a normal bulk crater, but it shoots out 8-20 Eggshot projectiles (Scale with player count) that all turn into Barrier Spitters that have additional Damage Dealt +20% stats.
