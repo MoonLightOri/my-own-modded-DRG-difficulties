@@ -37,7 +37,7 @@ Changelog compares to FC is below:
     + 1 Extra resupply (~60N) on Eggs, Dreadnought Cocoon and Black Box.
     + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well.
     + Unchanged in Mini-Mules and Morkite.
-  This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
+    + Side Note: This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
 - Rival Turrets spawn count in Encounters sabotage mission type is reduced by 50%.
 - EnemyWaveInterval: 1% chance to instantly spawn an announced wave is now restricted to during hotdrop of Refinery mission type, and it will delay 7s to spawn an announced wave instead.
 - EnemyNormalWaveInterval: Removed 10% chance to instantly spawn a normal wave.

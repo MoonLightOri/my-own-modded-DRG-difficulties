@@ -57,7 +57,7 @@ Interstellar requirement: Custom Difficulty 2 beta 14, MEVv5_4, DEA_b003.3.
     + 1 Extra resupply (~60N) on Eggs, Dreadnought Cocoon and Black Box.
     + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well.
     + Unchanged in Mini-Mules and Morkite.
-  This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
+    + Side Note: This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
 - Disabled player headbounces.
 - Banned Blood Sugar, Low Gravity, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak warnings.
  
