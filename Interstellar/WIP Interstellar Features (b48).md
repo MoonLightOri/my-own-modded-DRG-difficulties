@@ -3,8 +3,7 @@ This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but 
 
 Contributor: seu
 
-Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
-(But I recommend you to update CD2 to latest version)
+Interstellar requirement: Custom Difficulty 2 beta 14, MEVv5_4, DEA_b003.3.
 
 - Recommended Mods: 
   + VEA: https://mod.io/g/drg/m/vanilla-enemy-adjustments
@@ -48,15 +47,16 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
 - Rival Turrets spawn count in Encounters sabotage mission type is reduced by 50%.
 - Lower player scaling will have some change (both Enemies and Objectives) to make playing easier. (E.G: Doretta during Refill and Heartstone phase gains slight increased resistance. No Bulk spawns during Defense. Dangerous run ending at 1p also gets reduced specific values,...)
 - Added NitraMultiplier for Mission types with values: 
-  + Mining    (1:2): x1.15 (~2/3 a resupply, ~40N)
-  + Elim      (2:2): x1.2 (enough for 1 more resup, ~60N)
-  + Deep Scan (2:1): x1.2 (enough for 1 more resup, ~60N)
-  + Sabotage  (1:2): x1.35 (slightly over 2 resups, > 120N)
-  + Sabotage  (2:2): x1.1 (just enough for 1 more resup, ~60N)
+  > Mission type (Complexity:Length): Value
+    + Mining    (1:2): x1.15 (~2/3 a resupply, ~40N)
+    + Elim      (2:2): x1.2 (enough for 1 more resup, ~60N)
+    + Deep Scan (2:1): x1.2 (enough for 1 more resup, ~60N)
+    + Sabotage  (1:2): x1.35 (slightly over 2 resups, > 120N)
+    + Sabotage  (2:2): x1.1 (just enough for 1 more resup, ~60N)
 - Added NitraMultiplier for Deep Dive Secondaries with approximate values: 
-  + 1 Extra resupply (~60N) on Eggs, Dreadnought Cocoon and Black Box.
-  + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well.
-  + Unchanged in Mini-Mules and Morkite.
+    + 1 Extra resupply (~60N) on Eggs, Dreadnought Cocoon and Black Box.
+    + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well.
+    + Unchanged in Mini-Mules and Morkite.
   This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
 - Disabled player headbounces.
 - Banned Blood Sugar, Low Gravity, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak warnings.
@@ -267,6 +267,7 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
   + These are rarer than usual and are even rarer on Escort.
 - Tower of Babel (CD2, DEA)
   + They are Giant sized burst turret that have no base Turret attached (from DEA). Their material are also changed.
+  + Stationary unit.
   + They have Base HP of 1500 (Higher than Barrager, to compensate for higher Weakpoint bonus damage). And significantly lower Freeze temperature, and moderately lower Burning temperature. Damage Dealt x0.125.
   + They have longer lock-on time than usual, but the projectile they shoot is a burst of triple Scorching Tide projectiles. 
   + It cannot be spawned on Escort mission type.
@@ -337,10 +338,9 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4.
 - During a Dreadnought fight (OG Dreadnought, Hiveguard, normal Twins), a Bulk Detonator known as a "DreadHelper" with Base HP x0.85 will spawn in to allow the team to kill the Dreadnought faster. Only one DreadHelper can exist at a given time.
 - During a Caretaker fight, a Weak Bulk Detonator known as a "CaretakerHelper" with slower movement speed and Base HP x0.25 will spawn in to allow the team to speed up Caretaker fight. It has halved carve radius compare to Normal Bulk. Only one CaretakerHelper can exist at a given time. Its material is slightly changed to distinct from Bulks that spawn from Waves.
 - During Dreadnought or Caretaker fight, Normal Wave will spawn in periodically. For Dreadnought fight, the Interval is increased by 50, but the beginning of the fight will guarantee a Normal Wave spawn.
-
-- Every 60 seconds (Longer during certain pressure scenarios), either 14-20 Grunts with 1-4 White Spitters (Web Spitter but have no Web STE on attack), a Bundle or/with 2-3 Mactera Spawns, or 2-3 Mini-Bulks spawn. The chance they spawn is split into 67%/21%/12%. Mini-Bulks from this WaveController are not allowed to spawn on Escort, and disabled during Defensive objective and Drillevator.
+- Every 60 seconds (Longer during certain pressure scenarios), either 14-20 Grunts with 1-4 White Spitters (Web Spitter but have no Web STE on attack), a Bundle or/with 2-3 Mactera Spawns, or 2-3 Mini-Bulks spawn. The chance they spawn is split into 67%/21%/12%. Mini-Bulks from this WaveController are not allowed to spawn on Escort, and disabled during Defensive objective and Drillevator. This wave spawner will be paused when a downed player is detected.
 - Every 90 seconds, a Trawler spawns. This wave controller is disabled in 1 player count lobby. Up to 0/2/4/5 trawlers can be available in the map.
-- Every 45 seconds (Longer during certain pressure scenarios), a mix of 2-4 weak Elite enemies will appear. The pool are: 1-2 Mactera Spawns, 1-3 Slashers, 1-2 Septic Spreaders, 1 Stingtail and 1-2 Ratters. Elite Stingtail is not allowed to spawn in 1p, otherwise they have a moderate cooldown timer after they spawned. Elite Septic is not allowed to spawn in 1p during Drillevator, otherwise in same scenario, they have a moderate cooldown timer after they spawned.
+- Every 45 seconds (Longer during certain pressure scenarios), a mix of 2-4 weak Elite enemies will appear. The pool are: 1-2 Mactera Spawns, 1-3 Slashers, 1-2 Septic Spreaders, 1 Stingtail and 1-2 Ratters. Elite Stingtail is not allowed to spawn in 1p, otherwise they have a moderate cooldown timer after they spawned. Elite Septic is not allowed to spawn in 1p during Drillevator, otherwise in same scenario, they have a moderate cooldown timer after they spawned. This wave spawner will be paused when a downed player is detected.
 - Every 110 seconds (Higher during Escort Heartstone phase), a Penta-jaw will appear.
 
 # Miscellaneous:

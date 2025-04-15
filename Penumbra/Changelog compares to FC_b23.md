@@ -1,8 +1,31 @@
-Penumbra, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.05. Changelog compares to FC is below:
+Penumbra (previously named FCM), is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.05.
+
+Penumbra requirement: Custom Difficulty 2 Beta 14, MEV v5.4 and DEA (any version)
+(But I recommend you to update DEA to latest version)
+
+- Recommended Mods: 
+  + VEA: https://mod.io/g/drg/m/vanilla-enemy-adjustments
+  + No Special Swarms: https://mod.io/g/drg/m/no-special-swarms#3374117
+  + Sabo with Stationaries & More Egg Swarms & Only Bug No Content (Use MINT to Install): https://drive.google.com/file/d/1-FPzfrHX7dozcD3BQX5VWSovlQ4jfwTR/view?usp=sharing
+  + No Carve Exploder (Large exploder spam): https://cdn.discordapp.com/attachments/1148725752020340827/1189713606762303578/No_Carve_Exploders.pak?ex=67fe44e3&is=67fcf363&hm=a34e1174c13cdd3ce68ae891e94cc4ca7c757c8afbdbbc085f54911e175aa92c&
+  + No Bulk Fragment Carve (Significantly higher Bulks spam than Celestial, you should have this): https://cdn.discordapp.com/attachments/1148725752020340827/1207731780405305364/no_bulk_fragments_carve.pak?ex=67fde69f&is=67fc951f&hm=83c11c061c3c43b6cbe28fc173f53b0d554a2d8caa37f9c633568891c7a9a494&
+
+- Optional Mods:
+  + Stalker Low Graphic Fix (If you can't play with high Effect setting): https://cdn.discordapp.com/attachments/1148725752020340827/1205500046557057055/StalkerLowGraphicsFix.pak?ex=67fe59e8&is=67fd0868&hm=97cb4a9dbca9553f1f5b720458a0e9f8d9d4ed943156c785e3d0c115dec793e0&
+  
+- Q: Why are Dread and Caretaker with normal wave mod not included in the recommended list above? 
+  - A: My difficulty has a dedicated Wave Spawner to simulate normal waves during Dread and Caretaker with 100% accuracy. You don't need Dread and Caretaker with normal wave mod anymore since I've forced this into my difficulty.
+
+* Legends: 
+  + During Defense = Uplink/Refuel/Blackbox objectives.
+  + 1/2/3/4 = Player Count setting (Left to Right, The last value in the list is used if there are more players than there are values in the list.).
+  + 1p = 1 Player Setting.
+
+Changelog compares to FC is below:
 
 # General
-- Banned Blood Sugar, Low Gravity, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak.
-- During the time of Uplink/Refuel/Blackbox objectives, penalty of draining the progress bar is reduced by 30%, and Mission Control will no longer shout when no player is at the bubble zone.
+- Banned Blood Sugar, Low Gravity, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak warnings.
+- During Defense, reduce Progress Bar Penalty by 30%, and Mission Control will no longer shout when no player is at the bubble zone.
 - Added NitraMultiplier for Mission types with values:
   > Mission type (Complexity:Length): Value
     + Mining    (1:2): x1.15 (~2/3 a resupply, ~40N)
@@ -12,15 +35,15 @@ Penumbra, is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to r
     + Sabotage  (2:2): x1.1 (just enough for 1 more resup, ~60N)
 - Added NitraMultiplier for Deep Dive Secondaries with approximate values: 
     + 1 Extra resupply (~60N) on Eggs, Dreadnought Cocoon and Black Box.
-    + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well
+    + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well.
     + Unchanged in Mini-Mules and Morkite.
-This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
-- Sabotage mission type: -50% Rival Turret spawn amount.
+  This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
+- Rival Turrets spawn count in Encounters sabotage mission type is reduced by 50%.
 - EnemyWaveInterval: 1% chance to instantly spawn an announced wave is now restricted to during hotdrop of Refinery mission type, and it will delay 7s to spawn an announced wave instead.
 - EnemyNormalWaveInterval: Removed 10% chance to instantly spawn a normal wave.
 - Restructured VeteranLarge promotion, now use CustomVeterans code on Praetorians to prevent overspawning Oppressors issue previously.
 
-# Enemies
+# Enemies (Detail changes)
 - Weak Twins: Added 45s Cooldown. They are now banned during Dreadnought due to unexpected behaviors.
 - Mini Bulk, Normal Bulk, Plantonator: Reduced MaxSpawnCount to 0 and Added Nospawnwithin of 7.5m and cooldown of 120s during Uplink/Refill/Blackbox, additionally during Escort Refill and Heartstone for MiniBulk and Normal Bulk. Otherwise cooldown is 60s. Plantonator is additionally banned during Drillevator.
 - Big Bulk: Added Corrosive Damage Weakness of 150%, NoSpawnWithin 7.5m and have cooldown of 1 hour on Refinery, Salvage and 4/6 Eggs. Otherwise cooldown is 900s (15 minutes). They are additionally banned during Drillevator.
@@ -46,8 +69,8 @@ This value is also compatible with current Main objective if they have nitra mul
 
 # Custom Waves
 - Removed Canary WaveSpawner.
-- Added DreadNWave and CaretakerNWave with normal wave interval and difficulty point (the beginning of dread fight will have a normal wave immediately, but they will have 50s more interval), this is to simulate Dread and Caretaker with wave mod.
-- During a Caretaker fight, a weaker Bulk known as "CaretakerHelper" will spawn in to allow the team to speed up killing caretaker faster. Only 1 CaretakerHelper can exist at a given time, once no more CaretakerHelper is in the map but Caretaker fight is still going, they will respawn after 5s. CaretakerHelper has only 1000 Base HP (4000 HP normal bulk), with only x1.2 movement speed instead (normal bulk x1.5), and the carve radius is the same as minibulk. Its look is changed via CD2.
+- During Dreadnought or Caretaker fight, Normal Wave will spawn in periodically. For Dreadnought fight, the Interval is increased by 50, but the beginning of the fight will guarantee a Normal Wave spawn.
+- During a Caretaker fight, a Weak Bulk Detonator known as a "CaretakerHelper" with slower movement speed and Base HP x0.25 will spawn in to allow the team to speed up Caretaker fight. It has halved carve radius compare to Normal Bulk. Only one CaretakerHelper can exist at a given time. Its material is slightly changed to distinct from Bulks that spawn from Waves.
 - Grunt WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 60s. No longer spawns minibulks during Uplink/Refill/Blackbox and Drillevator.
 - Trawler WaveSpawner: Limit the amount of XED_Shark on the map to 5. ED_Shark from pool spawn doesn't count toward this. This WS is disabled in 1p setting to avoid frustration.
 - Weak Elite WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 100s.
