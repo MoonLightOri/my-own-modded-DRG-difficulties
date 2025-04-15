@@ -12,7 +12,16 @@ Download Links (if you are from CN, please uses VPN since dl links are coming fr
 
 [old version of DEA (a05t2)](https://cdn.discordapp.com/attachments/1264172880359591996/1321546340093657209/DEA_a05t2.pak?ex=67ce87b0&is=67cd3630&hm=4a8d33b1b397d1c6156d3dc5ea0fa02d088d41a104025bc6d177924c74c6dcb8&) <br />
 
-[Recommended VEA for Initial Enemy Balancing](https://mod.io/g/drg/m/vanilla-enemy-adjustments)
+Recommended & Option Mods (if you are from CN, please uses VPN since dl links are coming from discord and google drive):
+- Recommended:
+    + [VEA](https://mod.io/g/drg/m/vanilla-enemy-adjustments)
+    + [No Special Swarms](https://mod.io/g/drg/m/no-special-swarms#3374117)
+    + [Sabo with Stationaries & More Egg Swarms & Only Bug No Content](https://drive.google.com/file/d/1-FPzfrHX7dozcD3BQX5VWSovlQ4jfwTR/view?usp=sharing)
+    + [No Carve Exploder](https://cdn.discordapp.com/attachments/1148725752020340827/1189713606762303578/No_Carve_Exploders.pak?ex=67fe44e3&is=67fcf363&hm=a34e1174c13cdd3ce68ae891e94cc4ca7c757c8afbdbbc085f54911e175aa92c&)(Some difficulties have larger exploder spam)
+    + [No Bulk Fragment Carve](https://cdn.discordapp.com/attachments/1148725752020340827/1207731780405305364/no_bulk_fragments_carve.pak?ex=67fde69f&is=67fc951f&hm=83c11c061c3c43b6cbe28fc173f53b0d554a2d8caa37f9c633568891c7a9a494&) (Some difficulties have higher bulk spam)
+
+- Optional:
+    + [Beta Stalker Low Graphic Fix](https://cdn.discordapp.com/attachments/1148725752020340827/1205500046557057055/StalkerLowGraphicsFix.pak?ex=67fe59e8&is=67fd0868&hm=97cb4a9dbca9553f1f5b720458a0e9f8d9d4ed943156c785e3d0c115dec793e0&) (If you can't play with high Effect setting)
 
 Installation order in mint/mintcat: 
 - DEA (above MEV)
