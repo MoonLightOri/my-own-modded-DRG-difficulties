@@ -23,7 +23,7 @@
   - Juvenile: AttackDamageMultiplier x1 -> x2.5 (Web Spitter's damage).
   - White Spitter: Changed projectile to Menace's (a work around fix to make projectile seeable), AttackMultiplier x1 -> x2.5 (to match with the damage from old projectile).
   - Bouncer: In 1p setting and During Drillevator, they are banned from spawning.
-  - Electric Praetorian: During Defense (Uplink/Refill/Blackbox), they have added spawnspread of 3500.
+  - Electric Praetorian: DifficultyRating 50 -> 70. They have added spawnspread of 3500.
   - 1% instant Announced Swarm at hotdrop Refinery: At 1p setting, the chance is now 0%.
   - EnemyWaveInterval: At 1p setting, on Deep Scan mission type, swap the weight between 90 and 110-140 bins. On Refinery, after 200s of timer passed, wave timer switches to 240s bin to allow you to gather resources, build pipes and clear the remaining room.
   - EnemyWaveInterval: At 1p setting, on Salvage, Sabotage, Escort, Deep Scan mission type, the weight of 120 and 150-180 bins become 0.2 and 0.8. On Salvage, after finishing mules but uplink hasn't started and finishing uplink but refill hasn't started, and Refinery after 200s normal wave timer switches to 300s bin to allow you to have time to gather resources and terraform the holding spot.
@@ -33,6 +33,7 @@
   - Grunt, Weak Elite, Penta Jaw WS: At 1p, delay more time before they spawn in big room and hotdrop mission types. Also increase Interval on the mission that requires down time.
   - Elimination mission type: Sentinels from Hiveguard spawn now have the correct stats applied from the one spawns in normal pool. At 1p setting, all Dreadnought types can be lit on fire, and has slightly increased DamageMultiplier and significantly increased FireDamageMultiplier.
   - Banned most of the dangerous and unfair Warnings + Volatile Guts.
+  - Exploder: At 1p and PE or Deep Scan mission type, in the first 60s of mission, Exploders cannot be spawned.
   ",
   "Resupply": {
     "Cost": {
@@ -1913,6 +1914,26 @@
             [
               "ED_Spider_Stinger"
             ],
+            []
+          ]
+        },
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "If",
+              "Condition": {
+                "Mutate": "DuringMission",
+                "StartingAt": 60
+              },
+              "Then": [],
+              "Else": {
+                "Mutate": "ByMissionType",
+                "Default": [],
+                "PE": ["ED_Spider_Exploder"],
+                "DeepScan": ["ED_Spider_Exploder"]
+              }
+            },
             []
           ]
         },
@@ -4967,7 +4988,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
       "UsesBiomeVariants": false,
-      "DifficultyRating": 50,
+      "DifficultyRating": 70,
       "HealthMultiplier": 0.6,
       "SpawnSpread": {
         "Mutate": "If",
