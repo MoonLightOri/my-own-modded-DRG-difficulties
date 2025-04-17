@@ -326,7 +326,7 @@ Interstellar requirement: Custom Difficulty 2 beta 14, MEVv5_4, DEA_b003.3.
   + It's a mini boss Mactera Spawn variant that has material changed.
   + It has significantly higher HP than normal mactera spawn, Time Dilation +50%. The projectile has long Poison DoT STE appliance and different trajectory visual effect than normal Spawn.
   + It also has high elemental, explosion and piercing resistances (Except for Physical damage where it's weak instead).
-  + Its main ability is to Summons clones of itself named Mactera Joker Clone on the map once Spawned with no HP bar indicator and a slight difference on it's appearance.
+  + Its main ability is to Summons clones of itself named Mactera Joker Clone on the map once Spawned with no HP bar indicator and a slight difference on its appearance.
   + The clones inherit Time-Dilation trait from the real Joker, but have significantly lower HP and no resistances. 
   + The clones can instantly respawn upon being defeated and only deals 1/4 of real Joker damage and without Poison DoT STE.
   + Upon killing the real Joker, all clones will instantly die.
