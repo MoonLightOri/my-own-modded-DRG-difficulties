@@ -23,7 +23,7 @@
   - Juvenile: AttackDamageMultiplier x1 -> x2.5 (Web Spitter's damage).
   - White Spitter: Changed projectile to Menace's (a work around fix to make projectile seeable), AttackMultiplier x1 -> x2.5 (to match with the damage from old projectile).
   - Bouncer: In 1p setting and During Drillevator, they are banned from spawning.
-  - Electric Praetorian: Movement Speed 1.15/1.4 -> 1.25/1.5. During Defense (Uplink/Refill/Blackbox), they have added spawnspread of 3500.
+  - Electric Praetorian: During Defense (Uplink/Refill/Blackbox), they have added spawnspread of 3500.
   - 1% instant Announced Swarm at hotdrop Refinery: At 1p setting, the chance is now 0%.
   - EnemyWaveInterval: At 1p setting, on Deep Scan mission type, swap the weight between 90 and 110-140 bins. On Refinery, after 200s of timer passed, wave timer switches to 240s bin to allow you to gather resources, build pipes and clear the remaining room.
   - EnemyWaveInterval: At 1p setting, on Salvage, Sabotage, Escort, Deep Scan mission type, the weight of 120 and 150-180 bins become 0.2 and 0.8. On Salvage, after finishing mules but uplink hasn't started and finishing uplink but refill hasn't started, and Refinery after 200s normal wave timer switches to 300s bin to allow you to have time to gather resources and terraform the holding spot.
@@ -32,6 +32,7 @@
   - Barrager type enemies and Tower of Babel: At 1p setting, on Refinery, DifficultyRating increases +150.
   - Grunt, Weak Elite, Penta Jaw WS: At 1p, delay more time before they spawn in big room and hotdrop mission types. Also increase Interval on the mission that requires down time.
   - Elimination mission type: Sentinels from Hiveguard spawn now have the correct stats applied from the one spawns in normal pool. At 1p setting, all Dreadnought types can be lit on fire, and has slightly increased DamageMultiplier and significantly increased FireDamageMultiplier.
+  - Banned most of the dangerous and unfair Warnings + Volatile Guts.
   ",
   "Resupply": {
     "Cost": {
@@ -52,9 +53,20 @@
   "Warnings": {
     "Banned": [
       "MMUT_BloodSugar",
+      "WRN_ExploderInfestation",
+      "MMUT_ExplosiveEnemies",
+      "WRN_LethalEnemies",
       "MMUT_LowGravity",
       "WRN_BulletHell",
       "WRN_Plague",
+      "WRN_RivalIncursion",
+      "WRN_LethalEnemies",
+      "WRN_NoShields",
+      "WRN_RegenerativeEnemies",
+      "WRN_NoOxygen",
+      "WRN_MacteraCave",
+      "WRN_Ghost",
+      "WRN_HeroEnemies",
       "WRN_RockInfestation"
     ]
   },
@@ -4967,29 +4979,29 @@
       },
       "Movement": {
         "AlignDirectionSpeed": [
-          1.25,
-          1.5
+          1.15,
+          1.4
         ],
         "AlignToTargetMinRequiredAngle": 1.1,
         "MaxAcceleration": [
-          1.25,
-          1.5
+          1.15,
+          1.4
         ],
         "MaxBrakingDeceleration": [
-          1.25,
-          1.5
+          1.15,
+          1.4
         ],
         "MaxPawnSpeed": [
-          1.25,
-          1.5
+          1.15,
+          1.4
         ],
         "MaxStrafeDistance": [
-          1.25,
-          1.5
+          1.15,
+          1.4
         ],
         "StrafeSpeed": [
-          1.25,
-          1.5
+          1.15,
+          1.4
         ]
       },
       "MaxSpawnCount": [
