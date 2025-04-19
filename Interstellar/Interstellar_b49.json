@@ -5,6 +5,8 @@
     Beta 49.1 [Electric Praetorian was too op so I must replace it with another praetorian variant, final change.]
   - Changed Electric Praetorian ED into Fire Praetorian, retaining all stats previously. DifficultyRating 70 -> 30. MaxSpawnCount 0/1/1/2 -> 0/0/1.
   - Now properly banned Stalker in Solo.
+  - Elite Ratter: DifficultyRating 100 -> 70, MaxSpawnCount 1 -> 2. 
+  - Elite Mactera Spawn: DifficultyRating 70 -> 80. MaxSpawnCount 2 -> 1.
   ======================================
     Beta 49 [expanded Solo and Lower Player Count support update]
     (Legend: / == player count setting, right most take the value if there is over the player limit.)
@@ -32,7 +34,7 @@
   - 1% instant Announced Swarm at hotdrop Refinery: At 1p setting, the chance is now 0%.
   - EnemyWaveInterval: At 1p setting, on Deep Scan mission type, swap the weight between 90 and 110-140 bins. On Refinery, after 200s of timer passed, wave timer switches to 240s bin to allow you to gather resources, build pipes and clear the remaining room.
   - EnemyWaveInterval: At 1p setting, on Salvage, Sabotage, Escort, Deep Scan mission type, the weight of 120 and 150-180 bins become 0.2 and 0.8. On Salvage, after finishing mules but uplink hasn't started and finishing uplink but refill hasn't started, and Refinery after 200s normal wave timer switches to 300s bin to allow you to have time to gather resources and terraform the holding spot.
-  - Stationary and Encounter Difficulty: At 1p setting, value lowered by 20%, 40% if on Big room type mission (Salvage, Deep Scan, Refinery, PE, Elimination). As exchange, Normal Wave Difficulty is slightly increased, PE gains slightly more ECM instead before announced swarm. 
+  - Stationary and Encounter Difficulty: At 1p setting, value lowered by 20%, 40% if on Big room type mission (Salvage, Deep Scan, Refinery, PE, Elimination). As exchange, Normal Wave Difficulty is slightly increased.
   - Deep Scan: At 1p setting, when it's not a swarm, Encounters and Drillevator, ECM is slightly reduced.
   - Barrager type enemies and Tower of Babel: At 1p setting, on Refinery, DifficultyRating increases +150.
   - Grunt, Weak Elite, Penta Jaw WS: At 1p, delay more time before they spawn in big room and hotdrop mission types. Also increase Interval on the mission that requires down time.
@@ -479,13 +481,7 @@
               "Mutate": "DuringGenericSwarm"
             },
             "Then": 1,
-            "Else": {
-              "Mutate": "ByPlayerCount",
-              "Values": [
-                1.32,
-                1.2
-              ]
-            }
+            "Else": 1.2
           }
         },
         "Salvage": {
@@ -673,7 +669,7 @@
             {
               "Mutate": "ByMissionType",
               "Default": 760,
-              "Salvage": 480,
+              "Salvage": 570,
               "PE": 570,
               "Refinery": 570,
               "DeepScan": 570,
@@ -3190,7 +3186,7 @@
       "DifficultyRating": {
         "Mutate": "ByMissionType",
         "Default": 200,
-        "Escort": 300
+        "Escort": 350
       },
       "MaxSpawnCount": [
         {
@@ -4186,13 +4182,19 @@
       "Rarity": 6,
       "SpawnAmountModifier": 1,
       "HealthMultiplier": {
-        "Mutate": "IfFloat",
-        "Value": {
-          "Mutate": "ScoutCount"
-        },
-        ">=": 1,
-        "Then": 0.6584,
-        "Else": 1
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          {
+            "Mutate": "IfFloat",
+            "Value": {
+              "Mutate": "ScoutCount"
+            },
+            ">=": 1,
+            "Then": 0.6584,
+            "Else": 1
+          },
+          1
+        ]
       },
       "NoSpawnWithin": {
         "Default": 750,
@@ -4251,13 +4253,19 @@
       },
       "MinSpawnCount": 1,
       "HealthMultiplier": {
-        "Mutate": "IfFloat",
-        "Value": {
-          "Mutate": "ScoutCount"
-        },
-        ">=": 1,
-        "Then": 0.6584,
-        "Else": 1
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          {
+            "Mutate": "IfFloat",
+            "Value": {
+              "Mutate": "ScoutCount"
+            },
+            ">=": 1,
+            "Then": 0.6584,
+            "Else": 1
+          },
+          1
+        ]
       },
       "Materials": [
         "",
@@ -5322,13 +5330,13 @@
     "XED_Mactera_Shooter_Normal_Elite": {
       "Base": "ED_Mactera_Shooter_Normal",
       "CanBeUsedForConstantPressure": true,
-      "DifficultyRating": 70,
+      "DifficultyRating": 80,
       "Elite": true,
       "Materials": [
         "M_Canteen_Metal_4",
         "M_Crawler_PuddleBlood"
       ],
-      "MaxSpawnCount": 2,
+      "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "AttackDamageMultiplier": 0.9,
       "Rarity": 5.125,
@@ -5348,7 +5356,7 @@
     "XED_Spider_Shooter_Spawner_Elite": {
       "Base": "ED_Spider_Shooter_Spawner",
       "CanBeUsedForConstantPressure": true,
-      "DifficultyRating": 100,
+      "DifficultyRating": 70,
       "DisplayName": "Glyphid Ratter",
       "Materials": [
         "M_Vanity_Headwear_PlagueMaskHat_S04",
@@ -5364,7 +5372,7 @@
         }
       ],
       "HealthMultiplier": 0.28,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Elite": true,
       "ForceEliteBase": "ED_Mactera_TripleShooter",
