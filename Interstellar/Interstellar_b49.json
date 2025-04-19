@@ -1,6 +1,11 @@
 {
-  "Name": "Interstellar_b49",
+  "Name": "Interstellar_b49.1",
   "Description": "REQUIRES CD2 beta update 14, MEV v5.4 AND DEA b00.3.3 (updated). Recommended VEA. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies.
+
+    Beta 49.1 [Electric Praetorian was too op so I must replace it with another praetorian variant, final change.]
+  - Changed Electric Praetorian ED into Fire Praetorian, retaining all stats previously. DifficultyRating 70 -> 30. MaxSpawnCount 0/1/1/2 -> 0/0/1.
+  - Now properly banned Stalker in Solo.
+  ======================================
     Beta 49 [expanded Solo and Lower Player Count support update]
     (Legend: / == player count setting, right most take the value if there is over the player limit.)
 
@@ -1307,15 +1312,6 @@
           ]
         },
         "ED_JellyBreeder_Swarm",
-        {
-          "Mutate": "ByPlayerCount",
-          "Values": [
-            [],
-            [
-              "ED_Spider_Stalker"
-            ]
-          ]
-        },
         "ED_Spider_Grunt_Guard_Elite",
         {
           "Mutate": "ByMissionType",
@@ -1702,7 +1698,7 @@
             "ED_Spider_Buffer_elecspawner"
           ]
         },
-        "ED_Spider_Tank_elec",
+        "ED_Spider_Tank_flame",
         {
           "Mutate": "If",
           "Condition": {
@@ -1914,6 +1910,13 @@
             [
               "ED_Spider_Stinger"
             ],
+            []
+          ]
+        },
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            ["ED_Spider_Stalker"],
             []
           ]
         },
@@ -4983,12 +4986,12 @@
         "DouseFireTemperature": [50, 100]
       }
     },
-    "ED_Spider_Tank_elec": {
-      "Base": "ED_Spider_Tank_cyan",
+    "ED_Spider_Tank_flame": {
+      "Base": "ED_Spider_Tank_red",
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
       "UsesBiomeVariants": false,
-      "DifficultyRating": 70,
+      "DifficultyRating": 30,
       "HealthMultiplier": 0.6,
       "SpawnSpread": {
         "Mutate": "If",
@@ -5027,15 +5030,14 @@
       },
       "MaxSpawnCount": [
         0,
-        1,
-        1,
-        2
+        0,
+        1
       ],
       "MinSpawnCount": 1,
       "Rarity": 5.5,
       "SpawnAmountModifier": 0.35,
       "VeteranClasses": [
-        "ED_Spider_Tank_elec"
+        "ED_Spider_Tank_flame"
       ]
     },
     "ED_SpiderSpawner": {
