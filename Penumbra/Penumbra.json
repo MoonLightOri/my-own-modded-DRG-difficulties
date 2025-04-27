@@ -1,27 +1,15 @@
 {
   "Name": "Penumbra",
   "Description": "REQUIRES CD2 BETA 14, MORE ENEMY VARIANTS (MEV) AND DEA. Penumbra (Previously named FCM), is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. WARNING: THIS IS A SLIGHTLY TONED DOWN VERSION OF FC_B23, IT DOES NOT OFFER SIMILAR EXTREME HIGH PACING EXPERIENCE AS FC_B23.
-    v1.05b (fix out typos on nitra number part)
-  - Renamed FCM into Penumbra due to confusion of similar difficulty name.
-  
-  - Reworked NitraMultiplier for Mission types with values:
-  ==========================================================
-  > Mission type (Complexity:Length): Value
-    + Mining    (1:2): x1.15 (~2/3 a resupply, ~40N)
-    + Elim      (2:2): x1.2 (enough for 1 more resup, ~60N)
-    + Deep Scan (2:1): x1.2 (enough for 1 more resup, ~60N)
-    + Sabotage  (1:2): x1.35 (slightly over 2 resups, > 120N)
-    + Sabotage  (2:2): x1.1 (just enough for 1 more resup, ~60N)
-
-  - Reworked NitraMultiplier for Deep Dive Secondaries with approximate values: 
-    + 1 Extra resupply (~60N) on Eggs, Dreadnought Cocoon and Black Box.
-    + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well
-    + Unchanged in Mini-Mules and Morkite.
-  This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
-
-  - Added CaretakerHelper wavespawner from Celestial/Interstellar, it is a slower, extremely weaker bulk that has halved carve radius. Only 1 of them spawns during Caretaker and respawn after being killed but Caretaker is not dead, so you can lure it to caretaker to blow it's eyes and vent up.
-  - During Caretaker, Normal Wave Difficulty and Interval from the custom Wavespawner are now accurate to NormalWaveDifficulty and Interval (Harder).
-  - During Dread, Normal Wave Difficulty and Interval from the custom Wavespawner are now accurate to NormalWaveDifficulty and Interval with 50s of increase value, due to the existing instant wave that triggers after popping dread (Still harder).
+    v1.06
+  - PE mission type: NitraMultiplier reduced to give ~1 less resupply, aka ~-60 Nitra (Due to PE mission type giving too many Nitra corresponding to the difficulty)
+  - Mini-Mules secondary: In any mission type other than Salvage, reduce Nitra Reward after repairing a mule from 50 -> 30 Nitra. 
+    Also reduce Scanning and Repair Time to 1.5s -> 1s and 10s -> 6.66s for non-Salvage mission type correspondingly.
+  - CaveLeech and FatLeech: Changed TimeDilation into CaveLeech control (Due to VEA's buff to leeches). Leeches speed with VEA are unchanged (x2.5 for normal Leech, x1.25 for Fat Leech).
+  - Big Bulk: No longer spawns after all mini-mules are repaired and after doing Uplink but haven't started Refill in Salvage. They are able to spawn back during Extraction.
+  - Patrol Bot (Normal and Caretaker version): Collision Disabled, so they don't displace you when they bump into you, but you still take damage from the bump though.
+  - Special Encounter Vanilla Enemies (BET-C, Crassus, Tyrant Weed, Nemesis, Prospector, Harold): *This is for hosts without OBNC, their spawn chance is reduced to 0%.
+  - NormalWaveDifficulty: Because I removed 10% instant Normal Wave in this difficulty compares to FC_b23, to make up for the stabilized waves RNG in Difficulty, NormalWaveDifficulty value is reduced by 10s (Use the 10% increased min value on max value).
   ",
   "Dwarves": {
     "RegenHealthPerSecond": 5.8,
@@ -38,6 +26,27 @@
     }
   },
   "Salvage": {
+    "MiniMules": {
+      "ScanUsable": {
+        "UseDuration": {
+          "Mutate": "ByMissionType",
+          "Default": 1,
+          "Salvage": 1.5
+        }
+      },
+      "RepairUsable": {
+        "UseDuration": {
+          "Mutate": "ByMissionType",
+          "Default": 6.66,
+          "Salvage": 10
+        }
+      },
+      "NitraToGive": {
+        "Mutate": "ByMissionType",
+        "Default": 30,
+        "Salvage": 50
+      }
+    },
     "Uplink": {
       "DisableLeaveShout": true,
       "LeavePenaltyMultiplier": 0.7
@@ -78,7 +87,9 @@
       "DeepScan,1,2": 1.2,
       "Sabotage,2,1": 1.35,
       "Sabotage,2,2": 1.1,
-      "Elimination,2,2": 1.2
+      "Elimination,2,2": 1.2,
+      "PE,2,3": 0.834,
+      "PE,3,3": 0.878
     },
     "B": {
       "Mutate": "BySecondary",
@@ -424,13 +435,13 @@
     "EnemyNormalWaveDifficulty": [
       {
         "weight": 0.2,
-        "min": 2000,
-        "max": 2000
+        "min": 2200,
+        "max": 2200
       },
       {
         "weight": 0.8,
-        "min": 800,
-        "max": 900
+        "min": 880,
+        "max": 980
       }
     ],
     "EnemyDiversity": [
@@ -637,9 +648,12 @@
                   "Egg,2,2": 3600
                 },
                 "ValueDuringCooldown": [],
-                "DefaultValue": [
-                  "ED_Spider_ExploderTank_kiwami"
-                ]
+                "DefaultValue": {
+                  "Mutate": "BySalvagePhase",
+                  "Default": ["ED_Spider_ExploderTank_kiwami"],
+                  "PreUplink": [],
+                  "PreRefuel": []
+                }
               }
             ],
             "Escort": []
@@ -786,11 +800,28 @@
     },
     "ED_CaveLeech": {
       "CaveLeech": {
+        "BitesPerSecond": [
+          2.5
+        ],
+        "GrapDelay": [
+          0.04
+        ],
+        "TentacleSpeed": [
+          1500
+        ],
+        "TentacleRetractSpeed": [
+          2750
+        ],
+        "TentaclePullSpeed": [
+          5000
+        ],
+        "TentacleDropPlayerSpeed": [
+          3750
+        ],
         "MaxDropPlayerDuration": 10
       },
       "DifficultyRating": 100,
-      "SpawnAmountModifier": 1,
-      "TimeDilation": 2
+      "SpawnAmountModifier": 1
     },
     "ED_CaveLeech_fat": {
       "Base": "ED_CaveLeech",
@@ -798,6 +829,24 @@
       "CanBeUsedInEncounters": true,
       "CaveLeech": {
         "MaxDistanceXY": 300000,
+        "BitesPerSecond": [
+          1.25
+        ],
+        "GrapDelay": [
+          0.08
+        ],
+        "TentacleSpeed": [
+          750
+        ],
+        "TentacleRetractSpeed": [
+          1375
+        ],
+        "TentaclePullSpeed": [
+          2500
+        ],
+        "TentacleDropPlayerSpeed": [
+          1875
+        ],
         "MaxDropPlayerDuration": 10
       },
       "DifficultyRating": 150,
@@ -807,8 +856,7 @@
       "Rarity": 3,
       "HealthMultiplier": 5.988,
       "Scale": 2,
-      "SpawnAmountModifier": 1,
-      "TimeDilation": 1
+      "SpawnAmountModifier": 1
     },
     "ED_Crawler": {
       "CanBeUsedForConstantPressure": true,
@@ -1065,7 +1113,17 @@
       },
       "MinSpawnCount": 1,
       "Rarity": 5.25,
-      "SpawnAmountModifier": 0.75
+      "SpawnAmountModifier": 0.75,
+      "Direct": {
+        "PCol:Mesh": false,
+        "PCol:Capsule": false
+      }
+    },
+    "ED_PatrolBot_Caretaker": {
+      "Direct": {
+        "PCol:Mesh": false,
+        "PCol:Capsule": false
+      }
     },
     "ED_PlagueLarva": {
       "Base": "ED_Spider_Lobber",
@@ -1844,6 +1902,36 @@
       "Enemy": [
         "ED_TentaclePlant"
       ]
+    },
+    {
+      "Enemy": "ED_InfectedMule",
+      "BaseChance": 0,
+      "CanSpawnInDeepDive": false
+    },
+    {
+      "Enemy": "ED_Spider_ExploderTank_King",
+      "BaseChance": 0,
+      "CanSpawnInDeepDive": false
+    },
+    {
+      "Enemy": "ED_HydraWeed",
+      "BaseChance": 0,
+      "CanSpawnInDeepDive": false
+    },
+    {
+      "Enemy": "ED_Terminator",
+      "BaseChance": 0,
+      "CanSpawnInDeepDive": false
+    },
+    {
+      "Enemy": "ED_Prospector",
+      "BaseChance": 0,
+      "CanSpawnInDeepDive": false
+    },
+    {
+      "Enemy": "ED_WalkingPlagueheart",
+      "BaseChance": 0,
+      "CanSpawnInDeepDive": false
     }
   ],
   "WaveSpawners": [

@@ -1,4 +1,4 @@
-Penumbra (previously named FCM), is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.05.
+Penumbra (previously named FCM), is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.06.
 
 Penumbra requirement: Custom Difficulty 2 Beta 14, MEV v5.4 and DEA (any version)
 (But I recommend you to update DEA to latest version)
@@ -33,15 +33,18 @@ Changelog compares to FC is below:
     + Deep Scan (2:1): x1.2 (enough for 1 more resup, ~60N)
     + Sabotage  (1:2): x1.35 (slightly over 2 resups, > 120N)
     + Sabotage  (2:2): x1.1 (just enough for 1 more resup, ~60N)
+    + PE        (3:2): x0.834 (reduced ~ 1 resupply, 60N)
+    + PE        (3:3): x0.878 (reduced ~ 1 resupply, 60N)
 - Added NitraMultiplier for Deep Dive Secondaries with approximate values: 
     + 1 Extra resupply (~60N) on Eggs, Dreadnought Cocoon and Black Box.
     + 0.4 Extra resupply (~25N) on Deep Scan and Morkite Well.
-    + Unchanged in Mini-Mules and Morkite.
+    + Unchanged in Mini-Mules and Morkite. For Mini-Mules secondaries, Nitra Reward from Reparing is reduced from 50 -> 30 Nitra, but Scanning and Repair Time are reduced by -33.3%. Unaffected in Salvage mission type.
     + Side Note: This value is also compatible with current Main objective if they have nitra multiplier support, calculated additively.
 - Rival Turrets spawn count in Encounters sabotage mission type is reduced by 50%.
 - EnemyWaveInterval: 1% chance to instantly spawn an announced wave is now restricted to during hotdrop of Refinery mission type, and it will delay 7s to spawn an announced wave instead.
-- EnemyNormalWaveInterval: Removed 10% chance to instantly spawn a normal wave.
+- EnemyNormalWaveInterval: Removed 10% chance to instantly spawn a normal wave. To make up for it, Increase NormalWaveDifficulty by 10%.
 - Restructured VeteranLarge promotion, now use CustomVeterans code on Praetorians to prevent overspawning Oppressors issue previously.
+- Special Encounter Vanilla Enemies (BET-C, Crassus, Tyrant Weed, Nemesis, Prospector, Harold): *This is for hosts without OBNC, their spawn chance is reduced to 0%.
 
 # Enemies (Detail changes)
 - Weak Twins: Added 45s Cooldown. They are now banned during Dreadnought due to unexpected behaviors.
