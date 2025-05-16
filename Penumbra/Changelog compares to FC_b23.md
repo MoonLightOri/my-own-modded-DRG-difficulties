@@ -1,4 +1,4 @@
-Penumbra (previously named FCM), is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.06.
+Penumbra (previously named FCM), is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.07.
 
 Penumbra requirement: Custom Difficulty 2 Beta 14, MEV v5.4 and DEA (any version)
 (But I recommend you to update DEA to latest version)
@@ -44,12 +44,13 @@ Changelog compares to FC is below:
 - EnemyWaveInterval: 1% chance to instantly spawn an announced wave is now restricted to during hotdrop of Refinery mission type, and it will delay 7s to spawn an announced wave instead.
 - EnemyNormalWaveInterval: Removed 10% chance to instantly spawn a normal wave. To make up for it, Increase NormalWaveDifficulty by 10%.
 - Restructured VeteranLarge promotion, now use CustomVeterans code on Praetorians to prevent overspawning Oppressors issue previously.
-- Special Encounter Vanilla Enemies (BET-C, Crassus, Tyrant Weed, Nemesis, Prospector, Harold): *This is for hosts without OBNC, their spawn chance is reduced to 0%.
+- Renamed some Elite enemies to include Elite in their name.
 
 # Enemies (Detail changes)
 - Weak Twins: Added 45s Cooldown. They are now banned during Dreadnought due to unexpected behaviors.
 - Mini Bulk, Normal Bulk, Plantonator: Reduced MaxSpawnCount to 0 and Added Nospawnwithin of 7.5m and cooldown of 120s during Uplink/Refill/Blackbox, additionally during Escort Refill and Heartstone for MiniBulk and Normal Bulk. Otherwise cooldown is 60s. Plantonator is additionally banned during Drillevator.
 - Big Bulk: Added Corrosive Damage Weakness of 150%, NoSpawnWithin 7.5m and have cooldown of 1 hour on Refinery, Salvage and 4/6 Eggs. Otherwise cooldown is 900s (15 minutes). They are additionally banned during Drillevator.
+- Weak Exploder from EggSpider: Replaced with Glyphid Sentinel Swarmer (Tunnel version). 
 - Mactera Warden: DifficultyRating 100 -> 135 (Since they are very oppressive in OG FC).
 - Breeder type enemies: FreezeTemperature -300 -> -150.
 - Gorilla: AttackDamageMultiplier x1 -> x1.4. Immune to being Feared.
@@ -57,14 +58,14 @@ Changelog compares to FC is below:
 - Big Shocker: AttackDamageMultiplier x1 -> x2. Immune to being Feared. Frozen temperature is increased to -240 due to DieIfFrozen not working at all.
 - Flying Rock from Escort Heartstone: HP reduced from 250 -> 148 (Slasher base HP).
 - Elite Mactera Spawn: AttackDamageMultiplier x1 -> x0.9. TimeDilation x1 -> x0.85.
-- Patrol Bot: FreezeTemp and Unfreeze temp are now reduced. When frozen, increase x3 damage taken.
+- Patrol Bot: FreezeTemp and Unfreeze temp are now reduced. When frozen, increase x3 damage taken. 
 - Rockpox Septic: AttackDamageMultiplier 1 -> 0.75.
-- Sentinel: DifficultyRating 50 -> 60. Movement speed buff x1.35 -> x1.25. Added Electric Damage Weakness by -30%. No longer spawns on Encounters.
+- Sentinel: Movement speed buff x1.35 -> x1.25. Added Electric Damage Weakness by -30%. No longer spawns on Encounters.
 - Trawler (from pool & wavespawner): No longer spawns during Encounters, TimeDilation x1 -> x0.75. In 1p setting it's banned from spawning.
 - Big Shredder: Reverted all weaknesses back to x1 value. AttackDamageMultiplier x1 -> x2. Immune to being Feared. Frozen temp is now -240.
 - Weak Lacerator: Now use Base Descriptor "ED_Lassie_Zen".
-- Weak Elites: They now have reduced Burn and Frozen temperature (still x2 higher than normal enemy type).
-- Acid Spitter: Changed material to make it easier to see in the dark. AttackDamageMultiplier x1 -> x0.8.
+- Weak Elites: They now have reduced Burn and Frozen temperature (still x2 higher than normal enemy type). Weak Elite Slashers DifficultyRating 70 -> 30 and MaxSpawnCount 1 -> 2 (Both Normal Pool and WaveSpawner versions).
+- Acid Spitter: Changed material to make it easier to see in the dark. AttackDamageMultiplier x1 -> x0.9.
 - Web Spitter: UsesBiomeVariants = false.
 - Stingtail: Rarity 5.25 -> 5.5.
 - Sprouts (Ground and Ceiling): Changed material to make it easier to see in the dark. 
@@ -76,4 +77,4 @@ Changelog compares to FC is below:
 - During a Caretaker fight, a Weak Bulk Detonator known as a "CaretakerHelper" with slower movement speed and Base HP x0.25 will spawn in to allow the team to speed up Caretaker fight. It has halved carve radius compare to Normal Bulk. Only one CaretakerHelper can exist at a given time. Its material is slightly changed to distinct from Bulks that spawn from Waves.
 - Grunt WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 60s. No longer spawns minibulks during Uplink/Refill/Blackbox and Drillevator.
 - Trawler WaveSpawner: Limit the amount of XED_Shark on the map to 5. ED_Shark from pool spawn doesn't count toward this. This WS is disabled in 1p setting to avoid frustration.
-- Weak Elite WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 100s.
+- Weak Elite WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 100s. 
