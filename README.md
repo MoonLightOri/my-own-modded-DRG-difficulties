@@ -4,6 +4,7 @@ Currently made:
 - [Celestial (alpha 25)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Celestial/Celestial_a25.json) <Require at least CD2 beta 13, MEV v5_4 and DEA a05t2 or above> (Toned-down of Interstellar, ND level) 
 - [Astral (alpha 22)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Astral/Astral_a22.json) <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
 - [Penumbra (v1.07)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Penumbra/Penumbra%20v1.07.json) <Require CD2 beta 14, MEV v5_4 and DEA (any version, but latest work best)> (FC fork with QoL and Balance changes from Interstellar)
+- [Elite Restriction Release [6x2/6x2EX]](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/tree/main/Elite%20Restriction%20Release) <Pubbable Difficulty, Host require CD2 beta 14 (Client as well for Non-Pub version)> (Elite Threat global expansion)
 
 Download Links (if you are from CN, please uses VPN since dl links are coming from discord): <br />
 [CD2 beta update 14 download](https://cdn.discordapp.com/attachments/1248846649107943434/1352476755801145415/custom-difficulty2-update-14-rc1.zip?ex=67de27a2&is=67dcd622&hm=b7b2db0371921fc432f26e8142a352ace2722d9328409443aafebf851503f6b7&) <br />
