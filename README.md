@@ -1,6 +1,6 @@
 My list of modded difficulties I made
 Currently made:
-- [Interstellar (beta 51)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Interstellar/Interstellar_b51.json) <Require CD2 beta 14, MEV v5_4 and DEA b00.3.3>
+- [Interstellar (v1.0)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Interstellar/Interstellar_v1.0.json) <Require CD2 beta 14, MEV v5_4 and DEA b00.3.3+>
 - [Celestial (alpha 25)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Celestial/Celestial_a25.json) <Require at least CD2 beta 13, MEV v5_4 and DEA a05t2 or above> (Toned-down of Interstellar, ND level) 
 - [Astral (alpha 22)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Astral/Astral_a22.json) <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
 - [Penumbra (v1.07)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Penumbra/Penumbra%20v1.07.json) <Require CD2 beta 14, MEV v5_4 and DEA (any version, but latest work best)> (FC fork with QoL and Balance changes from Interstellar)
@@ -24,7 +24,7 @@ Recommended & Option Mods (if you are from CN, please uses VPN since dl links ar
 - Optional:
     + [Beta Stalker Low Graphic Fix](https://cdn.discordapp.com/attachments/1148725752020340827/1205500046557057055/StalkerLowGraphicsFix.pak?ex=67fe59e8&is=67fd0868&hm=97cb4a9dbca9553f1f5b720458a0e9f8d9d4ed943156c785e3d0c115dec793e0&) (If you can't play with high Effect setting)
     + [More Egg Swarms (If you want a more challenging Egg Hunt)](https://cdn.discordapp.com/attachments/1148725752020340827/1166128615440789546/more_egg_swarms_P.pak?ex=682ef0a7&is=682d9f27&hm=c21d0b1a6b76339885f8070ee82a954dd027619df1506a39824f347f1fdd8b42&)
-    
+
 Installation order in mint/mintcat: 
 - DEA (above MEV)
 - MEV (above CD2)
