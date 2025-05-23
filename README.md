@@ -1,8 +1,8 @@
 My list of modded difficulties I made
 Currently made (For requirements, Latest version is always better):
-- [Interstellar (v1.0)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Interstellar/Interstellar_v1.0.json) <Require CD2 beta 15, MEV v5_4 and DEA b00.3.3>
-- [Celestial (v1.0)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Celestial/Celestial_a25.json) <Require CD2 beta 15, MEV v5_4 and DEA a05t2 or above> (Toned-down of Interstellar, ND level) 
-- [Astral (v1.0)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Astral/Astral_a22.json) <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
+- [Interstellar (v1.01)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Interstellar/Interstellar_v1.01.json) <Require CD2 beta 15, MEV v5_4 and DEA b00.3.3>
+- [Celestial (v1.0)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Celestial/Celestial%20v1.0.json) <Require CD2 beta 15, MEV v5_4 and DEA a05t2 or above> (Toned-down of Interstellar, ND level) 
+- [Astral (v1.0)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Astral/Astral%20v1.0.json) <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
 - [Penumbra (v1.07)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Penumbra/Penumbra%20v1.07.json) <Require CD2 beta 14, MEV v5_4 and DEA (any version, but latest work best)> (FC fork with QoL and Balance changes from Interstellar)
 - [Elite Restriction Release [6x2/6x2EX]](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/tree/main/Elite%20Restriction%20Release) <Pubbable Difficulty, Host require CD2 beta 14 (Client as well for Non-Pub version)> (Elite Threat global expansion)
 
