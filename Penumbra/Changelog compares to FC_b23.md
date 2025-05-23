@@ -1,6 +1,6 @@
 Penumbra (previously named FCM), is the *Modified* Hazard FC (made by pH-JPEG) with various tweaks to reduce bad RNG and balance more around mission types and enemies. This tweak is done by MoonLightOri and will mainly base on the tweaks from Interstellar 4 player count and on fire comp in general. This is updated to version v1.07.
 
-Penumbra requirement: Custom Difficulty 2 Beta 14, MEV v5.4 and DEA (any version)
+Penumbra requirement: Custom Difficulty 2 Beta 14, MEV v5.4 and DEA (Latest version is always better).
 (But I recommend you to update DEA to latest version)
 
 - Recommended Mods: 

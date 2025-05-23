@@ -1,8 +1,9 @@
+Updated to v1.01
 This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but with adjustments.
 
 Contributor: seu
 
-Interstellar requirement: Custom Difficulty 2 beta 14, MEVv5_4, DEA_b003.3+. (Latest version is always better)
+Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Latest version is always better)
 
 - Recommended Mods: 
   + VEA: https://mod.io/g/drg/m/vanilla-enemy-adjustments
@@ -155,15 +156,15 @@ Interstellar requirement: Custom Difficulty 2 beta 14, MEVv5_4, DEA_b003.3+. (La
   + Set your Effects in the in-game options to High to see them while they are cloaked. If you have Low Graphic Stalker Fix mod then you can ignore this line.
   + No longer spawns in Solo.
 - Naedocyte Seeder (CD2)
-  + It's a rarer Breeder that only spawns in a wave. Their materials are changed also.
-  + Base HP -50%, move -66.66% slower.
+  + It's a rarer Breeder that is bigger sized and only spawns in a wave (Highlighted by Enemy Outline, disappear after being pinged by player and expire). Their materials are changed also.
+  + Base HP & movement speed -66.66%.
   + They now instead spawn smaller and different look Sentinels that inherit every trait of normal Sentinel (Except bonus movement speed), with some extra stats: Fire damage resistance +25%, Base HP -40%, and Damage Dealt -25%.
-  + Unable to spawn in Mining and Deep Scan mission type. In other mission types, It will start bleeding (lose HP) after 1/2/3/4 minutes of spawning. Additionally increase cooldown after It spawns to 300s as well.
+  + It will bleed out (lose HP) after 2 minutes of being in the map and dies exactly 2 minutes later (The timer value is lower in player count).
 - Naedocyte Thugger (CD2)
-  + It's another rarer Breeder that only spawns in a wave. Their materials are changed also and is different than Seeder.
-  + Base HP -50%, move -66.66% slower.
+  + It's another rarer Breeder that is bigger sized and only spawns in a wave (Highlighted by Enemy Outline, disappear after being pinged by player and expire). Their materials are changed also and is different than Seeder. 
+  + Base HP & movement speed -66.66%.
   + They now instead spawn swarmer sized with different look Oppressors named "Glyphid Thug" that move slower than normal Oppressor, have Base HP x0.05 (5% HP), Damage Dealt -35% and have no hitbox collision. On death they leave behind Frost Praetorian's gas instead. They also die to normal pickaxe hit.
-  + Unable to spawn in Mining and Deep Scan mission type. In other mission types, It will start bleeding (lose HP) after 1/2/3/4 minutes of spawning. Additionally increase cooldown after It spawns to 300s as well.
+  + It will bleed out (lose HP) after 2 minutes of being in the map and dies exactly 2 minutes later (The timer value is lower in player count).
 - Battle Blimp (CD2)
   + It's another rarer Breeder but different variant that only spawns in a wave. Their materials are changed also and scaling is bigger.
   + Base HP +100%, Freezing temperature is increased to -400c and It spawns Patrol Bot's homing missile projectiles in short interval.
@@ -307,15 +308,15 @@ Interstellar requirement: Custom Difficulty 2 beta 14, MEVv5_4, DEA_b003.3+. (La
   + Its attack drops A LOT of low velocity BET-C bombs in circular pattern that deal similar damage as being hit directly by Glyphid Dreadnought's Fireball.
   + It cannot be spawned during Defense, Drillevator and Escort Heartstone phases.
 - The Sun (CD2)
-  + This is a static Ommoran Flying Rock that has Base HP 250 -> 600 (Brundle's). Its material is changed also.
-  + On its presence, it increases Movement Speed, Projectile Speed and decreases Attack Cooldown (apply mostly for Melee attack enemies like Grunt) values by a considerable amount.
+  + This is a static Ommoran Flying Rock that has Base HP 300. Its material is changed also.
+  + On its presence (Highlighted by Enemy Outline, disappear after being pinged by player and expire), it increases Movement Speed, Projectile Speed and decreases Attack Cooldown (apply mostly for Melee attack enemies like Grunt) values by a considerable amount.
   + It cannot buff already on-field enemies before The Sun spawns. The buff cannot wear off on already buffed enemies.
-  + The Sun will bleed out (lose HP) after 30s of being in the map. 
+  + The Sun will bleed out (lose HP) after 45s of being in the map and dies exactly 45s later (The timer value is lower in player count). 
   + It cannot be spawned During Defense, Drillevator and Escort mission type.
 - The Moon (CD2)
-  + This is a static Ommoran Flying Rock that has Base HP 250 -> 600 (Brundle's). Its material is changed also.
-  + On its presence, it prevents regen your HP naturally, reduces revive HP to 10% and reduces all lighting values to low amount (This will make surrounding much darker).
-  + The Moon will bleed out (lose HP) after 30s of being in the map. 
+  + This is a static Ommoran Flying Rock that has Base HP 300. Its material is changed also.
+  + On its presence (Highlighted by Enemy Outline, disappear after being pinged by player and expire), it prevents regen your HP naturally, reduces revive HP to 10% and reduces all lighting values to low amount (This will make surrounding much darker).
+  + The Moon will bleed out (lose HP) after 45s of being in the map and dies exactly 45s later (The timer value is lower in player count).
   + It cannot be spawned During Defense, Drillevator and Escort mission type.
 - Big Youngling (CD2)
   + They are bigger sized Youngling that have more HP than original version (Stingtail's Normal Scaling at 4p, lower health at lower player count).
@@ -349,8 +350,8 @@ Interstellar requirement: Custom Difficulty 2 beta 14, MEVv5_4, DEA_b003.3+. (La
  
 
 # Custom Waves
-- During a Dreadnought fight (OG Dreadnought, Hiveguard, normal Twins), a Bulk Detonator known as a "DreadHelper" with Base HP x0.85 will spawn in to allow the team to kill the Dreadnought faster. Only one DreadHelper can exist at a given time.
-- During a Caretaker fight, a Weak Bulk Detonator known as a "CaretakerHelper" with slower movement speed and Base HP x0.25 will spawn in to allow the team to speed up Caretaker fight. It has halved carve radius compare to Normal Bulk. Only one CaretakerHelper can exist at a given time. Its material is slightly changed to distinct from Bulks that spawn from Waves.
+- During a Dreadnought fight (OG Dreadnought, Hiveguard, normal Twins), a Bulk Detonator known as a "DreadHelper" with Base HP x0.85 will spawn in to allow the team to kill the Dreadnought faster (Highlighted by Item Outline, disappear after being pinged by player and expire). Only one DreadHelper can exist at a given time.
+- During a Caretaker fight, a Weak Bulk Detonator known as a "CaretakerHelper" with slower movement speed and Base HP x0.25 will spawn in to allow the team to speed up Caretaker fight (Highlighted by Item Outline, disappear after being pinged by player and expire). It has halved carve radius compare to Normal Bulk. Only one CaretakerHelper can exist at a given time. Its material is slightly changed to distinct from Bulks that spawn from Waves.
 - During Dreadnought or Caretaker fight, Normal Wave will spawn in periodically. For Dreadnought fight, the Interval is increased by 50, but the beginning of the fight will guarantee a Normal Wave spawn.
 - Every 60 seconds (Longer during certain pressure scenarios), either 20 Grunts with 1-4 White Spitters (Web Spitter but have no Web STE on attack), a Bundle or/with 2-3 Mactera Spawns, or 2-3 Mini-Bulks spawn. The chance they spawn is split into 67%/21%/12%. Mini-Bulks from this WaveController are not allowed to spawn on Escort, and disabled during Defensive objective and Drillevator.
 - Every 90 seconds, a Trawler spawns. This wave controller is disabled in 1 player count lobby. Up to 0/2/4/5 trawlers can be available in the map.
@@ -359,4 +360,3 @@ Interstellar requirement: Custom Difficulty 2 beta 14, MEVv5_4, DEA_b003.3+. (La
 
 # Miscellaneous:
 - Bandaid bug fix: Darkness module somehow caused scout's flare gun to have significantly less duration time so I added FlareGunDuration field value in Darkness module file, so it matches 90s of duration (1 duration upgrade) most scout upgrade path will take.
-- Currently CD2 Beta 14 is having a bug relating to lighting at lobby without Scout, basically the stage in mid-way will have start to have incorrect lighting, cause the map to look extra-ordinary bright and your game to drop in FPS significantly.
