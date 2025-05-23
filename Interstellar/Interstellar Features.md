@@ -99,7 +99,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + They have Fire Damage Weakness +295%. 
   + They now instead spawn white Slashers that only have ~66 HP.
 - White Exploder (MEV)
-  + Apart from spawning from Breeders, these also spawn from Swarmer Eggs (Halved damage dealt, smaller Scaled).
+  + Only spawns from Normal Breeders.
   + They also move -25% slower.
 - Exploder
   + They move +50% faster.
@@ -188,7 +188,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + These are Goo Bomber variant that have Base HP -25%. Their materials are changed also.
   + Normal attack projectile is now replaced with Glyphid Dreadnought's Eggshot projectile that spawns a bunch of Glyphid Rats and apply Pheromone STE.
   + Bombing attack now spawns individual Glyphid Rats instead.
-  + On its presence, all Glyphid Rats on-field gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Bombers are dead.
+  + On its presence, all Glyphid Rats on-field (Except Sewer/Hatched Rats) gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Bombers are dead.
 - Glyphid Dreadnought (BOSS)
   + Glyphid Dreadnought's Eggshot projectile spawns a bunch of Glyphid Rats instead with Pheromone STE.
 - Turbo Menace (MEV)
@@ -204,7 +204,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + They can spawn in waves that have Base HP of 600 (Brundle's). 
   + They will not try to heal with each other so burrow and fireballs pan attacks are locked.
   + Both have 20% chance to promote into Wallhacker and Banshee respectively, cannot be promoted into these variants during Defense and Drillevator.
-  + Arbalest cannot be spawned during Drillevator in 1p setting.
+  + In 1p setting, Arbalest cannot be spawned during Drillevator.
 - Wrathbane + Banshee (CD2, DEA)
   + These are the promoted variant of twins. They retain all stats from weak twins previously and have different materials.
   + Wrathbane: Damage Dealt -65%. Wrathbane is a type of Lacerator that has Stomping rockwall projectile replaced with Scorching Tide projectile (Has limited range, deadly in close range, low ground attack) and Flaming Breath attack replaced with Burrow.
