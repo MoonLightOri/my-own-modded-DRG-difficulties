@@ -1,5 +1,4 @@
-Updated to v1.01
-This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but with adjustments.
+This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but with adjustments. Updated to v1.01.
 
 Contributor: seu
 
