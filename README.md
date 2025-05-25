@@ -7,7 +7,7 @@ Currently made (For requirements, Latest version is always better):
 - [Elite Restriction Release [6x2/6x2EX]](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/tree/main/Elite%20Restriction%20Release) <Pubbable Difficulty, Host require CD2 beta 14 (Client as well for Non-Pub version)> (Elite Threat global expansion)
 
 Download Links (if you are from CN, please uses VPN since dl links are coming from discord): <br />
-[CD2 beta 15 download](https://cdn.discordapp.com/attachments/1248846649107943434/1375281959928074340/custom-difficulty2-update-15.zip?ex=68311ea2&is=682fcd22&hm=dafb70c9a5d72d22d1781a3420852e3b8787341877e4ae300f4da5581ebfc52d&) <br />
+[CD2 beta 15a download](https://cdn.discordapp.com/attachments/1248846649107943434/1375689245309800448/custom-difficulty2-update-15a.zip?ex=683342b3&is=6831f133&hm=36b8a5b4623928ffebc8b893bc024fd37e6ac5f8e841473e025b9435cd832f75&) <br />
 [MEV v5_4 download](https://cdn.discordapp.com/attachments/1162902740230471720/1266497317855297536/MEVv5_4.pak?ex=67cea74a&is=67cd55ca&hm=89d81a4af61bfe231939390f898452196caaf05bb9a2f1c449366def6a61e1b1&) <br />
 [DEA b00.3.3 download](https://cdn.discordapp.com/attachments/1264172880359591996/1356364415976476692/DEA_b00.3.3.pak?ex=67f0e98c&is=67ef980c&hm=de04e1aedeccf9bee50d4cfed1e193de2e06a145a1a584258bee94082236638e&) <br />
 
