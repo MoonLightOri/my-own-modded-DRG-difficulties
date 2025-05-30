@@ -1,4 +1,4 @@
-This difficulty used ND - a difficulty made by pH-JPEG, as a framework, but with adjustments. It's also a toned-down version of Interstellar. Updated to v1.0.
+This difficulty used ND - a difficulty made by pH-JPEG, as a framework, but with adjustments. It's also a toned-down version of Interstellar. Updated to v1.01.
 
 Contributor: seu
 
@@ -43,9 +43,9 @@ Celestial minimum requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_a05t2+ 
 - Some existing enemies have been modified (E.G: Some enemies having lower freezing temperatures like Breeders, Bombers and Patrol Bot. Elite enemies have lower burn and freeze temperature,... - Having some favor for Cryo comp.).
 - Custom waves of certain enemies spawn at set intervals or conditions.
 - Difficulty adjusted across mission types (E.G: PE gets slightly harder, Escort heartstone phase gets slightly easier).
-- During Defense, reduce Progress Bar Penalty by 30%. At 1p, further reduce Progress Bar Penalty to 60%, and 100% if the player is Scout (No more draining). Also increase Bubble radius by 50% at 1p.
+- During Defense, reduce Progress Bar Penalty by 30%. At 1p, also increase Bubble radius by 40%.
 - Rival Turrets spawn count in Encounters sabotage mission type is reduced by 50%.
-- Lower player scaling (Especially Solo) will have signficant change on Enemies, Objectives and Mission types to make playing easier. (E.G: Doretta during Refill and Heartstone phase gains slight increased resistance. No Bulk spawns during Defense. Dangerous run ending at 1p also gets reduced specific values,...)
+- Lower player scaling (Especially Solo) will have signficant change on Enemies, Objectives and Mission types to make playing easier. (E.G: Doretta during Refill and Heartstone phase gains slight increased resistance. No Bulk spawns during Defense...)
 - Added NitraMultiplier for Deep Dive Secondaries with approximate values: 
   + 1 Extra resupply (~50N) on Eggs, Dreadnought Cocoon and Black Box.
   + 0.4 Extra resupply (~20N) on Deep Scan and Morkite Well.

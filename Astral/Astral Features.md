@@ -1,4 +1,4 @@
-This difficulty used 6x2EX - a difficulty made by pH-JPEG, as a framework, but with adjustments. It's also a toned-down version of Celestial. Updated to v1.0.
+This difficulty used 6x2EX - a difficulty made by pH-JPEG, as a framework, but with adjustments. It's also a toned-down version of Celestial. Updated to v1.01.
 
 Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4 (Latest version is always better).
 
@@ -34,9 +34,9 @@ Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4 (Latest versio
 - Some existing enemies have been modified (E.G: Some enemies having lower freezing temperatures like Breeders, Bombers and Patrol Bot. Elite enemies have lower burn and freeze temperature,... - Having some favor for Cryo comp.).
 - Custom waves of certain enemies spawn at set intervals or conditions.
 - Difficulty adjusted across mission types (E.G: Escort heartstone phase gets slightly easier).
-- During Defense at 1p, reduce Progress Bar Penalty by 30%, the value is doubled to 60% if the player is Scout. Also increase Bubble radius by 35%.
+- During Defense, reduce Progress Bar Penalty by 20%. At 1p, also increase Bubble radius by 25%.
 - Rival Turrets spawn count in Encounters sabotage mission type is reduced by 35%.
-- Lower player scaling (Especially Solo) will have signficant change on Enemies, Objectives and Mission types to make playing easier. (E.G: Doretta during Refill and Heartstone phase gains slight increased resistance. No Bulk spawns during Defense. Dangerous run ending at 1p also gets reduced specific values,...)
+- Lower player scaling (Especially Solo) will have signficant change on Enemies, Objectives and Mission types to make playing easier. (E.G: Doretta during Refill and Heartstone phase gains slight increased resistance. No Bulk spawns during Defense...)
 - Disabled player headbounces.
 - Banned Blood Sugar, Low Gravity, Duck and Cover, Ebonite Outbreak and Lithophage Outbreak warnings.
 

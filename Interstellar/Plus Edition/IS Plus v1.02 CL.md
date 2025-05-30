@@ -25,6 +25,7 @@
   + Bin with 4-7: Weight 40% -> 48%.
   + Bin with 8-11: Weight 23% -> 30%.
 * Enemies:
+- Nuke Barrager: Removed restriction in spawning in Refinery and Escort, now they can spawn more than one in these mission types.
 - Cave Leech: Grabbing and Damaging speed x1.5/2 -> x1.75/2.5.
 - Shocker: MaxSpawnCount 3/10 -> 5/15.
 - Shredder: MaxSpawnCount 10 -> 15.
