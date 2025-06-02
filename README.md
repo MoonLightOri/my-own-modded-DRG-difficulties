@@ -9,7 +9,7 @@ Currently made (For requirements, Latest version is always better):
 Download Links (if you are from CN, please uses VPN since dl links are coming from discord): <br />
 [CD2 beta 15b download](https://cdn.discordapp.com/attachments/1248846649107943434/1376674183953518642/custom-difficulty2-update-15b.zip?ex=683a23be&is=6838d23e&hm=54ef878573c043323a5f11ccff0ab4ecc10c6067b183d17de0a24afe3399d556&) <br />
 [MEV v5_4 download](https://cdn.discordapp.com/attachments/1162902740230471720/1266497317855297536/MEVv5_4.pak?ex=67cea74a&is=67cd55ca&hm=89d81a4af61bfe231939390f898452196caaf05bb9a2f1c449366def6a61e1b1&) <br />
-[DEA b00.3.3 download](https://cdn.discordapp.com/attachments/1264172880359591996/1356364415976476692/DEA_b00.3.3.pak?ex=67f0e98c&is=67ef980c&hm=de04e1aedeccf9bee50d4cfed1e193de2e06a145a1a584258bee94082236638e&) <br />
+[DEA b01.0.0 mod.io](https://mod.io/g/drg/m/donnies-enemy-addon-cd2-version) <br />
 
 [old version of DEA (a05t2)](https://cdn.discordapp.com/attachments/1264172880359591996/1321546340093657209/DEA_a05t2.pak?ex=67ce87b0&is=67cd3630&hm=4a8d33b1b397d1c6156d3dc5ea0fa02d088d41a104025bc6d177924c74c6dcb8&) <br />
 
