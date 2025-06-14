@@ -1,4 +1,4 @@
-* Master Series difficulty was inspired partially by zeta's DW. Changelogs for MS (from 6x2EX ERR): 
+* Master Series difficulty was inspired partially by zeta's DW. MS = Master Standard. Changelogs for MS (from 6x2EX ERR): 
   - Reduced Grunt Ratio to a reasonable level.
   - Enemy Damage and Movement Speed scaling follows Hazard 7. Enemy HP and projectile speed scaling stays at Hazard 6 instead.
   - Enemy Count Modifier values are 7x2 values. Enemy Cap is at 4+ player count is increased to 240.
@@ -41,14 +41,15 @@
   - Turret Spawn count in Sabotage mission type is reduced by 1/2.
   - Drilldozer gains +25% resistance. 
 * Miscellaneous:
+  - Banned Rival Presence Warning.
   - When a Dread Cocoon is popped, A Bulk named DreadHelper will spawn in along with the ~1/3 normal-wave size and 4-6 diversity to help the team kills Dread faster.
   - Removed lower Health scaling to avoid bug where when player leaves = invisible mob client.
 
 ============================================================================================================================================================================================================================
 
- * MSX is Xtreme version of Master difficulty, and It will definitely be harder. Changelogs for MSX (from MS): 
+ * MSX is Master Extreme version of Master difficulty, and It will definitely be harder. Changelogs for MSX (from MS): 
   - Announced Swarm Interval now increased to a singular bin of 110-120.
-  - Normal Wave Interval now increased to a singular bin of 140-150.
+  - Normal Wave Interval now increased to a singular bin of 130-140.
   - Stationary Difficulty now changed from a bin of 675-825 -> 800-950.
   - Some Elite Pools get +1 Elite Count, the list is: HVT:Disruptive, Ranged2:Special, SwarmBreeder.
   - During the Extraction phase of a mission or the PE countdown until the Drop Pod lands, x1.5 or x1.75 more bugs spawn respectively.
