@@ -41,7 +41,7 @@
   - Turret Spawn count in Sabotage mission type is reduced by 1/2.
   - Drilldozer gains +25% resistance. 
 * Miscellaneous:
-  - When a Dread Cocoon is popped, A Bulk named DreadHelper will spawn in along with the ~1/3 normal-wave size and 4~6 diversity to help the team kills Dread faster.
+  - When a Dread Cocoon is popped, A Bulk named DreadHelper will spawn in along with the ~1/3 normal-wave size and 4-6 diversity to help the team kills Dread faster.
   - Removed lower Health scaling to avoid bug where when player leaves = invisible mob client.
 
 ============================================================================================================================================================================================================================
