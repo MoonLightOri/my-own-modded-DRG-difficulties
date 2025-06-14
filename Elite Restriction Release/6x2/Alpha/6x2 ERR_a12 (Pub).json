@@ -2247,7 +2247,7 @@
     },
     "ED_Mactera_TripleShooter": {
       "CustomVeterans": {
-        "ED_Mactera_TripleShooter_Final": 25,
+        "ED_Mactera_TripleShooter_Final": 5,
         "ED_Mactera_TripleShooter_Elite": {
           "Mutate": "EnemyCooldown",
           "EDs": [

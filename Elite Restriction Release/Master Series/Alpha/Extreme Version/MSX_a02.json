@@ -2780,7 +2780,7 @@
       "Rarity": 5.125,
       "Base": "ED_Mactera_Shooter_Normal",
       "CustomVeterans": {
-        "ED_Mactera_Shooter_Normal_Final": 16,
+        "ED_Mactera_Shooter_Normal_Final": 9,
         "ED_Mactera_Shooter_Normal_Elite": {
           "Mutate": "EnemyCooldown",
           "EDs": [
@@ -2811,7 +2811,7 @@
             },
             ">=": 3,
             "Then": 0,
-            "Else": 4
+            "Else": 3
           }
         },
         "ED_Mactera_Shooter_Amber_Elite": {
@@ -2919,7 +2919,7 @@
       "CanBeUsedInEncounters": true,
       "Rarity": 5.25,
       "CustomVeterans": {
-        "ED_Mactera_TripleShooter_Final": 16,
+        "ED_Mactera_TripleShooter_Final": 5,
         "ED_Mactera_TripleShooter_Elite": {
           "Mutate": "EnemyCooldown",
           "EDs": [
@@ -2988,7 +2988,7 @@
     },
     "ED_Mactera_Shooter_HeavyVeteran": {
       "CustomVeterans": {
-        "ED_Mactera_Shooter_HeavyVeteran_Final": 2,
+        "ED_Mactera_Shooter_HeavyVeteran_Final": 4,
         "ED_Mactera_Shooter_HeavyVeteran_Elite": {
           "Mutate": "EnemyCooldown",
           "EDs": [
@@ -3476,7 +3476,7 @@
     },
     "ED_JellyBreeder": {
       "CustomVeterans": {
-        "ED_JellyBreeder_Final": 1,
+        "ED_JellyBreeder_Final": 1.5,
         "ED_JellyBreeder_Elite": {
           "Mutate": "IfFloat",
           "Value": {
