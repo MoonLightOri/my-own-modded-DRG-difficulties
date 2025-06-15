@@ -2136,7 +2136,7 @@
       "MinSpawnCount": 1,
       "Resistances": {
         "DamageMultiplier": 0.2412698,
-        "FireDamageMultiplier": 1.3
+        "FireDamageMultiplier": 0.91
       },
       "HealthRaw": 100,
       "SpawnSpread": 7500,
@@ -2827,7 +2827,7 @@
       "ForceEliteBase": "ED_Mactera_Shooter_Normal",
       "Resistances": {
         "DamageMultiplier": 0.7238095,
-        "FireDamageMultiplier": 1.15
+        "FireDamageMultiplier": 1.38
       },
       "Temperature": {
         "BurnTemperature": 10.5,
@@ -2911,7 +2911,7 @@
       "DisplayName": "Elite Mactera Fire Bomber",
       "Resistances": {
         "DamageMultiplier": 0.7238095,
-        "FireDamageMultiplier": 1.15
+        "FireDamageMultiplier": 1.38
       },
       "Projectile": "PRJ_Spider_Boss_Heavy_FireballBallistics",
       "AttackDamageMultiplier": 0.75,
@@ -2971,7 +2971,8 @@
       "Elite": true,
       "ForceEliteBase": "ED_Spider_Grunt_Attacker",
       "Resistances": {
-        "DamageMultiplier": 2.1714285
+        "DamageMultiplier": 2.1714285,
+        "FireDamageMultiplier": 1
       },
       "Projectile": "PRJ_HomingDrone_C",
       "JellyBreeder": {
@@ -3045,7 +3046,8 @@
       "Elite": true,
       "ForceEliteBase": "ED_Spider_Grunt_Attacker",
       "Resistances": {
-        "DamageMultiplier": 2.1714285
+        "DamageMultiplier": 2.1714285,
+        "FireDamageMultiplier": 1
       },
       "Projectile": "PRJ_HomingDrone_C",
       "JellyBreeder": {
@@ -3243,7 +3245,8 @@
       "ForceEliteBase": "ED_Spider_Grunt_Attacker",
       "DisplayName": "Elite Patrol Bot",
       "Resistances": {
-        "DamageMultiplier": 5.277777
+        "DamageMultiplier": 5.277777,
+        "FireDamageMultiplier": 1
       },
       "Temperature": {
         "FreezeTemperature": -3,
