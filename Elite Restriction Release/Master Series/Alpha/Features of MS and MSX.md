@@ -57,7 +57,6 @@
   - UPGRADE: Normal and Elite Breeders' Breed Interval are slightly buffed.
   - UPGRADE: Rockpox Exploders (Normal and Elites) deal 50% more damage.
   - UPGRADE: Crawler's Rarity decreased (5 -> 3.5).
-  - NEW ENEMY: Phase Bombs from Nemesis can be spawned occasionally in this difficulty, you will often hear Nemesis dying voices though. Unable to spawn during Drillevator, Defense.
   - NEW ENEMY: Weak Glyphid Dreadnought, has total Heath of Warden at 4p, split between Main Health and Shell ratio of 4:1, Shell can be regenerated, Orb Spawn Ball can spawn a bunch of Paratroopers
   - NEW ENEMY: Elite Glyphid Crassus Detonator (Rarely promoted from Normal Bulk), Globally Marked, move at +400% speed, but has only health of vanilla Barrager, Damage Dealt are reduced to 50% except the meatballs, Electric and Corrosive damage reduced to x0.2. There can only be 1 Elite Crassus Bulk available in the map, hidden cooldown of 400s will be applied once it spawns. This Elite uses LST:Disruptive slot.
   - NEW ENEMY: Burst Turret, new stationary unit can now be spawned in all mission types. Base health is lowered to 750 -> 600 and can now be frozen normally.
