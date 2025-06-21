@@ -14,6 +14,7 @@
   - Ranged2:Special and SwarmBreeder no longer inherit +1 Max Elite Count. Ranged:Special and HVT_Disruptive still retains +1 Max Elite Count.
   - Increase attack interval of Elite Burst Turret slightly. Reduce damage dealt.
   - Trawler no longer spawns during Encounters.
+  - Elite Stationaries increased DifficultyRating.
   ",
   "Warnings": {
     "Banned": [
@@ -3715,7 +3716,7 @@
       "Base": "ED_CaveLeech",
       "Elite": true,
       "ForceEliteBase": "ED_Mactera_TripleShooter",
-      "DifficultyRating": 100,
+      "DifficultyRating": 150,
       "Rarity": 5,
       "MaxSpawnCount": 4,
       "MinSpawnCount": 1,
@@ -3749,7 +3750,7 @@
       "Elite": true,
       "ForceEliteBase": "ED_Spider_ExploderTank",
       "Rarity": 3,
-      "DifficultyRating": 100,
+      "DifficultyRating": 175,
       "AttackDamageMultiplier": 0.4,
       "Resistances": {
         "DamageMultiplier": 2.1111111
@@ -3777,8 +3778,8 @@
       "Rarity": 7.5,
       "DifficultyRating": {
         "Mutate": "ByMissionType",
-        "Default": 200,
-        "Escort": 450
+        "Default": 300,
+        "Escort": 550
       },
       "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
@@ -3807,7 +3808,7 @@
       "CanBeUsedInEncounters": true,
       "Elite": true,
       "ForceEliteBase": "ED_Spider_ExploderTank",
-      "DifficultyRating": 100,
+      "DifficultyRating": 175,
       "MaxSpawnCount": 4,
       "MinSpawnCount": 1,
       "Rarity": 5,
@@ -4101,8 +4102,8 @@
       "DisplayName": "Elite Sniper Turret",
       "DifficultyRating": {
         "Mutate": "ByMissionType",
-        "Default": 80,
-        "Escort": 140
+        "Default": 120,
+        "Escort": 175
       },
       "MaxSpawnCount": {
         "Mutate": "ByMissionType",
@@ -4173,7 +4174,7 @@
         "FreezeTemperature": -100,
         "FozenDamageBonusScale": 3
       },
-      "DifficultyRating": 125,
+      "DifficultyRating": 175,
       "Projectile": "PRJ_GuntowerLineProjectile_C",
       "SpawnAmountModifier": 0.6,
       "Resistances": {
@@ -4223,7 +4224,7 @@
       "AttackDamageMultiplier": 0.825,
       "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
-      "DifficultyRating": 125,
+      "DifficultyRating": 200,
       "Rarity": 6,
       "DisplayName": "Elite Burst Turret",
       "SpawnAmountModifier": 0.6,

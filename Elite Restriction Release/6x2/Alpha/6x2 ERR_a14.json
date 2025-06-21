@@ -6,6 +6,7 @@
   - Increase WaveSpawners Interval (Except SI! and MSX).
   - Reduce MaxSpawnCount of Elite Leeches and Elite Spitballer.
   - Reduce Elite Kursite Spitter damage dealt by ~7.5%.
+  - Elite Stationaries increased DifficultyRating.
   ",
   "Warnings": {
     "Banned": [
@@ -2693,7 +2694,7 @@
       "Base": "ED_CaveLeech",
       "Elite": true,
       "ForceEliteBase": "ED_Mactera_TripleShooter",
-      "DifficultyRating": 100,
+      "DifficultyRating": 150,
       "Rarity": 5,
       "MaxSpawnCount": 3,
       "MinSpawnCount": 1,
@@ -2726,7 +2727,7 @@
       "Elite": true,
       "ForceEliteBase": "ED_Spider_ExploderTank",
       "Rarity": 3,
-      "DifficultyRating": 100,
+      "DifficultyRating": 175,
       "AttackDamageMultiplier": 0.4,
       "Resistances": {
         "DamageMultiplier": 2.1111111
@@ -2748,7 +2749,7 @@
       "Elite": true,
       "ForceEliteBase": "ED_Spider_ExploderTank",
       "Rarity": 7.5,
-      "DifficultyRating": 150,
+      "DifficultyRating": 250,
       "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "Resistances": {
