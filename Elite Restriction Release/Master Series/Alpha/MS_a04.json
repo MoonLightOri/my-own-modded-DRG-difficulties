@@ -12,6 +12,7 @@
   - Ranged:Special no longer inherits +1 Max Elite Count. 
   - Elite Exploder movement speed +400% -> +100%.
   - Reduce Elite Breeder promotion chance slightly.
+  - Trawler no longer spawns during Encounters.
   ",
   "Warnings": {
     "Banned": [
@@ -2528,7 +2529,7 @@
     },
     "ED_Shark": {
       "CanBeUsedForConstantPressure": true,
-      "CanBeUsedInEncounters": true,
+      "CanBeUsedInEncounters": false,
       "DifficultyRating": 45,
       "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
@@ -2580,7 +2581,7 @@
     },
     "ED_Shark_Final": {
       "CanBeUsedForConstantPressure": true,
-      "CanBeUsedInEncounters": true,
+      "CanBeUsedInEncounters": false,
       "DifficultyRating": 45,
       "MaxSpawnCount": 2,
       "MinSpawnCount": 1,

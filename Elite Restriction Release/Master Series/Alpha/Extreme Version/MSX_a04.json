@@ -13,6 +13,7 @@
   - Reduce Elite Breeder promotion chance.
   - Ranged2:Special and SwarmBreeder no longer inherit +1 Max Elite Count. Ranged:Special and HVT_Disruptive still retains +1 Max Elite Count.
   - Increase attack interval of Elite Burst Turret slightly. Reduce damage dealt.
+  - Trawler no longer spawns during Encounters.
   ",
   "Warnings": {
     "Banned": [
@@ -2686,7 +2687,7 @@
     },
     "ED_Shark": {
       "CanBeUsedForConstantPressure": true,
-      "CanBeUsedInEncounters": true,
+      "CanBeUsedInEncounters": false,
       "DifficultyRating": 45,
       "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
@@ -2738,7 +2739,7 @@
     },
     "ED_Shark_Final": {
       "CanBeUsedForConstantPressure": true,
-      "CanBeUsedInEncounters": true,
+      "CanBeUsedInEncounters": false,
       "DifficultyRating": 45,
       "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
