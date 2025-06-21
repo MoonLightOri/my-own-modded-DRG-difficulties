@@ -93,7 +93,6 @@
           "Then": ["ED_Sprout_Normal_Elite"],
           "Else": ["ED_ShootingPlant_Elite"]
         },
-        "ED_ShootingPlant_Elite",
         "ED_BarrageInfector_Elite",
         "ED_FacilityTurret_Sniper_Global",
         "ED_FacilityTurret_Sniper_Global_Elite",
