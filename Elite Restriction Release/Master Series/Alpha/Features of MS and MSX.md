@@ -1,4 +1,4 @@
-* Master Series difficulty was inspired partially by zeta's DW. MS = Master Standard. Changelogs for MS (from 6x2EX ERR): 
+* Master Series difficulty was inspired partially by zeta's DW. MS = Master. Changelogs for MS (from 6x2EX ERR): 
   - Reduced Grunt Ratio to a reasonable level.
   - Enemy Damage and Movement Speed scaling follows Hazard 7. Enemy HP and projectile speed scaling stays at Hazard 6 instead.
   - Enemy Count Modifier values are 7x2 values. Enemy Cap is at 4+ player count is increased to 240.
