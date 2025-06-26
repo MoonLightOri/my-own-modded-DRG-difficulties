@@ -723,6 +723,8 @@
       }
     },
     "ED_Spider_Stalker": {
+      "SpawnSpread": 750,
+      "NoSpawnWithin": 500,
       "MaxSpawnCount": [0, 0, 0, 1],
       "AttackDamageMultiplier": 0.75,
       "StaggerDurationMultiplier": 1,
