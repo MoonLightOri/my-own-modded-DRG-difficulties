@@ -777,6 +777,7 @@
       "SpawnSpread": 500
     },
     "ED_Spider_Spitter": {
+      "UsesBiomeVariants": false,
       "Temperature": {
         "FreezeTemperature": -50,
         "WarmingRate": 6
