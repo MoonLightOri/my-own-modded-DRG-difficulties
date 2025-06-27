@@ -66,7 +66,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
 # Enemies
 - Swarmer
   + They are now stunnable.
-  + Base HP 12 -> 5.
+  + Base HP 12 -> 4.
 - Sentinel
   + They are the bugs the Dreadnought Hiveguard summon. Electric Weakness +30%.
   + They also move +25% faster.
@@ -123,9 +123,9 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + They move -30% slower and have Fear immunity. Their materials are changed slightly.
   + They won't flee away or drop you down after taking damage.
 - Carrier (CD2)
-  + They are Elite Grabbers that have Base HP -50%, and move +50% faster than normal Elite Grabber.
+  + They are Elite Grabbers that have same Base HP as normal Grabber, and move +50% faster than normal Elite Grabber.
   + Grab Time is reduced to 10s.
-  + They are banned During Encounters, Defense, Drillevator, and in 1p.
+  + Unable to spawn During Encounters, Defense, Drillevator, in 1p setting and when there's the last standing player in the team.
   + There can only be a small number of Carrier available on-field.
 - Bulk Detonator
   + They move +50% faster. 
