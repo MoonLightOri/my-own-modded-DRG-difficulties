@@ -5,6 +5,7 @@ Currently made (For requirements, Latest version is always better):
 - [Astral (v1.01)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Astral) <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
 - [Penumbra (v1.07)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Penumbra/Penumbra%20v1.07.json) <Require CD2 beta 14, MEV v5_4 and DEA (any version, but latest work best)> (FC fork with QoL and Balance changes from Interstellar)
 - [Elite Restriction Release [6x2/6x2EX/Send It! Type R/Master Series]](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/tree/main/Elite%20Restriction%20Release) <Pubbable Difficulty, Host require CD2 beta 15+ (Client as well for Non-Pub version)> (Elite Threat global expansion)
+- [6x2RE](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/tree/main/6x2Re) <Pubble Difficulty, Host require CD2 beta 15+> (Hazard 6x2 Rebalance and QOL)
 
 Download Links (if you are from CN, please uses VPN since dl links are coming from discord): <br />
 [CD2 beta 15b download](https://cdn.discordapp.com/attachments/1248846649107943434/1376674183953518642/custom-difficulty2-update-15b.zip?ex=683a23be&is=6838d23e&hm=54ef878573c043323a5f11ccff0ab4ecc10c6067b183d17de0a24afe3399d556&) <br />
@@ -13,7 +14,7 @@ Download Links (if you are from CN, please uses VPN since dl links are coming fr
 
 [old version of DEA (a05t2)](https://cdn.discordapp.com/attachments/1264172880359591996/1321546340093657209/DEA_a05t2.pak?ex=67ce87b0&is=67cd3630&hm=4a8d33b1b397d1c6156d3dc5ea0fa02d088d41a104025bc6d177924c74c6dcb8&) <br />
 
-Recommended & Option Mods (if you are from CN, please uses VPN since dl links are coming from discord and google drive):
+Recommended & Optional Mods (if you are from CN, please uses VPN since dl links are coming from discord and google drive):
 - Recommended:
     + [VEA](https://mod.io/g/drg/m/vanilla-enemy-adjustments)
     + [No Special Swarms](https://mod.io/g/drg/m/no-special-swarms#3374117)

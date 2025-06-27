@@ -56,7 +56,7 @@ Celestial minimum requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_a05t2+ 
 # Enemies
 - Swarmer
   + They are now stunnable.
-  + Base HP 12 -> 5.
+  + Base HP 12 -> 4.
 - Sentinel
   + They are the bugs the Dreadnought Hiveguard summon. Electric Weakness +30%.
 - Leech
