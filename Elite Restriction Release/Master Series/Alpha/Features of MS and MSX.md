@@ -54,7 +54,7 @@
   - Announced Swarm Interval now increased to a singular bin of 110-120.
   - Normal Wave Interval now increased to a singular bin of 130-140.
   - Normal Wave Difficulty now changed from a bin of 750-850 -> 800-900. Added a 2000 bin that has a weight of 10%.
-  - Stationary Difficulty now changed from a bin of 600-700 -> 675-750 (Add 100 on both if MEV is detected).
+  - Stationary Difficulty now changed from a bin of 600-700 -> 700-850 (Add 100 on both if MEV is detected).
   - Encounter Difficulty now changed from a bin of 700-800 -> 750-850
   - Some Elite Pools get +1 Elite Count, the list is: HVT:Disruptive, Ranged:Special.
   - During the Extraction phase of a mission or the PE countdown until the Drop Pod lands, x1.5 or x1.75 more bugs spawn respectively.
