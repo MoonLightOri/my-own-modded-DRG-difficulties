@@ -2,7 +2,7 @@
   "Name": "6x2 ERR_a17 [Pub]",
   "Description": "EnemiesNoSync Edition, For Pubbing. Breaking the Limit in 6x2. What is Elite Restriction Release? 90% of enemies have a chance to spawn in Elite variant, Elite enemies stats are tuned significantly, for Balance. New Elite variants are also borns with new quirks to ensure the enjoyment of the difficulty.
     Alpha 17:
-  - Shredder: MinSpawnCount is now 1. DifficultyRating 20 -> 12, MaxSpawnCount 10 -> 15. Rarity 5.25 -> 8.
+  - Shocker: MinSpawnCount is now 1. DifficultyRating 20 -> 12, MaxSpawnCount 10 -> 15. Rarity 5.25 -> 8.
   - Swarmer: DifficultyRating 5 -> 6, MaxSpawnCount 65 -> 180.
   ",
   "Warnings": {
