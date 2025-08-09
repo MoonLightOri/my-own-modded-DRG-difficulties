@@ -20,15 +20,14 @@
     + UPGRADE: Exploder and Elite variant now upgraded into Rockpox Exploder. It has signficantly higher health than normal Exploder (Grunt HP at 4p).
     + UPGRADE: Elite Exploder has significantly higher Health than Elite Exploder previously (Crawler HP at 4p).
     + UPGRADE: Grabber and Elite variant requires double more damage threshold to flee/free off grabbed player than normal.
-    + UPGRADE: Cave Leech: Added Resistance against Piercing damage by 60%. Elite Cave Leech variant increased resistance against piercing damage to 90%.
     + UPGRADE: More Shockers will be spawned than usual.
     + UPGRADE: Elite Sentinel deals 30% more damage than normally.
   - New Enemy additions:
-    + NEW ENEMY: Elite Rockpox Bomber (Rarely promoted from Normal Goo Bomber), normal shot is a Orb Spawn Ball attack which will spawn a bunch of normal Grunts (named Paratroopers) which deal 30% more damage to attack player, and have the same health of vanilla Goo Bomber (weakpoint is on the Rockpox sacks now), everything else inherited from Elite Goo Bomber. This Elite uses LST:Disruptive slot.
-    + NEW ENEMY: Rockpox Breeder, can be only rarely spawn in a wave, Globally Marked, has same health as normal breeder, spawns a bunch of rockpox Spitters which have the health of a Web Spitter, shoots Acid Spitter queen projectile - AOE and Poison DoT but only tick once, projectile damage is reduced by 50%.
+    + NEW ENEMY: Elite Rockpox Bomber (Rarely promoted from Normal Goo Bomber), normal shot is a Orb Spawn Ball attack (Deal roughly slasher damage on contact) which will spawn a bunch of normal Grunts (named Paratroopers) which move 15% faster and deal 30% more damage to attack player, and have the same health of vanilla Barrage Infector (weakpoint is on the Rockpox sacks now), everything else inherited from Elite Goo Bomber. This Elite uses LST:Disruptive slot.
+    + NEW ENEMY: Rockpox Breeder, can be only rarely spawn in a wave, Globally Marked, has same health as normal breeder, spawns a bunch of rockpox Spitters which have the health of a Web Spitter, shoots Acid Spitter queen projectile which deals AoE Poison DoT but only tick once, projectile damage is reduced by 42.5%.
     + NEW ENEMY: Weak Arbalest/Lacerator, they can be spawned in a wave, has the same health as a Brundle. It will not trade health with Each Other.
     + NEW ENEMY: Crawler, Trawler, can be spawned globally in a Wave, only Crawler can be spawned during Encounters.
-    + NEW ENEMY: Elite Crawler (Promoted from Normal Crawler), has +100% movement speed, the health as a Brundle, and regenerate 21.28 HP every second naturally (4% Max HP/s at 4p), deal 30% more damage to player. This Elite uses Melee:Special slot.
+    + NEW ENEMY: Elite Crawler (Promoted from Normal Crawler), has +100% movement speed, the health as a Brundle, deal 30% more damage to player. This Elite uses Melee:Special slot.
     + NEW ENEMY: Elite Kursite Praetorian (Rarely promoted from Normal Praetorian), has +400% increased movement speed, has the same health as Elite Praetorian without tankier Armor Plates, and only do Blunt attack which deal 30% more damage. Electric, Corrosive damage has been reduced to x0.2. There can only be 1 Elite Kursite Praetorian in the map, hidden cooldown of 200s will be applied once it spawns. This Elite uses LST:Common slot. 
     + NEW ENEMY [MEV]: Korlok Sprout, new stationary unit that can now be spawned independently outside of Korlok Hydraweed fight. It has base health of a Sentinel. If you have MEV, they will spawn.
     + NEW ENEMY: Repulsion Turret, new stationary unit can now be spawned in all mission types. It has -25% attack interval, base health lowered 600 -> 500. It can also be frozen normally to take more damage.
