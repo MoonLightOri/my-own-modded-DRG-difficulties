@@ -1501,6 +1501,7 @@
     },
     "ED_Spider_RapidShooter_Elite": {
       "DisplayName": "Elite Glyphid Menace",
+      "IsBossFight": true,
       "Base": "ED_Spider_RapidShooter",
       "Elite": true,
       "StaggerDurationMultiplier": 5,

@@ -1848,6 +1848,7 @@
     },
     "ED_Spider_RapidShooter_Elite": {
       "DisplayName": "Elite Glyphid Menace",
+      "IsBossFight": true,
       "Base": "ED_Spider_RapidShooter",
       "Elite": true,
       "StaggerDurationMultiplier": 5,
@@ -3413,6 +3414,7 @@
       "Elite": true,
       "ForceEliteBase": "ED_Spider_Grunt_Attacker",
       "DisplayName": "Elite Patrol Bot",
+      "IsBossFight": true,
       "Resistances": {
         "DamageMultiplier": 5.277777,
         "FireDamageMultiplier": 1
