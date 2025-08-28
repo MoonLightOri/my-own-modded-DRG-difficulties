@@ -1,14 +1,10 @@
 {
-  "Name": "Interstellar EAT SHIT v1.03",
+  "Name": "Interstellar EAT SHIT v1.04",
   "MaxPlayers": 8,
   "Description": "REQUIRES CD2 beta update 15 (UPDATED), MEV v5.4 AND DEA b00.3.3+. Recommended VEA. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies. This is the EAT SHIT VERSION WITH DOUBLE ENEMY ECM.
-    v1.03:
-  - Carrier: HealthMultiplier x0.5 -> x0.46052 (Same Health as a normal Grabber). Prevent normal grabber from promoting into Carrier when there's the last standing player on the team.
-  - Glyphid Rat: Fix incorrect number value on OnFireHeatRange (0.2cm -> 0.2m).
-  - Swarmer: MinSpawnCount is now 1, HealthRaw 5 -> 4 (Fix Drak and Client pickaxe breakpoint a bit more).
-  - Fix typo on CustomVeteran Praetorian ED (doesn't matter much).
-  - Joker: Spawn Cooldown 60s -> 90s. Scale Health and Clone spawn amount on 5+ player count.
-  - Solaris: Scale Health on 5+ player count.
+    v1.04:
+  - EggSpider: Max and MinSpawnCount capped to 1.
+  - Big Bulk: Banned on Refinery, 4 Eggs Egg Hunt and 2 Mules Salvage.
   ",
   "Resupply": {
     "Cost": {
@@ -1457,7 +1453,6 @@
             "Default": {
               "Mutate": "ByPlayerCount",
               "Values": [
-                [],
                 {
                   "Mutate": "EnemyCooldown",
                   "EDs": [
@@ -1466,20 +1461,23 @@
                   "CooldownTime": {
                     "Mutate": "ByDNA",
                     "Default": 900,
-                    "Refinery": 3600,
                     "Salvage": 3600,
-                    "Egg,1,1": 3600,
                     "Egg,2,2": 3600
                   },
                   "ValueDuringCooldown": [],
                   "DefaultValue": {
+                  "Mutate": "ByDNA",
+                  "Default": ["ED_Spider_ExploderTank_kiwami"],
+                  "Refinery": [],
+                  "Egg,1,1": [],
+                  "Salvage,2,2": [],
+                  "Salvage,3,3": {
                     "Mutate": "BySalvagePhase",
-                    "Default": [
-                      "ED_Spider_ExploderTank_kiwami"
-                    ],
+                    "Default": ["ED_Spider_ExploderTank_kiwami"],
                     "PreUplink": [],
                     "PreRefuel": []
                   }
+                }
                 }
               ]
             },
@@ -2519,6 +2517,8 @@
       "DisplayName": "Glyphid Hatched Rat",
       "Courage": 1,
       "UsesBiomeVariants": false,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
       "Materials": [
         "M_RustedMetal_White01",
         {

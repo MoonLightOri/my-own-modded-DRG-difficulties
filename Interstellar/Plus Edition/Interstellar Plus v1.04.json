@@ -1,27 +1,23 @@
 {
-  "Name": "Interstellar EAT SHIT v1.03",
-  "MaxPlayers": 8,
-  "Description": "REQUIRES CD2 beta update 15 (UPDATED), MEV v5.4 AND DEA b00.3.3+. Recommended VEA. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies. This is the EAT SHIT VERSION WITH DOUBLE ENEMY ECM.
-    v1.03:
-  - Carrier: HealthMultiplier x0.5 -> x0.46052 (Same Health as a normal Grabber). Prevent normal grabber from promoting into Carrier when there's the last standing player on the team.
-  - Glyphid Rat: Fix incorrect number value on OnFireHeatRange (0.2cm -> 0.2m).
-  - Swarmer: MinSpawnCount is now 1, HealthRaw 5 -> 4 (Fix Drak and Client pickaxe breakpoint a bit more).
-  - Fix typo on CustomVeteran Praetorian ED (doesn't matter much).
-  - Joker: Spawn Cooldown 60s -> 90s. Scale Health and Clone spawn amount on 5+ player count.
-  - Solaris: Scale Health on 5+ player count.
+  "Name": "Interstellar PLUS v1.04",
+  "Description": "REQUIRES CD2 beta update 15 (UPDATED), MEV v5.4 AND DEA b00.3.3+. Recommended VEA. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies. This is the PLUS version which has some changes that increases the difficulty further.
+    v1.04:
+  - MaxActiveSwarmers: 90/180/240 -> 90/120/180/240. MaxActiveEnemies 115/225/300 -> 115/170/225/300
+  - EggSpider: Max and MinSpawnCount capped to 1.
+  - Big Bulk: Banned on Refinery, 4 Eggs Egg Hunt and 2 Mules Salvage.
+  - Spy: Banned in Solo.
   ",
   "Resupply": {
     "Cost": {
       "Mutate": "ByResuppliesCalled",
       "Values": [
-        0,
-        0,
+        40,
         {
           "Mutate": "ByPlayerCount",
           "Values": [
-            15,
-            15,
-            20
+            50,
+            50,
+            60
           ]
         }
       ]
@@ -287,14 +283,16 @@
   "Caps": {
     "MaxActiveCritters": 240,
     "MaxActiveSwarmers": [
+      90,
+      120,
       180,
-      360,
-      480
+      240
     ],
     "MaxActiveEnemies": [
-      180,
-      360,
-      480
+      115,
+      170,
+      225,
+      300
     ]
   },
   "Salvage": {
@@ -557,8 +555,7 @@
             }
           }
         }
-      },
-      "C": 2
+      }
     },
     "EncounterDifficulty": [
       {
@@ -1063,24 +1060,12 @@
           },
           "Then": {
             "Mutate": "ByDNA",
-            "Default": [
-              "ED_Spider_Lobber_Wave"
-            ],
-            "Egg,x,2": [
-              "ED_Spider_Lobber_Enc"
-            ],
-            "PE": [
-              "ED_Spider_Lobber_Enc"
-            ],
-            "Escort": [
-              "ED_Spider_Lobber_Enc"
-            ],
-            "Refinery": [
-              "ED_Spider_Lobber_Enc"
-            ],
-            "DeepScan": [
-              "ED_Spider_Lobber_Enc"
-            ]
+            "Default": ["ED_Spider_Lobber_Wave"],
+            "Egg,x,2": ["ED_Spider_Lobber_Enc"],
+            "PE": ["ED_Spider_Lobber_Enc"],
+            "Escort": ["ED_Spider_Lobber_Enc"],
+            "Refinery": ["ED_Spider_Lobber_Enc"],
+            "DeepScan": ["ED_Spider_Lobber_Enc"]
           },
           "Else": [
             "ED_Spider_Lobber_Wave"
@@ -1466,20 +1451,23 @@
                   "CooldownTime": {
                     "Mutate": "ByDNA",
                     "Default": 900,
-                    "Refinery": 3600,
                     "Salvage": 3600,
-                    "Egg,1,1": 3600,
                     "Egg,2,2": 3600
                   },
                   "ValueDuringCooldown": [],
                   "DefaultValue": {
+                  "Mutate": "ByDNA",
+                  "Default": ["ED_Spider_ExploderTank_kiwami"],
+                  "Refinery": [],
+                  "Egg,1,1": [],
+                  "Salvage,2,2": [],
+                  "Salvage,3,3": {
                     "Mutate": "BySalvagePhase",
-                    "Default": [
-                      "ED_Spider_ExploderTank_kiwami"
-                    ],
+                    "Default": ["ED_Spider_ExploderTank_kiwami"],
                     "PreUplink": [],
                     "PreRefuel": []
                   }
+                }
                 }
               ]
             },
@@ -1572,7 +1560,7 @@
                       "ED_Spider_ExploderTank",
                       "ED_Spider_ExploderTank_frozen"
                     ],
-                    "CooldownTime": 300,
+                    "CooldownTime": 480,
                     "ValueDuringCooldown": [],
                     "DefaultValue": ["ED_Spider_ExploderTank_frozen"]
                   },
@@ -1667,9 +1655,7 @@
           ],
           "CooldownTime": 240,
           "ValueDuringCooldown": [],
-          "DefaultValue": [
-            "ED_JellyBreeder_Sentinel"
-          ]
+          "DefaultValue": ["ED_JellyBreeder_Sentinel"]
         },
         {
           "Mutate": "IfFloat",
@@ -1680,9 +1666,9 @@
           ">=": {
             "Mutate": "ByPlayerCount",
             "Values": [
-              2,
-              3,
-              4
+              1,
+              1,
+              2
             ]
           },
           "Then": [],
@@ -1711,7 +1697,13 @@
         },
         "ED_Spider_Shooter_Barrier",
         "ED_Spider_Shooter_Vomit",
-        "ED_Spy",
+        {
+          "Mutate":"ByPlayerCount",
+          "Values": [
+            [],
+            ["ED_Spy"]
+          ]
+        },
         {
           "Mutate": "If",
           "Condition": {
@@ -1829,9 +1821,7 @@
           ],
           "CooldownTime": 240,
           "ValueDuringCooldown": [],
-          "DefaultValue": [
-            "ED_JellyThugger"
-          ]
+          "DefaultValue": ["ED_JellyThugger"]
         },
         {
           "Mutate": "If",
@@ -1916,9 +1906,7 @@
         {
           "Mutate": "ByPlayerCount",
           "Values": [
-            [
-              "ED_Spider_Stalker"
-            ],
+            ["ED_Spider_Stalker"],
             []
           ]
         },
@@ -1935,12 +1923,8 @@
               "Else": {
                 "Mutate": "ByMissionType",
                 "Default": [],
-                "PE": [
-                  "ED_Spider_Exploder"
-                ],
-                "DeepScan": [
-                  "ED_Spider_Exploder"
-                ]
+                "PE": ["ED_Spider_Exploder"],
+                "DeepScan": ["ED_Spider_Exploder"]
               }
             },
             []
@@ -2035,7 +2019,7 @@
                       "ED_Spider_ExploderTank",
                       "ED_Spider_ExploderTank_frozen"
                     ],
-                    "CooldownTime": 300,
+                    "CooldownTime": 480,
                     "ValueDuringCooldown": [
                       "ED_Spider_ExploderTank"
                     ],
@@ -2159,8 +2143,8 @@
       },
       "MaxSpawnCount": [
         0,
-        1,
-        2
+        0,
+        1
       ],
       "MinSpawnCount": 1,
       "Rarity": 8,
@@ -2245,7 +2229,7 @@
         "Float:TurretRotationSpeed": 100,
         "Float:LockonTime": 2,
         "Float:FireInterval": 0.4,
-        "Float:AimZOffset": 0
+        "Float:AimZOffset": 0.0
       },
       "Materials": [
         "M_Plague_MedbayScan",
@@ -2276,9 +2260,9 @@
       },
       "DifficultyRating": 47.5,
       "MaxSpawnCount": [
+        1,
         2,
-        3,
-        5
+        3
       ],
       "Rarity": 5.25,
       "Temperature": {
@@ -2293,9 +2277,9 @@
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 47.5,
       "MaxSpawnCount": [
+        1,
         2,
-        3,
-        5
+        3
       ],
       "Rarity": 5.25,
       "Temperature": {
@@ -2333,8 +2317,7 @@
       },
       "MaxSpawnCount": [
         0,
-        1,
-        2
+        1
       ],
       "MinSpawnCount": 1,
       "Rarity": [
@@ -2364,8 +2347,8 @@
       "MaxSpawnCount": [
         0,
         1,
-        3,
-        5
+        2,
+        3
       ],
       "MinSpawnCount": 1,
       "Temperature": {
@@ -2385,7 +2368,7 @@
         "M_SpiderStingerClaw_Flesh",
         "M_WPN_ZipPole_A_Light"
       ],
-      "MaxSpawnCount": 5,
+      "MaxSpawnCount": 3,
       "MinSpawnCount": 1,
       "Rarity": 5.25,
       "HealthMultiplier": [
@@ -2404,7 +2387,7 @@
           2.5
         ],
         "GrapDelay": [
-          0.057143,
+          0.0571428,
           0.04
         ],
         "TentacleSpeed": [
@@ -2477,10 +2460,10 @@
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 50,
       "MaxSpawnCount": [
-        8,
-        10,
-        14,
-        20
+        4,
+        5,
+        7,
+        10
       ],
       "MinSpawnCount": 1,
       "Rarity": 3.5,
@@ -2490,7 +2473,7 @@
       "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 145,
-      "MaxSpawnCount": 2,
+      "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "Rarity": 8,
       "HealthMultiplier": 0.5,
@@ -2504,7 +2487,7 @@
       "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 200,
-      "MaxSpawnCount": 2,
+      "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "Rarity": 5.875,
       "HealthMultiplier": 0.5,
@@ -2519,6 +2502,8 @@
       "DisplayName": "Glyphid Hatched Rat",
       "Courage": 1,
       "UsesBiomeVariants": false,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
       "Materials": [
         "M_RustedMetal_White01",
         {
@@ -2590,7 +2575,7 @@
       "DisplayName": "Glyphid Youngnought",
       "DifficultyRating": 200,
       "IsBossFight": true,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "UsesSpawnRarityModifiers": false,
       "Rarity": 6.25,
@@ -2649,8 +2634,8 @@
         ]
       },
       "MaxSpawnCount": [
-        1,
-        2
+        0,
+        1
       ],
       "MinSpawnCount": 1,
       "Rarity": [
@@ -2704,8 +2689,8 @@
         ]
       },
       "MaxSpawnCount": [
-        1,
-        2
+        0,
+        1
       ],
       "MinSpawnCount": 1,
       "Rarity": [
@@ -2734,7 +2719,7 @@
               ">=": {
                 "Mutate": "ByPlayerCount",
                 "Values": [
-                  0,1,2,3,4,5,6,7
+                  0,1,2,3
                 ]
               },
               "Then": true,
@@ -2752,9 +2737,9 @@
               "Mutate": "ByPlayerCount",
               "Values": [
                 1,
+                1,
                 2,
-                3,
-                4
+                3
               ]
             },
             "Then": 0,
@@ -2890,8 +2875,8 @@
       "Base": "ED_Jelly_Swarmer",
       "DifficultyRating": 10,
       "MaxSpawnCount": [
-        10,
-        30
+        5,
+        15
       ],
       "MinSpawnCount": 1,
       "Rarity": 5.5,
@@ -3010,20 +2995,15 @@
         "TimeBetweenBursts": 35,
         "TimeBetweenEggs": 5,
         "EggBurstSize": 2,
-        "MaxJellies": 40,
+        "MaxJellies": 20,
         "MultiplierOnHighPlayerCount": 1.5,
-        "SpawnAmount": 8,
+        "SpawnAmount": 4,
         "EggName": "Thegg",
         "EggMaterial": [
           "M_SpaceRig_Metal05_WS"
         ],
         "EggTime": 15,
-        "EggHealth": [
-          70,
-          84,
-          98,
-          120
-        ]
+        "EggHealth": [70, 84, 98, 120]
       }
     },
     "ED_Spider_ShieldTank_white": {
@@ -3069,22 +3049,17 @@
       "MaxSpawnCount": [
         {
           "Mutate": "ByMissionType",
-          "Default": 2,
-          "Escort": 1
+          "Default": 1,
+          "Escort": 0
         },
-        2
+        1
       ],
       "HealthMultiplier": 0.5,
       "Temperature": {
         "FreezeTemperature": -150
       },
       "JellyBreeder": {
-        "EggHealth": [
-          70,
-          84,
-          98,
-          120
-        ]
+        "EggHealth": [70, 84, 98, 120]
       }
     },
     "ED_JellyBreeder_Blimp": {
@@ -3097,7 +3072,7 @@
       "Significance": "Critical",
       "DifficultyRating": 250,
       "Rarity": 9,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "SpawnAmountModifier": 1,
       "Scale": 1.2,
@@ -3243,8 +3218,8 @@
       },
       "JellyBreeder": {
         "EnemyToSpawn": "ED_Sentinel_medium",
-        "MaxJellies": 40,
-        "SpawnAmount": 8,
+        "MaxJellies": 20,
+        "SpawnAmount": 4,
         "MultiplierOnHighPlayerCount": 1.5,
         "Eggtime": 20,
         "CloseToSpawnEggTime": 5,
@@ -3252,12 +3227,7 @@
         "TimeBetweenEggs": 5,
         "TimeBetweenBursts": 35,
         "EggName": "Segg",
-        "EggHealth": [
-          70,
-          84,
-          98,
-          120
-        ],
+        "EggHealth": [70, 84, 98, 120],
         "EggMaterial": [
           "M_Canteen_Metal_4",
           "M_Canteen_Metal_4",
@@ -3288,10 +3258,10 @@
       "MaxSpawnCount": [
         {
           "Mutate": "ByMissionType",
-          "Default": 2,
-          "Escort": 1
+          "Default": 1,
+          "Escort": 0
         },
-        2
+        1
       ],
       "MinSpawnCount": 1,
       "Rarity": 5.875,
@@ -3299,12 +3269,7 @@
         "FreezeTemperature": -150
       },
       "JellyBreeder": {
-        "EggHealth": [
-          70,
-          84,
-          98,
-          120
-        ]
+        "EggHealth": [70, 84, 98, 120]
       },
       "HealthMultiplier": 0.5,
       "SpawnAmountModifier": 1
@@ -3329,19 +3294,12 @@
         "PiercingDamageMultiplier": 0.666,
         "RadiationDamageMultiplier": 0.5
       },
-      "TimeDilation": [
-        1.25,
-        1.5
-      ],
+      "TimeDilation": [1.25, 1.5],
       "HealthMultiplier": [
         2.5,
         2.8,
         3.2,
-        3.5,
-        3.9,
-        4.3,
-        4.7,
-        5.2
+        3.5
       ],
       "Temperature": {
         "FreezeTemperature": -320
@@ -3356,22 +3314,14 @@
           4,
           4,
           5,
-          6,
-          7,
-          8,
-          9,
-          10
+          6
         ],
         "Interval": 3600,
         "MaxSpawns": [
           4,
           4,
           5,
-          6,
-          7,
-          8,
-          9,
-          10
+          6
         ]
       },
       "AttackDamageMultiplier": 1,
@@ -3430,10 +3380,7 @@
       },
       "MinSpawnCount": 1,
       "DisplayName": "Mactera Joker Clone",
-      "TimeDilation": [
-        1.25,
-        1.5
-      ],
+      "TimeDilation": [1.25, 1.5],
       "Materials": [
         "M_PrecursorArtifact_Base",
         "M_CaveHolo_Transition"
@@ -3461,7 +3408,7 @@
         "M_Flier_BomberGoo_Flesh",
         "M_DropPod_RampLightsNotBlinking"
       ],
-      "MaxSpawnCount": 5,
+      "MaxSpawnCount": 3,
       "MinSpawnCount": 1,
       "Rarity": 5.125,
       "HealthMultiplier": 0.015,
@@ -3681,7 +3628,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 30,
-      "MaxSpawnCount": 140,
+      "MaxSpawnCount": 70,
       "Rarity": 5.125
     },
     "ED_Mactera_PentaJaw": {
@@ -3690,7 +3637,7 @@
     "ED_Mactera_TripleShooter": {
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
-      "MaxSpawnCount": 100,
+      "MaxSpawnCount": 50,
       "Rarity": 5.25,
       "UsesVeteranLarge": true,
       "VeteranClasses": [
@@ -3715,9 +3662,9 @@
         "DouseFireTemperature": 10
       },
       "MaxSpawnCount": [
-        4,
-        6,
-        8
+        2,
+        3,
+        4
       ],
       "MinSpawnCount": 1,
       "Rarity": 5.25,
@@ -3797,9 +3744,9 @@
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 110,
       "MaxSpawnCount": [
+        0,
         1,
-        2,
-        4
+        2
       ],
       "MinSpawnCount": 1,
       "Temperature": {
@@ -3815,7 +3762,7 @@
       }
     },
     "ED_PatrolBot_Caretaker": {
-      "Temperature": {
+        "Temperature": {
         "FreezeTemperature": -60,
         "UnfreezeTemperature": -4,
         "FozenDamageBonusScale": 3
@@ -3849,7 +3796,7 @@
         "StrafeSpeed": 1.5
       },
       "IsBossFight": true,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "Rarity": 9,
       "HealthMultiplier": 0.175,
@@ -3869,10 +3816,10 @@
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 50,
       "MaxSpawnCount": [
-        28,
-        34,
-        44,
-        60
+        14,
+        17,
+        22,
+        30
       ],
       "MinSpawnCount": 1,
       "Movement": {
@@ -3944,9 +3891,9 @@
         0.666
       ],
       "MaxSpawnCount": [
-        1,
-        2,
-        4
+        0,
+        0,
+        2
       ],
       "MinSpawnCount": 1,
       "Base": "ED_ShootingPlant_Nuke",
@@ -3964,7 +3911,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 15,
-      "MaxSpawnCount": 30,
+      "MaxSpawnCount": 15,
       "MinSpawnCount": 1,
       "Rarity": 7.5,
       "SpawnAmountModifier": 1
@@ -3988,7 +3935,7 @@
         "ElectricDamageMultiplier": 1
       },
       "AttackDamageMultiplier": 2,
-      "MaxSpawnCount": 3,
+      "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "Rarity": 5.25,
       "Scale": 3,
@@ -4014,10 +3961,10 @@
         "Escort": {
           "Mutate": "ByPlayerCount",
           "Values": [
+            1,
             2,
-            4,
-            6,
-            8
+            3,
+            4
           ]
         }
       },
@@ -4093,11 +4040,7 @@
         3,
         3.5,
         4,
-        4.5,
-        5.1,
-        5.7,
-        6.3,
-        7
+        4.5
       ],
       "Temperature": {
         "FreezeTemperature": -400
@@ -4117,7 +4060,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 150,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "UsesSpawnRarityModifiers": false,
       "Rarity": 5.5,
@@ -4149,7 +4092,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 150,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "UsesSpawnRarityModifiers": false,
       "MinSpawnCount": 1,
       "Rarity": 5.5,
@@ -4227,9 +4170,9 @@
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 45,
       "MaxSpawnCount": [
+        1,
         2,
-        4,
-        6
+        3
       ],
       "Rarity": [
         7.125,
@@ -4244,9 +4187,9 @@
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 110,
       "MaxSpawnCount": [
-        1,
-        2,
-        3
+        0,
+        0,
+        1
       ],
       "Rarity": 6.5,
       "HealthMultiplier": 0.5,
@@ -4308,7 +4251,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 10,
-      "MaxSpawnCount": 100,
+      "MaxSpawnCount": 50,
       "Movement": {
         "AlignDirectionSpeed": 1.5,
         "AlignToTargetMinRequiredAngle": 1.1,
@@ -4355,7 +4298,7 @@
               0,
               {
                 "Mutate": "ByEscortPhase",
-                "Default": 2,
+                "Default": 1,
                 "WaitingForFuel": 0,
                 "FinalEventA": 0,
                 "FinalEventB": 0,
@@ -4417,7 +4360,7 @@
               0,
               {
                 "Mutate": "ByEscortPhase",
-                "Default": 2,
+                "Default": 1,
                 "WaitingForFuel": 0,
                 "FinalEventA": 0,
                 "FinalEventB": 0,
@@ -4501,7 +4444,7 @@
       "DisplayName": "Glyphid Sonic Detonator",
       "NoSpawnWithin": 750,
       "DifficultyRating": 100,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "Temperature": {
         "FreezeTemperature": -240,
@@ -4544,7 +4487,7 @@
       "DisplayName": "Glyphid Mini-Bulk Detonator",
       "MaxSpawnCount": {
         "Mutate": "ByEscortPhase",
-        "Default": 3,
+        "Default": 2,
         "WaitingForFuel": 0,
         "FinalEventA": 0,
         "FinalEventB": 0,
@@ -4567,7 +4510,7 @@
       "DifficultyRating": 150,
       "DisplayName": "Glyphid Fanatic",
       "IsBossFight": true,
-      "MaxSpawnCount": 4,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Rarity": 5.5,
       "HealthMultiplier": 0.0816,
@@ -4576,10 +4519,10 @@
     "ED_Spider_Grunt": {
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
-      "DifficultyRating": 5,
-      "MaxSpawnCount": 160,
+      "DifficultyRating": 8,
+      "MaxSpawnCount": 80,
       "Rarity": 1,
-      "SpawnAmountModifier": 0.35
+      "SpawnAmountModifier": 0.55
     },
     "ED_Spider_Grunt_Guard_Elite": {
       "Base": "ED_Spider_Grunt_Guard",
@@ -4589,7 +4532,7 @@
       "DisplayName": "Elite Glyphid Guard",
       "Elite": true,
       "Materials": [],
-      "MaxSpawnCount": 2,
+      "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "Rarity": 5.5,
       "HealthMultiplier": 0.7163,
@@ -4606,7 +4549,7 @@
       "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 60,
-      "MaxSpawnCount": 19,
+      "MaxSpawnCount": 10,
       "MinSpawnCount": 1,
       "Rarity": 5.25,
       "SpawnAmountModifier": 1
@@ -4616,7 +4559,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 60,
-      "MaxSpawnCount": 19,
+      "MaxSpawnCount": 10,
       "MinSpawnCount": 1,
       "Rarity": 5.25,
       "SpawnAmountModifier": 1,
@@ -4631,10 +4574,10 @@
           ">=": {
             "Mutate": "ByPlayerCount",
             "Values": [
+              1,
               2,
-              4,
-              4,
-              6
+              2,
+              3
             ]
           },
           "Then": 0,
@@ -4673,7 +4616,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 47.5,
-      "MaxSpawnCount": 4,
+      "MaxSpawnCount": 2,
       "Rarity": 5.25,
       "SpawnAmountModifier": 1
     },
@@ -4681,7 +4624,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 150,
-      "MaxSpawnCount": 4,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Rarity": 5.5,
       "SpawnAmountModifier": 1
@@ -4750,7 +4693,7 @@
         "M_Gem_Red"
       ],
       "NoSpawnWithin": 500,
-      "MaxSpawnCount": 140,
+      "MaxSpawnCount": 70,
       "Rarity": [
         6.5,
         5.75,
@@ -4770,9 +4713,9 @@
         "M_Facility_Light_Accents"
       ],
       "MaxSpawnCount": [
+        1,
         2,
-        4,
-        8
+        4
       ],
       "MinSpawnCount": 1,
       "HealthMultiplier": 3.007,
@@ -4797,7 +4740,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
       "AttackDamageMultiplier": 1.1,
-      "MaxSpawnCount": 140,
+      "MaxSpawnCount": 70,
       "HealthMultiplier": 0.3326,
       "MinSpawnCount": 1,
       "Scale": 0.78,
@@ -4814,7 +4757,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 110,
-      "MaxSpawnCount": 5,
+      "MaxSpawnCount": 3,
       "MinSpawnCount": 1,
       "Rarity": 5.5,
       "SpawnAmountModifier": 1,
@@ -4827,10 +4770,10 @@
     "ED_Spider_Swarmer_Fauxnought": {
       "Base": "ED_Spider_Grunt_Streaker",
       "MaxSpawnCount": [
+        6,
+        6,
         8,
-        10,
-        12,
-        14
+        9
       ],
       "Temperature": {
         "DieIfFrozen": false,
@@ -4847,10 +4790,10 @@
       "Base": "ED_Spider_Swarmer",
       "AttackDamageMultiplier": 1.5,
       "MaxSpawnCount": [
+        6,
+        6,
         8,
-        10,
-        12,
-        14
+        9
       ],
       "UsesBiomeVariants": false,
       "DisplayName": "Glyphid Rat",
@@ -4988,10 +4931,10 @@
     "ED_Spider_Swarmer_Frostnought": {
       "Base": "ED_Spider_Grunt_Mole",
       "MaxSpawnCount": [
+        6,
+        6,
         8,
-        10,
-        12,
-        14
+        9
       ],
       "Materials": [
         "M_Xmas_SnowParticle",
@@ -5004,7 +4947,7 @@
       "CanBeUsedInEncounters": false,
       "UsesBiomeVariants": false,
       "DifficultyRating": 20,
-      "MaxSpawnCount": 140,
+      "MaxSpawnCount": 70,
       "Rarity": 5.125,
       "SpawnAmountModifier": 1
     },
@@ -5015,8 +4958,8 @@
       "DifficultyRating": 90,
       "MaxSpawnCount": [
         0,
-        1,
-        2
+        0,
+        1
       ],
       "MinSpawnCount": 1,
       "Rarity": [
@@ -5034,9 +4977,9 @@
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 80,
       "MaxSpawnCount": [
+        0,
         1,
-        3,
-        5
+        3
       ],
       "MinSpawnCount": 1,
       "Rarity": [
@@ -5053,7 +4996,7 @@
       "StaggerDurationMultiplier": 1,
       "StaggerImmunityWindow": 0,
       "HealthRaw": 4,
-      "MaxSpawnCount": 120,
+      "MaxSpawnCount": 60,
       "MinSpawnCount": 1,
       "Rarity": 3.5,
       "SpawnAmountModifier": 1
@@ -5063,7 +5006,7 @@
       "CanBeUsedForConstantPressure": false,
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 10,
-      "MaxSpawnCount": 4,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Rarity": 4,
       "SpawnAmountModifier": 1,
@@ -5076,7 +5019,7 @@
       "CanBeUsedForConstantPressure": true,
       "CanBeUsedInEncounters": false,
       "DifficultyRating": 10,
-      "MaxSpawnCount": 4,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Rarity": 4,
       "SpawnAmountModifier": 1,
@@ -5203,24 +5146,12 @@
     },
     "ED_Spider_Tank_Boss": {
       "Resistances": {
-        "DamageMultiplier": [
-          1.23,
-          1
-        ],
-        "FireDamageMultiplier": [
-          1.2,
-          0.6
-        ]
+        "DamageMultiplier": [1.23, 1],
+        "FireDamageMultiplier": [1.2, 0.6]
       },
       "Temperature": {
-        "BurnTemperature": [
-          100,
-          1000
-        ],
-        "DouseFireTemperature": [
-          50,
-          100
-        ]
+        "BurnTemperature": [100, 1000],
+        "DouseFireTemperature": [50, 100]
       }
     },
     "ED_Spider_Tank_HeavySpawn": {
@@ -5237,68 +5168,32 @@
     },
     "ED_Spider_Boss_Heavy": {
       "Resistances": {
-        "DamageMultiplier": [
-          1.23,
-          1
-        ],
-        "FireDamageMultiplier": [
-          1.2,
-          0.6
-        ]
+        "DamageMultiplier": [1.23, 1],
+        "FireDamageMultiplier": [1.2, 0.6]
       },
       "Temperature": {
-        "BurnTemperature": [
-          100,
-          1000
-        ],
-        "DouseFireTemperature": [
-          50,
-          100
-        ]
+        "BurnTemperature": [100, 1000],
+        "DouseFireTemperature": [50, 100]
       }
     },
     "ED_Spider_Boss_TwinA": {
       "Resistances": {
-        "DamageMultiplier": [
-          1.23,
-          1
-        ],
-        "FireDamageMultiplier": [
-          1.2,
-          0.7
-        ]
+        "DamageMultiplier": [1.23, 1],
+        "FireDamageMultiplier": [1.2, 0.7]
       },
       "Temperature": {
-        "BurnTemperature": [
-          100,
-          1000
-        ],
-        "DouseFireTemperature": [
-          50,
-          100
-        ]
+        "BurnTemperature": [100, 1000],
+        "DouseFireTemperature": [50, 100]
       }
     },
     "ED_Spider_Boss_TwinB": {
       "Resistances": {
-        "DamageMultiplier": [
-          1.23,
-          1
-        ],
-        "FireDamageMultiplier": [
-          1.2,
-          0.7
-        ]
+        "DamageMultiplier": [1.23, 1],
+        "FireDamageMultiplier": [1.2, 0.7]
       },
       "Temperature": {
-        "BurnTemperature": [
-          100,
-          1000
-        ],
-        "DouseFireTemperature": [
-          50,
-          100
-        ]
+        "BurnTemperature": [100, 1000],
+        "DouseFireTemperature": [50, 100]
       }
     },
     "ED_Spider_Tank_flame": {
@@ -5336,9 +5231,9 @@
         ]
       },
       "MaxSpawnCount": [
-        1,
-        2,
-        3
+        0,
+        0,
+        1
       ],
       "MinSpawnCount": 1,
       "StaggerDurationMultiplier": 0.4,
@@ -5397,7 +5292,7 @@
         "FreezeTemperature": -999
       },
       "StaggerDurationMultiplier": 0,
-      "MaxSpawnCount": 3,
+      "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "Materials": [
         "M_Spider_Stalker_Camouflage",
@@ -5511,8 +5406,8 @@
       "DifficultyRating": 70,
       "MaxSpawnCount": [
         0,
-        1,
-        2
+        0,
+        1
       ],
       "Rarity": 5.25,
       "SpawnAmountModifier": 1
@@ -5525,8 +5420,8 @@
       "DifficultyRating": 60,
       "MaxSpawnCount": [
         0,
-        1,
-        2
+        0,
+        1
       ],
       "MinSpawnCount": 1,
       "Rarity": 5.35,
@@ -5548,9 +5443,9 @@
       "CanBeUsedInEncounters": true,
       "DifficultyRating": 30,
       "MaxSpawnCount": [
+        3,
         6,
-        9,
-        15
+        10
       ],
       "MinSpawnCount": 1,
       "Rarity": 5.125
@@ -5564,7 +5459,7 @@
         "M_SpiderStingerClaw_Flesh",
         "M_WPN_ZipPole_A_Light"
       ],
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "Rarity": 1,
       "HealthMultiplier": [
@@ -5643,7 +5538,7 @@
       "Base": "ED_Mactera_Shooter_Normal",
       "CanBeUsedForConstantPressure": false,
       "DifficultyRating": 60,
-      "MaxSpawnCount": 4,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Rarity": 5.25,
       "SpawnAmountModifier": 0.8,
@@ -5661,7 +5556,7 @@
         "M_Canteen_Metal_4",
         "M_Crawler_PuddleBlood"
       ],
-      "MaxSpawnCount": 3,
+      "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "AttackDamageMultiplier": 0.9,
       "Rarity": 5.125,
@@ -5698,7 +5593,7 @@
       ],
       "HealthMultiplier": 0.3115,
       "TimeDilation": 1.5,
-      "MaxSpawnCount": 4,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Elite": true,
       "ForceEliteBase": "ED_Mactera_TripleShooter",
@@ -5714,9 +5609,9 @@
     },
     "XED_Shark": {
       "Base": "ED_Shark",
-      "DifficultyRating": 1,
+      "DifficultyRating": 10,
       "TimeDilation": 0.75,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "MinSpawnCount": 1
     },
     "XED_Spider_ExploderTank_mini": {
@@ -5724,7 +5619,7 @@
       "CanBeUsedForConstantPressure": true,
       "DifficultyRating": 140,
       "DisplayName": "Glyphid Mini-Bulk Detonator",
-      "MaxSpawnCount": 3,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Rarity": 1,
       "Temperature": {
@@ -5738,10 +5633,10 @@
     "XED_Spider_Grunt": {
       "Base": "ED_Spider_Grunt",
       "CanBeUsedForConstantPressure": true,
-      "DifficultyRating": 6,
-      "MaxSpawnCount": 39,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 19,
       "Rarity": 1,
-      "SpawnAmountModifier": 0.5
+      "SpawnAmountModifier": 0.65
     },
     "XED_Spider_Grunt_Attacker_Elite": {
       "Base": "ED_Spider_Grunt_Attacker",
@@ -5754,7 +5649,7 @@
         "M_Hydra_Weed_Heart_Roots",
         "M_Hydra_Weed_Head"
       ],
-      "MaxSpawnCount": 4,
+      "MaxSpawnCount": 2,
       "MinSpawnCount": 1,
       "Rarity": 5.3,
       "HealthMultiplier": 0.3584,
@@ -5773,7 +5668,7 @@
       "DisplayName": "Elite Glyphid Septic Spreader",
       "SpawnAmountModifier": 1,
       "DifficultyRating": 75,
-      "MaxSpawnCount": 3,
+      "MaxSpawnCount": 1,
       "MinSpawnCount": 1,
       "Rarity": 5.5,
       "Materials": [
@@ -5817,12 +5712,7 @@
       "DifficultyRating": 40,
       "AttackDamageMultiplier": 2.5,
       "Projectile": "PRJ_Spider_RapidShooter",
-      "MaxSpawnCount": [
-        2,
-        3,
-        4,
-        5
-      ],
+      "MaxSpawnCount": [0,1,2,3],
       "Rarity": 1,
       "SpawnAmountModifier": 0.5
     },
@@ -5832,7 +5722,7 @@
       "DisplayName": "Elite Glyphid Stingtail",
       "SpawnAmountModifier": 1,
       "DifficultyRating": 85,
-      "MaxSpawnCount": 1,
+      "MaxSpawnCount": 0,
       "MinSpawnCount": 1,
       "Rarity": 5.5,
       "HealthMultiplier": 0.1408,
@@ -6171,10 +6061,10 @@
         "<": {
           "Mutate": "ByPlayerCount",
           "Values": [
+            1,
             2,
             4,
-            8,
-            10
+            5
           ]
         },
         "Then": {
@@ -6408,7 +6298,7 @@
       "Enemies": [
         "XED_Mactera_PentaJaw"
       ],
-      "Difficulty": 180,
+      "Difficulty": 18,
       "Interval": {
         "Mutate": "ByPlayerCount",
         "Values": [
@@ -6479,7 +6369,17 @@
     "BigHitDamageModifier": {
       "Mutate": "ByPlayerCount",
       "Values": [
-        0.95
+        {
+          "Mutate": "ByEscortPhase",
+          "Default": 0.8125,
+          "Stationary": 0.8875,
+          "WaitingForFuel": 0.8875,
+          "FinalEventA": 0.8875,
+          "FinalEventB": 0.8875,
+          "FinalEventC": 0.8875,
+          "FinalEventD": 0.8875
+        },
+        0.8125
       ]
     },
     "BigHitDamageReductionThreshold": 0,
