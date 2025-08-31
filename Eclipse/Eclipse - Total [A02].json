@@ -1,6 +1,6 @@
 ﻿{
     "Name": "ECLIPSE - TOTAL [A02]",
-    "Description": "REQUIRES CD2 beta 15b+, MEV v5.4, DEA. Recommended VEA. This is a harder Version of Send it! Interstellar with Gradual Difficulty increase (Start at Lv3) by time. Each 40 Golds in Deposit Bank will recharge 90s of Threat Meter. Do not enable mods that clean up the Gold Chunk as this will make the difficulty even more harder.
+    "Description": "REQUIRES CD2 beta 15b+, MEV v5.4, DEA. Recommended VEA. This is a harder Version of Send it! Interstellar with Gradual Difficulty increase (Start at Lv3) by time. Each 40 Golds in Deposit Bank will pause 90s of Threat Meter. Do not enable mods that clean up the Gold Chunk as this will make the difficulty even more harder.
         Alpha 02:
     - Split the difficulty into two versions:
         + Eclipse - Partial: Start the game at Level 1.
@@ -4233,7 +4233,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 1,
+                            "N": 90,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4253,7 +4253,7 @@
                         }
                     },
                     "Then": -0.5,
-                    "Else": 45
+                    "Else": 0
                 }
             },
             "Resistances": {
@@ -4300,7 +4300,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 1,
+                            "N": 90,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4320,7 +4320,7 @@
                         }
                     },
                     "Then": -0.5,
-                    "Else": 45
+                    "Else": 0
                 }
             },
             "Resistances": {
@@ -4370,7 +4370,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 1,
+                            "N": 90,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4390,7 +4390,7 @@
                         }
                     },
                     "Then": -0.5,
-                    "Else": 45
+                    "Else": 0
                 }
             },
             "Resistances": {
@@ -4437,7 +4437,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 1,
+                            "N": 90,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4457,7 +4457,7 @@
                         }
                     },
                     "Then": -0.5,
-                    "Else": 45
+                    "Else": 0
                 }
             },
             "Resistances": {
@@ -4504,7 +4504,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 1,
+                            "N": 90,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4524,7 +4524,7 @@
                         }
                     },
                     "Then": -0.5,
-                    "Else": 45
+                    "Else": 0
                 }
             },
             "Resistances": {
