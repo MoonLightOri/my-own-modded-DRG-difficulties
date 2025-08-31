@@ -1,7 +1,7 @@
 ﻿{
     "Name": "ECLIPSE - TOTAL [A03]",
     "Description": "REQUIRES CD2 beta 15b+, MEV v5.4, DEA. Recommended VEA. This is a harder Version of Send it! Interstellar with Gradual Difficulty increase (Start at Lv3) by time. Each 40 Golds in Deposit Bank will recover 72s of Threat Meter. Do not enable mods that clean up the Gold Chunk as this will make the difficulty even more harder.
-      Alpha 07:
+      Alpha 03:
     - Seeder: When spawned, Cooldown Time 240s -> 480s. Rarity 8.5 -> 12.
     - The Sun and Moon: When spawned, Cooldown Time 90s -> 270s. Rarity 7.25 -> 9.
     - Mini Boss WaveSpawner: Interval 90s -> 120s.
