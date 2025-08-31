@@ -1,6 +1,6 @@
 ﻿{
     "Name": "ECLIPSE - PARTIAL [A02]",
-    "Description": "REQUIRES CD2 beta 15b+, MEV v5.4, DEA. Recommended VEA. This is a Send it! Interstellar with Gradual Difficulty increase by time. Each 40 Golds in Deposit Bank will pause 90s of Threat Meter. Do not enable mods that clean up the Gold Chunk as this will make the difficulty even more harder.
+    "Description": "REQUIRES CD2 beta 15b+, MEV v5.4, DEA. Recommended VEA. This is a Send it! Interstellar with Gradual Difficulty increase by time. Each 50 Golds in Deposit Bank will recover 90s of Threat Meter. Do not enable mods that clean up the Gold Chunk as this will make the difficulty even more harder.
         Alpha 02:
     - Split the difficulty into two versions:
         + Eclipse - Partial: Start the game at Level 1.
@@ -4225,7 +4225,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 90,
+                            "N": 1,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4238,18 +4238,18 @@
                                             "Mutate": "DepositedResource",
                                             "Resource": "Gold"
                                         },
-                                        "B": 40
+                                        "B": 50
                                     }
                                 }
                             }
                         }
                     },
-                    "Then": -0.5,
-                    "Else": 0
+                    "Then": -500,
+                    "Else": 75
                 }
             },
             "Resistances": {
-                "DamageMultiplier": 1,
+                "DamageMultiplier": 0.001,
                 "FireDamageMultiplier": 0,
                 "CorrosiveDamageMultiplier": 0,
                 "ElectricDamageMultiplier": 0,
@@ -4292,7 +4292,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 90,
+                            "N": 1,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4305,18 +4305,18 @@
                                             "Mutate": "DepositedResource",
                                             "Resource": "Gold"
                                         },
-                                        "B": 40
+                                        "B": 50
                                     }
                                 }
                             }
                         }
                     },
-                    "Then": -0.5,
-                    "Else": 0
+                    "Then": -500,
+                    "Else": 75
                 }
             },
             "Resistances": {
-                "DamageMultiplier": 1,
+                "DamageMultiplier": 0.001,
                 "FireDamageMultiplier": 0,
                 "CorrosiveDamageMultiplier": 0,
                 "ElectricDamageMultiplier": 0,
@@ -4359,7 +4359,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 90,
+                            "N": 1,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4372,18 +4372,18 @@
                                             "Mutate": "DepositedResource",
                                             "Resource": "Gold"
                                         },
-                                        "B": 40
+                                        "B": 50
                                     }
                                 }
                             }
                         }
                     },
-                    "Then": -0.5,
-                    "Else": 0
+                    "Then": -500,
+                    "Else": 75
                 }
             },
             "Resistances": {
-                "DamageMultiplier": 1,
+                "DamageMultiplier": 0.001,
                 "FireDamageMultiplier": 0,
                 "CorrosiveDamageMultiplier": 0,
                 "ElectricDamageMultiplier": 0,
@@ -4426,7 +4426,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 90,
+                            "N": 1,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4439,18 +4439,18 @@
                                             "Mutate": "DepositedResource",
                                             "Resource": "Gold"
                                         },
-                                        "B": 40
+                                        "B": 50
                                     }
                                 }
                             }
                         }
                     },
-                    "Then": -0.5,
-                    "Else": 0
+                    "Then": -500,
+                    "Else": 75
                 }
             },
             "Resistances": {
-                "DamageMultiplier": 1,
+                "DamageMultiplier": 0.001,
                 "FireDamageMultiplier": 0,
                 "CorrosiveDamageMultiplier": 0,
                 "ElectricDamageMultiplier": 0,
@@ -4493,7 +4493,7 @@
                         "Mutate": "Not",
                         "Value": {
                             "Mutate": "TriggerFixedDuration",
-                            "N": 90,
+                            "N": 1,
                             "Reset": true,
                             "In": {
                                 "Mutate": "TriggerOnChange",
@@ -4506,18 +4506,18 @@
                                             "Mutate": "DepositedResource",
                                             "Resource": "Gold"
                                         },
-                                        "B": 40
+                                        "B": 50
                                     }
                                 }
                             }
                         }
                     },
-                    "Then": -0.5,
-                    "Else": 0
+                    "Then": -500,
+                    "Else": 75
                 }
             },
             "Resistances": {
-                "DamageMultiplier": 1,
+                "DamageMultiplier": 0.001,
                 "FireDamageMultiplier": 0,
                 "CorrosiveDamageMultiplier": 0,
                 "ElectricDamageMultiplier": 0,
