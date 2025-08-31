@@ -11,7 +11,7 @@
     - Added PhaseBomb WaveSpawner into Threat Level 5. Will spawn the bomb every 60s independant of other timer. Banned during Defense, Drillevator and Caretaker.
     - In Sabotage mission, Second resupply cost 50 -> 40.
     - Grenade Spitter: DifficultyRating 110 -> 90.
-    - Grabber: MaxSpawnCount 1 -> 0.
+    - Grabber: MaxSpawnCount 1 -> 0. Have 120s of Cooldown when spawned.
     ",
     "Resupply": {
         "Cost": {
@@ -1215,22 +1215,16 @@
                     ]
                 },
                 {
-                    "Mutate": "ByPlayerCount",
-                    "Values": [
-                        {
-                            "Mutate": "EnemyCooldown",
-                            "EDs": [
-                                "ED_Grabber",
-                                "ED_Grabber_Deliverer"
-                            ],
-                            "CooldownTime": 120,
-                            "ValueDuringCooldown": [
-                                "ED_Grabber"
-                            ],
-                            "DefaultValue": []
-                        },
-                        []
-                    ]
+                    "Mutate": "EnemyCooldown",
+                    "EDs": [
+                        "ED_Grabber",
+                        "ED_Grabber_Deliverer"
+                    ],
+                    "CooldownTime": 120,
+                    "ValueDuringCooldown": [
+                        "ED_Grabber"
+                    ],
+                    "DefaultValue": []
                 },
                 {
                     "Mutate": "If",
