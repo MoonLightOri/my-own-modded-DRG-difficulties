@@ -1,5 +1,6 @@
 My list of modded difficulties I made
 Currently made (For requirements, Latest version is always better):
+- [Eclipse (Alpha 02)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Eclipse) <Require CD2 beta 15b+, MEV v5_4 and DEA b00.3.3>
 - [Interstellar (v1.03)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Interstellar) <Require CD2 beta 15, MEV v5_4 and DEA b00.3.3>
 - [Celestial (v1.02)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Celestial) <Require CD2 beta 15, MEV v5_4 and DEA a05t2 or above> (Toned-down of Interstellar, ND level) 
 - [Astral (v1.02)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Astral) <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
