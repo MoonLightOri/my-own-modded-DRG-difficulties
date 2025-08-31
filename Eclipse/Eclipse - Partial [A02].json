@@ -4568,6 +4568,24 @@
     ],
     "WaveSpawners": [
         {
+            "Name": "Lv1 Entrance Wave",
+            "Enabled": {
+                "Mutate": "IfFloat",
+                "Value": {
+                    "Mutate": "EnemyCount",
+                    "ED": "ED_Gauge_Lv1"
+                },
+                ">=": 1,
+                "Then": true,
+                "Else": false
+            },
+            "Interval": 9999,
+            "Difficulty": 160,
+            "Distance": 2000,
+            "Locations": 1,
+            "SpawnOnEnable": true
+        },
+        {
             "Name": "Lv2 Entrance Wave",
             "Enabled": {
                 "Mutate": "IfFloat",

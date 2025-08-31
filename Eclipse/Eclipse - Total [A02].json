@@ -4354,6 +4354,9 @@
         "ED_Gauge_Lv3": {
             "Base": "ED_Spider_Swarmer",
             "AttackDamageMultiplier": 0,
+            "MinSpawnCount": 1,
+            "MaxSpawnCount": 0,
+            "DifficultyRating": 100,
             "Significance": "Critical",
             "DisplayName": "THREAT Lv3: SUBSTANTIAL (420s)",
             "ShowHealthBar": false,
