@@ -1,4 +1,4 @@
-This difficulty used Interstellar and Send It! Type R as a framework, but with adjustments. Updated to Alpha 05.
+This difficulty used Interstellar and Send It! Type R as a framework, but with adjustments. Updated to Alpha 06.
 
 Contributor: seu (for certain enemies)
 
@@ -24,11 +24,11 @@ Interstellar requirement: Custom Difficulty 2 beta 15b, MEVv5_4, DEA_b003.3. (La
 - Announced Waves no longer spawns (Except in certain forced mission type), instead Normal Wave with Small Size are frequently spawned (90% will be main timing - covered soon, 10% for the longer 60s bin).
 - The game will start ticking down the Threat Meter (Displayed as boss bar) after 15s of starting. There are 5 levels of Threat which increase the difficulty, interval and enemy composition of Normal Wave. Every phase transition will force spawn a normal sized wave (which can stack with the current Normal Wave spawner). Here's the detailed section for each threat:
   + Threat Lv1: LOW. Take 180s to reach Lv2. Main Normal Wave timing is 37.5s.
-  + Threat Lv2: MODERATE. Take 270s to reach Lv3. Main Normal Wave timing is 37.5s. Some Enemies are now able to spawn (Fire Bomber, Sentinel, Naedocyte Breeder in Swarm, Patrol Bot, Architect, Barrier Shooter, Vomit Spitter). Bulk Detonator now moves 35% faster.
+  + Threat Lv2: MODERATE. Take 270s to reach Lv3. Main Normal Wave timing is 37.5s. Some Enemies are now able to spawn (The Jupiter, Fire Bomber, Sentinel, Naedocyte Breeder in Swarm, Patrol Bot, Architect, Barrier Shooter, Vomit Spitter). Bulk Detonator now moves 35% faster.
   + Threat Lv3: SUBSTANTIAL. Take 360s to reach Lv4. Main Normal Wave timing is 30s. Some Enemies are now able to spawn (The Sun & Moon, Elite Grunt Guard, Turbo Menace, Mini-Bulk, Ninja, Naedocyte Seeder). Bulk Detonator now moves 35% -> 50% faster. Nexuses now spawn White Weak Slasher (previously White Weak Grunt). Swarmer Tunnel and Egg Spider now spawn tanky Glyphid Rat enemies (Previously White Weak Grunt). Naedocyte Breeder now spawn White Exploder. Normal Exploder and Grabber now moves 50% faster. Oppressor moves 20% -> 50% faster. Every 100s, Lacerator or Arbalest will spawn via Mini-Boss WaveSpawner. Enemy Movement Speed increases from Hazard 6 value to Hazard 7.
   + Threat Lv4: SEVERE. Take 450s to reach Lv5/Max. Main Normal Wave timing is 30s. Fanatic and Grenade Spitter are able to spawn. Septic can now be promoted into Ice Septic variant. Youngnought and Ice Youngnought are now able to spawn via Mini-Boss WaveSpawner. Enemy Attack Cooldown (mostly for grunt) increases from Hazard 6 to Hazard 7.
   + Threat Lv5/Max: CRITICAL. No longer drains once the Threat level is 5. Main Normal Wave timing is 25s. Mactera Warden, Rat Bomber and Barrinator are now able to spawn. Oppressor now moves 50% -> 100% faster. Grabber can now be promoted into Deliverer. Solaris and Joker are now able to spawn via Mini-Boss Wave Spawner. Every 60s, PhaseBomb can spawn to bomb the players. Enemy Damage Modifier increases from Hazard 6 to Hazard 7.
-- For every 50 Gold into Team Repository (Counted by dividing 40 in repository) will increase the gauge by 72s immediately. This is crucial to delay the timer.
+- For every 50 Gold into Team Repository (Counted by dividing 40 in repository) will increase the gauge by 90s immediately. This is crucial to delay the timer.
 - When 2+ players repairing Mini-mules/Uplink/Refuel, increases the repair speed. Also reduce the time to scan Mini-mule legs to 1 second.
 # New Enemies compare to Interstellar:
 - Grenade Spitter: 
@@ -39,4 +39,11 @@ Interstellar requirement: Custom Difficulty 2 beta 15b, MEVv5_4, DEA_b003.3. (La
 - The Jupiter:
   + Has 400 Base HP and Bigger Hitbox than The Sun and The Moon.
   + Can bleed after a certain times.
-  + When it dies, spawn a burst of meteor rains (A lot of Flying Rock) that fly around until they hit the terrain. Deal high amount of damage when player is hit with Flying Rock.
+  + When it dies, spawn one of the three attack and cycle in order for the next Jupiter spawn: Meteor Rain -> Helium Rain -> Gravitational Field -> (repeat)
+    + Meteor Rain: Spawn a burst of meteor rains (A lot of Flying Rock) that fly around until they hit the terrain. Deal high amount of damage when player is hit with Flying Rock and can carve terrain.
+    + Helium Rain: Spawn a burst of particle (dying Foobers) that drops bomblet on player, deal damage on contact.
+    + Gravitational Field: Spawn an invisible Field (Invisible Stingtails) that can instantly grab player in range and repeatedly make the player stuck in place, however they deal no damage.
+
+  # Custom Waves
+- During a Dreadnought fight (OG Dreadnought, Hiveguard, normal Twins), a Bulk Detonator known as a "DreadHelper" with Base HP x0.85 will spawn in to allow the team to kill the Dreadnought faster (Highlighted by Item Outline, disappear after being pinged by player and expire). Only one DreadHelper can exist at a given time.
+- During a Caretaker fight, a Weak Bulk Detonator known as a "CaretakerHelper" with slower movement speed and Base HP x0.25 will spawn in to allow the team to speed up Caretaker fight (Highlighted by Item Outline, disappear after being pinged by player and expire). It has halved carve radius compare to Normal Bulk. Only one CaretakerHelper can exist at a given time. Its material is slightly changed to distinct from Bulks that spawn from Waves.
