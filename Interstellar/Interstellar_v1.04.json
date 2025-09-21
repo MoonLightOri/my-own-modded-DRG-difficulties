@@ -2,7 +2,7 @@
   "Name": "Interstellar v1.04",
   "Description": "REQUIRES CD2 beta update 15 (UPDATED), MEV v5.4 AND DEA b00.3.3+. Recommended VEA. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies.
     v1.04:
-  - MaxActiveSwarmers/Enemies: 90/180/240 -> 90/120/180/240
+  - MaxActiveEnemies: 90/180/240 -> 90/120/180/240
   - EggSpider: Max and MinSpawnCount capped to 1.
   - Big Bulk: Banned on Refinery, 4 Eggs Egg Hunt and 2 Mules Salvage.
   - Spy: Banned in Solo.
