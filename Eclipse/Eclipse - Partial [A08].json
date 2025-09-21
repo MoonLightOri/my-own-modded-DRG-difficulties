@@ -4,7 +4,7 @@
       Alpha 08:
     - Jupiter: Difficulty Rating 90 -> 70, Rarity 7 -> 6.25. Cooldown 90s -> 70s, bleed earlier and faster. Meteor Rain attack has lower Spawnspread.
     - Added several more enemies:
-      + Gas Spreader (Lv4): Another Septic Variant, shoot a projectile that generate Praetorian Death Cloud (Non-combustable) and deal damage via the projectile impact and death cloud.  
+      + Gas Spreader (Lv4): Another Septic Variant, shoot a projectile that generate Praetorian Death Cloud (Non-combustable), dealing damage via the projectile impact and death cloud.  
       + Invincible Exploder (Lv4): Unkillable by normal mean, but will die after self-exploding like normal.
       + Teleport Praetorian (Lv3): This enemy teleports and rotates hit target in 5m range. On death leaves field which applies STE_DimensionalInstability and will cause player to teleport randomly every 5 seconds within Death Radius (Ste has 15 seconds duration). Have higher movement speed but less health. This enemy replaces Fire Praetorian previously.
       + Grunt Grooter (Lv2): A hybrid of Grunt and Acid Spitter, it can shoot triple Barrager's projectiles (Deal only 50% of damage) and will move to the player to attack player directly, dealing slasher-like damage and poison DoT. This enemy replaces Vomit Spitter previously.
