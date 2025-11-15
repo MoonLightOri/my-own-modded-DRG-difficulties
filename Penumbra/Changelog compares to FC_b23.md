@@ -61,7 +61,7 @@ Changelog compares to FC is below:
 - Patrol Bot: FreezeTemp and Unfreeze temp are now reduced. When frozen, increase x3 damage taken. 
 - Rockpox Septic: AttackDamageMultiplier 1 -> 0.75.
 - Sentinel: Movement speed buff x1.35 -> x1.25. Added Electric Damage Weakness by -30%. No longer spawns on Encounters.
-- Trawler (from pool & wavespawner): No longer spawns during Encounters, TimeDilation x1 -> x0.75. In 1p setting it's banned from spawning.
+- Trawler (from pool & wavespawner): Removed.
 - Big Shredder: Reverted all weaknesses back to x1 value. AttackDamageMultiplier x1 -> x2. Immune to being Feared. Frozen temp is now -240.
 - Weak Lacerator: Now use Base Descriptor "ED_Lassie_Zen".
 - Weak Elites: They now have reduced Burn and Frozen temperature (still x2 higher than normal enemy type). Weak Elite Slashers DifficultyRating 70 -> 30 and MaxSpawnCount 1 -> 2 (Both Normal Pool and WaveSpawner versions).
@@ -76,5 +76,5 @@ Changelog compares to FC is below:
 - During Dreadnought or Caretaker fight, Normal Wave will spawn in periodically. For Dreadnought fight, the Interval is increased by 50, but the beginning of the fight will guarantee a Normal Wave spawn.
 - During a Caretaker fight, a Weak Bulk Detonator known as a "CaretakerHelper" with slower movement speed and Base HP x0.25 will spawn in to allow the team to speed up Caretaker fight. It has halved carve radius compare to Normal Bulk. Only one CaretakerHelper can exist at a given time. Its material is slightly changed to distinct from Bulks that spawn from Waves.
 - Grunt WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 60s. No longer spawns minibulks during Uplink/Refill/Blackbox and Drillevator.
-- Trawler WaveSpawner: Limit the amount of XED_Shark on the map to 5. ED_Shark from pool spawn doesn't count toward this. This WS is disabled in 1p setting to avoid frustration.
+- Trawler WaveSpawner: Removed.
 - Weak Elite WaveSpawner: Interval during Dread, RefineryStalled, Escort Refill and Caretaker is increased to 100s. 
