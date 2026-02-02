@@ -1,4 +1,4 @@
-This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but with adjustments. Updated to v1.03.
+This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but with adjustments. Updated to v1.06.
 
 Contributor: seu
 
@@ -69,7 +69,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + Base HP 12 -> 4.
 - Sentinel
   + They are the bugs the Dreadnought Hiveguard summon. Electric Weakness +30%.
-  + They also move +25% faster.
+  + They also move +35% faster.
 - Leech
   + They grab and damage +100% faster.
   + However, if a Leech from high up grabs you and it's killed, you will not die of fall damage.
@@ -173,7 +173,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   - All Elite enemies except Guard have material change (to tell them if they are weak).
   - Elite Slasher: Has 265/274/309/336 HP (based on Crawler Normal Scaling at 4p).
   - Elite Ratter (DEA):
-    + They are ground Acid Spitter that lob a projectile that spawns 1 Glyphid Rat (Detail below)
+    + They are ground Acid Spitter that lob a projectile that spawns 1 Glyphid Rat (Detail below). Every 8/7/6/5s spawn a Glyphid Rat on its position.
     + Has 140/145/164/177.6 HP (based on Slasher Normal Scaling at 4p).
     + Additionally, movement Speed now +50%.
   - Elite Septic: Has 114/117/133/144 HP (based on Acid Spitter Normal Scaling at 4p). Additionally, Time Dilation +30% and Damage Dealt -20%.
@@ -308,8 +308,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + It cannot be spawned during Defense, Drillevator and Escort Heartstone phases.
 - The Sun (CD2)
   + This is a static Ommoran Flying Rock that has Base HP 300. Its material is changed also.
-  + On its presence (Highlighted by Enemy Outline, disappear after being pinged by player and expire), it increases Movement Speed, Projectile Speed and decreases Attack Cooldown (apply mostly for Melee attack enemies like Grunt) values by a considerable amount.
-  + It cannot buff already on-field enemies before The Sun spawns. The buff cannot wear off on already buffed enemies.
+  + On its presence (Highlighted by Enemy Outline, disappear after being pinged by player and expire), it increases normal Grunt's and Praetorian Movement Speed by 35% and immune to stun and fear (Highlighted by material change). The buff will end when The Sun is killed.
   + The Sun will bleed out (lose HP) after 45s of being in the map and dies exactly 45s later (The timer value is lower in player count). 
   + It cannot be spawned During Defense, Drillevator and Escort mission type.
 - The Moon (CD2)

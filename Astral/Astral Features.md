@@ -1,4 +1,4 @@
-This difficulty used 6x2EX - a difficulty made by pH-JPEG, as a framework, but with adjustments. It's also a toned-down version of Celestial. Updated to v1.02.
+This difficulty used 6x2EX - a difficulty made by pH-JPEG, as a framework, but with adjustments. It's also a toned-down version of Celestial. Updated to v1.04.
 
 Astral minimum requirement: Custom Difficulty 2 beta 13+, MEVv5_4 (Latest version is always better).
 
