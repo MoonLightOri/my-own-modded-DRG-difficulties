@@ -1,8 +1,9 @@
 {
-  "Name": "MS Lite_a02",
+  "Name": "MS Lite_a03",
   "Description": "REQUIRES CD2 B15+. This is ND-flavored difficulty (With some ERR enemies added but not entire Elite promote system) but use mostly Vanilla Assets. Partially inspired by zeta's Death Series.
-    Alpha 2:
-  - Trawler now only spawn on Sandblasted Biome
+    Alpha 03:
+  - Ossiran Scrab: Added to the Pool. MinSpawnCount reduced to 1, MaxSpawnCount 35, DifficultyRating 20, Rarity 5.125, SpawnAmountModifier 0.7.
+  - Pit Jaw: DifficultyRating increased to 150, MaxSpawnCount 1, Rarity 5 and SpawnAmountModifier 0.5.
   ",
   "Warnings": {
     "Banned": [
@@ -377,7 +378,8 @@
             ]
           }
         },
-        "ED_Crawler_Global"
+        "ED_Crawler_Global",
+        "ED_Ossiran_Scrab"
       ],
       "Remove": [
         "ED_Spider_Grunt",
@@ -1592,6 +1594,24 @@
         "Float:BumpDamage.Damage": 0,
         "Float:ImpactCooldown.CoolDownTime": 9999
       }
+    },
+    "ED_PitJaw": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 150,
+      "MinSpawnCount": 1,
+      "MaxSpawnCount": 1,
+      "Rarity": 5,
+      "SpawnAmountModifier": 0.5
+    },
+    "ED_Ossiran_Scrab": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 20,
+      "MinSpawnCount": 1,
+      "MaxSpawnCount": 35,
+      "Rarity": 5.125,
+      "SpawnAmountModifier": 0.7
     },
     "ED_Sentinel": {
       "Base": "ED_Spider_Tank_HeavySpawn",

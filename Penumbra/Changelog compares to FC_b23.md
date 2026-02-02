@@ -47,6 +47,7 @@ Changelog compares to FC is below:
 - Renamed some Elite enemies to include Elite in their name.
 
 # Enemies (Detail changes)
+- Ossiran Scrab: Added to the pool.
 - Weak Twins: Added 45s Cooldown. They are now banned during Dreadnought due to unexpected behaviors.
 - Mini Bulk, Normal Bulk, Plantonator: Reduced MaxSpawnCount to 0 and Added Nospawnwithin of 7.5m and cooldown of 120s during Uplink/Refill/Blackbox, additionally during Escort Refill and Heartstone for MiniBulk and Normal Bulk. Otherwise cooldown is 60s. Plantonator is additionally banned during Drillevator.
 - Big Bulk: Added Corrosive Damage Weakness of 150%, NoSpawnWithin 7.5m and have cooldown of 1 hour on Refinery, Salvage and 4/6 Eggs. Otherwise cooldown is 900s (15 minutes). They are additionally banned during Drillevator.
@@ -60,7 +61,7 @@ Changelog compares to FC is below:
 - Elite Mactera Spawn: AttackDamageMultiplier x1 -> x0.9. TimeDilation x1 -> x0.85.
 - Patrol Bot: FreezeTemp and Unfreeze temp are now reduced. When frozen, increase x3 damage taken. 
 - Rockpox Septic: AttackDamageMultiplier 1 -> 0.75.
-- Sentinel: Movement speed buff x1.35 -> x1.25. Added Electric Damage Weakness by -30%. No longer spawns on Encounters.
+- Sentinel: Added Electric Damage Weakness by -30%. No longer spawns on Encounters.
 - Trawler (from pool & wavespawner): Removed.
 - Big Shredder: Reverted all weaknesses back to x1 value. AttackDamageMultiplier x1 -> x2. Immune to being Feared. Frozen temp is now -240.
 - Weak Lacerator: Now use Base Descriptor "ED_Lassie_Zen".
