@@ -47,11 +47,12 @@ Interstellar requirement: Require CD2 beta 15b+, MEV v5_4, DEA b01.1.0 and EEE v
   + Another Septic Variant
   + Shoot a projectile that generate Praetorian Death Cloud (Non-combustable), dealing damage via the projectile impact and death cloud.  
 - Invincible Exploder (Lv4): Unkillable by normal mean, but will die after self-exploding like normal.
-- Teleport Praetorian (Lv3): 
-  + This enemy teleports and rotates hit target in 5m range. 
-  + On death leaves field which applies STE_DimensionalInstability and will cause player to teleport randomly every 5 seconds within Death Radius (Ste has 15 seconds duration). 
-  + Have higher movement speed but less health. 
-  + This enemy replaces Fire Praetorian previously.
+- Fire Praetorian
+  + They are another Praetorian variant from MEV. Has different coloring than normal's.
+  + Base HP 700 -> 450. They move +50% faster.
+  + Has an even lower stun duration and higher stun immunity window than normal Praetorian. Immune to Fear.
+  + Their spitting attack will deal fire damage with higher damage value.
+  + Their death gas cloud is replaced with Incendiary flame trail (has lower radius than Gas), they will damage you with fire damage and heat you up.
 - Grunt Grooter (Lv2): 
   + A hybrid of Grunt and Acid Spitter.
   + It can shoot triple Barrager's projectiles (Deal only 50% of damage) and will move to the player to attack player directly, dealing slasher-like damage and poison DoT. 
@@ -74,8 +75,6 @@ Interstellar requirement: Require CD2 beta 15b+, MEV v5_4, DEA b01.1.0 and EEE v
   + This is another variant of Lacerator. 
   + Replacing the stomp attack, it can launch triple arc-fireballs attack to player. 
   + Occasionally can shoot a singular fireball too.   
-- Shade: 
-  + Upon dying, spawn a series of Event which cause darkness, losing Shield and slowed down.
 - Venus:
   + Has 300 Base HP and Bigger Hitbox than The Sun and The Moon.
   + Can bleed after a certain times.
