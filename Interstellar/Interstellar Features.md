@@ -34,7 +34,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
 - During the Extraction phase of a mission or the PE countdown until the Drop Pod lands, x1.66 or x2 more bugs spawn respectively.
 - During the time in-between the Fuel Cells and the Drop Pod opening on a Salvage mission, there will initially be a pause in bug spawns with the amount of bugs spawning greatly increasing as the Drop Pod gets closer to opening.
 - Whenever an Egg is pulled, if it does not trigger a swarm, the wave it summons spawns x4 the bugs.
-- Wave timers are significantly tighter than Celestial (Announced Wave value is loosely based off Chinese Hazard 11+, while Normal Wave value is harder than Chinese Hazard 15+), with 1% chance to have announced swarm to spawn instantly, only in beginning of Refinery mission type.
+- Wave timers are significantly tighter than Celestial (Announced Wave value is loosely based off Chinese Hazard 11+, while Normal Wave value is harder than Chinese Hazard 15+).
 - A "fat" wave of bugs can rarely spawn. This is a wave that is twices the size of a typical wave.
 - Enemy diversity is higher and more variable; this means you can get multiple types of enemies all spawning at once with the amount being variable. You could get a superdiverse wave or a wave of only one or two enemy types. Diversity wave setting is 1 value higher than Celestial's. 
 - Most caves will have at least one of every Stationary type if possible.

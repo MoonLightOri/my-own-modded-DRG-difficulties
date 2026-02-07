@@ -1,0 +1,6954 @@
+{
+  "Name": "Interstellar v1.06",
+  "Description": "REQUIRES CD2 beta update 15 (UPDATED), MEV v5.4 AND DEA b00.3.3+. Recommended VEA. Interstellar, shortened as IS, is a spin off of FC_b23 with some interesting twists on modded enemies. 
+    v1.07:
+  - Removing instant swarm bin in Refinery. 
+  ",
+  "Resupply": {
+    "Cost": {
+      "Mutate": "ByResuppliesCalled",
+      "Values": [
+        40,
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            50,
+            50,
+            60
+          ]
+        }
+      ]
+    }
+  },
+  "Warnings": {
+    "Banned": [
+      "MMUT_BloodSugar",
+      "WRN_ExploderInfestation",
+      "MMUT_ExplosiveEnemies",
+      "WRN_LethalEnemies",
+      "MMUT_LowGravity",
+      "WRN_BulletHell",
+      "WRN_Plague",
+      "WRN_RivalIncursion",
+      "WRN_LethalEnemies",
+      "WRN_NoShields",
+      "WRN_RegenerativeEnemies",
+      "WRN_NoOxygen",
+      "WRN_MacteraCave",
+      "WRN_Ghost",
+      "WRN_HeroEnemies",
+      "WRN_RockInfestation",
+      "WRN_ScrabNestingGrounds",
+      "WRN_PitJawColony"
+    ]
+  },
+  "NitraMultiplier": {
+    "Mutate": "Add",
+    "A": {
+      "Mutate": "ByDNA",
+      "Default": 1,
+      "Mining,2,1": 1.15,
+      "DeepScan,1,2": 1.2,
+      "Sabotage,2,1": 1.35,
+      "Sabotage,2,2": 1.1,
+      "Elimination,2,2": 1.2,
+      "PE,2,3": 0.834,
+      "PE,3,3": 0.878
+    },
+    "B": {
+      "Mutate": "BySecondary",
+      "Default": 0,
+      "OBJ_DD_Elimination_Eggs": {
+        "Mutate": "ByDNA",
+        "Default": 0,
+        "Mining,1,1": 0.3,
+        "Mining,2,1": 0.25,
+        "Mining,2,2": 0.25,
+        "Egg,1,1": 0.3,
+        "Egg,2,2": 0.18,
+        "PE,2,3": 0.166,
+        "Elimination,2,2": 0.2,
+        "Salvage,2,2": 0.333,
+        "Salvage,3,3": 0.3,
+        "Escort,2,2": 0.14,
+        "Escort,2,3": 0.126,
+        "Refinery,2,2": 0.2,
+        "Refinery,2,3": 0.166,
+        "Sabotage,2,1": 0.166,
+        "DeepScan,1,2": 0.2
+      },
+      "OBJ_DD_AlienEggs": {
+        "Mutate": "ByDNA",
+        "Default": 0,
+        "Mining,1,1": 0.3,
+        "Mining,2,1": 0.25,
+        "Mining,2,2": 0.25,
+        "Egg,1,1": 0.3,
+        "Egg,2,2": 0.18,
+        "PE,2,3": 0.166,
+        "Elimination,2,2": 0.2,
+        "Salvage,2,2": 0.333,
+        "Salvage,3,3": 0.3,
+        "Escort,2,2": 0.14,
+        "Escort,2,3": 0.126,
+        "Refinery,2,2": 0.2,
+        "Refinery,2,3": 0.166,
+        "Sabotage,2,1": 0.166,
+        "DeepScan,1,2": 0.2
+      },
+      "OBJ_DD_Defense": {
+        "Mutate": "ByDNA",
+        "Default": 0,
+        "Mining,1,1": 0.3,
+        "Mining,2,1": 0.25,
+        "Mining,2,2": 0.25,
+        "Egg,1,1": 0.3,
+        "Egg,2,2": 0.18,
+        "PE,2,3": 0.166,
+        "Elimination,2,2": 0.2,
+        "Salvage,2,2": 0.333,
+        "Salvage,3,3": 0.3,
+        "Escort,2,2": 0.14,
+        "Escort,2,3": 0.126,
+        "Refinery,2,2": 0.2,
+        "Refinery,2,3": 0.166,
+        "Sabotage,2,1": 0.166,
+        "DeepScan,1,2": 0.2
+      },
+      "OBJ_DD_DeepScan": {
+        "Mutate": "ByDNA",
+        "Default": 0,
+        "Mining,1,1": 0.12,
+        "Mining,2,1": 0.1,
+        "Mining,2,2": 0.1,
+        "Egg,1,1": 0.12,
+        "Egg,2,2": 0.1075,
+        "PE,2,3": 0.107,
+        "Elimination,2,2": 0.083,
+        "Salvage,2,2": 0.14,
+        "Salvage,3,3": 0.12,
+        "Escort,2,2": 0.06,
+        "Escort,2,3": 0.053,
+        "Refinery,2,2": 0.083,
+        "Refinery,2,3": 0.07,
+        "Sabotage,2,1": 0.07,
+        "DeepScan,1,2": 0.083
+      },
+      "OBJ_DD_MorkiteWell": {
+        "Mutate": "ByDNA",
+        "Default": 0,
+        "Mining,1,1": 0.12,
+        "Mining,2,1": 0.1,
+        "Mining,2,2": 0.1,
+        "Egg,1,1": 0.12,
+        "Egg,2,2": 0.1075,
+        "PE,2,3": 0.107,
+        "Elimination,2,2": 0.083,
+        "Salvage,2,2": 0.14,
+        "Salvage,3,3": 0.12,
+        "Escort,2,2": 0.06,
+        "Escort,2,3": 0.053,
+        "Refinery,2,2": 0.083,
+        "Refinery,2,3": 0.07,
+        "Sabotage,2,1": 0.07,
+        "DeepScan,1,2": 0.083
+      }
+    }
+  },
+  "Dwarves": {
+    "Test": true,
+    "RegenHealthPerSecond": {
+      "Mutate": "IfFloat",
+      "Value": {
+        "Mutate": "EnemyCount",
+        "ED": "ED_FlyingSmartRock_debuffer"
+      },
+      ">=": 1,
+      "Then": 0,
+      "Else": 5.8
+    },
+    "RegenDelayAfterDamage": 6
+  },
+  "Darkness": {
+    "FlashlightStrength": {
+      "Mutate": "Multiply",
+      "A": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "ScoutCount"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            1.5,
+            1.5,
+            1.25
+          ]
+        }
+      },
+      "B": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_debuffer"
+        },
+        ">=": 1,
+        "Then": 0.25,
+        "Else": 1
+      }
+    },
+    "FlareStrength": {
+      "Mutate": "Multiply",
+      "A": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "ScoutCount"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            1.5,
+            1.5,
+            1.25
+          ]
+        }
+      },
+      "B": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_debuffer"
+        },
+        ">=": 1,
+        "Then": 0.25,
+        "Else": 1
+      }
+    },
+    "PlayerIllumination": {
+      "Mutate": "Multiply",
+      "A": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "ScoutCount"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            1.5,
+            1.5,
+            1.25
+          ]
+        }
+      },
+      "B": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_debuffer"
+        },
+        ">=": 1,
+        "Then": 0.25,
+        "Else": 1
+      }
+    },
+    "FlareGunStrength": {
+      "Mutate": "IfFloat",
+      "Value": {
+        "Mutate": "EnemyCount",
+        "ED": "ED_FlyingSmartRock_debuffer"
+      },
+      ">=": 1,
+      "Then": 0.125,
+      "Else": 1
+    },
+    "EnvironmentalLight": {
+      "Mutate": "IfFloat",
+      "Value": {
+        "Mutate": "EnemyCount",
+        "ED": "ED_FlyingSmartRock_debuffer"
+      },
+      ">=": 1,
+      "Then": 0.25,
+      "Else": 1
+    },
+    "FlareGunDuration": 120
+  },
+  "Caps": {
+    "MaxActiveCritters": 240,
+    "MaxActiveSwarmers": [
+      90,
+      120,
+      180,
+      240
+    ],
+    "MaxActiveEnemies": [
+      90,
+      120,
+      180,
+      240
+    ]
+  },
+  "Salvage": {
+    "MiniMules": {
+      "ScanUsable": {
+        "UseDuration": {
+          "Mutate": "ByMissionType",
+          "Default": 1,
+          "Salvage": 1.5
+        }
+      },
+      "RepairUsable": {
+        "UseDuration": {
+          "Mutate": "ByMissionType",
+          "Default": 6.66,
+          "Salvage": 10
+        }
+      },
+      "NitraToGive": {
+        "Mutate": "ByMissionType",
+        "Default": 30,
+        "Salvage": 50
+      }
+    },
+    "Uplink": {
+      "DisableLeaveShout": true,
+      "Scale": [
+        1.4,
+        1
+      ],
+      "LeavePenaltyMultiplier": 0.7
+    },
+    "Refuel": {
+      "DisableLeaveShout": true,
+      "Scale": [
+        1.4,
+        1
+      ],
+      "LeavePenaltyMultiplier": 0.7
+    }
+  },
+  "DifficultySetting": {
+    "BaseHazard": "Hazard 5",
+    "ExtraLargeEnemyDamageResistance": [
+      1,
+      1.3,
+      1.7,
+      2.1
+    ],
+    "ExtraLargeEnemyDamageResistanceB": [
+      1,
+      1.3,
+      1.5,
+      1.7
+    ],
+    "ExtraLargeEnemyDamageResistanceC": [
+      1,
+      1.3,
+      1.7,
+      2.1
+    ],
+    "ExtraLargeEnemyDamageResistanceD": [
+      1.5,
+      1.55,
+      1.75,
+      1.9
+    ],
+    "EnemyDamageResistance": [
+      1.4,
+      1.5,
+      1.6,
+      1.75
+    ],
+    "SmallEnemyDamageResistance": [
+      1.2,
+      1.2,
+      1.2,
+      1.2
+    ],
+    "EnemyDamageModifier": [
+      3.8,
+      4.1,
+      4.4,
+      4.6
+    ],
+    "EnemyCountModifier": {
+      "Mutate": "Multiply",
+      "A": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          2.3,
+          2.5,
+          2.9,
+          3.5
+        ]
+      },
+      "B": {
+        "Mutate": "ByMissionType",
+        "Default": 1,
+        "Mining": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringExtraction"
+          },
+          "Then": 1.66,
+          "Else": 1
+        },
+        "Egg": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringEggAmbush",
+            "StartingAt": 5,
+            "StoppingAfter": 10
+          },
+          "Then": 4,
+          "Else": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringExtraction"
+            },
+            "Then": 1.66,
+            "Else": 1
+          }
+        },
+        "Refinery": {
+          "Mutate": "ByRefineryPhase",
+          "Default": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringExtraction"
+            },
+            "Then": 1.66,
+            "Else": 1
+          },
+          "Refining": 1.2,
+          "RefiningStalled": 0.9,
+          "RefiningComplete": 1.2
+        },
+        "PE": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringExtraction"
+            },
+            "B": {
+              "Mutate": "DuringPECountdown"
+            }
+          },
+          "Then": 2,
+          "Else": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringGenericSwarm"
+            },
+            "Then": 1,
+            "Else": 1.125 
+          }
+        },
+        "Salvage": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringDefend"
+          },
+          "Then": 1.15,
+          "Else": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringExtraction"
+            },
+            "Then": {
+              "Mutate": "Add",
+              "A": {
+                "Mutate": "Multiply",
+                "A": {
+                  "Mutate": "ElapsedExtraction"
+                },
+                "B": 0.02
+              },
+              "B": 0.2
+            },
+            "Else": 1
+          }
+        },
+        "Escort": {
+          "Mutate": "ByEscortPhase",
+          "Default": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringExtraction"
+            },
+            "Then": 1.66,
+            "Else": 1
+          },
+          "FinalEventA": 0.9,
+          "FinalEventB": 0.925,
+          "FinalEventC": 0.96,
+          "FinalEventD": 1
+        },
+        "Elimination": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringExtraction"
+          },
+          "Then": 1.66,
+          "Else": 1
+        },
+        "Sabotage": {
+          "Mutate": "BySaboPhase",
+          "Default": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringEncounters"
+            },
+            "Then": 0.5,
+            "Else": {
+              "Mutate": "If",
+              "Condition": {
+                "Mutate": "DuringExtraction"
+              },
+              "Then": 1.66,
+              "Else": 0.85
+            }
+          },
+          "Hacking": 1,
+          "BetweenHacks": 0.9,
+          "HackingFinished": 0.9,
+          "Phase1Vent": 0.95,
+          "Phase1Eye": 0.95,
+          "Phase2Vent": 0.95,
+          "Phase2Eye": 0.95,
+          "Phase3Vent": 0.95,
+          "Phase3Eye": 0.95
+        },
+        "DeepScan": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringGenericSwarm"
+            },
+            "B": {
+              "Mutate": "DuringEncounters"
+            }
+          },
+          "Then": 1,
+          "Else": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringDrillevator"
+            },
+            "Then": 1.2,
+            "Else": {
+              "Mutate": "If",
+              "Condition": {
+                "Mutate": "DuringExtraction"
+              },
+              "Then": 1.66,
+              "Else": 0.9
+            }
+          }
+        }
+      }
+    },
+    "EncounterDifficulty": [
+      {
+        "weight": 1,
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 580,
+              "Salvage": 435,
+              "PE": 435,
+              "Refinery": 435,
+              "DeepScan": 435,
+              "Elimination": 435,
+              "Sabotage": 1160
+            },
+            {
+              "Mutate": "ByMissionType",
+              "Default": 725,
+              "Sabotage": 1450
+            }
+          ]
+        },
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 720,
+              "Salvage": 540,
+              "PE": 540,
+              "Refinery": 540,
+              "DeepScan": 540,
+              "Elimination": 540,
+              "Sabotage": 1440
+            },
+            {
+              "Mutate": "ByMissionType",
+              "Default": 900,
+              "Sabotage": 1800
+            }
+          ]
+        }
+      }
+    ],
+    "StationaryDifficulty": [
+      {
+        "weight": 1,
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 640,
+              "Salvage": 480,
+              "PE": 480,
+              "Refinery": 480,
+              "DeepScan": 480,
+              "Elimination": 480,
+              "Sabotage": 1280
+            },
+            {
+              "Mutate": "ByMissionType",
+              "Default": 800,
+              "Sabotage": 1600
+            }
+          ]
+        },
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 760,
+              "Salvage": 570,
+              "PE": 570,
+              "Refinery": 570,
+              "DeepScan": 570,
+              "Elimination": 570,
+              "Sabotage": 1520
+            },
+            {
+              "Mutate": "ByMissionType",
+              "Default": 950,
+              "Sabotage": 1900
+            }
+          ]
+        }
+      }
+    ],
+    "EnemyWaveInterval": [
+      {
+        "weight": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 0.8,
+              "DeepScan": 0.19
+            },
+            0.8
+          ]
+        },
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 90,
+              "Refinery": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 240,
+                "Else": 90
+              }
+            },
+            90
+          ]
+        },
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 110,
+              "Refinery": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 240,
+                "Else": 110
+              }
+            },
+            110
+          ]
+        }
+      },
+      {
+        "weight": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 0.19,
+              "DeepScan": 0.8
+            },
+            0.19
+          ]
+        },
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 110,
+              "Refinery": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 240,
+                "Else": 110
+              }
+            },
+            110
+          ]
+        },
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 140,
+              "Refinery": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 240,
+                "Else": 140
+              }
+            },
+            140
+          ]
+        }
+      }
+    ],
+    "EnemyNormalWaveInterval": [
+      {
+        "weight": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 0.65,
+              "DeepScan": 0.2,
+              "Escort": 0.2,
+              "Salvage": 0.2,
+              "Sabotage": 0.2
+            },
+            0.65
+          ]
+        },
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 120,
+              "Salvage": {
+                "Mutate": "BySalvagePhase",
+                "Default": 120,
+                "PreUplink": 300,
+                "PreRefuel": 300
+              },
+              "Refinery": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 300,
+                "Else": 120
+              }
+            },
+            120
+          ]
+        },
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 120,
+              "Salvage": {
+                "Mutate": "BySalvagePhase",
+                "Default": 120,
+                "PreUplink": 300,
+                "PreRefuel": 300
+              },
+              "Refinery": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 300,
+                "Else": 120
+              }
+            },
+            120
+          ]
+        }
+      },
+      {
+        "weight": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 0.35,
+              "DeepScan": 0.8,
+              "Escort": 0.8,
+              "Salvage": 0.8,
+              "Sabotage": 0.8
+            },
+            0.35
+          ]
+        },
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 150,
+              "Salvage": {
+                "Mutate": "BySalvagePhase",
+                "Default": 150,
+                "PreUplink": 300,
+                "PreRefuel": 300
+              },
+              "Refinery": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 300,
+                "Else": 150
+              }
+            },
+            150
+          ]
+        },
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 180,
+              "Salvage": {
+                "Mutate": "BySalvagePhase",
+                "Default": 180,
+                "PreUplink": 300,
+                "PreRefuel": 300
+              },
+              "Refinery": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 300,
+                "Else": 180
+              }
+            },
+            180
+          ]
+        }
+      }
+    ],
+    "EnemyNormalWaveDifficulty": [
+      {
+        "weight": 0.1,
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            2300,
+            2000
+          ]
+        },
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            2300,
+            2000
+          ]
+        }
+      },
+      {
+        "weight": 0.9,
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            920,
+            800
+          ]
+        },
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            1035,
+            900
+          ]
+        }
+      }
+    ],
+    "EnemyDiversity": [
+      {
+        "weight": 0.22,
+        "min": 1,
+        "max": 3
+      },
+      {
+        "weight": 0.4,
+        "min": 4,
+        "max": 7
+      },
+      {
+        "weight": 0.23,
+        "min": 8,
+        "max": 11
+      },
+      {
+        "weight": 0.15,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "StationaryEnemyDiversity": [
+      {
+        "weight": 1,
+        "min": 15,
+        "max": 15
+      }
+    ],
+    "VeteranNormal": [
+      {
+        "weight": 0.9,
+        "min": 0.7,
+        "max": 0.8
+      },
+      {
+        "weight": 0.1,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "VeteranLarge": [
+      {
+        "weight": 1,
+        "min": 0.3,
+        "max": 0.3
+      }
+    ],
+    "EnvironmentalDamageModifier": 1.6,
+    "PointExtractionScalar": 1.6,
+    "FriendlyFireModifier": 1.1,
+    "WaveStartDelayScale": 0,
+    "SpeedModifier": 1.35,
+    "AttackCooldownModifier": 2,
+    "ProjectileSpeedModifier": 1.9,
+    "HealthRegenerationMax": {
+      "Mutate": "IfFloat",
+      "Value": {
+        "Mutate": "EnemyCount",
+        "ED": "ED_FlyingSmartRock_debuffer"
+      },
+      ">=": 1,
+      "Then": 0.1,
+      "Else": 0.4
+    },
+    "ReviveHealthRatio": {
+      "Mutate": "IfFloat",
+      "Value": {
+        "Mutate": "EnemyCount",
+        "ED": "ED_FlyingSmartRock_debuffer"
+      },
+      ">=": 1,
+      "Then": 0.1,
+      "Else": 0.4
+    }
+  },
+  "Pools": {
+    "MinPoolSize": 999,
+    "DisruptiveEnemyPoolCount": {
+      "Min": 69,
+      "Max": 69
+    },
+    "StationaryEnemyCount": {
+      "Min": 69,
+      "Max": 69
+    },
+    "EnemyPool": {
+      "Add": [
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringEncounters"
+          },
+          "Then": [
+            "ED_Spider_Tank_Enc"
+          ],
+          "Else": [
+            "ED_Spider_Tank_Wave"
+          ]
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringEncounters"
+          },
+          "Then": {
+            "Mutate": "ByDNA",
+            "Default": ["ED_Spider_Lobber_Wave"],
+            "Egg,x,2": ["ED_Spider_Lobber_Enc"],
+            "PE": ["ED_Spider_Lobber_Enc"],
+            "Escort": ["ED_Spider_Lobber_Enc"],
+            "Refinery": ["ED_Spider_Lobber_Enc"],
+            "DeepScan": ["ED_Spider_Lobber_Enc"]
+          },
+          "Else": [
+            "ED_Spider_Lobber_Wave"
+          ]
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringEncounters"
+          },
+          "Then": [
+            "ED_Bomber_Enc"
+          ],
+          "Else": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_Bomber_Explosive",
+                  "ED_Acid_Bomber",
+                  "ED_Parabomber_Rat",
+                  "ED_Bomber_buffer",
+                  "ED_Bomber_Wave"
+                ],
+                "CooldownTime": {
+                  "Mutate": "If",
+                  "Condition": {
+                    "Mutate": "Or",
+                    "A": {
+                      "Mutate": "DuringDefend"
+                    },
+                    "B": {
+                      "Mutate": "DuringDrillevator"
+                    }
+                  },
+                  "Then": 120,
+                  "Else": {
+                    "Mutate": "ByEscortPhase",
+                    "Default": {
+                      "Mutate": "BySaboPhase",
+                      "Default": 60,
+                      "Hacking": 120
+                    },
+                    "FinalEventA": 120,
+                    "FinalEventB": 120,
+                    "FinalEventC": 120,
+                    "FinalEventD": 120
+                  }
+                },
+                "ValueDuringCooldown": [],
+                "DefaultValue": [
+                  "ED_Bomber_Wave"
+                ]
+              },
+              [
+                "ED_Bomber_Wave"
+              ]
+            ]
+          }
+        },
+        "ED_Sentinel",
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "EnemyCooldown",
+              "EDs": [
+                "ED_Bomber_Explosive",
+                "ED_Acid_Bomber",
+                "ED_Parabomber_Rat",
+                "ED_Bomber_buffer",
+                "ED_Bomber_Wave"
+              ],
+              "CooldownTime": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "Or",
+                  "A": {
+                    "Mutate": "DuringDefend"
+                  },
+                  "B": {
+                    "Mutate": "DuringDrillevator"
+                  }
+                },
+                "Then": 120,
+                "Else": {
+                  "Mutate": "ByEscortPhase",
+                  "Default": {
+                    "Mutate": "BySaboPhase",
+                    "Default": 60,
+                    "Hacking": 120
+                  },
+                  "FinalEventA": 120,
+                  "FinalEventB": 120,
+                  "FinalEventC": 120,
+                  "FinalEventD": 120
+                }
+              },
+              "ValueDuringCooldown": [],
+              "DefaultValue": [
+                "ED_Bomber_Explosive"
+              ]
+            },
+            [
+              "ED_Bomber_Explosive"
+            ]
+          ]
+        },
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "EnemyCooldown",
+              "EDs": [
+                "ED_Bomber_Explosive",
+                "ED_Acid_Bomber",
+                "ED_Parabomber_Rat",
+                "ED_Bomber_buffer",
+                "ED_Bomber_Wave"
+              ],
+              "CooldownTime": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "Or",
+                  "A": {
+                    "Mutate": "DuringDefend"
+                  },
+                  "B": {
+                    "Mutate": "DuringDrillevator"
+                  }
+                },
+                "Then": 120,
+                "Else": {
+                  "Mutate": "ByEscortPhase",
+                  "Default": {
+                    "Mutate": "BySaboPhase",
+                    "Default": 60,
+                    "Hacking": 120
+                  },
+                  "FinalEventA": 120,
+                  "FinalEventB": 120,
+                  "FinalEventC": 120,
+                  "FinalEventD": 120
+                }
+              },
+              "ValueDuringCooldown": [],
+              "DefaultValue": [
+                "ED_Parabomber_Rat"
+              ]
+            },
+            [
+              "ED_Parabomber_Rat"
+            ]
+          ]
+        },
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "EnemyCooldown",
+              "EDs": [
+                "ED_Bomber_Explosive",
+                "ED_Acid_Bomber",
+                "ED_Parabomber_Rat",
+                "ED_Bomber_buffer",
+                "ED_Bomber_Wave"
+              ],
+              "CooldownTime": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "Or",
+                  "A": {
+                    "Mutate": "DuringDefend"
+                  },
+                  "B": {
+                    "Mutate": "DuringDrillevator"
+                  }
+                },
+                "Then": 120,
+                "Else": {
+                  "Mutate": "ByEscortPhase",
+                  "Default": {
+                    "Mutate": "BySaboPhase",
+                    "Default": 60,
+                    "Hacking": 120
+                  },
+                  "FinalEventA": 120,
+                  "FinalEventB": 120,
+                  "FinalEventC": 120,
+                  "FinalEventD": 120
+                }
+              },
+              "ValueDuringCooldown": [],
+              "DefaultValue": [
+                "ED_Bomber_buffer"
+              ]
+            },
+            [
+              "ED_Bomber_buffer"
+            ]
+          ]
+        },
+        "ED_JellyBreeder_Swarm",
+        "ED_Spider_Grunt_Guard_Elite",
+        {
+          "Mutate": "ByMissionType",
+          "Elimination": [],
+          "Default": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringDread"
+            },
+            "Then": [],
+            "Else": [
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_Spider_Boss_TwinA_Weak",
+                  "ED_Spider_Boss_TwinB_Weak",
+                  "ED_Banshee",
+                  "ED_Wrathbane"
+                ],
+                "CooldownTime": 45,
+                "ValueDuringCooldown": [],
+                "DefaultValue": [
+                  {
+                    "Mutate": "ByPlayerCount",
+                    "Values": [
+                      {
+                        "Mutate": "If",
+                        "Condition": {
+                          "Mutate": "DuringDrillevator"
+                        },
+                        "Then": [],
+                        "Else": [
+                          "ED_Spider_Boss_TwinA_Weak"
+                        ]
+                      },
+                      [
+                        "ED_Spider_Boss_TwinA_Weak"
+                      ]
+                    ]
+                  },
+                  "ED_Spider_Boss_TwinB_Weak"
+                ]
+              },
+              {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringDefend"
+                },
+                "Then": [],
+                "Else": [
+                  {
+                    "Mutate": "EnemyCooldown",
+                    "EDs": [
+                      "ED_Youngnought",
+                      "ED_Youngnought_Ice"
+                    ],
+                    "CooldownTime": {
+                      "Mutate": "If",
+                      "Condition": {
+                        "Mutate": "DuringDefend"
+                      },
+                      "Then": {
+                        "Mutate": "ByPlayerCount",
+                        "Values": [
+                          120,
+                          120,
+                          105,
+                          90
+                        ]
+                      },
+                      "Else": 60
+                    },
+                    "ValueDuringCooldown": [],
+                    "DefaultValue": [
+                      "ED_Youngnought"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "ED_Spider_RapidShooter_Turbo",
+        {
+          "Mutate": "EnemyCooldown",
+          "EDs": [
+            "ED_Spider_ExploderTank_mini",
+            "ED_Spider_ExploderTank_frozen",
+            "ED_Spider_ExploderTank",
+            "ED_Spider_ExploderTank_fast",
+            "ED_Plantonator_Barrinator"
+          ],
+          "CooldownTime": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "Or",
+              "A": {
+                "Mutate": "DuringDefend"
+              },
+              "B": {
+                "Mutate": "DuringDrillevator"
+              }
+            },
+            "Then": 120,
+            "Else": {
+              "Mutate": "ByEscortPhase",
+              "Default": 60,
+              "WaitingForFuel": 120,
+              "FinalEventA": 120,
+              "FinalEventB": 120,
+              "FinalEventC": 120,
+              "FinalEventD": 120
+            }
+          },
+          "ValueDuringCooldown": [],
+          "DefaultValue": [
+            "ED_Spider_ExploderTank_mini"
+          ]
+        },
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            [],
+            [
+              "ED_Shredder"
+            ]
+          ]
+        },
+        "ED_Shredder_Big",
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Spider_RapidShooter_Platform"
+          },
+          ">=": 1,
+          "Then": [],
+          "Else": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringDrillevator"
+            },
+            "Then": [],
+            "Else": {
+              "Mutate": "ByMissionType",
+              "Default": [
+                "ED_Spider_RapidShooter_Platform"
+              ],
+              "Escort": {
+                "Mutate": "ByEscortPhase",
+                "Default": [],
+                "InGarage": [
+                  "ED_Spider_RapidShooter_Platform"
+                ],
+                "Finished": [
+                  "ED_Spider_RapidShooter_Platform"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringDefend"
+          },
+          "Then": [],
+          "Else": {
+            "Mutate": "ByMissionType",
+            "Default": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                [],
+                {
+                  "Mutate": "EnemyCooldown",
+                  "EDs": [
+                    "ED_Spider_ExploderTank_kiwami"
+                  ],
+                  "CooldownTime": {
+                    "Mutate": "ByDNA",
+                    "Default": 900,
+                    "Salvage": 3600,
+                    "Egg,2,2": 3600
+                  },
+                  "ValueDuringCooldown": [],
+                  "DefaultValue": {
+                  "Mutate": "ByDNA",
+                  "Default": ["ED_Spider_ExploderTank_kiwami"],
+                  "Refinery": [],
+                  "Egg,1,1": [],
+                  "Salvage,2,2": [],
+                  "Salvage,3,3": {
+                    "Mutate": "BySalvagePhase",
+                    "Default": ["ED_Spider_ExploderTank_kiwami"],
+                    "PreUplink": [],
+                    "PreRefuel": []
+                  }
+                }
+                }
+              ]
+            },
+            "Escort": []
+          }
+        },
+        "ED_Bundle",
+        "ED_PatrolBot",
+        "ED_KamiGoober",
+        "ED_Crawler",
+        "ED_Spider_Fanatic",
+        "ED_Drone_Breeder_Swarm",
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringDrillevator"
+          },
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [],
+              [
+                "ED_Spider_Shooter_Bouncer"
+              ]
+            ]
+          },
+          "Else": [
+            "ED_Spider_Shooter_Bouncer"
+          ]
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [],
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_Spider_ExploderTank_mini",
+                  "ED_Spider_ExploderTank_frozen",
+                  "ED_Spider_ExploderTank",
+                  "ED_Spider_ExploderTank_fast",
+                  "ED_Plantonator_Barrinator"
+                ],
+                "CooldownTime": 120,
+                "ValueDuringCooldown": [],
+                "DefaultValue": [
+                  "ED_Spider_ExploderTank_frozen"
+                ]
+              }
+            ]
+          },
+          "Else": {
+            "Mutate": "EnemyCooldown",
+            "EDs": [
+              "ED_Spider_ExploderTank_mini",
+              "ED_Spider_ExploderTank_frozen",
+              "ED_Spider_ExploderTank",
+              "ED_Spider_ExploderTank_fast",
+              "ED_Plantonator_Barrinator"
+            ],
+            "CooldownTime": {
+              "Mutate": "ByEscortPhase",
+              "Default": 60,
+              "WaitingForFuel": 120,
+              "FinalEventA": 120,
+              "FinalEventB": 120,
+              "FinalEventC": 120,
+              "FinalEventD": 120
+            },
+            "ValueDuringCooldown": [],
+            "DefaultValue": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                {
+                  "Mutate": "ByMissionType",
+                  "Default": {
+                    "Mutate": "EnemyCooldown",
+                    "EDs": [
+                      "ED_Spider_ExploderTank",
+                      "ED_Spider_ExploderTank_frozen"
+                    ],
+                    "CooldownTime": 480,
+                    "ValueDuringCooldown": [],
+                    "DefaultValue": ["ED_Spider_ExploderTank_frozen"]
+                  },
+                  "Escort": []
+                },
+                ["ED_Spider_ExploderTank_frozen"]
+              ]
+            }
+          }
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": [],
+          "Else": {
+            "Mutate": "ByMissionType",
+            "Default": {
+              "Mutate": "EnemyCooldown",
+              "EDs": [
+                "ED_Spider_ExploderTank_mini",
+                "ED_Spider_ExploderTank_frozen",
+                "ED_Spider_ExploderTank",
+                "ED_Spider_ExploderTank_fast",
+                "ED_Plantonator_Barrinator"
+              ],
+              "CooldownTime": 60,
+              "ValueDuringCooldown": [],
+              "DefaultValue": [
+                "ED_Spider_ExploderTank_fast"
+              ]
+            },
+            "Escort": []
+          }
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": [],
+          "Else": {
+            "Mutate": "ByMissionType",
+            "Default": [
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_FlyingSmartRock_buffer",
+                  "ED_FlyingSmartRock_debuffer"
+                ],
+                "CooldownTime": 90,
+                "ValueDuringCooldown": [],
+                "DefaultValue": [
+                  "ED_FlyingSmartRock_buffer",
+                  "ED_FlyingSmartRock_debuffer"
+                ]
+              }
+            ],
+            "Escort": []
+          }
+        },
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_JellyBreeder_Blimp"
+          },
+          ">=": 1,
+          "Then": [],
+          "Else": [
+            "ED_JellyBreeder_Blimp"
+          ]
+        },
+        {
+          "Mutate": "EnemyCooldown",
+          "EDs": [
+            "ED_JellyThugger",
+            "ED_JellyBreeder_Sentinel"
+          ],
+          "CooldownTime": 240,
+          "ValueDuringCooldown": [],
+          "DefaultValue": ["ED_JellyBreeder_Sentinel"]
+        },
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Spider_Buffer_elecspawner"
+          },
+          ">=": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              1,
+              2
+            ]
+          },
+          "Then": [],
+          "Else": [
+            "ED_Spider_Buffer_elecspawner"
+          ]
+        },
+        "ED_Spider_Tank_flame",
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringDrillevator"
+          },
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [],
+              [
+                "ED_Woodlouse_Youngling_Big"
+              ]
+            ]
+          },
+          "Else": [
+            "ED_Woodlouse_Youngling_Big"
+          ]
+        },
+        "ED_Spider_Shooter_Barrier",
+        "ED_Spider_Shooter_Vomit",
+        {
+          "Mutate":"ByPlayerCount",
+          "Values": [
+            [],
+            ["ED_Spy"]
+          ]
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": [],
+          "Else": {
+            "Mutate": "EnemyCooldown",
+            "EDs": [
+              "ED_Solaris"
+            ],
+            "CooldownTime": 60,
+            "ValueDuringCooldown": [],
+            "DefaultValue": {
+              "Mutate": "ByEscortPhase",
+              "Default": {
+                "Mutate": "IfFloat",
+                "Value": {
+                  "Mutate": "EnemyCount",
+                  "ED": "ED_Solaris"
+                },
+                ">=": 1,
+                "Then": [],
+                "Else": [
+                  "ED_Solaris"
+                ]
+              },
+              "FinalEventA": [],
+              "FinalEventB": [],
+              "FinalEventC": [],
+              "FinalEventD": []
+            }
+          }
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": [],
+          "Else": {
+            "Mutate": "EnemyCooldown",
+            "EDs": [
+              "ED_Joker"
+            ],
+            "CooldownTime": 90,
+            "ValueDuringCooldown": [],
+            "DefaultValue": {
+              "Mutate": "IfFloat",
+              "Value": {
+                "Mutate": "EnemyCount",
+                "ED": "ED_Joker"
+              },
+              ">=": 1,
+              "Then": [],
+              "Else": [
+                "ED_Joker"
+              ]
+            }
+          }
+        },
+        "ED_Ninja",
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringEncounters"
+          },
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [],
+              [
+                "ED_Grabber_Enc"
+              ]
+            ]
+          },
+          "Else": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_Grabber_Wave",
+                  "ED_Grabber_Deliverer"
+                ],
+                "CooldownTime": 120,
+                "ValueDuringCooldown": [],
+                "DefaultValue": [
+                  "ED_Grabber_Wave"
+                ]
+              },
+              [
+                "ED_Grabber_Wave"
+              ]
+            ]
+          }
+        },
+        {
+          "Mutate": "EnemyCooldown",
+          "EDs": [
+            "ED_JellyThugger",
+            "ED_JellyBreeder_Sentinel"
+          ],
+          "CooldownTime": 240,
+          "ValueDuringCooldown": [],
+          "DefaultValue": ["ED_JellyThugger"]
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [],
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_Spider_ExploderTank_mini",
+                  "ED_Spider_ExploderTank_frozen",
+                  "ED_Spider_ExploderTank",
+                  "ED_Spider_ExploderTank_fast",
+                  "ED_Plantonator_Barrinator"
+                ],
+                "CooldownTime": 120,
+                "ValueDuringCooldown": [],
+                "DefaultValue": [
+                  "ED_Plantonator_Barrinator"
+                ]
+              }
+            ]
+          },
+          "Else": {
+            "Mutate": "EnemyCooldown",
+            "EDs": [
+              "ED_Spider_ExploderTank_mini",
+              "ED_Spider_ExploderTank_frozen",
+              "ED_Spider_ExploderTank",
+              "ED_Spider_ExploderTank_fast",
+              "ED_Plantonator_Barrinator"
+            ],
+            "CooldownTime": {
+              "Mutate": "ByEscortPhase",
+              "Default": 60,
+              "WaitingForFuel": 120,
+              "FinalEventA": 120,
+              "FinalEventB": 120,
+              "FinalEventC": 120,
+              "FinalEventD": 120
+            },
+            "ValueDuringCooldown": [],
+            "DefaultValue": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                {
+                  "Mutate": "ByMissionType",
+                  "Default": [
+                    "ED_Plantonator_Barrinator"
+                  ],
+                  "Escort": []
+                },
+                [
+                  "ED_Plantonator_Barrinator"
+                ]
+              ]
+            }
+          }
+        },
+        "ED_Ossiran_Scrab"
+      ],
+      "Remove": [
+        "ED_Spider_Lobber",
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            [
+              "ED_Spider_Stinger"
+            ],
+            []
+          ]
+        },
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            ["ED_Spider_Stalker"],
+            []
+          ]
+        },
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "If",
+              "Condition": {
+                "Mutate": "DuringMission",
+                "StartingAt": 60
+              },
+              "Then": [],
+              "Else": {
+                "Mutate": "ByMissionType",
+                "Default": [],
+                "PE": ["ED_Spider_Exploder"],
+                "DeepScan": ["ED_Spider_Exploder"]
+              }
+            },
+            []
+          ]
+        },
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringDrillevator"
+          },
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [
+                "ED_Woodlouse_Youngling",
+                "ED_Woodlouse"
+              ],
+              []
+            ]
+          },
+          "Else": []
+        },
+        "ED_Spider_Tank",
+        "ED_Grabber",
+        "ED_Shark",
+        "ED_Bomber_Ice",
+        "ED_Spider_Tank_Ice",
+        "ED_Bomber",
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [
+                "ED_Spider_ExploderTank"
+              ],
+              {
+                "Mutate": "EnemyCooldown",
+                "EDs": [
+                  "ED_Spider_ExploderTank_mini",
+                  "ED_Spider_ExploderTank_frozen",
+                  "ED_Spider_ExploderTank",
+                  "ED_Spider_ExploderTank_fast",
+                  "ED_Plantonator_Barrinator"
+                ],
+                "CooldownTime": 120,
+                "ValueDuringCooldown": [
+                  "ED_Spider_ExploderTank"
+                ],
+                "DefaultValue": []
+              }
+            ]
+          },
+          "Else": {
+            "Mutate": "EnemyCooldown",
+            "EDs": [
+              "ED_Spider_ExploderTank_mini",
+              "ED_Spider_ExploderTank_frozen",
+              "ED_Spider_ExploderTank",
+              "ED_Spider_ExploderTank_fast",
+              "ED_Plantonator_Barrinator"
+            ],
+            "CooldownTime": {
+              "Mutate": "ByEscortPhase",
+              "Default": 60,
+              "WaitingForFuel": 120,
+              "FinalEventA": 120,
+              "FinalEventB": 120,
+              "FinalEventC": 120,
+              "FinalEventD": 120
+            },
+            "ValueDuringCooldown": [
+              "ED_Spider_ExploderTank"
+            ],
+            "DefaultValue": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                {
+                  "Mutate": "ByMissionType",
+                  "Default": {
+                    "Mutate": "EnemyCooldown",
+                    "EDs": [
+                      "ED_Spider_ExploderTank",
+                      "ED_Spider_ExploderTank_frozen"
+                    ],
+                    "CooldownTime": 480,
+                    "ValueDuringCooldown": [
+                      "ED_Spider_ExploderTank"
+                    ],
+                    "DefaultValue": []
+                  },
+                  "Escort": [
+                    "ED_Spider_ExploderTank"
+                  ]
+                },
+                []
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "StationaryPool": {
+      "Add": [
+        "ED_Sprout_Normal",
+        "ED_ShootingPlant_NukeSingle",
+        "ED_CaveLeech_fat",
+        "ED_Drone_Breeder",
+        {
+          "Mutate": "ByMissionType",
+          "Default": [
+            "ED_FacilityTurret_Cutter"
+          ],
+          "Escort": []
+        },
+        "ED_ShootingPlant_Shield",
+        "ED_Sniper_Turret_Slow_Rocket",
+        {
+          "Mutate": "ByMissionType",
+          "Default": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [],
+              ["ED_BarrageInfector_Nuker"]
+            ]
+          },
+          "Refinery": [],
+          "Escort": []
+        },
+        {
+          "Mutate": "ByMissionType",
+          "Default": [
+            "ED_Babel"
+          ],
+          "Escort": []
+        }
+      ],
+      "Remove": [
+        {
+          "Mutate": "ByMissionType",
+          "Default": [],
+          "Escort": [
+            "ED_TentaclePlant",
+            "ED_FacilityTurret_Cutter"
+          ]
+        }
+      ]
+    }
+  },
+  "Enemies": {
+    "ED_Youngnought_Ice": {
+      "Base": "ED_Frostnought",
+      "SpawnAmountModifier": 2,
+      "UsesSpawnRarityModifiers": false,
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DisplayName": "Glyphid Ice Youngnought",
+      "MinSpawnCount": 1,
+      "MaxSpawnCount": 0,
+      "StaggerDurationMultiplier": 0,
+      "Significance": "Critical",
+      "Materials": [
+        "M_Light_BlueX20",
+        "M_BeachParty_Ball_Blue"
+      ],
+      "IsBossFight": true,
+      "Temperature": {
+        "BurnTemperature": 100,
+        "DouseFireTemperature": 50,
+        "FreezeTemperature": -490,
+        "WarmingRate": -520
+      }
+    },
+    "ED_BarrageInfector": {
+      "DifficultyRating": {
+        "Default": 200,
+        "Refinery": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            350,
+            200
+          ]
+        },
+        "Escort": 450,
+        "Mutate": "ByMissionType"
+      },
+      "MaxSpawnCount": [
+        0,
+        0,
+        9999
+      ],
+      "SpawnAmountModifier": [
+        0.001,
+        0.001,
+        1
+      ]
+    },
+    "ED_BarrageInfector_Nuker": {
+      "Base": "ED_BarrageInfector",
+      "DisplayName": "Nuke Barrager",
+      "Projectile": "PRJ_Nukebomber_Bomb",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "Materials": [
+        "M_Gunner_PJ_BioHazard_Glow_DLC07",
+        "M_RivalBomb_ImpactBubbleRed",
+        "M_RivalBomb_ImpactBubbleRed",
+        "M_RivalBomb_ImpactBubbleRed"
+      ],
+      "TimeDilation": {
+        "Mutate": "If",
+        "Condition": {
+          "Mutate": "DuringMission",
+          "StartingAt": 20
+        },
+        "Then": 0.333,
+        "Else": 0.25
+      },
+      "MaxSpawnCount": [
+        0,
+        0,
+        1
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 8,
+      "DifficultyRating": {
+        "Default": 450,
+        "Refinery": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            600,
+            450
+          ]
+        },
+        "Escort": 700,
+        "Mutate": "ByMissionType"
+      },
+      "SpawnAmountModifier": [
+        0.001,
+        0.001,
+        0.35
+      ]
+    },
+    "ED_Acid_Bomber": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "MinSpawnCount": 1,
+      "Temperature": {
+        "FreezeTemperature": -200,
+        "WarmingRate": 30
+      },
+      "Materials": [
+        "M_HairColor_Grey01",
+        "M_HairColor_Grey01",
+        "M_SpaceRig_MetalGreen01_WS",
+        "M_CaveGeneric_Enor",
+        "M_Drone_Painted03",
+        "M_SpaceRig_MetalGreen01_WS",
+        "M_Drone_Painted03"
+      ]
+    },
+    "ED_Babel": {
+      "Base": "ED_Burst_Turret_Nobase",
+      "Projectile": "PRJ_FlameWall_C",
+      "Temperature": {
+        "DieIfBurning": false,
+        "FreezeTemperature": -100,
+        "BurnTemperature": 50,
+        "DouseFireTemperature": 0,
+        "FozenDamageBonusScale": 3,
+        "CoolingRate": 10
+      },
+      "Resistances": {
+        "FireDamageMultiplier": 1
+      },
+      "AttackDamageMultiplier": 0.125,
+      "MaxSpawnCount": [
+        0,
+        0,
+        9999
+      ],
+      "MinSpawnCount": 1,
+      "DifficultyRating": {
+        "Default": 250,
+        "Refinery": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            400,
+            250
+          ]
+        },
+        "Mutate": "ByMissionType"
+      },
+      "DisplayName": "Tower of Babel",
+      "SpawnAmountModifier": [
+        0.001,
+        0.001,
+        0.5
+      ],
+      "HealthMultiplier": 2,
+      "Scale": 2.5,
+      "Direct": {
+        "Float:BurstInterval": 0.666,
+        "Float:TurretRotationSpeed": 100,
+        "Float:LockonTime": 2,
+        "Float:FireInterval": 0.4,
+        "Float:AimZOffset": 0.0
+      },
+      "Materials": [
+        "M_Plague_MedbayScan",
+        "M_GlobalSkin_RoyalBlue_S05",
+        "M_VanityBase_EyePupil",
+        "M_Greybox_Light_PinkX20",
+        "M_CaveHolo_Transition",
+        "M_CaveHolo_Transition"
+      ]
+    },
+    "ED_Bomber_Enc": {
+      "Base": "ED_Bomber",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          {
+            "Mutate": "ByDNA",
+            "Default": true,
+            "Egg,x,2": false,
+            "PE": false,
+            "Escort": false,
+            "Refinery": false,
+            "DeepScan": false
+          },
+          true
+        ]
+      },
+      "DifficultyRating": 47.5,
+      "MaxSpawnCount": [
+        1,
+        2,
+        3
+      ],
+      "Rarity": 5.25,
+      "Temperature": {
+        "FreezeTemperature": -200,
+        "WarmingRate": 30
+      },
+      "SpawnAmountModifier": 1
+    },
+    "ED_Bomber_Wave": {
+      "Base": "ED_Bomber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 47.5,
+      "MaxSpawnCount": [
+        1,
+        2,
+        3
+      ],
+      "Rarity": 5.25,
+      "Temperature": {
+        "FreezeTemperature": -200,
+        "WarmingRate": 30
+      },
+      "SpawnAmountModifier": 1,
+      "CustomVeterans": {
+        "ED_Bomber_Wave": 0.75,
+        "ED_Acid_Bomber": 0.25
+      }
+    },
+    "ED_Bomber_buffer": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          {
+            "Mutate": "ByDNA",
+            "Default": true,
+            "Egg,x,2": false,
+            "PE": false,
+            "Escort": false,
+            "Refinery": false,
+            "DeepScan": false
+          },
+          true
+        ]
+      },
+      "DifficultyRating": 135,
+      "DisplayName": "Mactera Warden",
+      "Temperature": {
+        "FreezeTemperature": -200,
+        "WarmingRate": 30
+      },
+      "MaxSpawnCount": [
+        0,
+        1
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": [
+        7.5,
+        5.5
+      ],
+      "SpawnAmountModifier": 1
+    },
+    "ED_Bomber_Explosive": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          {
+            "Mutate": "ByDNA",
+            "Default": true,
+            "Egg,x,2": false,
+            "PE": false,
+            "Escort": false,
+            "Refinery": false,
+            "DeepScan": false
+          },
+          true
+        ]
+      },
+      "DifficultyRating": 90,
+      "MaxSpawnCount": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "MinSpawnCount": 1,
+      "Temperature": {
+        "FreezeTemperature": -200,
+        "WarmingRate": 30
+      },
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Bundle": {
+      "Base": "ED_Mactera_Shooter_HeavyVeteran",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 80,
+      "DisplayName": "Mactera Bundle",
+      "Materials": [
+        "M_SpiderStingerClaw_Flesh",
+        "M_WPN_ZipPole_A_Light"
+      ],
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 1,
+      "Rarity": 5.25,
+      "HealthMultiplier": [
+        1.5556,
+        1.6667,
+        1.7778,
+        1.9455
+      ],
+      "Scale": 1.5,
+      "SpawnAmountModifier": 1
+    },
+    "ED_CaveLeech": {
+      "CaveLeech": {
+        "BitesPerSecond": [
+          1.5,
+          2
+        ],
+        "GrapDelay": [
+          0.0666,
+          0.05
+        ],
+        "TentacleSpeed": [
+          900,
+          1200
+        ],
+        "TentacleRetractSpeed": [
+          1650,
+          2200
+        ],
+        "TentaclePullSpeed": [
+          3000,
+          4000
+        ],
+        "TentacleDropPlayerSpeed": [
+          2250,
+          3000
+        ],
+        "MaxDropPlayerDuration": 10
+      },
+      "DifficultyRating": 100,
+      "SpawnAmountModifier": 1.5,
+      "Rarity": 2
+    },
+    "ED_CaveLeech_fat": {
+      "Base": "ED_CaveLeech",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "CaveLeech": {
+        "MaxDistanceXY": 300000,
+        "BitesPerSecond": [
+          1,
+          1.25
+        ],
+        "GrapDelay": [
+          0.1,
+          0.08
+        ],
+        "TentacleSpeed": [
+          600,
+          750
+        ],
+        "TentacleRetractSpeed": [
+          1100,
+          1375
+        ],
+        "TentaclePullSpeed": [
+          2000,
+          2500
+        ],
+        "TentacleDropPlayerSpeed": [
+          1500,
+          1875
+        ],
+        "MaxDropPlayerDuration": 10
+      },
+      "DifficultyRating": 150,
+      "DisplayName": "Fat Cave Leech",
+      "MaxSpawnCount": 10,
+      "MinSpawnCount": 1,
+      "Resistances": {
+        "DamageMultiplier": 0.167,
+        "PhysicalDamageMultiplier": 3
+      },
+      "Scale": 2,
+      "SpawnAmountModifier": 1.5
+    },
+    "ED_Crawler": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 50,
+      "MaxSpawnCount": [
+        4,
+        5,
+        7,
+        10
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 3.5,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Drone_Breeder": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 145,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 8,
+      "HealthMultiplier": 0.5,
+      "SpawnAmountModifier": 0.5,
+      "Temperature": {
+        "FreezeTemperature": -150
+      }
+    },
+    "ED_Drone_Breeder_Swarm": {
+      "Base": "ED_Drone_Breeder",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 200,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 5.875,
+      "HealthMultiplier": 0.5,
+      "SpawnAmountModifier": 1,
+      "Temperature": {
+        "FreezeTemperature": -150
+      }
+    },
+    "ED_EggSpider": {
+      "Base": "ED_Spider_Swarmer",
+      "AttackDamageMultiplier": 1.5,
+      "DisplayName": "Glyphid Hatched Rat",
+      "Courage": 1,
+      "UsesBiomeVariants": false,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Materials": [
+        "M_RustedMetal_White01",
+        {
+          "Mutate": "RandomChoice",
+          "Choices": [
+            [],
+            [
+              ""
+            ]
+          ]
+        }
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": 1.25,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.25,
+        "MaxBrakingDeceleration": 1.25,
+        "MaxPawnSpeed": 1.25,
+        "MaxStrafeDistance": 1.25,
+        "StrafeSpeed": 1.25
+      },
+      "Resistances": {
+        "DamageMultiplier": 0.24,
+        "FireDamageMultiplier": 0.5
+      },
+      "Temperature": {
+        "DieIfBurning": false,
+        "DieIfFrozen": false,
+        "OnFireHeatRange": 20
+      },
+      "Scale": 1.5
+    },
+    "ED_FacilityTurret_Cutter": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "Base": "ED_FacilityTurret_Barrier",
+      "MaxSpawnCount": 9999,
+      "MinSpawnCount": 1,
+      "Rarity": 5,
+      "AttackDamageMultiplier": 0.7,
+      "DisplayName": "Line-Cutting Turret",
+      "Temperature": {
+        "DieIfBurning": false,
+        "FreezeTemperature": -100,
+        "BurnTemperature": 50,
+        "FozenDamageBonusScale": 3,
+        "CoolingRate": 10
+      },
+      "DifficultyRating": 90,
+      "Projectile": "PRJ_GuntowerLineProjectile_C",
+      "SpawnAmountModifier": 1,
+      "Materials": [
+        "M_HairColor_Purple01",
+        "M_GlobalSkin_CleanPurple_S05",
+        "M_WPN_Gatling_HeatGlow_A",
+        "M_VanityBase_EyeColor"
+      ],
+      "Scale": 1.4,
+      "TimeDilation": 1,
+      "Direct": {
+        "Float:TurnCooldown": 0.4,
+        "Float:TurnSpeed": 4.5
+      }
+    },
+    "ED_Youngnought": {
+      "Base": "ED_Fauxnought",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DisplayName": "Glyphid Youngnought",
+      "DifficultyRating": 200,
+      "IsBossFight": true,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "UsesSpawnRarityModifiers": false,
+      "Rarity": 6.25,
+      "StaggerDurationMultiplier": 0,
+      "Significance": "Critical",
+      "Temperature": {
+        "BurnTemperature": 100,
+        "DouseFireTemperature": 50,
+        "FreezeTemperature": -400,
+        "WarmingRate": -520
+      },
+      "SpawnAmountModifier": 2,
+      "CustomVeterans": {
+        "ED_Youngnought": 0.75,
+        "ED_Youngnought_Ice": 0.25
+      }
+    },
+    "ED_Grabber_Enc": {
+      "Base": "ED_Grabber",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 70,
+      "NoSpawnWithin": 500,
+      "Grabber": {
+        "CarryAcceleration": [
+          3750,
+          4500
+        ],
+        "CarrySpeed": [
+          625,
+          750
+        ],
+        "ChaseAcceleration": [
+          3750,
+          4500
+        ],
+        "ChaseSpeed": [
+          937.5,
+          1125
+        ],
+        "FleeAcceleration": [
+          1250,
+          1500
+        ],
+        "FleeSpeed": [
+          1050,
+          1200
+        ],
+        "WanderingAcceleration": [
+          1250,
+          1500
+        ],
+        "WanderingSpeed": [
+          325,
+          375
+        ]
+      },
+      "MaxSpawnCount": [
+        0,
+        1
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": [
+        6.5,
+        5.25
+      ],
+      "SpawnSpread": 5000,
+      "CustomVeterans": {
+        "ED_Grabber": 0.45,
+        "ED_Grabber_Deliverer": 0.3
+      }
+    },
+    "ED_Grabber_Wave": {
+      "Base": "ED_Grabber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 70,
+      "NoSpawnWithin": 500,
+      "Grabber": {
+        "CarryAcceleration": [
+          3750,
+          4500
+        ],
+        "CarrySpeed": [
+          625,
+          750
+        ],
+        "ChaseAcceleration": [
+          3750,
+          4500
+        ],
+        "ChaseSpeed": [
+          937.5,
+          1125
+        ],
+        "FleeAcceleration": [
+          1250,
+          1500
+        ],
+        "FleeSpeed": [
+          1050,
+          1200
+        ],
+        "WanderingAcceleration": [
+          1250,
+          1500
+        ],
+        "WanderingSpeed": [
+          325,
+          375
+        ]
+      },
+      "MaxSpawnCount": [
+        0,
+        1
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": [
+        6.5,
+        5.25
+      ],
+      "SpawnSpread": 5000,
+      "CustomVeterans": {
+        "ED_Grabber": 0.45,
+        "ED_Grabber_Deliverer": 0.3,
+        "ED_Grabber_Carrier": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            },
+            "C": {
+              "Mutate": "IfFloat",
+              "Value": {
+                "Mutate": "DwarvesDown"
+              },
+              ">=": {
+                "Mutate": "ByPlayerCount",
+                "Values": [
+                  0,1,2,3
+                ]
+              },
+              "Then": true,
+              "Else": false
+            }
+          },
+          "Then": 0,
+          "Else": {
+            "Mutate": "IfFloat",
+            "Value": {
+              "Mutate": "EnemyCount",
+              "ED": "ED_Grabber_Carrier"
+            },
+            ">=": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                1,
+                1,
+                2,
+                3
+              ]
+            },
+            "Then": 0,
+            "Else": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                0,
+                0.04,
+                0.12,
+                0.25
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ED_Grabber_Deliverer": {
+      "DisplayName": "Mactera Deliverer",
+      "Base": "ED_Grabber",
+      "Materials": [
+        "M_Spider_Oppressor_Tank_Body_red",
+        "M_Forge_EnergyLightRed",
+        "M_Forge_EnergyLightRed",
+        ""
+      ],
+      "NoSpawnWithin": 500,
+      "SpawnSpread": 5000,
+      "Grabber": {
+        "CarryAcceleration": [
+          1747.5,
+          2100
+        ],
+        "CarrySpeed": [
+          349.5,
+          420
+        ],
+        "ChaseAcceleration": [
+          1747.5,
+          2100
+        ],
+        "ChaseSpeed": [
+          436.875,
+          525
+        ],
+        "FleeAcceleration": [
+          582.5,
+          700
+        ],
+        "FleeSpeed": [
+          524.25,
+          630
+        ],
+        "WanderingAcceleration": [
+          582.5,
+          700
+        ],
+        "WanderingSpeed": [
+          145.625,
+          175
+        ],
+        "DamageThreshold": 99999
+      },
+      "Courage": 1
+    },
+    "ED_Grabber_Carrier": {
+      "Base": "ED_Grabber",
+      "NoSpawnWithin": 750,
+      "CanBeUsedInEncounters": false,
+      "DisplayName": "Mactera Carrier",
+      "Elite": true,
+      "ForceEliteBase": "ED_Grabber",
+      "IsBossFight": true,
+      "TimeDilation": 1,
+      "HealthMultiplier": 0.46052,
+      "DifficultyRating": 50,
+      "Materials": [
+        "M_RivalBombNode_Beacon_Blink",
+        "M_RivalBombNode_Beacon_Blink",
+        "M_SpaceRig_Light03",
+        {
+          "Mutate": "RandomChoice",
+          "Choices": [
+            [],
+            [
+              ""
+            ]
+          ]
+        }
+      ],
+      "Grabber": {
+        "CarryAcceleration": 4500,
+        "CarrySpeed": 750,
+        "ChaseAcceleration": 4500,
+        "ChaseSpeed": 1125,
+        "FleeAcceleration": 1500,
+        "FleeSpeed": 1200,
+        "WanderingAcceleration": 1500,
+        "WanderingSpeed": 375,
+        "GrabTime": 10
+      },
+      "SpawnSpread": 7500,
+      "Temperature": {
+        "BurnTemperature": 6,
+        "DouseFireTemperature": 0,
+        "FreezeTemperature": -30
+      }
+    },
+    "ED_Jelly_Spawn": {
+      "CustomVeterans": {
+        "ED_Spider_Exploder_white": 0.65,
+        "ED_Spider_Exploder_frost": 0.35
+      }
+    },
+    "ED_Spider_Exploder_white": {
+      "UsesBiomeVariants": false,
+      "Movement": {
+        "AlignDirectionSpeed": 0.75,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 0.75,
+        "MaxBrakingDeceleration": 0.75,
+        "MaxPawnSpeed": 0.75,
+        "MaxStrafeDistance": 0.75,
+        "StrafeSpeed": 0.75
+      }
+    },
+    "ED_Jelly_Swarmer": {
+      "CanBeUsedInEncounters": false,
+      "SpawnSpread": [
+        1000,
+        500,
+        0
+      ],
+      "Base": "ED_Jelly_Swarmer",
+      "DifficultyRating": 10,
+      "MaxSpawnCount": [
+        3,
+        10
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "SpawnAmountModifier": 1,
+      "NoSpawnWithin": [
+        1000,
+        500,
+        0
+      ]
+    },
+    "ED_JellyThugger": {
+      "Base": "ED_JellyBreeder",
+      "Temperature": {
+        "FreezeTemperature": -150
+      },
+      "Significance": "Critical",
+      "Scale": 1.5,
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Outline": {
+        "Enabled": true,
+        "Type": "Enemy"
+      },
+      "Heal": {
+        "FinalRate": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            -5.8334,
+            -4.6875,
+            -4,
+            -3.645834
+          ]
+        },
+        "SwitchAfter": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            60,
+            80,
+            100,
+            120
+          ]
+        }
+      },
+      "SpawnSpread": [
+        {
+          "Mutate": "Multiply",
+          "A": {
+            "Mutate": "Multiply",
+            "A": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                437.5,
+                625,
+                875,
+                1125
+              ]
+            },
+            "B": {
+              "Mutate": "ByDNA",
+              "Default": 0.2,
+              "Mining": 0,
+              "Egg,1": 0.3,
+              "Egg,2": 0.6,
+              "Egg,x,3": 1,
+              "PE,2": 1,
+              "PE,3": 1.5,
+              "Salvage,x,2": 1,
+              "Salvage,x,3": 1.5,
+              "Refinery,x,2": 1,
+              "Refinery,x,3": 1.5,
+              "Sabotage,x,1": 0.3,
+              "Sabotage,x,2": 0.6,
+              "DeepScan,x,2": 0,
+              "DeepScan,x,3": 0
+            }
+          },
+          "B": {
+            "Mutate": "IfFloat",
+            "Value": {
+              "Mutate": "ScoutCount"
+            },
+            ">=": 1,
+            "Then": 2,
+            "Else": 1
+          }
+        }
+      ],
+      "DifficultyRating": 200,
+      "Rarity": 8.5,
+      "IsBossFight": true,
+      "Movement": {
+        "AlignDirectionSpeed": 0.333,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 0.333,
+        "MaxBrakingDeceleration": 0.333,
+        "MaxPawnSpeed": 0.333,
+        "MaxStrafeDistance": 0.333,
+        "StrafeSpeed": 0.333
+      },
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "DisplayName": "Naedocyte Thugger",
+      "HealthMultiplier": 0.334,
+      "SpawnAmountModifier": 1,
+      "Materials": [
+        "M_JellyBreeder_Infected_Shards",
+        "M_SpaceRig_Metal05_WS",
+        "M_Flier_Grabber_Body",
+        "M_Engineer_PJ_DLC01_Stripes",
+        "M_Engineer_PJ_DLC01_Stripes",
+        "M_SpaceRig_Metal05_WS",
+        "M_Engineer_PJ_DLC01_Stripes"
+      ],
+      "JellyBreeder": {
+        "EnemyToSpawn": "ED_Spider_ShieldTank_white",
+        "TimeBetweenBursts": 35,
+        "TimeBetweenEggs": 5,
+        "EggBurstSize": 2,
+        "MaxJellies": 20,
+        "MultiplierOnHighPlayerCount": 1.5,
+        "SpawnAmount": 4,
+        "EggName": "Thegg",
+        "EggMaterial": [
+          "M_SpaceRig_Metal05_WS"
+        ],
+        "EggTime": 15,
+        "EggHealth": [70, 84, 98, 120]
+      }
+    },
+    "ED_Spider_ShieldTank_white": {
+      "DisplayName": "Glyphid Thug",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "MaxSpawnCount": 0,
+      "AttackDamageMultiplier": 0.65,
+      "Scale": 0.27,
+      "Resistances": {
+        "FireDamageMultiplier": 0.4,
+        "PhysicalDamageMultiplier": 10
+      },
+      "Materials": [
+        "M_Spider_ExploderTank_Weakpoint_small",
+        "M_SpaceRig_Metal05_WS"
+      ],
+      "HealthMultiplier": 0.05,
+      "Temperature": {
+        "FreezeTemperature": -150,
+        "UnfreezeTemperature": 0,
+        "WarmingRate": 75
+      },
+      "Movement": {
+        "AlignDirectionSpeed": 0.85,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.2,
+        "MaxBrakingDeceleration": 1.2,
+        "MaxPawnSpeed": 1.2,
+        "MaxStrafeDistance": 1.2,
+        "StrafeSpeed": 1.2
+      },
+      "Direct": {
+        "PCol:Capsule": false
+      }
+    },
+    "ED_JellyBreeder": {
+      "DifficultyRating": {
+        "Mutate": "ByMissionType",
+        "Default": 145,
+        "Escort": 300
+      },
+      "MaxSpawnCount": [
+        {
+          "Mutate": "ByMissionType",
+          "Default": 1,
+          "Escort": 0
+        },
+        1
+      ],
+      "HealthMultiplier": 0.5,
+      "Temperature": {
+        "FreezeTemperature": -150
+      },
+      "JellyBreeder": {
+        "EggHealth": [70, 84, 98, 120]
+      }
+    },
+    "ED_JellyBreeder_Blimp": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "IsBossFight": true,
+      "Base": "ED_JellyBreeder",
+      "DisplayName": "Battle Blimp",
+      "Projectile": "PRJ_PatrolBotRocket_slow",
+      "Significance": "Critical",
+      "DifficultyRating": 250,
+      "Rarity": 9,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "SpawnAmountModifier": 1,
+      "Scale": 1.2,
+      "Temperature": {
+        "FreezeTemperature": -400,
+        "DieIfFrozen": true
+      },
+      "SpawnSpread": 100,
+      "HealthMultiplier": 2,
+      "Materials": [
+        "M_Extractor_Metal01",
+        "M_WPN_Drill_Metal_B",
+        "M_Extractor_Metal01",
+        "M_Extractor_Metal01",
+        "M_Extractor_Metal01",
+        "M_CandleFlame",
+        "M_Extractor_Metal01"
+      ],
+      "JellyBreeder": {
+        "TimeBetweenEggs": 1,
+        "TimeBetweenBursts": 0
+      },
+      "Spawner": {
+        "ED": "ED_Monke",
+        "OnDeathCount": [
+          6,
+          8,
+          10,
+          13
+        ]
+      }
+    },
+    "ED_Monke": {
+      "Base": "ED_Crawler",
+      "DisplayName": "Airship Crewmate",
+      "AttackDamageMultiplier": 1.1,
+      "HealthMultiplier": 1.25,
+      "SpawnSpread": 3000,
+      "Materials": [
+        "M_Vanity_summerEvent_2025_Swimglasses",
+        "M_RedVineFlower_01",
+        "M_Vanity_summerEvent_2025_Swimglasses",
+        "M_Vanity_summerEvent_2025_Swimglasses",
+        "M_RedVineFlower_01",
+        "M_Vanity_summerEvent_2025_Swimglasses",
+        "M_RedVineFlower_01",
+        "M_RedVineFlower_01"
+      ]
+    },
+    "ED_JellyBreeder_Sentinel": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 200,
+      "Scale": 1.5,
+      "Outline": {
+        "Enabled": true,
+        "Type": "Enemy"
+      },
+      "Heal": {
+        "FinalRate": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            -5.8334,
+            -4.6875,
+            -4,
+            -3.645834
+          ]
+        },
+        "SwitchAfter": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            60,
+            80,
+            100,
+            120
+          ]
+        }
+      },
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "SpawnAmountModifier": 1,
+      "Temperature": {
+        "FreezeTemperature": -150
+      },
+      "IsBossFight": true,
+      "Significance": "Critical",
+      "Rarity": 8.5,
+      "Base": "ED_JellyBreeder",
+      "HealthMultiplier": 0.334,
+      "DisplayName": "Naedocyte Seeder",
+      "SpawnSpread": [
+        {
+          "Mutate": "Multiply",
+          "A": {
+            "Mutate": "Multiply",
+            "A": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                328.125,
+                468.75,
+                656.25,
+                843.75
+              ]
+            },
+            "B": {
+              "Mutate": "ByDNA",
+              "Default": 0.3,
+              "Mining": 0,
+              "Egg,1": 0.3,
+              "Egg,2": 0.6,
+              "Egg,x,3": 1,
+              "PE,2": 1,
+              "PE,3": 1.5,
+              "Salvage,x,2": 1,
+              "Salvage,x,3": 1.5,
+              "Refinery,x,2": 1,
+              "Refinery,x,3": 1.5,
+              "Sabotage,x,1": 0.3,
+              "Sabotage,x,2": 0.6,
+              "DeepScan,x,2": 0,
+              "DeepScan,x,3": 0
+            }
+          },
+          "B": {
+            "Mutate": "IfFloat",
+            "Value": {
+              "Mutate": "ScoutCount"
+            },
+            ">=": 1,
+            "Then": 2,
+            "Else": 1
+          }
+        }
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": 0.333,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 0.333,
+        "MaxBrakingDeceleration": 0.333,
+        "MaxPawnSpeed": 0.333,
+        "MaxStrafeDistance": 0.333,
+        "StrafeSpeed": 0.333
+      },
+      "JellyBreeder": {
+        "EnemyToSpawn": "ED_Sentinel_medium",
+        "MaxJellies": 20,
+        "SpawnAmount": 4,
+        "MultiplierOnHighPlayerCount": 1.5,
+        "Eggtime": 20,
+        "CloseToSpawnEggTime": 5,
+        "EggBurstSize": 2,
+        "TimeBetweenEggs": 5,
+        "TimeBetweenBursts": 35,
+        "EggName": "Segg",
+        "EggHealth": [70, 84, 98, 120],
+        "EggMaterial": [
+          "M_Canteen_Metal_4",
+          "M_Canteen_Metal_4",
+          "M_Canteen_Metal_4",
+          "M_Canteen_Metal_4",
+          "M_Canteen_Metal_4"
+        ]
+      },
+      "Materials": [
+        "M_Flare_Glow_Driller_inst",
+        "M_Canteen_Metal_4",
+        "M_Flare_Glow_Driller_inst",
+        "M_Canteen_Metal_4",
+        "M_Canteen_Metal_4",
+        "M_SentinelGoo_GooWobble",
+        "M_Flare_Glow_Driller_inst"
+      ]
+    },
+    "ED_JellyBreeder_Swarm": {
+      "Base": "ED_JellyBreeder",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": {
+        "Mutate": "ByMissionType",
+        "Default": 200,
+        "Escort": 350
+      },
+      "MaxSpawnCount": [
+        {
+          "Mutate": "ByMissionType",
+          "Default": 1,
+          "Escort": 0
+        },
+        1
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 5.875,
+      "Temperature": {
+        "FreezeTemperature": -150
+      },
+      "JellyBreeder": {
+        "EggHealth": [70, 84, 98, 120]
+      },
+      "HealthMultiplier": 0.5,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Joker": {
+      "Base": "ED_Mactera_Shooter_Normal",
+      "VeteranClasses": [
+        "ED_Joker"
+      ],
+      "Significance": "Critical",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "StaggerDurationMultiplier": 0.5,
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 1500,
+      "Resistances": {
+        "FireDamageMultiplier": 0.5,
+        "CorrosiveDamageMultiplier": 0.5,
+        "ElectricDamageMultiplier": 0.5,
+        "PhysicalDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 0.333,
+        "PiercingDamageMultiplier": 0.666,
+        "RadiationDamageMultiplier": 0.5
+      },
+      "TimeDilation": [1.25, 1.5],
+      "HealthMultiplier": [
+        2.5,
+        2.8,
+        3.2,
+        3.5
+      ],
+      "Temperature": {
+        "FreezeTemperature": -320
+      },
+      "StaggerImmunityWindow": 2,
+      "Projectile": "PRJ_Mactera_Shooter_poison",
+      "IsBossFight": true,
+      "Spawner": {
+        "ED": "ED_JokerClone",
+        "OnSpawnDelay": 0.5,
+        "OnSpawnCount": [
+          4,
+          4,
+          5,
+          6
+        ],
+        "Interval": 3600,
+        "MaxSpawns": [
+          4,
+          4,
+          5,
+          6
+        ]
+      },
+      "AttackDamageMultiplier": 1,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "Rarity": 6.25,
+      "DifficultyRating": 135,
+      "DisplayName": "Mactera Joker",
+      "Materials": [
+        "M_PrecursorArtifact_Base",
+        "M_FixedArmorMat_BioHazardGlass"
+      ],
+      "Direct": {
+        "Float:DashPoints.DashSpeed": 1000
+      }
+    },
+    "ED_JokerClone": {
+      "Base": "ED_Mactera_Shooter_Normal",
+      "ShowHealthBar": false,
+      "StaggerDurationMultiplier": 0.5,
+      "StaggerImmunityWindow": 2,
+      "VeteranClasses": [
+        "ED_JokerClone"
+      ],
+      "HealthMultiplier": 0.5,
+      "Projectile": "PRJ_Mactera_Shooter",
+      "Spawner": {
+        "ED": "ED_JokerClone",
+        "IntervalSpawnCount": 0,
+        "Interval": 3600,
+        "OnDeathCount": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Joker"
+          },
+          ">=": 1,
+          "Then": 1,
+          "Else": 0
+        }
+      },
+      "AttackDamageMultiplier": 0.333,
+      "Heal": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_Joker"
+        },
+        ">=": 1,
+        "Then": 0,
+        "Else": -9999
+      },
+      "MaxSpawnCount": 0,
+      "Temperature": {
+        "DieIfFrozen": true
+      },
+      "MinSpawnCount": 1,
+      "DisplayName": "Mactera Joker Clone",
+      "TimeDilation": [1.25, 1.5],
+      "Materials": [
+        "M_PrecursorArtifact_Base",
+        "M_CaveHolo_Transition"
+      ],
+      "Direct": {
+        "Float:DashPoints.DashSpeed": 1500
+      }
+    },
+    "ED_KamiGoober": {
+      "Base": "ED_Bomber_NoShot",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 5,
+      "DisplayName": "Mactera Kamikaze Goo Bomber",
+      "Temperature": {
+        "FreezeTemperature": -70,
+        "WarmingRate": 10
+      },
+      "Materials": [
+        "M_Flier_BomberGoo_Flesh",
+        "M_Flier_BomberGoo_Armor",
+        "M_DropPod_RampLightsNotBlinking",
+        "M_Flier_BomberGoo_Eyes",
+        "M_DropPod_RampLightsNotBlinking",
+        "M_Flier_BomberGoo_Flesh",
+        "M_DropPod_RampLightsNotBlinking"
+      ],
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 1,
+      "Rarity": 5.125,
+      "HealthMultiplier": 0.015,
+      "Scale": 0.25,
+      "SpawnAmountModifier": 1
+    },
+    "ED_FlyingSmartRock": {
+      "HealthMultiplier": [
+        0.36,
+        0.48,
+        0.592
+      ]
+    },
+    "ED_FlyingSmartRock_buffer": {
+      "Base": "ED_FlyingSmartRock",
+      "DisplayName": "The Sun",
+      "Significance": "Critical",
+      "IsBossFight": true,
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Outline": {
+        "Enabled": true,
+        "Type": "Enemy"
+      },
+      "DifficultyRating": 150,
+      "UsesSpawnRarityModifiers": false,
+      "Rarity": 7.25,
+      "Resistances": {
+        "DamageMultiplier": [
+          1.25,
+          1.1667,
+          1.0937,
+          1
+        ]
+      },
+      "Scale": 1,
+      "Materials": [
+        "",
+        "M_RockCracker_RedLight_AlwaysOn"
+      ],
+      "SpawnSpread": [
+        {
+          "Mutate": "Multiply",
+          "A": {
+            "Mutate": "Multiply",
+            "A": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                656.25,
+                937.5,
+                1312.5,
+                1687.5
+              ]
+            },
+            "B": {
+              "Mutate": "ByDNA",
+              "Default": 0.3,
+              "Mining": 0,
+              "Egg,1": 0.3,
+              "Egg,2": 0.6,
+              "Egg,x,3": 1,
+              "PE,2": 1,
+              "PE,3": 1.5,
+              "Salvage,x,2": 1,
+              "Salvage,x,3": 1.5,
+              "Refinery,x,2": 1,
+              "Refinery,x,3": 1.5,
+              "Sabotage,x,1": 0.3,
+              "Sabotage,x,2": 0.6,
+              "DeepScan,x,2": 0,
+              "DeepScan,x,3": 0
+            }
+          },
+          "B": {
+            "Mutate": "IfFloat",
+            "Value": {
+              "Mutate": "ScoutCount"
+            },
+            ">=": 1,
+            "Then": 2,
+            "Else": 1
+          }
+        }
+      ],
+      "HealthRaw": 300,
+      "Heal": {
+        "FinalRate": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            -8,
+            -6,
+            -4.8,
+            -4
+          ]
+        },
+        "SwitchAfter": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            22.5,
+            30,
+            37.5,
+            45
+          ]
+        }
+      },
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "SpawnAmountModifier": 0.75
+    },
+    "ED_FlyingSmartRock_debuffer": {
+      "Base": "ED_FlyingSmartRock",
+      "DisplayName": "The Moon",
+      "Significance": "Critical",
+      "IsBossFight": true,
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "UsesSpawnRarityModifiers": false,
+      "Outline": {
+        "Enabled": true,
+        "Type": "Enemy"
+      },
+      "Rarity": 7.25,
+      "DifficultyRating": 150,
+      "Scale": 1,
+      "Resistances": {
+        "DamageMultiplier": [
+          1.25,
+          1.1667,
+          1.0937,
+          1
+        ]
+      },
+      "Materials": [
+        "",
+        "M_NeonSign_StaticYellow"
+      ],
+      "SpawnSpread": [
+        {
+          "Mutate": "Multiply",
+          "A": {
+            "Mutate": "Multiply",
+            "A": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                656.25,
+                937.5,
+                1312.5,
+                1687.5
+              ]
+            },
+            "B": {
+              "Mutate": "ByDNA",
+              "Default": 0.3,
+              "Mining": 0,
+              "Egg,1": 0.3,
+              "Egg,2": 0.6,
+              "Egg,x,3": 1,
+              "PE,2": 1,
+              "PE,3": 1.5,
+              "Salvage,x,2": 1,
+              "Salvage,x,3": 1.5,
+              "Refinery,x,2": 1,
+              "Refinery,x,3": 1.5,
+              "Sabotage,x,1": 0.3,
+              "Sabotage,x,2": 0.6,
+              "DeepScan,x,2": 0,
+              "DeepScan,x,3": 0
+            }
+          },
+          "B": {
+            "Mutate": "IfFloat",
+            "Value": {
+              "Mutate": "ScoutCount"
+            },
+            ">=": 1,
+            "Then": 2,
+            "Else": 1
+          }
+        }
+      ],
+      "HealthRaw": 300,
+      "Heal": {
+        "FinalRate": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            -8,
+            -6,
+            -4.8,
+            -4
+          ]
+        },
+        "SwitchAfter": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            22.5,
+            30,
+            37.5,
+            45
+          ]
+        }
+      },
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "SpawnAmountModifier": 0.75
+    },
+    "ED_Mactera_Brendle": {
+      "AttackDamageMultiplier": 1.5,
+      "Base": "ED_Mactera_Brendle"
+    },
+    "ED_Mactera_Shooter_HeavyVeteran": {
+      "CustomVeterans": {
+        "ED_Mactera_Shooter_HeavyVeteran": 0.7,
+        "ED_Mactera_Brendle": 0.3
+      }
+    },
+    "ED_Mactera_Shooter_Normal": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 30,
+      "MaxSpawnCount": 70,
+      "Rarity": 5.125
+    },
+    "ED_Mactera_PentaJaw": {
+      "DisplayName": "Mactera Pentajaw"
+    },
+    "ED_Mactera_TripleShooter": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "MaxSpawnCount": 50,
+      "Rarity": 5.25,
+      "UsesVeteranLarge": true,
+      "VeteranClasses": [
+        "ED_Mactera_PentaJaw"
+      ]
+    },
+    "ED_Ninja": {
+      "Base": "ED_Woodlouse",
+      "DisplayName": "Q'ronar Ninja",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 50,
+      "Projectile": "PRJ_WoodlouseAttack_electric",
+      "AttackDamageMultiplier": 0.33,
+      "Resistances": {
+        "ElectricDamageMultiplier": 1.3,
+        "PhysicalDamageMultiplier": 2,
+        "FireDamageMultiplier": 1
+      },
+      "Temperature": {
+        "BurnTemperature": 50,
+        "DouseFireTemperature": 10
+      },
+      "MaxSpawnCount": [
+        2,
+        3,
+        4
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 1,
+      "NoSpawnWithin": 1000,
+      "SpawnSpread": 12500,
+      "HealthMultiplier": 0.53333,
+      "Scale": 0.85,
+      "TimeDilation": 1.25,
+      "Direct": {
+        "Float:ChanceToWalk": 1,
+        "Float:FoldedStateMaxTime": 0.1,
+        "Float:FoldedStateMinTime": 0.1,
+        "Float:RefreshTimeMax": 0.1,
+        "Float:RefreshTimeMin": 0.1,
+        "Float:BumpRange": 150,
+        "Float:BumpDamage": 0.75,
+        "Float:MinBumpDamage": 0.75,
+        "Float:MaxBumpDamage": 0.75,
+        "Float:ForgetTime": 0.1,
+        "Float:ForgetRange": 10,
+        "Float:MaxBumpPower": 0,
+        "Float:DirectionalBumpPower": 0,
+        "Float:BurstTime": 0.6,
+        "PCol:Mesh": false,
+        "PCol:Capsule": false
+      },
+      "Materials": [
+        "M_AllBlack",
+        "M_Biome_IceCaves_Rock02_Oasis_Particles",
+        "M_CaveHolo_Transition",
+        "M_AllBlack",
+        "M_DamageEnhancer_Field_ProgressBAr"
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": 50,
+        "AlignToTargetMinRequiredAngle": 10,
+        "MaxAcceleration": 120,
+        "MaxBrakingDeceleration": 100,
+        "MaxPawnSpeed": 120,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 10
+      }
+    },
+    "ED_Parabomber_Rat": {
+      "Base": "ED_Parabomber",
+      "DisplayName": "Mactera Plague Bomber",
+      "CanBeUsedForConstantPressure": true,
+      "Projectile": "PRJ_Spider_Tank_Boss_Eggshot",
+      "HealthMultiplier": 0.75,
+      "Temperature": {
+        "FreezeTemperature": -200,
+        "WarmingRate": 30
+      },
+      "CanBeUsedInEncounters": false,
+      "Materials": [
+        "M_Spider_ExploderTank_Armor_white",
+        "M_GreatEggHunt_LightChain_Pink",
+        "M_Spider_ExploderTank_Armor_white",
+        "M_TreasureBox_StateGlow",
+        "M_TreasureBox_StateGlow",
+        "M_Spider_ExploderTank_Armor_white",
+        "M_TreasureBox_StateGlow"
+      ],
+      "DifficultyRating": 125,
+      "MaxSpawnCount": [
+        0,
+        1,
+        2
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 7,
+      "SpawnAmountModifier": 1
+    },
+    "ED_PatrolBot": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 110,
+      "MaxSpawnCount": [
+        0,
+        1,
+        2
+      ],
+      "MinSpawnCount": 1,
+      "Temperature": {
+        "FreezeTemperature": -60,
+        "UnfreezeTemperature": -4,
+        "FozenDamageBonusScale": 3
+      },
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 0.75,
+      "Direct": {
+        "Float:BumpDamage.Damage": 0,
+        "Float:ImpactCooldown.CoolDownTime": 9999
+      }
+    },
+    "ED_PatrolBot_Caretaker": {
+        "Temperature": {
+        "FreezeTemperature": -60,
+        "UnfreezeTemperature": -4,
+        "FozenDamageBonusScale": 3
+      },
+      "Direct": {
+        "Float:BumpDamage.Damage": 0,
+        "Float:ImpactCooldown.CoolDownTime": 9999
+      }
+    },
+    "ED_PitJaw": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 150,
+      "MinSpawnCount": 1,
+      "MaxSpawnCount": 1,
+      "Rarity": 5,
+      "SpawnAmountModifier": 0.5
+    },
+    "ED_Plantonator_Barrinator": {
+      "Base": "ED_Spider_Plantonator",
+      "Materials": [
+        "M_Facility_Turret_Debris",
+        "M_Facility_TurretController_ManualBlink",
+        "M_FireExRed_A",
+        "M_FireExRed_A",
+        "M_FireExRed_A"
+      ],
+      "SpawnSpread": 750,
+      "NoSpawnWithin": 750,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 200,
+      "DisplayName": "Glyphid Barrinator",
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "IsBossFight": true,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "Rarity": 9,
+      "HealthMultiplier": 0.175,
+      "SpawnAmountModifier": 1,
+      "Direct": {
+        "Int:NumClusterBombs": [
+          6,
+          9,
+          12,
+          15
+        ]
+      }
+    },
+    "ED_Ossiran_Scrab": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 20,
+      "MinSpawnCount": 1,
+      "MaxSpawnCount": 35,
+      "Rarity": 5.125,
+      "SpawnAmountModifier": 0.7
+    },
+    "ED_Sentinel": {
+      "Base": "ED_Spider_Tank_HeavySpawn",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 50,
+      "MaxSpawnCount": [
+        7,
+        9,
+        12,
+        15
+      ],
+      "MinSpawnCount": 1,
+      "Movement": {
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.35,
+        "MaxBrakingDeceleration": 1.35,
+        "MaxPawnSpeed": 1.35
+      },
+      "Resistances": {
+        "ElectricDamageMultiplier": 1.3
+      },
+      "Rarity": 5.125,
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 5000
+    },
+    "ED_Sentinel_medium": {
+      "Base": "ED_Spider_Tank_HeavySpawn",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "AttackDamageMultiplier": 0.75,
+      "Movement": {
+        "MaxAcceleration": 1,
+        "MaxBrakingDeceleration": 1,
+        "MaxPawnSpeed": 1.15,
+        "StrafeSpeed": 0.8,
+        "MaxStrafeDistance": 1
+      },
+      "Scale": 0.75,
+      "HealthMultiplier": 0.6,
+      "Materials": [
+        "M_Canteen_Metal_4"
+      ],
+      "Temperature": {
+        "BurnTemperature": 30
+      },
+      "Resistances": {
+        "FireDamageMultiplier": 0.75,
+        "ElectricDamageMultiplier": 1.3
+      },
+      "StaggerImmunityWindow": 0,
+      "StaggerDurationMultiplier": 1
+    },
+    "ED_ShootingPlant": {
+      "DifficultyRating": 100
+    },
+    "ED_ShootingPlant_NukeSingle": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 300,
+      "Materials": [
+        "M_Parasite2_01",
+        "M_Biome_RadioactiveZone_UraniumGlowing",
+        "M_Biome_RadioactiveZone_UraniumGlowing"
+      ],
+      "MaxSpawnCount": 9999,
+      "MinSpawnCount": 1,
+      "Rarity": 1,
+      "SpawnAmountModifier": 1
+    },
+    "ED_ShootingPlant_Shield": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "Rarity": 1,
+      "TimeDilation": [
+        0.5,
+        0.5,
+        0.666
+      ],
+      "MaxSpawnCount": [
+        0,
+        0,
+        2
+      ],
+      "MinSpawnCount": 1,
+      "Base": "ED_ShootingPlant_Nuke",
+      "DisplayName": "Spitscreen Infector",
+      "Materials": [
+        "M_MobilePlague_StabAttack_Tendrils_Active",
+        "M_MatrixCore_GlowEmpty",
+        "M_MatrixCore_GlowEmpty"
+      ],
+      "Projectile": "PRJ_Terminator_Barrier_C",
+      "DifficultyRating": 220,
+      "SpawnAmountModifier": 0.5
+    },
+    "ED_Shredder": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 15,
+      "MaxSpawnCount": 10,
+      "MinSpawnCount": 1,
+      "Rarity": 7.5,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Shredder_Big": {
+      "Base": "ED_Shredder",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 70,
+      "DisplayName": "Big Shredder",
+      "Courage": 1,
+      "HealthMultiplier": [
+        10,
+        10.8,
+        11.6,
+        12.8205
+      ],
+      "Resistances": {
+        "PhysicalDamageMultiplier": 1,
+        "ExplosionDamageMultiplier": 1,
+        "ElectricDamageMultiplier": 1
+      },
+      "AttackDamageMultiplier": 2,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 5.25,
+      "Scale": 3,
+      "SpawnAmountModifier": 1,
+      "Temperature": {
+        "FreezeTemperature": -200,
+        "DieIfBurning": false
+      }
+    },
+    "ED_Sniper_Turret_Slow_Rocket": {
+      "Base": "ED_Sniper_Turret_Slow",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DisplayName": "Rocket Turret",
+      "DifficultyRating": {
+        "Mutate": "ByMissionType",
+        "Default": 70,
+        "Escort": 125
+      },
+      "MaxSpawnCount": {
+        "Mutate": "ByMissionType",
+        "Default": 9999,
+        "Escort": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      "AttackDamageMultiplier": 1.5,
+      "MinSpawnCount": 1,
+      "Scale": 1.2,
+      "Rarity": 2.25,
+      "HealthMultiplier": [
+        1.2,
+        1.28565,
+        1.37145,
+        1.5
+      ],
+      "Materials": [
+        "M_HairColor_Purple01",
+        "M_Meteor_Glowing",
+        "M_Meteor_Glowing",
+        "M_VanityBase_EyeColor",
+        "M_Meteor_Glowing"
+      ],
+      "SpawnAmountModifier": 0.75,
+      "Temperature": {
+        "FreezeTemperature": -50,
+        "UnfreezeTemperature": 0,
+        "FozenDamageBonusScale": 3
+      },
+      "Projectile": "PRJ_PatrolBotRocket_fast_C"
+    },
+    "ED_Solaris": {
+      "Base": "ED_Mactera_RadialJaw",
+      "DisplayName": "Mactera Solaris",
+      "IsBossFight": true,
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "SpawnSpread": 2500,
+      "Resistances": {
+        "FireDamageMultiplier": 0.5,
+        "CorrosiveDamageMultiplier": 0.5,
+        "ElectricDamageMultiplier": 0.75,
+        "PhysicalDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 0.5
+      },
+      "Significance": "Critical",
+      "StaggerDurationMultiplier": 0.25,
+      "StaggerImmunityWindow": 3,
+      "NoSpawnWithin": 1000,
+      "Projectile": "PRJ_InfectedMuleGrenade_C",
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "Rarity": 7,
+      "DifficultyRating": 150,
+      "Materials": [
+        "M_Flier_Triple_Shooter_01",
+        "M_Flier_Triple_Shooter_01",
+        "M_Goal_Hologram_red"
+      ],
+      "SpawnAmountModifier": 1,
+      "Scale": 1.35,
+      "Movement": {
+        "AlignDirectionSpeed": 2,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 2,
+        "MaxBrakingDeceleration": 2,
+        "MaxPawnSpeed": 2,
+        "MaxStrafeDistance": 2,
+        "StrafeSpeed": 2
+      },
+      "TimeDilation": [
+        1.75,
+        2.5
+      ],
+      "HealthMultiplier": [
+        3,
+        3.5,
+        4,
+        4.5
+      ],
+      "Temperature": {
+        "FreezeTemperature": -400
+      },
+      "Direct": {
+        "Float:DashPoints.PointOffset": 400,
+        "Float:DistanceForAttackMode": 0,
+        "Float:DashPoints.MaxRangeFromPlayer": 800,
+        "Float:DashPoints.MinRangeFromPlayer": 1,
+        "Float:DashPoints.MaxHeightAboveTarget": 500,
+        "Float:DashPoints.MinHeightAboveTarget": 350,
+        "Float:DashPoints.DashSpeed": 1200
+      }
+    },
+    "ED_Spider_Boss_TwinA_Weak": {
+      "Base": "ED_Fauxbalester_Locked",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 150,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "UsesSpawnRarityModifiers": false,
+      "Rarity": 5.5,
+      "HealthMultiplier": 0.5485,
+      "Temperature": {
+        "FreezeTemperature": -400
+      },
+      "SpawnAmountModifier": 2,
+      "CustomVeterans": {
+        "ED_Spider_Boss_TwinA_Weak": 0.8,
+        "ED_Banshee": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": 0,
+          "Else": 0.2
+        }
+      }
+    },
+    "ED_Spider_Boss_TwinB_Weak": {
+      "Base": "ED_Lassie_Zen",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 150,
+      "MaxSpawnCount": 0,
+      "UsesSpawnRarityModifiers": false,
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "HealthMultiplier": 0.5485,
+      "Temperature": {
+        "FreezeTemperature": -400
+      },
+      "SpawnAmountModifier": 2,
+      "CustomVeterans": {
+        "ED_Spider_Boss_TwinB_Weak": 0.8,
+        "ED_Wrathbane": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "Or",
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            }
+          },
+          "Then": 0,
+          "Else": 0.2
+        }
+      }
+    },
+    "ED_Banshee": {
+      "Materials": [
+        "",
+        "M_Scout_PJ_BioHazard_Glow_DLC07",
+        "M_BeachParty_Ball_Blue",
+        "M_BeachParty_Ball_Blue"
+      ],
+      "IsBossFight": true,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "HealthMultiplier": 0.5485,
+      "Temperature": {
+        "FreezeTemperature": -400
+      }
+    },
+    "ED_Wrathbane": {
+      "Materials": [
+        "",
+        "M_MatrixCore_GlowEmpty",
+        "M_FireExRed_A",
+        "M_FireExRed_A"
+      ],
+      "IsBossFight": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "Delta",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Wrathbane"
+          }
+        },
+        "==": 0,
+        "Then": true,
+        "Else": false
+      },
+      "AttackDamageMultiplier": 0.35,
+      "DisplayName": "Glyphid Wrathbane",
+      "Base": "ED_Lassie_Aggro",
+      "Projectile": "PRJ_FlameWall_C",
+      "Temperature": {
+        "FreezeTemperature": -400
+      },
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "HealthMultiplier": 0.5485
+    },
+    "ED_Spider_Buffer": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 45,
+      "MaxSpawnCount": [
+        1,
+        2,
+        3
+      ],
+      "Rarity": [
+        7.125,
+        5.125
+      ],
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Buffer_elecspawner": {
+      "Base": "ED_Spider_Buffer",
+      "DisplayName": "Glyphid Tarantula",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 110,
+      "MaxSpawnCount": [
+        0,
+        0,
+        1
+      ],
+      "Rarity": 6.5,
+      "HealthMultiplier": 0.5,
+      "SpawnAmountModifier": 1,
+      "Spawner": {
+        "ED": "ED_Spider_Spitter_elec",
+        "OnSpawnCount": [
+          4,
+          5,
+          6,
+          8
+        ],
+        "OnSpawnDelay": 4,
+        "IntervalSpawnCount": 3,
+        "Interval": [
+          45,
+          40,
+          35,
+          30
+        ],
+        "MaxSpawns": 20,
+        "OnDeathKillSpawns": false,
+        "OnlySpawnOnAlert": true
+      },
+      "Materials": [
+        "M_PartyStreamer_White",
+        "M_Xmas_LightBlue",
+        "M_WPN_Cryospray_BlueLight",
+        "M_Flare_Glow_Scout_inst"
+      ],
+      "Direct": {
+        "Float:EnemyBuffer.BuffRadius": 0
+      },
+      "SpawnSpread": 1000
+    },
+    "ED_Spider_Spitter_elec": {
+      "Base": "ED_Spider_Spitter",
+      "UsesBiomeVariants": false,
+      "DisplayName": "Glyphid Juvenile",
+      "MaxSpawnCount": 0,
+      "AttackDamageMultiplier": 2.5,
+      "Materials": [
+        "M_Flare_Glow_Scout_inst",
+        "M_Xmas_LightBlue"
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Spider_RapidShooter_electric_C"
+    },
+    "ED_Spider_Exploder": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 50,
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "Rarity": 5
+    },
+    "ED_Spider_Exploder_frost": {
+      "UsesBiomeVariants": false,
+      "Movement": {
+        "AlignDirectionSpeed": 0.75,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 0.75,
+        "MaxBrakingDeceleration": 0.75,
+        "MaxPawnSpeed": 0.75,
+        "MaxStrafeDistance": 0.75,
+        "StrafeSpeed": 0.75
+      }
+    },
+    "ED_Spider_ExploderTank": {
+      "DifficultyRating": 100,
+      "MaxSpawnCount": {
+        "Mutate": "If",
+        "Condition": {
+          "Mutate": "Or",
+          "A": {
+            "Mutate": "DuringDefend"
+          },
+          "B": {
+            "Mutate": "DuringDrillevator"
+          }
+        },
+        "Then": 0,
+        "Else": {
+          "Mutate": "BySaboPhase",
+          "Default": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              0,
+              0,
+              {
+                "Mutate": "ByEscortPhase",
+                "Default": 1,
+                "WaitingForFuel": 0,
+                "FinalEventA": 0,
+                "FinalEventB": 0,
+                "FinalEventC": 0,
+                "FinalEventD": 0
+              }
+            ]
+          },
+          "Hacking": 0
+        }
+      },
+      "MinSpawnCount": 1,
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "Rarity": 6,
+      "SpawnAmountModifier": 1,
+      "NoSpawnWithin": {
+        "Default": 750,
+        "Escort": 300,
+        "Mutate": "ByMissionType"
+      },
+      "SpawnSpread": {
+        "Default": 16000,
+        "Escort": 0,
+        "Mutate": "ByMissionType"
+      },
+      "TimeDilation": 1
+    },
+    "ED_Spider_ExploderTank_frozen": {
+      "DifficultyRating": 100,
+      "IsBossFight": false,
+      "DisplayName": "Glyphid Ice Detonator",
+      "Rarity": 6.5,
+      "MaxSpawnCount": {
+        "Mutate": "If",
+        "Condition": {
+          "Mutate": "Or",
+          "A": {
+            "Mutate": "DuringDefend"
+          },
+          "B": {
+            "Mutate": "DuringDrillevator"
+          }
+        },
+        "Then": 0,
+        "Else": {
+          "Mutate": "BySaboPhase",
+          "Default": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              0,
+              0,
+              {
+                "Mutate": "ByEscortPhase",
+                "Default": 1,
+                "WaitingForFuel": 0,
+                "FinalEventA": 0,
+                "FinalEventB": 0,
+                "FinalEventC": 0,
+                "FinalEventD": 0
+              }
+            ]
+          },
+          "Hacking": 0
+        }
+      },
+      "NoSpawnWithin": {
+        "Default": 750,
+        "Escort": 300,
+        "Mutate": "ByMissionType"
+      },
+      "MinSpawnCount": 1,
+      "Materials": [
+        "",
+        "",
+        "M_Crystal_BlueGlow02"
+      ],
+      "SpawnAmountModifier": 1,
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "SpawnSpread": {
+        "Default": 1200,
+        "Escort": 0,
+        "Mutate": "ByMissionType"
+      }
+    },
+    "ED_Spider_ExploderTank_kiwami": {
+      "Base": "ED_Spider_ExploderTank_big",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 450,
+      "SpawnSpread": 500,
+      "NoSpawnWithin": 750,
+      "DisplayName": "Glyphid Big Bulk Detonator",
+      "IsBossFight": true,
+      "Materials": [
+        "M_NeonSign_StaticRed",
+        "M_Bosco_PJ_PrimalBlood",
+        "M_HackingPod_ButtonBlink",
+        "M_HackingPod_ButtonBlink",
+        "M_HackingPod_ButtonBlink"
+      ],
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "Movement": {
+        "AlignDirectionSpeed": 1,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1,
+        "MaxBrakingDeceleration": 1,
+        "MaxPawnSpeed": 1,
+        "MaxStrafeDistance": 1,
+        "StrafeSpeed": 1
+      },
+      "Rarity": 10,
+      "Resistances": {
+        "PiercingDamageMultiplier": 0.5,
+        "ElectricDamageMultiplier": 12,
+        "CorrosiveDamageMultiplier": 2.5
+      },
+      "SpawnAmountModifier": 1,
+      "WeakpointHP": 500
+    },
+    "ED_Spider_ExploderTank_fast": {
+      "Base": "ED_Spider_ExploderTank",
+      "DisplayName": "Glyphid Sonic Detonator",
+      "NoSpawnWithin": 750,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "Temperature": {
+        "FreezeTemperature": -240,
+        "UnfreezeTemperature": -100,
+        "WarmingRate": 50
+      },
+      "Movement": {
+        "AlignDirectionSpeed": 2,
+        "AlignToTargetMinRequiredAngle": 180,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 2,
+        "MaxPawnSpeed": 2,
+        "MaxStrafeDistance": 2,
+        "StrafeSpeed": 2
+      },
+      "TimeDilation": 1.35,
+      "Rarity": 7.25,
+      "Materials": [
+        "M_Xmas_LightBlue",
+        "M_RivalBombNode_Beacon_Blink",
+        "M_Goal_Hologram_Blue",
+        "M_Goal_Hologram_Blue",
+        "M_Goal_Hologram_Blue"
+      ],
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 500,
+      "HealthMultiplier": 0.25,
+      "Direct": {
+        "Int:NumClusterBombs": 16,
+        "Float:CarveDiameter": 1280,
+        "Float:DamageDeathExplosion.DamageRadius": 640,
+        "Float:DamageDeathExplosion.MaxDamageRadius": 320
+      }
+    },
+    "ED_Spider_ExploderTank_mini": {
+      "Base": "ED_Spider_ExploderTank_small",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 110,
+      "DisplayName": "Glyphid Mini-Bulk Detonator",
+      "MaxSpawnCount": {
+        "Mutate": "ByEscortPhase",
+        "Default": 2,
+        "WaitingForFuel": 0,
+        "FinalEventA": 0,
+        "FinalEventB": 0,
+        "FinalEventC": 0,
+        "FinalEventD": 0
+      },
+      "MinSpawnCount": 1,
+      "Temperature": {
+        "FreezeTemperature": -240,
+        "UnfreezeTemperature": -100,
+        "WarmingRate": 50
+      },
+      "Rarity": 5.125,
+      "HealthMultiplier": 0.3292,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Fanatic": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 150,
+      "DisplayName": "Glyphid Fanatic",
+      "IsBossFight": true,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "HealthMultiplier": 0.0816,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Grunt": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 60,
+      "Rarity": 1,
+      "SpawnAmountModifier": 0.7,
+      "Courage": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": 0.5
+      },
+      "Materials": [
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": "M_RivalBomb_ImpactBubbleRed",
+          "Else": "M_Spider_Grunt_Body_Generic"
+        },
+        "",
+        ""
+      ],
+      "StaggerDurationMultiplier": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 0,
+        "Else": 1
+      },
+      "Movement": {
+        "AlignDirectionSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxBrakingDeceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxPawnSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxStrafeDistance": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "StrafeSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        }
+      }
+    },
+    "ED_Spider_Grunt_Attacker": {
+      "Courage": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": 0.5
+      },
+      "StaggerDurationMultiplier": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 0,
+        "Else": 1
+      },
+      "Materials": [
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": "M_RivalBomb_ImpactBubbleRed",
+          "Else": "M_Spider_Grunt_Body_Generic"
+        },
+        ""
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxBrakingDeceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxPawnSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxStrafeDistance": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "StrafeSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        }
+      }
+    },
+    "ED_Spider_Grunt_Guard": {
+      "Courage": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": 0.5
+      },
+      "StaggerDurationMultiplier": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 0,
+        "Else": 1
+      },
+      "Materials": [
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": "M_RivalBomb_ImpactBubbleRed",
+          "Else": "M_Spider_Grunt_Body_Generic"
+        },
+        ""
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxBrakingDeceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxPawnSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxStrafeDistance": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "StrafeSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        }
+      }
+    },
+    "ED_Spider_Grunt_Guard_Elite": {
+      "Base": "ED_Spider_Grunt_Guard",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 100,
+      "DisplayName": "Elite Glyphid Guard",
+      "Elite": true,
+      "Materials": [],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "HealthMultiplier": 0.7163,
+      "SpawnAmountModifier": 1,
+      "Temperature": {
+        "BurnTemperature": 24,
+        "DouseFireTemperature": 8,
+        "FreezeTemperature": -32,
+        "UnfreezeTemperature": -8
+      }
+    },
+    "ED_Spider_Lobber_Enc": {
+      "Base": "ED_Spider_Lobber",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 60,
+      "MaxSpawnCount": 10,
+      "MinSpawnCount": 1,
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Lobber_Wave": {
+      "Base": "ED_Spider_Lobber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 60,
+      "MaxSpawnCount": 10,
+      "MinSpawnCount": 1,
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 1,
+      "CustomVeterans": {
+        "ED_Spider_Lobber": 0.75,
+        "ED_Spider_Lobber_frozen": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Spider_Lobber_frozen"
+          },
+          ">=": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              2,
+              2,
+              3
+            ]
+          },
+          "Then": 0,
+          "Else": {
+            "Mutate": "If",
+            "Condition": {
+              "Mutate": "DuringMission",
+              "StartingAt": 60
+            },
+            "Then": 0.25,
+            "Else": {
+              "Mutate": "ByMissionType",
+              "Default": 0.25,
+              "PE": 0,
+              "DeepScan": 0
+            }
+          }
+        }
+      }
+    },
+    "ED_Spider_Lobber_frozen": {
+      "Base": "ED_Spider_Lobber",
+      "DisplayName": "Glyphid Ice Spreader",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "MaxSpawnCount": 0,
+      "AttackDamageMultiplier": 0.5,
+      "MinSpawnCount": 1,
+      "Materials": [
+        "M_Crystal_BlueGlow",
+        "M_Crystal_BlueGlow"
+      ],
+      "Projectile": "PRJ_Crye_SnowBall_C"
+    },
+    "ED_Spider_RapidShooter": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 47.5,
+      "MaxSpawnCount": 2,
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_RapidShooter_Turbo": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 150,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_RapidShooter_Platform": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "IsBossFight": true,
+      "Base": "ED_Spider_RapidShooter",
+      "DisplayName": "Glyphid Architect",
+      "MaxSpawnCount": [
+        0,
+        0,
+        1
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "DifficultyRating": 130,
+      "Projectile": "PRJ_PlatformMaker_C",
+      "TimeDilation": 0.75,
+      "HealthMultiplier": 0.7855,
+      "Materials": [
+        "M_Forge_EnergyLightRed",
+        "M_Maggot_Green",
+        "M_TetherPole_CenterGlow",
+        "M_TetherPole_CenterGlow"
+      ],
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_ShieldTank": {
+      "Movement": {
+        "AlignDirectionSpeed": [
+          1.5,
+          2
+        ],
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": [
+          1.5,
+          2
+        ],
+        "MaxBrakingDeceleration": [
+          1.5,
+          2
+        ],
+        "MaxPawnSpeed": [
+          1.5,
+          2
+        ],
+        "MaxStrafeDistance": [
+          1.5,
+          2
+        ],
+        "StrafeSpeed": [
+          1.5,
+          2
+        ]
+      }
+    },
+    "ED_Spider_Shooter": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 35,
+      "AttackDamageMultiplier": 0.9,
+      "Materials": [
+        "",
+        "M_Gem_Red"
+      ],
+      "NoSpawnWithin": 500,
+      "MaxSpawnCount": 70,
+      "Rarity": [
+        6.5,
+        5.75,
+        5.125
+      ],
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Shooter_Barrier": {
+      "Base": "ED_Spider_Spitter",
+      "DisplayName": "Glyphid Barrier Shooter",
+      "UsesBiomeVariants": false,
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 60,
+      "Materials": [
+        "M_Facility_TurretController_ManualBlink",
+        "M_Facility_Light_Accents"
+      ],
+      "MaxSpawnCount": [
+        1,
+        2,
+        4
+      ],
+      "MinSpawnCount": 1,
+      "HealthMultiplier": 3.007,
+      "Scale": 1.25,
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 50,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "TimeDilation": 1,
+      "Rarity": 5.75,
+      "SpawnAmountModifier": 1,
+      "Projectile": "PRJ_Terminator_Barrier_C"
+    },
+    "ED_Spider_Shooter_Vomit": {
+      "Base": "ED_Spider_Shooter_Bouncer",
+      "DisplayName": "Glyphid Vomit Spitter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "AttackDamageMultiplier": 1.1,
+      "MaxSpawnCount": 70,
+      "HealthMultiplier": 0.3326,
+      "MinSpawnCount": 1,
+      "Scale": 0.78,
+      "DifficultyRating": 20,
+      "Rarity": 5.25,
+      "Materials": [
+        "M_GlobalSkin_RoyalBlue_S05",
+        "M_Vanity_Headwear_Bavarian_Green"
+      ],
+      "SpawnAmountModifier": 1,
+      "Projectile": "PRJ_StaticBomber_C"
+    },
+    "ED_Spider_Shooter_Bouncer": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 110,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 5000
+    },
+    "ED_Spider_Spawn": {
+      "Base": "ED_Spider_Grunt_Attacker_white",
+      "HealthMultiplier": 0.3716
+    },
+    "ED_Spider_Swarmer_Fauxnought": {
+      "Base": "ED_Spider_Grunt_Streaker",
+      "MaxSpawnCount": [
+        6,
+        6,
+        8,
+        9
+      ],
+      "Temperature": {
+        "DieIfFrozen": false,
+        "DieIfBurning": false,
+        "BurnTemperature": 30,
+        "DouseFireTemperature": 10,
+        "FreezeTemperature": -30,
+        "WarmingRate": 6,
+        "CoolingRate": 6
+      },
+      "HealthMultiplier": 1.5416
+    },
+    "ED_Spider_Swarmer_Pheromone_NOFX": {
+      "Base": "ED_Spider_Swarmer",
+      "AttackDamageMultiplier": 1.5,
+      "MaxSpawnCount": [
+        6,
+        6,
+        8,
+        9
+      ],
+      "UsesBiomeVariants": false,
+      "DisplayName": "Glyphid Rat",
+      "Materials": [
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Parabomber_Rat"
+          },
+          ">=": 1,
+          "Then": [
+            "M_Spider_ExploderTank_Body_black",
+            {
+              "Mutate": "RandomChoice",
+              "Choices": [
+                [],
+                [
+                  ""
+                ]
+              ]
+            }
+          ],
+          "Else": [
+            "M_MuleInfected_Black",
+            {
+              "Mutate": "RandomChoice",
+              "Choices": [
+                [],
+                [
+                  ""
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": 1.25,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.25,
+        "MaxBrakingDeceleration": 1.25,
+        "MaxPawnSpeed": 1.25,
+        "MaxStrafeDistance": 1.25,
+        "StrafeSpeed": 1.25
+      },
+      "Resistances": {
+        "DamageMultiplier": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Parabomber_Rat"
+          },
+          ">=": 1,
+          "Then": 0.24,
+          "Else": 0.6
+        }
+      },
+      "Temperature": {
+        "DieIfBurning": false,
+        "DieIfFrozen": false,
+        "OnFireHeatRange": 20
+      },
+      "Scale": 1.3
+    },
+    "ED_Spider_Swarmer_SpawnShot": {
+      "Base": "ED_Spider_Swarmer",
+      "AttackDamageMultiplier": 1.5,
+      "UsesBiomeVariants": false,
+      "DisplayName": "Glyphid Rat",
+      "Materials": [
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Parabomber_Rat"
+          },
+          ">=": 1,
+          "Then": [
+            "M_Spider_ExploderTank_Body_black",
+            {
+              "Mutate": "RandomChoice",
+              "Choices": [
+                [],
+                [
+                  ""
+                ]
+              ]
+            }
+          ],
+          "Else": [
+            "M_MuleInfected_Black",
+            {
+              "Mutate": "RandomChoice",
+              "Choices": [
+                [],
+                [
+                  ""
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 1.25,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.25,
+        "MaxBrakingDeceleration": 1.25,
+        "MaxPawnSpeed": 1.25,
+        "MaxStrafeDistance": 1.25,
+        "StrafeSpeed": 1.25
+      },
+      "Resistances": {
+        "DamageMultiplier": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_Parabomber_Rat"
+          },
+          ">=": 1,
+          "Then": 0.24,
+          "Else": 0.6
+        }
+      },
+      "Temperature": {
+        "DieIfBurning": false,
+        "DieIfFrozen": false,
+        "OnFireHeatRange": 20
+      },
+      "Scale": 1.3
+    },
+    "ED_Spider_Swarmer_Frostnought": {
+      "Base": "ED_Spider_Grunt_Mole",
+      "MaxSpawnCount": [
+        6,
+        6,
+        8,
+        9
+      ],
+      "Materials": [
+        "M_Xmas_SnowParticle",
+        "M_Spider_Swarmer_Ice"
+      ],
+      "HealthMultiplier": 0.6166
+    },
+    "ED_Spider_Spitter": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "UsesBiomeVariants": false,
+      "DifficultyRating": 20,
+      "MaxSpawnCount": 70,
+      "Rarity": 5.125,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Stalker": {
+      "Base": "ED_Spider_Stalker_Beta",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 90,
+      "MaxSpawnCount": [
+        0,
+        0,
+        1
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": [
+        7.5,
+        6.5,
+        5.875
+      ],
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 5000,
+      "StaggerDurationMultiplier": 1,
+      "StaggerImmunityWindow": 0
+    },
+    "ED_Spider_Stinger": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 80,
+      "MaxSpawnCount": [
+        0,
+        1,
+        3
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": [
+        7.5,
+        6.375,
+        5.75
+      ],
+      "Scale": 1,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Swarmer": {
+      "CanBeUsedForConstantPressure": true,
+      "DifficultyRating": 5,
+      "StaggerDurationMultiplier": 1,
+      "StaggerImmunityWindow": 0,
+      "HealthRaw": 4,
+      "MaxSpawnCount": 60,
+      "MinSpawnCount": 1,
+      "Rarity": 3.5,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Tank_Enc": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 4,
+      "SpawnAmountModifier": 1,
+      "VeteranClasses": [
+        "ED_Spider_Tank_Enc"
+      ],
+      "Courage": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": 0.5
+      },
+      "StaggerDurationMultiplier": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 0,
+        "Else": 0.8
+      },
+      "Materials": [
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": "M_RivalBomb_ImpactBubbleRed",
+          "Else": "M_Spider_Tank_Body"
+        },
+        ""
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxBrakingDeceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxPawnSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxStrafeDistance": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "StrafeSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        }
+      }
+    },
+    "ED_Spider_Tank_Wave": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 4,
+      "SpawnAmountModifier": 1,
+      "Courage": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": 0.5
+      },
+      "StaggerDurationMultiplier": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 0,
+        "Else": 0.8
+      },
+      "Materials": [
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": "M_RivalBomb_ImpactBubbleRed",
+          "Else": "M_Spider_Tank_Body"
+        },
+        "",
+        ""
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxBrakingDeceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxPawnSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxStrafeDistance": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "StrafeSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        }
+      },
+      "CustomVeterans": {
+        "ED_Spider_Tank_Wave": 0.7,
+        "ED_Spider_ShieldTank": {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringDefend"
+          },
+          "Then": {
+            "Mutate": "IfFloat",
+            "Value": {
+              "Mutate": "EnemyCount",
+              "ED": "ED_Spider_ShieldTank"
+            },
+            ">=": 1,
+            "Then": 0,
+            "Else": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                0,
+                0,
+                0.3
+              ]
+            }
+          },
+          "Else": {
+            "Mutate": "ByMissionType",
+            "Default": {
+              "Mutate": "IfFloat",
+              "Value": {
+                "Mutate": "EnemyCount",
+                "ED": "ED_Spider_ShieldTank"
+              },
+              ">=": {
+                "Mutate": "ByPlayerCount",
+                "Values": [
+                  1,
+                  1,
+                  2
+                ]
+              },
+              "Then": 0,
+              "Else": 0.3
+            },
+            "Escort": {
+              "Mutate": "ByEscortPhase",
+              "Default": {
+                "Mutate": "IfFloat",
+                "Value": {
+                  "Mutate": "EnemyCount",
+                  "ED": "ED_Spider_ShieldTank"
+                },
+                ">=": {
+                  "Mutate": "ByPlayerCount",
+                  "Values": [
+                    1,
+                    1,
+                    2
+                  ]
+                },
+                "Then": 0,
+                "Else": 0.3
+              },
+              "Moving": {
+                "Mutate": "IfFloat",
+                "Value": {
+                  "Mutate": "EnemyCount",
+                  "ED": "ED_Spider_ShieldTank"
+                },
+                ">=": 1,
+                "Then": 0,
+                "Else": {
+                  "Mutate": "ByPlayerCount",
+                  "Values": [
+                    0,
+                    0,
+                    0.3
+                  ]
+                }
+              }
+            },
+            "Sabotage": {
+              "Mutate": "BySaboPhase",
+              "Default": {
+                "Mutate": "IfFloat",
+                "Value": {
+                  "Mutate": "EnemyCount",
+                  "ED": "ED_Spider_ShieldTank"
+                },
+                ">=": {
+                  "Mutate": "ByPlayerCount",
+                  "Values": [
+                    1,
+                    1,
+                    2
+                  ]
+                },
+                "Then": 0,
+                "Else": 0.3
+              },
+              "Hacking": {
+                "Mutate": "IfFloat",
+                "Value": {
+                  "Mutate": "EnemyCount",
+                  "ED": "ED_Spider_ShieldTank"
+                },
+                ">=": 1,
+                "Then": 0,
+                "Else": {
+                  "Mutate": "ByPlayerCount",
+                  "Values": [
+                    0,
+                    0,
+                    0.3
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ED_Spider_Tank_Boss": {
+      "Resistances": {
+        "DamageMultiplier": [1.23, 1],
+        "FireDamageMultiplier": [1.2, 0.6]
+      },
+      "Temperature": {
+        "BurnTemperature": [100, 1000],
+        "DouseFireTemperature": [50, 100]
+      }
+    },
+    "ED_Spider_Tank_HeavySpawn": {
+      "SpawnSpread": 500,
+      "Movement": {
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.25,
+        "MaxBrakingDeceleration": 1.25,
+        "MaxPawnSpeed": 1.25
+      },
+      "Resistances": {
+        "ElectricDamageMultiplier": 1.3
+      }
+    },
+    "ED_Spider_Boss_Heavy": {
+      "Resistances": {
+        "DamageMultiplier": [1.23, 1],
+        "FireDamageMultiplier": [1.2, 0.6]
+      },
+      "Temperature": {
+        "BurnTemperature": [100, 1000],
+        "DouseFireTemperature": [50, 100]
+      }
+    },
+    "ED_Spider_Boss_TwinA": {
+      "Resistances": {
+        "DamageMultiplier": [1.23, 1],
+        "FireDamageMultiplier": [1.2, 0.7]
+      },
+      "Temperature": {
+        "BurnTemperature": [100, 1000],
+        "DouseFireTemperature": [50, 100]
+      }
+    },
+    "ED_Spider_Boss_TwinB": {
+      "Resistances": {
+        "DamageMultiplier": [1.23, 1],
+        "FireDamageMultiplier": [1.2, 0.7]
+      },
+      "Temperature": {
+        "BurnTemperature": [100, 1000],
+        "DouseFireTemperature": [50, 100]
+      }
+    },
+    "ED_Spider_Tank_flame": {
+      "Base": "ED_Spider_Tank_red",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "UsesBiomeVariants": false,
+      "DifficultyRating": 30,
+      "HealthMultiplier": 0.6,
+      "Movement": {
+        "AlignDirectionSpeed": [
+          1.25,
+          1.5
+        ],
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": [
+          1.25,
+          1.5
+        ],
+        "MaxBrakingDeceleration": [
+          1.25,
+          1.5
+        ],
+        "MaxPawnSpeed": [
+          1.25,
+          1.5
+        ],
+        "MaxStrafeDistance": [
+          1.25,
+          1.5
+        ],
+        "StrafeSpeed": [
+          1.25,
+          1.5
+        ]
+      },
+      "MaxSpawnCount": [
+        0,
+        0,
+        1
+      ],
+      "MinSpawnCount": 1,
+      "StaggerDurationMultiplier": 0.4,
+      "StaggerImmunityWindow": 4,
+      "Courage": 1,
+      "Rarity": 5.5,
+      "SpawnAmountModifier": 0.35,
+      "VeteranClasses": [
+        "ED_Spider_Tank_flame"
+      ]
+    },
+    "ED_SpiderSpawner": {
+      "DifficultyRating": 120,
+      "Resistances": {
+        "FireDamageMultiplier": 3.95
+      },
+      "SpawnAmountModifier": 0.5
+    },
+    "ED_Spy": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Base": "ED_Spider_Spitter",
+      "Projectile": {
+        "Mutate": "RandomChoice",
+        "Choices": [
+          "PRJ_Mactera_Breach",
+          "PRJ_GuntowerLineProjectile_C"
+        ],
+        "Weights": [
+          0.6,
+          0.4
+        ]
+      },
+      "DisplayName": "Glyphid Spy",
+      "UsesBiomeVariants": false,
+      "SpawnSpread": 1000,
+      "DifficultyRating": 60,
+      "Rarity": 5.5,
+      "Scale": 0.6,
+      "SpawnAmountModifier": 1,
+      "Resistances": {
+        "DamageMultiplier": [
+          0.57,
+          0.525,
+          0.4865,
+          0.4433
+        ],
+        "FireDamageMultiplier": 0.1,
+        "ExplosionDamageMultiplier": 0.1,
+        "ColdDamageMultiplier": 0.1,
+        "CorrosiveDamageMultiplier": 0.1,
+        "ElectricDamageMultiplier": 0.1
+      },
+      "Temperature": {
+        "BurnTemperature": 999,
+        "FreezeTemperature": -999
+      },
+      "StaggerDurationMultiplier": 0,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Materials": [
+        "M_Spider_Stalker_Camouflage",
+        "M_Spider_Stalker_Camouflage",
+        "M_Spider_Stalker_Camouflage",
+        "M_Spider_Stalker_Camouflage",
+        "M_Spider_Stalker_Camouflage",
+        "M_Spider_Stalker_Camouflage"
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": 6,
+        "AlignToTargetMinRequiredAngle": 6,
+        "MaxAcceleration": 2.6,
+        "MaxBrakingDeceleration": 6,
+        "MaxPawnSpeed": 2.6,
+        "MaxStrafeDistance": 1.95,
+        "StrafeSpeed": 6
+      }
+    },
+    "ED_Sprout_Normal": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 9999,
+      "MinSpawnCount": 1,
+      "Rarity": 2.5,
+      "HealthMultiplier": 0.8333,
+      "Materials": [
+        "M_Grenade_FriendlyShredder_Light",
+        "M_SpaceRig_MedBay02"
+      ],
+      "SpawnAmountModifier": 1
+    },
+    "ED_Sprout_spawn": {
+      "Base": "ED_Spider_Spitter",
+      "DisplayName": "Glyphid Barrier Shooter",
+      "Materials": [
+        "M_Facility_TurretController_ManualBlink",
+        "M_Facility_Light_Accents"
+      ],
+      "MaxSpawnCount": 2,
+      "AttackDamageMultiplier": 1.2,
+      "UsesBiomeVariants": false,
+      "MinSpawnCount": 1,
+      "HealthMultiplier": 3.007,
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 50,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "Scale": 1.15,
+      "TimeDilation": 1,
+      "Projectile": "PRJ_Terminator_Barrier_C"
+    },
+    "ED_TentaclePlant": {
+      "DifficultyRating": 180,
+      "Materials": [
+        "M_SpaceRig_Ext_LaunchBay_Blink",
+        "",
+        "M_ShieldGen_GenGlow"
+      ],
+      "SpawnSpread": 0,
+      "TimeDilation": 0.5
+    },
+    "ED_TunnelSwarmer": {
+      "Base": "ED_Spider_Swarmer",
+      "AttackDamageMultiplier": 1.5,
+      "DisplayName": "Glyphid Sewer Rat",
+      "Courage": 1,
+      "UsesBiomeVariants": false,
+      "Materials": [
+        "M_Scout_PJ_PrettyinPurple_S04",
+        {
+          "Mutate": "RandomChoice",
+          "Choices": [
+            [],
+            [
+              ""
+            ]
+          ]
+        }
+      ],
+      "Movement": {
+        "AlignDirectionSpeed": 1.25,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.25,
+        "MaxBrakingDeceleration": 1.25,
+        "MaxPawnSpeed": 1.25,
+        "MaxStrafeDistance": 1.25,
+        "StrafeSpeed": 1.25
+      },
+      "Resistances": {
+        "DamageMultiplier": 0.24,
+        "FireDamageMultiplier": 0.5
+      },
+      "Temperature": {
+        "DieIfBurning": false,
+        "DieIfFrozen": false,
+        "OnFireHeatRange": 20
+      },
+      "Scale": 1.5,
+      "SpawnSpread": 400
+    },
+    "ED_Woodlouse": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 70,
+      "MaxSpawnCount": [
+        0,
+        0,
+        1
+      ],
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Woodlouse_Youngling_Big": {
+      "Base": "ED_Woodlouse_Youngling",
+      "DisplayName": "Q'ronar Big Youngling",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 60,
+      "MaxSpawnCount": [
+        0,
+        0,
+        1
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 5.35,
+      "SpawnAmountModifier": 1,
+      "VeteranClasses": [
+        "ED_Woodlouse",
+        "ED_Woodlouse_Youngling_Big"
+      ],
+      "HealthMultiplier": [
+        3.2,
+        3.425,
+        3.65,
+        4
+      ],
+      "Scale": 1.8
+    },
+    "ED_Woodlouse_Youngling": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 30,
+      "MaxSpawnCount": [
+        3,
+        6,
+        10
+      ],
+      "MinSpawnCount": 1,
+      "Rarity": 5.125
+    },
+    "XED_Bundle": {
+      "Base": "ED_Mactera_Shooter_HeavyVeteran",
+      "CanBeUsedForConstantPressure": true,
+      "DifficultyRating": 175,
+      "DisplayName": "Mactera Bundle",
+      "Materials": [
+        "M_SpiderStingerClaw_Flesh",
+        "M_WPN_ZipPole_A_Light"
+      ],
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "Rarity": 1,
+      "HealthMultiplier": [
+        1.5556,
+        1.6667,
+        1.7778,
+        1.9455
+      ],
+      "Scale": 1.5,
+      "SpawnAmountModifier": 1
+    },
+    "XED_DreadHelper": {
+      "Base": "ED_Spider_ExploderTank",
+      "HealthMultiplier": 0.85,
+      "MaxSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "Outline": {
+        "Enabled": true,
+        "Type": "Item"
+      },
+      "SpawnAmountModifier": 0.01,
+      "WeakpointHP": 300
+    },
+    "XED_CaretakerHelper": {
+      "Base": "ED_Spider_ExploderTank",
+      "DisplayName": "Glyphid Weak Bulk Detonator",
+      "DifficultyRating": 250,
+      "HealthRaw": 1000,
+      "MaxSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 1.2,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.2,
+        "MaxBrakingDeceleration": 1.2,
+        "MaxPawnSpeed": 1.2,
+        "MaxStrafeDistance": 1.2,
+        "StrafeSpeed": 1.2
+      },
+      "Outline": {
+        "Enabled": true,
+        "Type": "Item"
+      },
+      "Temperature": {
+        "FreezeTemperature": -240,
+        "UnfreezeTemperature": -100,
+        "WarmingRate": 50
+      },
+      "SpawnAmountModifier": 0.01,
+      "WeakpointHP": 300,
+      "Materials": [
+        "M_DropPod_Metal01",
+        "M_Canteen_Metal_3"
+      ],
+      "Direct": {
+        "Float:CarveDiameter": 800
+      }
+    },
+    "XED_Mactera_PentaJaw": {
+      "Base": "ED_Mactera_PentaJaw",
+      "CanBeUsedForConstantPressure": false,
+      "DifficultyRating": 60,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 1
+    },
+    "XED_Mactera_Shooter_Normal": {
+      "Base": "ED_Mactera_Shooter_Normal",
+      "CanBeUsedForConstantPressure": false,
+      "DifficultyRating": 60,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 0.8,
+      "VeteranClasses": [
+        "XED_Mactera_Shooter_Normal"
+      ]
+    },
+    "XED_Mactera_Shooter_Normal_Elite": {
+      "Base": "ED_Mactera_Shooter_Normal",
+      "CanBeUsedForConstantPressure": true,
+      "DifficultyRating": 80,
+      "DisplayName": "Elite Mactera Spawn",
+      "Elite": true,
+      "Materials": [
+        "M_Canteen_Metal_4",
+        "M_Crawler_PuddleBlood"
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "AttackDamageMultiplier": 0.9,
+      "Rarity": 5.125,
+      "HealthMultiplier": 0.099,
+      "Scale": 1.1,
+      "SpawnAmountModifier": 1,
+      "VeteranClasses": [
+        "XED_Mactera_Shooter_Normal_Elite"
+      ],
+      "Temperature": {
+        "BurnTemperature": 14,
+        "DouseFireTemperature": 1,
+        "FreezeTemperature": -100
+      },
+      "TimeDilation": 0.85
+    },
+    "XED_Spider_Shooter_Spawner_Elite": {
+      "Base": "ED_Spider_Shooter_Spawner",
+      "CanBeUsedForConstantPressure": true,
+      "DifficultyRating": 70,
+      "DisplayName": "Elite Glyphid Ratter",
+      "Materials": [
+        "M_Vanity_Headwear_PlagueMaskHat_S04",
+        "M_Mug_Metalic_White",
+        {
+          "Mutate": "RandomChoice",
+          "Choices": [
+            [],
+            [
+              ""
+            ]
+          ]
+        }
+      ],
+      "HealthMultiplier": 0.3115,
+      "Spawner": {
+        "ED": "ED_Spider_Swarmer_SpawnShot",
+        "IntervalSpawnCount": 1,
+        "Interval": [
+          8,
+          7,
+          6,
+          5
+        ],
+        "MaxSpawns": 10,
+        "OnDeathKillSpawns": false,
+        "OnlySpawnOnAlert": true
+      },
+      "Movement": {
+        "AlignDirectionSpeed": 1.5,
+        "AlignToTargetMinRequiredAngle": 50,
+        "MaxAcceleration": 1.5,
+        "MaxBrakingDeceleration": 1.5,
+        "MaxPawnSpeed": 1.5,
+        "MaxStrafeDistance": 1.5,
+        "StrafeSpeed": 1.5
+      },
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Elite": true,
+      "ForceEliteBase": "ED_Mactera_TripleShooter",
+      "Rarity": 5.5,
+      "Scale": 1.1,
+      "SpawnAmountModifier": 1,
+      "Temperature": {
+        "BurnTemperature": 14,
+        "DouseFireTemperature": 1,
+        "FreezeTemperature": -20,
+        "UnfreezeTemperature": 0
+      }
+    },
+    "XED_Shark": {
+      "Base": "ED_Shark",
+      "DifficultyRating": 10,
+      "TimeDilation": 0.75,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1
+    },
+    "XED_Spider_ExploderTank_mini": {
+      "Base": "ED_Spider_ExploderTank_small",
+      "CanBeUsedForConstantPressure": true,
+      "DifficultyRating": 140,
+      "DisplayName": "Glyphid Mini-Bulk Detonator",
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 1,
+      "Temperature": {
+        "FreezeTemperature": -240,
+        "UnfreezeTemperature": -100,
+        "WarmingRate": 50
+      },
+      "HealthMultiplier": 0.3292,
+      "SpawnAmountModifier": 1
+    },
+    "XED_Spider_Grunt": {
+      "Base": "ED_Spider_Grunt",
+      "CanBeUsedForConstantPressure": true,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 19,
+      "Rarity": 1,
+      "SpawnAmountModifier": 0.65,
+      "Courage": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 1,
+        "Else": 0.5
+      },
+      "Materials": [
+        {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": "M_RivalBomb_ImpactBubbleRed",
+          "Else": "M_Spider_Grunt_Body_Generic"
+        },
+        "",
+        ""
+      ],
+      "StaggerDurationMultiplier": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "ED_FlyingSmartRock_buffer"
+        },
+        ">=": 1,
+        "Then": 0,
+        "Else": 1
+      },
+      "Movement": {
+        "AlignDirectionSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxBrakingDeceleration": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxPawnSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "MaxStrafeDistance": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        },
+        "StrafeSpeed": {
+          "Mutate": "IfFloat",
+          "Value": {
+            "Mutate": "EnemyCount",
+            "ED": "ED_FlyingSmartRock_buffer"
+          },
+          ">=": 1,
+          "Then": 1.35,
+          "Else": 1
+        }
+      }
+    },
+    "XED_Spider_Grunt_Attacker_Elite": {
+      "Base": "ED_Spider_Grunt_Attacker",
+      "CanBeUsedForConstantPressure": true,
+      "DisplayName": "Elite Glyphid Slasher",
+      "DifficultyRating": 85,
+      "Elite": true,
+      "Materials": [
+        "M_Hydra_Weed_Head",
+        "M_Hydra_Weed_Heart_Roots",
+        "M_Hydra_Weed_Head"
+      ],
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 5.3,
+      "HealthMultiplier": 0.3584,
+      "Scale": 1.1,
+      "SpawnAmountModifier": 1,
+      "Temperature": {
+        "BurnTemperature": 12,
+        "DouseFireTemperature": 2,
+        "FreezeTemperature": -12,
+        "UnfreezeTemperature": 0
+      }
+    },
+    "XED_Spider_Lobber_Elite": {
+      "Base": "ED_Spider_Lobber",
+      "CanBeUsedForConstantPressure": true,
+      "DisplayName": "Elite Glyphid Septic Spreader",
+      "SpawnAmountModifier": 1,
+      "DifficultyRating": 75,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "Materials": [
+        "M_MatrixCore_GlowEmpty",
+        "M_SkinColor_BrownUmber",
+        "M_Biome_AzureWeald_Flower_Orkidyellow",
+        "M_Bosco_PJ_StreetScrapperFixed_S04",
+        {
+          "Mutate": "RandomChoice",
+          "Choices": [
+            [],
+            [
+              ""
+            ]
+          ]
+        }
+      ],
+      "HealthMultiplier": 0.1122,
+      "AttackDamageMultiplier": 0.8,
+      "Elite": true,
+      "ForceEliteBase": "ED_Mactera_TripleShooter",
+      "Scale": 1.1,
+      "TimeDilation": 1.3,
+      "Temperature": {
+        "BurnTemperature": 14,
+        "DouseFireTemperature": 1,
+        "FreezeTemperature": -20,
+        "UnfreezeTemperature": 0
+      },
+      "VeteranClasses": [
+        "XED_Spider_Lobber_Elite"
+      ]
+    },
+    "XED_Spider_Spitter_White": {
+      "Base": "ED_Spider_Spitter_White",
+      "Materials": [
+        "M_WPN_ZipPole_A_Light",
+        "M_Spider_ExploderTank_Armor"
+      ],
+      "CanBeUsedForConstantPressure": true,
+      "DifficultyRating": 40,
+      "AttackDamageMultiplier": 2.5,
+      "Projectile": "PRJ_Spider_RapidShooter",
+      "MaxSpawnCount": [0,1,2,3],
+      "Rarity": 1,
+      "SpawnAmountModifier": 0.5
+    },
+    "XED_Spider_Stinger_Elite": {
+      "Base": "ED_Spider_Stinger",
+      "CanBeUsedForConstantPressure": true,
+      "DisplayName": "Elite Glyphid Stingtail",
+      "SpawnAmountModifier": 1,
+      "DifficultyRating": 85,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "Rarity": 5.5,
+      "HealthMultiplier": 0.1408,
+      "Movement": {
+        "AlignDirectionSpeed": 1.4,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.4,
+        "MaxBrakingDeceleration": 1.4,
+        "MaxPawnSpeed": 1.4,
+        "MaxStrafeDistance": 1.4,
+        "StrafeSpeed": 1.4
+      },
+      "Elite": true,
+      "ForceEliteBase": "ED_Mactera_TripleShooter",
+      "Scale": 1.1,
+      "Resistances": {
+        "PhysicalDamageMultiplier": 1.2
+      },
+      "Temperature": {
+        "BurnTemperature": 15,
+        "DouseFireTemperature": 8,
+        "FreezeTemperature": -20,
+        "UnfreezeTemperature": -6
+      },
+      "Materials": [
+        "M_Spider_Lobber_GlowBubbles",
+        "M_Spider_Grunt_Armor_Slasher_white",
+        "M_Spider_Grunt_Armor_Slasher_white",
+        "M_BeachParty_Lantern_Blue"
+      ]
+    }
+  },
+  "SpecialEncounters": [
+    {
+      "BaseChance": {
+        "Mutate": "ByMissionType",
+        "Default": 0,
+        "Escort": 1
+      },
+      "CanSpawnInDeepDive": true,
+      "Enemy": [
+        "ED_TentaclePlant"
+      ]
+    },
+    {
+      "BaseChance": {
+        "Mutate": "ByMissionType",
+        "Default": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            1,
+            0
+          ]
+        },
+        "Refinery": 1,
+        "Escort": 1
+      },
+      "CanSpawnInDeepDive": true,
+      "Enemy": [
+        "ED_BarrageInfector_Nuker"
+      ]
+    }
+  ],
+  "WaveSpawners": [
+    {
+      "Name": "DreadHP",
+      "Enabled": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "XED_DreadHelper"
+        },
+        "<": 1,
+        "Then": {
+          "Mutate": "DuringDread"
+        },
+        "Else": false
+      },
+      "Interval": 10,
+      "Enemies": [
+        "XED_DreadHelper"
+      ],
+      "Difficulty": 250,
+      "Distance": 1750,
+      "Locations": 1
+    },
+    {
+      "Name": "DreadNWave",
+      "Enabled": {
+        "Mutate": "DuringDread"
+      },
+      "SpawnOnEnable": true,
+      "Interval": {
+        "Mutate": "RandomChoice",
+        "Choices": [
+          170,
+          {
+            "Mutate": "Random",
+            "Min": 200,
+            "Max": 230
+          }
+        ],
+        "Weights": [
+          0.65,
+          0.35
+        ]
+      },
+      "Difficulty": {
+        "Mutate": "RandomChoice",
+        "Choices": [
+          {
+            "Mutate": "Random",
+            "Min": 800,
+            "Max": 900
+          },
+          2000
+        ],
+        "Weights": [
+          0.9,
+          0.1
+        ]
+      },
+      "Distance": 2000,
+      "Locations": 1
+    },
+    {
+      "Name": "CaretakerHP",
+      "Enabled": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "EnemyCount",
+          "ED": "XED_CaretakerHelper"
+        },
+        "<": 1,
+        "Then": {
+          "Mutate": "BySaboPhase",
+          "Default": false,
+          "Phase1Vent": true,
+          "Phase1Eye": true,
+          "Phase2Vent": true,
+          "Phase2Eye": true,
+          "Phase3Vent": true,
+          "Phase3Eye": true
+        },
+        "Else": false
+      },
+      "Interval": 5,
+      "Enemies": [
+        "XED_CaretakerHelper"
+      ],
+      "Difficulty": 250,
+      "Distance": 1750,
+      "Locations": 1
+    },
+    {
+      "Name": "CaretakerNWave",
+      "Enabled": {
+        "Mutate": "BySaboPhase",
+        "Default": false,
+        "Phase1Vent": true,
+        "Phase1Eye": true,
+        "Phase2Vent": true,
+        "Phase2Eye": true,
+        "Phase3Vent": true,
+        "Phase3Eye": true
+      },
+      "Interval": {
+        "Mutate": "RandomChoice",
+        "Choices": [
+          120,
+          {
+            "Mutate": "Random",
+            "Min": 150,
+            "Max": 180
+          }
+        ],
+        "Weights": [
+          0.65,
+          0.35
+        ]
+      },
+      "Difficulty": {
+        "Mutate": "RandomChoice",
+        "Choices": [
+          {
+            "Mutate": "Random",
+            "Min": 800,
+            "Max": 900
+          },
+          2000
+        ],
+        "Weights": [
+          0.9,
+          0.1
+        ]
+      },
+      "Distance": 2000,
+      "Locations": 1
+    },
+    {
+      "Name": "Grunt WS",
+      "Enabled": {
+        "Mutate": "DuringMission",
+        "StartingAt": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 15,
+              "Refinery": 75,
+              "PE": 45,
+              "DeepScan": 45,
+              "Salvage": 45,
+              "Elimination": 45
+            },
+            15
+          ]
+        }
+      },
+      "Enemies": {
+        "Mutate": "RandomChoice",
+        "Choices": [
+          [
+            "XED_Spider_Grunt",
+            "XED_Spider_Spitter_White"
+          ],
+          [
+            "XED_Bundle",
+            "XED_Mactera_Shooter_Normal"
+          ],
+          [
+            "XED_Spider_ExploderTank_mini"
+          ]
+        ],
+        "Weights": [
+          0.67,
+          0.21,
+          {
+            "Mutate": "ByMissionType",
+            "Default": {
+              "Mutate": "If",
+              "Condition": {
+                "Mutate": "Or",
+                "A": {
+                  "Mutate": "DuringDefend"
+                },
+                "B": {
+                  "Mutate": "DuringDrillevator"
+                }
+              },
+              "Then": 0,
+              "Else": 0.12
+            },
+            "Escort": 0
+          }
+        ]
+      },
+      "Difficulty": 130,
+      "Interval": {
+        "Mutate": "If",
+        "Condition": {
+          "Mutate": "DuringDread"
+        },
+        "Then": 80,
+        "Else": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 60,
+              "Escort": {
+                "Mutate": "ByEscortPhase",
+                "Default": 60,
+                "Stationary": 80,
+                "WaitingForFuel": 80,
+                "FinalEventA": 80,
+                "FinalEventB": 80,
+                "FinalEventC": 80,
+                "FinalEventD": 80
+              },
+              "Sabotage": {
+                "Mutate": "BySaboPhase",
+                "Default": 60,
+                "HackingFinished": 80,
+                "Phase1Vent": 80,
+                "Phase1Eye": 80,
+                "Phase2Vent": 80,
+                "Phase2Eye": 80,
+                "Phase3Vent": 80,
+                "Phase3Eye": 80
+              },
+              "Salvage": {
+                "Mutate": "BySalvagePhase",
+                "Default": 60,
+                "PreUplink": 120,
+                "PreRefuel": 120
+              },
+              "Refinery": {
+                "Mutate": "ByRefineryPhase",
+                "Default": {
+                  "Mutate": "If",
+                  "Condition": {
+                    "Mutate": "DuringMission",
+                    "StartingAt": 200
+                  },
+                  "Then": 120,
+                  "Else": 60
+                },
+                "RefiningStalled": 120
+              }
+            },
+            {
+              "Mutate": "ByMissionType",
+              "Default": 60,
+              "Escort": {
+                "Mutate": "ByEscortPhase",
+                "Default": 60,
+                "WaitingForFuel": 80,
+                "FinalEventA": 80,
+                "FinalEventB": 80,
+                "FinalEventC": 80,
+                "FinalEventD": 80
+              },
+              "Sabotage": {
+                "Mutate": "BySaboPhase",
+                "Default": 60,
+                "Phase1Vent": 80,
+                "Phase1Eye": 80,
+                "Phase2Vent": 80,
+                "Phase2Eye": 80,
+                "Phase3Vent": 80,
+                "Phase3Eye": 80
+              }
+            }
+          ]
+        }
+      },
+      "Distance": 3000,
+      "Locations": 1,
+      "PauseOnDisable": true
+    },
+    {
+      "Name": "Weak Elite WS",
+      "Enabled": {
+        "Mutate": "IfFloat",
+        "Value": {
+          "Mutate": "DwarvesDown"
+        },
+        "==": 0,
+        "Then": {
+          "Mutate": "DuringMission",
+          "StartingAt": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              {
+                "Mutate": "ByMissionType",
+                "Default": 15,
+                "Refinery": 75,
+                "PE": 45,
+                "DeepScan": 45,
+                "Salvage": 45,
+                "Elimination": 45
+              },
+              15
+            ]
+          }
+        },
+        "Else": false
+      },
+      "Enemies": [
+        "XED_Spider_Grunt_Attacker_Elite",
+        "XED_Mactera_Shooter_Normal_Elite",
+        "XED_Spider_Shooter_Spawner_Elite",
+        "XED_Spider_Lobber_Elite",
+        {
+          "Mutate": "If",
+          "Condition": {
+            "Mutate": "DuringDrillevator"
+          },
+          "Then": {
+            "Mutate": "EnemyCooldown",
+            "EDs": [
+              "XED_Spider_Lobber_Elite"
+            ],
+            "CooldownTime": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                1,
+                210,
+                140
+              ]
+            },
+            "ValueDuringCooldown": [],
+            "DefaultValue": {
+              "Mutate": "ByPlayerCount",
+              "Values": [
+                [],
+                [
+                  "XED_Spider_Lobber_Elite"
+                ]
+              ]
+            }
+          },
+          "Else": [
+            "XED_Spider_Lobber_Elite"
+          ]
+        },
+        {
+          "Mutate": "EnemyCooldown",
+          "EDs": [
+            "XED_Spider_Stinger_Elite"
+          ],
+          "CooldownTime": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              210,
+              140
+            ]
+          },
+          "ValueDuringCooldown": [],
+          "DefaultValue": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              [],
+              [
+                "XED_Spider_Stinger_Elite"
+              ]
+            ]
+          }
+        }
+      ],
+      "Difficulty": 90,
+      "Interval": {
+        "Mutate": "If",
+        "Condition": {
+          "Mutate": "DuringDread"
+        },
+        "Then": 60,
+        "Else": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 45,
+              "Refinery": {
+                "Mutate": "ByRefineryPhase",
+                "Default": {
+                  "Mutate": "If",
+                  "Condition": {
+                    "Mutate": "DuringMission",
+                    "StartingAt": 200
+                  },
+                  "Then": 90,
+                  "Else": 45
+                },
+                "RefiningStalled": 90
+              },
+              "Salvage": {
+                "Mutate": "BySalvagePhase",
+                "Default": 45,
+                "PreUplink": 90,
+                "PreRefuel": 90
+              },
+              "Escort": {
+                "Mutate": "ByEscortPhase",
+                "Default": 45,
+                "WaitingForFuel": 60,
+                "Stationary": 60,
+                "FinalEventA": 60,
+                "FinalEventB": 60,
+                "FinalEventC": 60,
+                "FinalEventD": 60
+              },
+              "Sabotage": {
+                "Mutate": "BySaboPhase",
+                "Default": 45,
+                "HackingFinished": 60,
+                "Phase1Vent": 60,
+                "Phase1Eye": 60,
+                "Phase2Vent": 60,
+                "Phase2Eye": 60,
+                "Phase3Vent": 60,
+                "Phase3Eye": 60
+              }
+            },
+            {
+              "Mutate": "ByMissionType",
+              "Default": 45,
+              "Refinery": {
+                "Mutate": "ByRefineryPhase",
+                "Default": 45,
+                "RefiningStalled": 90
+              },
+              "Escort": {
+                "Mutate": "ByEscortPhase",
+                "Default": 45,
+                "WaitingForFuel": 60,
+                "FinalEventA": 60,
+                "FinalEventB": 60,
+                "FinalEventC": 60,
+                "FinalEventD": 60
+              },
+              "Sabotage": {
+                "Mutate": "BySaboPhase",
+                "Default": 45,
+                "Phase1Vent": 60,
+                "Phase1Eye": 60,
+                "Phase2Vent": 60,
+                "Phase2Eye": 60,
+                "Phase3Vent": 60,
+                "Phase3Eye": 60
+              }
+            }
+          ]
+        }
+      },
+      "Distance": 1500,
+      "Locations": 3,
+      "PauseOnDisable": true
+    },
+    {
+      "Name": "PentaJaw WS",
+      "Enabled": {
+        "Mutate": "DuringMission",
+        "StartingAt": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            {
+              "Mutate": "ByMissionType",
+              "Default": 0,
+              "Refinery": 60,
+              "PE": 30,
+              "DeepScan": 30,
+              "Salvage": 30,
+              "Elimination": 30
+            },
+            0
+          ]
+        }
+      },
+      "Enemies": [
+        "XED_Mactera_PentaJaw"
+      ],
+      "Difficulty": 18,
+      "Interval": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          {
+            "Mutate": "ByMissionType",
+            "Default": 110,
+            "Refinery": {
+              "Mutate": "ByRefineryPhase",
+              "Default": {
+                "Mutate": "If",
+                "Condition": {
+                  "Mutate": "DuringMission",
+                  "StartingAt": 200
+                },
+                "Then": 170,
+                "Else": 110
+              },
+              "RefiningStalled": 170
+            },
+            "Salvage": {
+              "Mutate": "BySalvagePhase",
+              "Default": 110,
+              "PreUplink": 170,
+              "PreRefuel": 170
+            },
+            "Escort": {
+              "Mutate": "ByEscortPhase",
+              "Default": 110,
+              "WaitingForFuel": 145,
+              "Stationary": 145,
+              "FinalEventA": 145,
+              "FinalEventB": 145,
+              "FinalEventC": 145,
+              "FinalEventD": 145
+            },
+            "Sabotage": {
+              "Mutate": "BySaboPhase",
+              "Default": 110,
+              "HackingFinished": 145,
+              "Phase1Vent": 145,
+              "Phase1Eye": 145,
+              "Phase2Vent": 145,
+              "Phase2Eye": 145,
+              "Phase3Vent": 145,
+              "Phase3Eye": 145
+            }
+          },
+          {
+            "Mutate": "ByMissionType",
+            "Default": 110,
+            "Escort": {
+              "Mutate": "ByEscortPhase",
+              "Default": 110,
+              "FinalEventA": 145,
+              "FinalEventB": 145,
+              "FinalEventC": 145,
+              "FinalEventD": 145
+            }
+          }
+        ]
+      },
+      "Distance": 5000,
+      "Locations": 4
+    }
+  ],
+  "EscortMule": {
+    "FriendlyFireModifier": 0.1,
+    "BigHitDamageModifier": {
+      "Mutate": "ByPlayerCount",
+      "Values": [
+        {
+          "Mutate": "ByEscortPhase",
+          "Default": 0.8125,
+          "Stationary": 0.8875,
+          "WaitingForFuel": 0.8875,
+          "FinalEventA": 0.8875,
+          "FinalEventB": 0.8875,
+          "FinalEventC": 0.8875,
+          "FinalEventD": 0.8875
+        },
+        0.8125
+      ]
+    },
+    "BigHitDamageReductionThreshold": 0,
+    "NeutralDamageModifier": 0.1
+  }
+}

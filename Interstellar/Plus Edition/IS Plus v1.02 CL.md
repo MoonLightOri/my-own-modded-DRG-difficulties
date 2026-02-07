@@ -10,13 +10,11 @@
   + Sabotage: Hacking ECM: x1 -> x1.1. Before hacking/Between Hacks/Hacking Finished/Caretaker phases ECM increased to x1.
   + Deep Scan: During Drillevator, ECM: x1.2 -> x1.33. Pressure Wave (Except Encounters and Announced Swarm), ECM: x0.8/0.9 -> x0.9/1. 
 - Enemy Wave Interval: 
-  + Bin with 90-110s: Weight 80% -> 89%. In 1p and Deep Scan, -61% -> -60% of the weight.
+  + Bin with 90-110s: Weight 80% -> 90%. In 1p and Deep Scan, -61% -> -60% of the weight.
   + Bin with 110-140s: Weight 19% -> 10%. In 1p and Deep Scan, +61% -> +60% of the weight.
-  + Bin with 7s: 7 -> 0s. Removed restrictions on Mission Types (Apply for 1p setting too).
 - Enemy Normal Wave Interval (Also applies for Dread/Caretaker Normal Wave WS):
-  + Bin with 120s: Weight 65% -> 60%. In 1p and Deep Scan/Escort/Salvage/Sabotage, -45% -> -30% of the weight.
-  + Bin with 150-180s: Weight 35% -> 30%. In 1p and Deep Scan/Escort/Salvage/Sabotage, +45% -> +30% of the weight.
-  + Added new bin of 0s with the weight of 10%.
+  + Bin with 120s: Weight 65% -> 66.7%. In 1p and Deep Scan/Escort/Salvage/Sabotage, -45% -> -30% of the weight.
+  + Bin with 150-180s: Weight 35% -> 33.3%. In 1p and Deep Scan/Escort/Salvage/Sabotage, +45% -> +30% of the weight.
 - Enemy Normal Wave Difficulty (Also applies for Dread/Caretaker Normal Wave WS):
   + Bin with 2000: Weight 10% -> 20%.
   + Bin with 800-900: Weight 90% -> 80%.
