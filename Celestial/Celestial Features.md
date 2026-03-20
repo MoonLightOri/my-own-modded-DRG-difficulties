@@ -1,4 +1,4 @@
-This difficulty used ND - a difficulty made by pH-JPEG, as a framework, but with adjustments. It's also a toned-down version of Interstellar. Updated to v1.04.
+This difficulty used ND - a difficulty made by pH-JPEG, as a framework, but with adjustments. It's also a toned-down version of Interstellar. Updated to v1.05.
 
 Contributor: seu
 

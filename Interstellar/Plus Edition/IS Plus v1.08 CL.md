@@ -20,7 +20,8 @@
   + Bin with 800-900: Weight 90% -> 80%.
 - Enemy Diversity:
   + Bin with 1 and Weight 15%: Removed
-  + Bin with 4-7: Weight 40% -> 48%.
+  + Bin with 1-3: Weight 30% -> 22%.
+  + Bin with 4-7: Weight 47% -> 48%.
   + Bin with 8-11: Weight 23% -> 30%.
 * Enemies:
 - Nuke Barrager: Removed restriction in spawning in Refinery and Escort, now they can spawn more than one in these mission types.
