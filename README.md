@@ -1,17 +1,17 @@
 My list of modded difficulties I made
 Currently made (For requirements, Latest version is always better):
-- [Eclipse (Alpha 13)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Eclipse) <Require CD2 beta 16a+, MEV v5_4, DEA b01.1.0 and EEE v1.5.4>
-- [Interstellar (v1.05)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Interstellar) <Require CD2 beta 15, MEV v5_4 and DEA b00.3.3>
-- [Celestial (v1.03)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Celestial) <Require CD2 beta 15, MEV v5_4 and DEA a05t2 or above> (Toned-down of Interstellar, ND level) 
-- [Astral (v1.03)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Astral) <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
-- [Penumbra (v1.09)](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Penumbra/Penumbra%20v1.07.json) <Require CD2 beta 14, MEV v5_4 and DEA (any version, but latest work best)> (FC fork with QoL and Balance changes from Interstellar)
+- [Eclipse](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Eclipse) <Require CD2 beta 16a+, MEV v5_4, DEA b01.1.0 and EEE v1.5.4>
+- [Interstellar](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Interstellar) <Require CD2 beta 15, MEV v5_4 and DEA b00.3.3>
+- [Celestial](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Celestial) <Require CD2 beta 15, MEV v5_4 and DEA a05t2 or above> (Toned-down of Interstellar, ND level) 
+- [Astral](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/blob/main/Astral) <Require CD2 beta 13 and MEV v5_4> (Toned-down of Celestial, 6x2EX level)
+- [Penumbra](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/tree/main/Penumbra) <Require CD2 beta 14, MEV v5_4 and DEA (any version, but latest work best)> (FC fork with QoL and Balance changes from Interstellar)
 - [Elite Restriction Release [6x2/6x2EX/Send It! Type R/Master Series]](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/tree/main/Elite%20Restriction%20Release) <Pubbable Difficulty, Host require CD2 beta 15+ (Client as well for Non-Pub version)> (Elite Threat global expansion)
 - [6x2RE](https://github.com/MoonLightOri/my-own-modded-DRG-difficulties/tree/main/6x2Re) <Pubble Difficulty, Host require CD2 beta 15+> (Hazard 6x2 Rebalance and QOL)
 
 Download Links (if you are from CN, please uses VPN since dl links are coming from discord): <br />
-[CD2 beta 16a download](https://cdn.discordapp.com/attachments/1248846649107943434/1435813724484145172/custom-difficulty2-update-16a.zip?ex=691932bc&is=6917e13c&hm=932bb3bfede08c26f13f330baffac0c55e3267229539638cafaccdb867a99eae&) <br />
+[CD2 beta 18 download](https://cdn.discordapp.com/attachments/1491663110690570290/1491663204647174265/custom-difficulty2-update-18.zip?ex=69ed9b1d&is=69ec499d&hm=1a34880f62733940c02c163ea11aaf1681928d91f6a385772e8042dadbd0c844&) <br />
 [MEV v5_4 download](https://cdn.discordapp.com/attachments/1162902740230471720/1266497317855297536/MEVv5_4.pak?ex=67cea74a&is=67cd55ca&hm=89d81a4af61bfe231939390f898452196caaf05bb9a2f1c449366def6a61e1b1&) <br />
-[DEA b01.0.0 mod.io](https://mod.io/g/drg/m/donnies-enemy-addon-cd2-version) <br />
+[DEA b02.1 mod.io](https://mod.io/g/drg/m/donnies-enemy-addon-cd2-version) <br />
 
 [old version of DEA (a05t2)](https://cdn.discordapp.com/attachments/1264172880359591996/1321546340093657209/DEA_a05t2.pak?ex=67ce87b0&is=67cd3630&hm=4a8d33b1b397d1c6156d3dc5ea0fa02d088d41a104025bc6d177924c74c6dcb8&) <br />
 
@@ -35,8 +35,3 @@ Installation order in mint/mintcat:
 - CD2 (bottom)
 
 [Mint repository (3rd party mod integration)](https://github.com/trumank/mint)
-
-To do Lists:
-- Implement Feature List for Elite Restriction Release difficulties.
-- Implement Plus version of Space Theme Difficulty Trilogy (Astral/Celestial/Interstellar).
-- Implement Harder base difficulty for Elite Restriction Release difficulty (Aim to still be pubbable).
