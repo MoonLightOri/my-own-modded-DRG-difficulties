@@ -1,6 +1,11 @@
 {
   "Name": "Celestial v1.06",
-  "Description": "REQUIRES CD2 beta 15 (UPDATED), MEV v5.4 AND DEA a05t2+. Recommended VEA. Celestial, shortened as CS, is a spin off of ND and the dial-down version of Interstellar with some interesting twists on modded enemies.",
+  "Description": "REQUIRES CD2 beta 15 (UPDATED), MEV v5.4 AND DEA a05t2+. Recommended VEA. Celestial, shortened as CS, is a spin off of ND and the dial-down version of Interstellar with some interesting twists on modded enemies.
+    v1.06:
+  - Glyphid Rat: Changed ED type to use Glyphid Dreadnought variant.
+  - Replaced Plague Bomber with Septic Spreader variant (named Plague Spreader), and retain its trait where it buffs Rat HP. DifficultyRating 125 -> 110.
+  - Plague Spreader and Glyphid Dreadnaught orb spawns 6/6/8/9 -> 6/7/9/10 Rats.
+  ",
   "Resupply": {
     "Cost": {
       "Mutate": "ByResuppliesCalled",
