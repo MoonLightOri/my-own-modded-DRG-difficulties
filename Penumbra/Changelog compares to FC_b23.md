@@ -58,7 +58,7 @@ Changelog compares to FC is below:
 - Grabber: Added NoSpawnWithin 5m.
 - Big Shocker: AttackDamageMultiplier x1 -> x2. Immune to being Feared. Frozen temperature is increased to -240 due to DieIfFrozen not working at all.
 - Flying Rock from Escort Heartstone: HP reduced from 250 -> 148 (Slasher base HP).
-- Elite Mactera Spawn: AttackDamageMultiplier x1 -> x0.9. TimeDilation x1 -> x0.85.
+- Elite Mactera Spawn: AttackDamageMultiplier x1 -> x0.65. TimeDilation x1 -> x0.85.
 - Patrol Bot: FreezeTemp and Unfreeze temp are now reduced. When frozen, increase x3 damage taken. 
 - Rockpox Septic: AttackDamageMultiplier 1 -> 0.75.
 - Sentinel: Added Electric Damage Weakness by -30%. No longer spawns on Encounters.
@@ -71,6 +71,7 @@ Changelog compares to FC is below:
 - Stingtail: Rarity 5.25 -> 5.5.
 - Sprouts (Ground and Ceiling): Changed material to make it easier to see in the dark. 
 - Youngling: CanBeUsedForConstantPressure = false.
+- Big Bulk: Removed.
 
 # Custom Waves
 - Removed Canary WaveSpawner.

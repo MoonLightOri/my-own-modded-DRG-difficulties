@@ -177,18 +177,17 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
     + Has 140/145/164/177.6 HP (based on Slasher Normal Scaling at 4p).
     + Additionally, movement Speed now +50%.
   - Elite Septic: Has 114/117/133/144 HP (based on Acid Spitter Normal Scaling at 4p). Additionally, Time Dilation +30% and Damage Dealt -20%.
-  - Elite Mactera Spawn: Has 95/98/110/120 HP (based on Cave Leech Normal Scaling at 4p). Additionally, Time Dilation -15% and Damage Dealt -10%.
+  - Elite Mactera Spawn: Has 95/98/110/120 HP (based on Cave Leech Normal Scaling at 4p). Additionally, Time Dilation -15% and Damage Dealt -35%.
   - Elite Stingtail: Has 211/218/246/267.6 HP (based on Mactera Spawn Normal Scaling at 4p). Additionally, move +40% faster and gain +20% Physical Damage weakness.
   - Elite Guard: Has 967/999/1128/1225 HP (based on Menace Special Scaling at 4p). THEY ONLY SPAWN IN WAVES.
 - Glyphid Rat: 
   + They are bigger sized Swarmer that won't die when ignited/frozen. Their materials are changed also.
   + Base HP 12 -> 20, move +20% faster and Damage Dealt +50% than normal Swarmer.
   + There are variants that spawn only on swarmer tunnel and glyphid egg, they are named as Glyphid Sewer/Hatched Rat, have Base HP 12 -> 50 instead, 50% resistance to Fire Damage and Fear Immunity. They also have Different base materials.
-- Mactera Plague Bomber (DEA)
-  + These are Goo Bomber variant that have Base HP -25%. Their materials are changed also.
+- Glyphid Plague Spreader:
+  + These are Septic Spreader variant. Their materials are changed.
   + Normal attack projectile is now replaced with Glyphid Dreadnought's Eggshot projectile that spawns a bunch of Glyphid Rats and apply Pheromone STE.
-  + Bombing attack now spawns individual Glyphid Rats instead.
-  + On its presence, all Glyphid Rats on-field (Except Sewer/Hatched Rats) gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Bombers are dead.
+  + On its presence, all Glyphid Rats on-field (Except Sewer/Hatched Rats) gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Spreaders are dead.
 - Glyphid Dreadnought (BOSS)
   + Glyphid Dreadnought's Eggshot projectile spawns a bunch of Glyphid Rats instead with Pheromone STE.
 - Turbo Menace (MEV)
@@ -239,12 +238,6 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + They are more expensive Spitballers that have Time Dilation -33.33%. Their materials is changed also.
   + Stationary unit.
   + Projectile they shoot is triple Nemesis's barriers.
-- Big Bulk Detonator (MEV)
-  + This is a very rare Big Bulk Detonator from MEV that have its material changed.
-  + It has Base HP +50% of Normal Bulk (4000 -> 6000).
-  + It also has massive Electric damage weakness, large Corrosion damage Weakness and Piercing Damage Resistance. 
-  + On death, it leaves behind significantly larger explosion and carve radius. The carve material is changed into Hot rock from Magma Core terrain. 
-  + It cannot be spawned during Defense, Escort mission type and 1p setting. Once spawned it has a massive cooldown timer before it can return into EnemyPool, and can only be spawned once in small 1-room mission type.
 - Brundle
   + They have 30% chance to promote into Brendle.
 - Brendle (DEA)

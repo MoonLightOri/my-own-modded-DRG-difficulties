@@ -1,11 +1,10 @@
-  v1.0
+  v1.05
 - Resupply costs 40/50/60 Nitra in 3/4p now.
 - EnemyCountModifier, EncounterDifficulty and StationaryDifficulty has been increased by ~10%.
 - Fat Wave chance increased from 20% to 25%.
 - EnemyDiversity increased by 1.
 - EnemySpeedModifier increases every time you call a Resupply.
 - EnemyWaveInterval and EnemyNormalWaveInterval is now shortened.
-
 - Grunt WS interval has been reduced from 60s -> 45s.
 - Weak Elite WS interval has been reduced from 45s -> 35s.
 - PentaJaw WS now renamed into Special WS, now has interval reduced from 110s to 90s and spawns 1-2 PentaJaw, 2 Barrier Spitter, 5 Vomit Spitter, a Glyphid Warden (with low chance) and a Mactera Warden (with low chance)
