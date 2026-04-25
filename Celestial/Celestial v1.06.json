@@ -1241,7 +1241,8 @@
         "ED_Spider_Shooter_Barrier",
         "ED_Spider_Shooter_Vomit",
         "ED_Ninja",
-        "ED_Ossiran_Scrab"        
+        "ED_Ossiran_Scrab",
+        "ED_Spider_Lobber_Rat"       
       ],
       "Remove": [
         "ED_Spider_Tank",
