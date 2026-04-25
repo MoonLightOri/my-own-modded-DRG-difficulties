@@ -133,11 +133,10 @@ Celestial minimum requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_a05t2+ 
   + They are bigger sized Swarmer that won't die when ignited/frozen. Their materials are changed also.
   + Base HP 12 -> 20, move +20% faster and Damage Dealt +50% than normal Swarmer.
   + There are variants that spawn only on swarmer tunnel and glyphid egg, they are named as Glyphid Sewer/Hatched Rat, have Base HP 12 -> 50 instead, 50% resistance to Fire Damage and Fear Immunity. They also have Different base materials.
-- Mactera Plague Bomber (DEA)
-  + These are Goo Bomber variant that have Base HP -25%. Their materials are changed also.
+- Glyphid Plague Spreader:
+  + These are Septic Spreader variant. Their materials are changed.
   + Normal attack projectile is now replaced with Glyphid Dreadnought's Eggshot projectile that spawns a bunch of Glyphid Rats and apply Pheromone STE.
-  + Bombing attack now spawns individual Glyphid Rats instead.
-  + On its presence, all Glyphid Rats on-field (Except Sewer/Hatched Rats) gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Bombers are dead.
+  + On its presence, all Glyphid Rats on-field (Except Sewer/Hatched Rats) gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Spreaders are dead.
 - Glyphid Dreadnought (BOSS)
   + Glyphid Dreadnought's Eggshot projectile spawns a bunch of Glyphid Rats instead with Pheromone STE.
 - Turbo Menace (MEV)
