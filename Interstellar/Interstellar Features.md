@@ -2,7 +2,7 @@ This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but 
 
 Contributor: seu
 
-Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Latest version is always better)
+Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA b02.1.
 
 - Recommended Mods: 
   + VEA: https://mod.io/g/drg/m/vanilla-enemy-adjustments

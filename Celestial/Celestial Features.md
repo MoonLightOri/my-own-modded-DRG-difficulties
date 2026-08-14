@@ -2,7 +2,7 @@ This difficulty used ND - a difficulty made by pH-JPEG, as a framework, but with
 
 Contributor: seu
 
-Celestial minimum requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_a05t2+ (Latest version is always better).
+Celestial minimum requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b02.1.
 
 - Recommended Mods: 
   + VEA: https://mod.io/g/drg/m/vanilla-enemy-adjustments
