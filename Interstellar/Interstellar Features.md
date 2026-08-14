@@ -1,4 +1,4 @@
-This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but with adjustments. Updated to v1.10.
+This difficulty used FC_b23 - a difficulty made by pH-JPEG, as a framework, but with adjustments. Updated to v1.11.
 
 Contributor: seu
 
@@ -97,7 +97,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + No longer do Bump Attack (You take damage and get knocked back).
 - Nexus
   + They have Fire Damage Weakness +295%. 
-  + They now instead spawn white Slashers that only have ~66 HP.
+  + They now instead spawn white Slashers that only have ~66 HP. (Swarmer Tunnel also spawns this kind of Slasher).
 - White Exploder (MEV)
   + Only spawns from Normal Breeders.
   + They also move -25% slower.
@@ -183,11 +183,11 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
 - Glyphid Rat: 
   + They are bigger sized Swarmer that won't die when ignited/frozen. Their materials are changed also.
   + Base HP 12 -> 20, move +20% faster and Damage Dealt +50% than normal Swarmer.
-  + There are variants that spawn only on swarmer tunnel and glyphid egg, they are named as Glyphid Sewer/Hatched Rat, have Base HP 12 -> 50 instead, 50% resistance to Fire Damage and Fear Immunity. They also have Different base materials.
+  + There are variants that spawn only on glyphid egg, they are named as Glyphid Hatched Rat, have Base HP 12 -> 50 instead, 50% resistance to Fire Damage and Fear Immunity. They also have Different base materials.
 - Glyphid Plague Spreader:
   + These are Septic Spreader variant. Their materials are changed.
   + Normal attack projectile is now replaced with Glyphid Dreadnought's Eggshot projectile that spawns a bunch of Glyphid Rats and apply Pheromone STE.
-  + On its presence, all Glyphid Rats on-field (Except Sewer/Hatched Rats) gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Spreaders are dead.
+  + On its presence, all Glyphid Rats on-field (Except Hatched Rats) gain +60% Damage Resistance (Reflected by Blacker material change). This buff is removed when all on-field Plague Spreaders are dead.
 - Glyphid Dreadnought (BOSS)
   + Glyphid Dreadnought's Eggshot projectile spawns a bunch of Glyphid Rats instead with Pheromone STE.
 - Turbo Menace (MEV)
@@ -208,10 +208,10 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + These are the promoted variant of twins. They retain all stats from weak twins previously and have different materials.
   + Wrathbane: Damage Dealt -65%. Wrathbane is a type of Lacerator that has Stomping rockwall projectile replaced with Scorching Tide projectile (Has limited range, deadly in close range, low ground attack) and Flaming Breath attack replaced with Burrow.
   + Banshee is a type of Arbalest that only uses Grieves attack.
-- Youngnought and Ice Youngnought (DEA)
-  + Both are a type of weak Glyphid Dreadnought which have Base HP of 1000, can be ignited by default and the weakpoint is opened at all time. Youngnought can spawn in waves, but can be promoted into Ice variant with 25% chance. Ice Youngnought has slightly altered appearance. Fun fact: Youngnought = Youngling Dreadnought shortened. 
-  + Youngnought abilities: Fireball attack, Slam attack (Have signifcantly higher damage drop off) and Eggshot attack that spawns a bunch of Grunt variant that are named as Streakers. They have Base HP of 148 HP (Slasher's), move faster than normal Grunt but have no armor and retain most swarmer moveset.
-  + Ice Youngnought abilities: Snowball attack, Ice Slam attack that deals Cold Damge instead (Mostly freeze you, have signifcantly higher damage drop off) and Eggshot attack that spawns a bunch of Ebonite Grunt (It's resistance is normal grunt) that are named as Moles. They have Base HP of 148 HP (Slasher's), and they can do the Lacerator's Burrow attack that deals normal damage with no knockback. Their materials are slightly changed. Ice Youngnought on death will leave behind Frost Praetorian's gas.
+- Dreadling and Ice Dreadling (DEA)
+  + Both are a type of weak Glyphid Dreadnought which have Base HP of 1000, can be ignited by default and the weakpoint is opened at all time. Dreadling can spawn in waves, but can be promoted into Ice variant with 25% chance. Ice Dreadling has slightly altered appearance. Fun fact: Dreadling = Youngling Dreadnought shortened. 
+  + Dreadling abilities: Fireball attack, Slam attack (Have signifcantly higher damage drop off) and Eggshot attack that spawns a bunch of Grunt variant that are named as Streakers. They have Base HP of 148 HP (Slasher's), move faster than normal Grunt but have no armor and retain most swarmer moveset.
+  + Ice Dreadling abilities: Snowball attack, Ice Slam attack that deals Cold Damge instead (Mostly freeze you, have signifcantly higher damage drop off) and Eggshot attack that spawns a bunch of Ebonite Grunt (It's resistance is normal grunt) that are named as Moles. They have Base HP of 148 HP (Slasher's), and they can do the Lacerator's Burrow attack that deals normal damage with no knockback. Their materials are slightly changed. Ice Dreadling on death will leave behind Frost Praetorian's gas.
 - Mini Bulk Detonator (MEV)
   + They are small Bulk Detonators from MEV that have Base HP x0.3292. 
   + None of normal Bulk SFX will be played until they die, so they are more stealthy than Normal Bulk.
@@ -301,7 +301,7 @@ Interstellar requirement: Custom Difficulty 2 beta 15, MEVv5_4, DEA_b003.3. (Lat
   + It cannot be spawned during Defense, Drillevator and Escort Heartstone phases.
 - The Sun (CD2)
   + This is a static Ommoran Flying Rock that has Base HP 300. Its material is changed also.
-  + On its presence (Highlighted by Enemy Outline, disappear after being pinged by player and expire), it increases normal Grunt's and Praetorian Movement Speed by 35% and immune to stun and fear (Highlighted by material change). The buff will end when The Sun is killed.
+  + On its presence (Highlighted by Enemy Outline, disappear after being pinged by player and expire), it increases normal Grunt's and Praetorian Movement Speed by 35%, immune to fear and reduce stun duration by 70% (Highlighted by material change). The buff will end when The Sun is killed.
   + The Sun will bleed out (lose HP) after 45s of being in the map and dies exactly 45s later (The timer value is lower in player count). 
   + It cannot be spawned During Defense, Drillevator and Escort mission type.
 - The Moon (CD2)

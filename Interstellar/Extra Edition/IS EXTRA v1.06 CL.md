@@ -13,11 +13,11 @@
 - New enemy: Glyphid Sniper. It has high movement speed, and will shoot very fast turret whip projectile from far away than normal Spitter. Has the health of a Stingtail.
 - New enemy: The Mars. On its presence, it changes all normal mactera variants to shoot Fireball projectile instead and immune to Stun and Fear. Similar to The Sun.
 - New enemy: Gas Spreader, it launches a projectile on Impact, spawns incombustible Praetorian gas. Cannot spawn During Defend.
-- New enemy: Invincible Exploder, it cannot take damage from any source, can only detonate if player is close by. Cannot spawn During Defend and Drillevator.
-- New enemy: Glyphid Artillery. This is a normal Praetorian but it can launch Arbalest's mine bomb to your location.
+- New enemy: Ebonite Exploder, it resists most damage types except Melee damage type which is weak against. Cannot spawn During Defend and Drillevator.
+- New enemy: Glyphid Artillery. This is a normal Praetorian but it can launch Fireball to your location.
 - New enemy: Grenade Barrager. It shoots Gunner's sticky grenade instead of Vomit projectile which stick and deal high damage.
 - New enemy: Spitwall Infector. It shoots Lacerator's stomp attack to you, dealing high damage and knockback.
-- New enemy: Fire Youngnought: This is a Youngnought variant that breath fire flame and Scorching Tide projectile.
-- New enemy: Praetor Youngnought: This is a Youngnought variant that breah Praetorian breath and Oppressor stomp.
+- New enemy: Fire Dreadling: This is a Dreadling variant that breath fire flame and Scorching Tide projectile.
+- New enemy: Praetor Dreadling: This is a Dreadling variant that breah Praetorian breath and Oppressor stomp.
 - New enemy: George: This is a radial jaw that has small hitbox and long wind up time. Once shoot, it will release 72 projectiles in radial pattern.
-- All Youngnought, Twin and Mactera Boss variants are now moved to a special WS, which has 60s interval.
+- All Dreadling, Twin and Mactera Boss variants are now moved to a special WS, which has 60s interval.
