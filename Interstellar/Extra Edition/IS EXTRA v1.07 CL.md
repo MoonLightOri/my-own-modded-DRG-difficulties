@@ -11,7 +11,7 @@
 - Grunt/AcidSpitter/WebSpitter/VomitSpitter Spawn Cap increases. Grunt SpawnAmountModifier decreases.
 
 - New enemy: Glyphid Sniper. It has high movement speed, and will shoot very fast turret whip projectile from far away than normal Spitter. Has the health of a Stingtail.
-- New enemy: The Mars. On its presence, it changes all normal mactera variants to shoot Fireball projectile instead and immune to Stun and Fear. Similar to The Sun.
+- New enemy: The Mars. On its presence, it changes all normal mactera variants to shoot Fireball projectile instead, immune to Fear and reduce stun time by 70%. Similar to The Sun.
 - New enemy: Gas Spreader, it launches a projectile on Impact, spawns incombustible Praetorian gas. Cannot spawn During Defend.
 - New enemy: Ebonite Exploder, it resists most damage types except Melee damage type which is weak against. Cannot spawn During Defend and Drillevator.
 - New enemy: Glyphid Artillery. This is a normal Praetorian but it can launch Fireball to your location.
